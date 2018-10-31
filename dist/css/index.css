@@ -3,17 +3,6 @@
 @import url("projects.css");
 @import url("contacts.css");
 
-.test {
-  width: 25vw;
-  position: relative;
-}
-
-.test img {
-  width: 100%;
-  position: absolute;
-  top: 20px;
-}
-
 :root {
   --slide-angle: 4deg;
   --slide-angle-tan: 0.07; /* no trig functions in CSS yet :( */

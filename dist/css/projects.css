@@ -59,7 +59,7 @@
 .project__preview--container {
   position: relative;
   width: 90%;
-  padding-top: 50.625%;
+  padding-bottom: 50.625%;
   display: block;
   margin: 0 auto;
   border-style: solid;
@@ -69,8 +69,7 @@
 
 .project__preview--media {
   position: absolute;
-  top: -25%;
-  width: 90%;
+  width: 100%;
   opacity: 1;
   transition: opacity 0.25s;
   z-index: 0;

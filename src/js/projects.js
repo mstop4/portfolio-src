@@ -73,7 +73,6 @@ const addProjectCards = function(parentEl, data) {
     projectPreviewContainer.appendChild(projectPreviewStatic);
     projectPreviewContainer.appendChild(projectPreviewAnim);
     projectCard.appendChild(projectPreviewContainer);
-    projectCard.appendChild(projectPreviewStatic);
     projectCard.appendChild(projectShortInfo);
 
     parentEl.appendChild(projectCard);
