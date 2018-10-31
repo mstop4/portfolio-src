@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Prepare cards
 
-  projectList = document.getElementsByClassName('project-list')[0];
-  contactList = document.getElementsByClassName('contact-list')[0];
+  projectList = document.querySelector('.project-list');
+  contactList = document.querySelector('.contact-list');
 
   addProjectCards(projectList, data);
   addContactCards(contactList, data);

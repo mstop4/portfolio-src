@@ -16,21 +16,25 @@ const addProjectCards = function(parentEl, data) {
     projectPreviewContainer.classList.add('project__preview--container');
 
     let projectPreviewStatic = document.createElement('img');
-    projectPreviewStatic.classList.add('project__preview--media');
+    projectPreviewStatic.classList.add('project__preview--media', 'project__preview--static');
     projectPreviewStatic.src = data.projects[i].previewStatic;
 
-    let projectPreviewAnim = document.createElement('img');
-    projectPreviewAnim.classList.add('project__preview--media', 'project__preview--hidden');
-    projectPreviewAnim.src = data.projects[i].previewAnim;
+    let projectPreviewAnim = document.createElement('video');
+    projectPreviewAnim.classList.add('project__preview--media');
+    //projectPreviewAnim.setAttribute('autoplay', '');
+    projectPreviewAnim.setAttribute('loop', '');
+    let projectPreviewAnimSrc = document.createElement('source');
+    projectPreviewAnimSrc.src = data.projects[i].previewAnim;
+    projectPreviewAnimSrc.type = 'video/mp4';
 
     projectCard.addEventListener('mouseenter', function() {
       projectPreviewStatic.classList.add('project__preview--hidden');
-      projectPreviewAnim.classList.remove('project__preview--hidden');
+      //projectPreviewAnim.classList.remove('project__preview--hidden');
     });
 
     projectCard.addEventListener('mouseleave', function() {
       projectPreviewStatic.classList.remove('project__preview--hidden');
-      projectPreviewAnim.classList.add('project__preview--hidden');
+      //projectPreviewAnim.classList.add('project__preview--hidden');
     });
 
     // - Project Short Info
@@ -71,6 +75,7 @@ const addProjectCards = function(parentEl, data) {
     projectShortInfo.appendChild(projectTypes);
 
     projectPreviewContainer.appendChild(projectPreviewStatic);
+    projectPreviewAnim.appendChild(projectPreviewAnimSrc);
     projectPreviewContainer.appendChild(projectPreviewAnim);
     projectCard.appendChild(projectPreviewContainer);
     projectCard.appendChild(projectShortInfo);

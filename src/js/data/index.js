@@ -3,55 +3,55 @@ module.exports = {
     {
       "title": "GML Script Wizard",
       "previewStatic": "img/gml-script-wizard.png",
-      "previewAnim": "img/gifcentration.png",
+      "previewAnim": "vid/gml-script-wizard.mp4",
       "types": ["webapp"]
     },
     {
       "title": "GIFcentration",
       "previewStatic": "img/gifcentration.png",
-      "previewAnim": "img/gifcentration.png",
+      "previewAnim": "vid/gifcentration.mp4",
       "types": ["webapp", "game"]
     },
     {
       "title": "Fractured Flicks",
       "previewStatic": "img/fractured-flicks.png",
-      "previewAnim": "img/gifcentration.png",
+      "previewAnim": "vid/fractured-flicks.mp4",
       "types": ["webapp", "game"]
     },
     {
       "title": "Sync Timer",
       "previewStatic": "img/sync-timer.png",
-      "previewAnim": "img/gifcentration.png",
+      "previewAnim": "vid/sync-timer.mp4",
       "types": ["webapp"]
     },
     {
       "title": "FMODGMS",
       "previewStatic": "img/fmodgms.png",
-      "previewAnim": "img/gifcentration.png",
+      "previewAnim": "vid/gifcentration.mp4",
       "types": ["utility"]
     },
     {
       "title": "Aborescence",
       "previewStatic": "img/aborescence.png",
-      "previewAnim": "img/gifcentration.png",
+      "previewAnim": "vid/gifcentration.mp4",
       "types": ["game"]
     },
     {
       "title": "I am Rubba, You Are Gloo",
       "previewStatic": "img/iamrubba.png",
-      "previewAnim": "img/gifcentration.png",
+      "previewAnim": "vid/gifcentration.mp4",
       "types": ["game"]
     },
     {
       "title": "dot.Market 2",
       "previewStatic": "img/dot.market2.png",
-      "previewAnim": "img/gifcentration.png",
+      "previewAnim": "vid/gifcentration.mp4",
       "types": ["game"]
     },
     {
       "title": "Moeblob Adventure",
       "previewStatic": "img/moeblobadventure.png",
-      "previewAnim": "img/gifcentration.png",
+      "previewAnim": "vid/gifcentration.mp4",
       "types": ["game"]
     },
   ],
