@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx browserify -p tinyify src/js/index.js > dist/bundle.js"
+    "build": "npx browserify -p tinyify src/js/index.js -o dist/bundle.js"
   },
   "repository": {
     "type": "git",
