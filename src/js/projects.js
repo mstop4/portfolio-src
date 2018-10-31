@@ -12,16 +12,25 @@ const addProjectCards = function(parentEl, data) {
 
     // - Project Preview
 
-    let projectPreviewStatic = document.createElement('div');
-    projectPreviewStatic.classList.add('project__preview');
-    projectPreviewStatic.style.backgroundImage = 'url(' + data.projects[i].preview + ')';
+    let projectPreviewContainer = document.createElement('div');
+    projectPreviewContainer.classList.add('project__preview--container');
+
+    let projectPreviewStatic = document.createElement('img');
+    projectPreviewStatic.classList.add('project__preview--media');
+    projectPreviewStatic.src = data.projects[i].previewStatic;
+
+    let projectPreviewAnim = document.createElement('img');
+    projectPreviewAnim.classList.add('project__preview--media', 'project__preview--hidden');
+    projectPreviewAnim.src = data.projects[i].previewAnim;
 
     projectCard.addEventListener('mouseenter', function() {
-      projectPreviewStatic.classList.add('project-preview--hidden');
+      projectPreviewStatic.classList.add('project__preview--hidden');
+      projectPreviewAnim.classList.remove('project__preview--hidden');
     });
 
     projectCard.addEventListener('mouseleave', function() {
-      projectPreviewStatic.classList.remove('project-preview--hidden');
+      projectPreviewStatic.classList.remove('project__preview--hidden');
+      projectPreviewAnim.classList.add('project__preview--hidden');
     });
 
     // - Project Short Info
@@ -61,6 +70,9 @@ const addProjectCards = function(parentEl, data) {
     projectShortInfo.appendChild(projectTitle);
     projectShortInfo.appendChild(projectTypes);
 
+    projectPreviewContainer.appendChild(projectPreviewStatic);
+    projectPreviewContainer.appendChild(projectPreviewAnim);
+    projectCard.appendChild(projectPreviewContainer);
     projectCard.appendChild(projectPreviewStatic);
     projectCard.appendChild(projectShortInfo);
 
