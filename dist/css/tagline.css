@@ -1,0 +1,23 @@
+#tagline {
+  margin: 0 auto;
+  width: 50vw;
+}
+
+.tagline--text {
+  text-align: center;
+}
+
+.photo {
+  width: 20vmax;
+  height: 20vmax;
+  display: block;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: 1vmax;
+  border-radius: 20vmax;
+  border-color: white;
+  background-color: white;
+  background-image: url("../img/bunny.jpg");
+  background-position: center;
+  background-size: cover;
+}
