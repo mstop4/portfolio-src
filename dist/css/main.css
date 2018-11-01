@@ -42,7 +42,7 @@
 }
 
 body {
-  position: relative;
+  position: absolute;
   background-color: cornflowerblue;
   font-family: "Quicksand", sans-serif;
   width: 100%;
@@ -52,7 +52,7 @@ body {
 h1 {
   text-align: center;
   font-size: 6vmax;
-  margin: 3vmax;
+  margin: 1vmax 0;
 }
 
 .hidden {

@@ -14,6 +14,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
   addProjectCards(projectList, data);
   addContactCards(contactList, data);
-
-  console.log(data);
 });

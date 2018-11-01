@@ -22,7 +22,7 @@ const addProjectCards = function(parentEl, data) {
     let projectPreviewAnim = document.createElement('video');
     projectPreviewAnim.classList.add('project__preview--media');
     projectPreviewAnim.setAttribute('loop', '');
-    
+
     let projectPreviewAnimSrc = document.createElement('source');
     projectPreviewAnimSrc.src = data.projects[i].previewAnim;
     projectPreviewAnimSrc.type = 'video/mp4';
@@ -36,6 +36,12 @@ const addProjectCards = function(parentEl, data) {
     projectCard.addEventListener('mouseleave', function() {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
+    });
+
+    projectCard.addEventListener('click', function() {
+      projectPreviewStatic.classList.remove('project__preview--hidden');
+      projectPreviewAnim.pause();
+      console.log('Click');
     });
 
     // - Project Short Info

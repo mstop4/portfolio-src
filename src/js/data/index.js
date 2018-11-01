@@ -27,7 +27,7 @@ module.exports = {
     {
       "title": "FMODGMS",
       "previewStatic": "img/fmodgms.png",
-      "previewAnim": "vid/gifcentration.mp4",
+      "previewAnim": "vid/fmodgms.mp4",
       "types": ["utility"]
     },
     {
