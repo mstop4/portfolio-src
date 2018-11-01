@@ -31,10 +31,17 @@
   margin: 0 auto;
   display: grid;
   max-width: 1280px;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 410px) {
+  .project-list {
+    grid-template-columns: 100vw;
+    grid-column-gap: 0;
+  }
 }
 
 .project {
