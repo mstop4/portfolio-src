@@ -1,4 +1,5 @@
-const { coinFlip } = require('./helpers.js');
+const { coinFlip, getScrollPosition } = require('./helpers.js');
+const projectCards = [];
 
 const addProjectCards = function(parentEl, data) {
 
@@ -9,6 +10,8 @@ const addProjectCards = function(parentEl, data) {
     let projectCard = document.createElement('article');
     projectCard.classList.add('project');
     coinFlip() === 0 ? projectCard.classList.add('project--left') : projectCard.classList.add('project--right');
+
+    projectCards.push(projectCard);
 
     // - Project Preview
 
@@ -41,9 +44,9 @@ const addProjectCards = function(parentEl, data) {
     projectCard.addEventListener('click', function() {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
-      console.log('Click');
+      console.log(this.offsetTop);
     });
-
+      
     // - Project Short Info
 
     let projectShortInfo = document.createElement('div');
@@ -89,8 +92,48 @@ const addProjectCards = function(parentEl, data) {
 
     parentEl.appendChild(projectCard);
   }
-}
+};
+
+const handleScroll = function() {
+  console.log('Scroll');
+  const pos = getScrollPosition();
+
+  for (let i = 0; i < projectCards.length; i++) {
+    const card = projectCards[i];
+
+    if (card.classList.contains('project--hidden')) {
+      if (card.offsetTop < pos.bottom ||
+        card.offsetTop + card.offsetHeight > pos.top) {
+
+        console.log('Show');
+        card.classList.remove('project--hidden');
+
+        if (card.classList.contains('project--left')) {
+          card.classList.add('project--left-appear');
+        } else if (card.classList.contains('project--right')) {
+          card.classList.add('project--right-appear');
+        }
+      }
+    }
+
+    else {
+      if (card.offsetTop >= pos.bottom ||
+        card.offsetTop + card.offsetHeight <= pos.top) {
+
+        console.log('Hide');
+        card.classList.add('project--hidden');
+
+        if (card.classList.contains('project--left')) {
+          card.classList.remove('project--left-appear');
+        } else if (card.classList.contains('project--right')) {
+          card.classList.remove('project--right-appear');
+        }
+      }
+    }
+  }
+};
 
 module.exports = {
-  addProjectCards
+  addProjectCards,
+  handleScroll
 }

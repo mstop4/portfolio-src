@@ -1,4 +1,4 @@
-const { addProjectCards } = require('./projects.js');
+const projects = require('./projects.js');
 const { addContactCards } = require('./contacts.js');
 const data = require('./data');
 
@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
   projectList = document.querySelector('.project-list');
   contactList = document.querySelector('.contact-list');
 
-  addProjectCards(projectList, data);
+  projects.addProjectCards(projectList, data);
   addContactCards(contactList, data);
+
+  document.addEventListener('scroll', projects.handleScroll);
 });
