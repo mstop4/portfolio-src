@@ -1,7 +1,10 @@
 const { coinFlip, getScrollPosition } = require('./helpers.js');
 const projectCards = [];
 
+const projectCardBuffer = 50;
+
 const addProjectCards = function(parentEl, data) {
+  const pos = getScrollPosition();
 
   for (let i = 0; i < data.projects.length; i++) {
 
@@ -11,6 +14,7 @@ const addProjectCards = function(parentEl, data) {
     projectCard.classList.add('project');
     coinFlip() === 0 ? projectCard.classList.add('project--left') : projectCard.classList.add('project--right');
 
+    toggleCardVisibility(projectCard, pos);
     projectCards.push(projectCard);
 
     // - Project Preview
@@ -94,42 +98,41 @@ const addProjectCards = function(parentEl, data) {
   }
 };
 
+const toggleCardVisibility = function(card, pos) {
+  if (card.classList.contains('project--hidden')) {
+    if (card.offsetTop + projectCardBuffer < pos.bottom ||
+      card.offsetTop + card.offsetHeight - projectCardBuffer > pos.top) {
+
+      card.classList.remove('project--hidden');
+
+      if (card.classList.contains('project--left')) {
+        card.classList.add('project--left-appear');
+      } else if (card.classList.contains('project--right')) {
+        card.classList.add('project--right-appear');
+      }
+    }
+  }
+
+  else {
+    if (card.offsetTop >= pos.bottom ||
+      card.offsetTop + card.offsetHeight <= pos.top) {
+
+      card.classList.add('project--hidden');
+
+      if (card.classList.contains('project--left')) {
+        card.classList.remove('project--left-appear');
+      } else if (card.classList.contains('project--right')) {
+        card.classList.remove('project--right-appear');
+      }
+    }
+  }
+}
+
 const handleScroll = function() {
-  console.log('Scroll');
   const pos = getScrollPosition();
 
   for (let i = 0; i < projectCards.length; i++) {
-    const card = projectCards[i];
-
-    if (card.classList.contains('project--hidden')) {
-      if (card.offsetTop < pos.bottom ||
-        card.offsetTop + card.offsetHeight > pos.top) {
-
-        console.log('Show');
-        card.classList.remove('project--hidden');
-
-        if (card.classList.contains('project--left')) {
-          card.classList.add('project--left-appear');
-        } else if (card.classList.contains('project--right')) {
-          card.classList.add('project--right-appear');
-        }
-      }
-    }
-
-    else {
-      if (card.offsetTop >= pos.bottom ||
-        card.offsetTop + card.offsetHeight <= pos.top) {
-
-        console.log('Hide');
-        card.classList.add('project--hidden');
-
-        if (card.classList.contains('project--left')) {
-          card.classList.remove('project--left-appear');
-        } else if (card.classList.contains('project--right')) {
-          card.classList.remove('project--right-appear');
-        }
-      }
-    }
+    toggleCardVisibility(projectCards[i], pos);
   }
 };
 
