@@ -1,6 +1,10 @@
-const { coinFlip } = require('./helpers.js');
+const { coinFlip, getScrollPosition } = require('./helpers.js');
+const projectCards = [];
+
+const projectCardBuffer = 50;
 
 const addProjectCards = function(parentEl, data) {
+  const pos = getScrollPosition();
 
   for (let i = 0; i < data.projects.length; i++) {
 
@@ -10,29 +14,43 @@ const addProjectCards = function(parentEl, data) {
     projectCard.classList.add('project');
     coinFlip() === 0 ? projectCard.classList.add('project--left') : projectCard.classList.add('project--right');
 
+    toggleCardVisibility(projectCard, pos);
+    projectCards.push(projectCard);
+
     // - Project Preview
 
     let projectPreviewContainer = document.createElement('div');
     projectPreviewContainer.classList.add('project__preview--container');
 
     let projectPreviewStatic = document.createElement('img');
-    projectPreviewStatic.classList.add('project__preview--media');
+    projectPreviewStatic.classList.add('project__preview--media', 'project__preview--static');
     projectPreviewStatic.src = data.projects[i].previewStatic;
 
-    let projectPreviewAnim = document.createElement('img');
-    projectPreviewAnim.classList.add('project__preview--media', 'project__preview--hidden');
-    projectPreviewAnim.src = data.projects[i].previewAnim;
+    let projectPreviewAnim = document.createElement('video');
+    projectPreviewAnim.classList.add('project__preview--media');
+    projectPreviewAnim.setAttribute('loop', '');
+
+    let projectPreviewAnimSrc = document.createElement('source');
+    projectPreviewAnimSrc.src = data.projects[i].previewAnim;
+    projectPreviewAnimSrc.type = 'video/mp4';
 
     projectCard.addEventListener('mouseenter', function() {
       projectPreviewStatic.classList.add('project__preview--hidden');
-      projectPreviewAnim.classList.remove('project__preview--hidden');
+      projectPreviewAnim.muted = true;
+      projectPreviewAnim.play();
     });
 
     projectCard.addEventListener('mouseleave', function() {
       projectPreviewStatic.classList.remove('project__preview--hidden');
-      projectPreviewAnim.classList.add('project__preview--hidden');
+      projectPreviewAnim.pause();
     });
 
+    projectCard.addEventListener('click', function() {
+      projectPreviewStatic.classList.remove('project__preview--hidden');
+      projectPreviewAnim.pause();
+      console.log(this.offsetTop);
+    });
+      
     // - Project Short Info
 
     let projectShortInfo = document.createElement('div');
@@ -71,14 +89,54 @@ const addProjectCards = function(parentEl, data) {
     projectShortInfo.appendChild(projectTypes);
 
     projectPreviewContainer.appendChild(projectPreviewStatic);
+    projectPreviewAnim.appendChild(projectPreviewAnimSrc);
     projectPreviewContainer.appendChild(projectPreviewAnim);
     projectCard.appendChild(projectPreviewContainer);
     projectCard.appendChild(projectShortInfo);
 
     parentEl.appendChild(projectCard);
   }
+};
+
+const toggleCardVisibility = function(card, pos) {
+  if (card.classList.contains('project--hidden')) {
+    if (card.offsetTop + projectCardBuffer < pos.bottom ||
+      card.offsetTop + card.offsetHeight - projectCardBuffer > pos.top) {
+
+      card.classList.remove('project--hidden');
+
+      if (card.classList.contains('project--left')) {
+        card.classList.add('project--left-appear');
+      } else if (card.classList.contains('project--right')) {
+        card.classList.add('project--right-appear');
+      }
+    }
+  }
+
+  else {
+    if (card.offsetTop >= pos.bottom ||
+      card.offsetTop + card.offsetHeight <= pos.top) {
+
+      card.classList.add('project--hidden');
+
+      if (card.classList.contains('project--left')) {
+        card.classList.remove('project--left-appear');
+      } else if (card.classList.contains('project--right')) {
+        card.classList.remove('project--right-appear');
+      }
+    }
+  }
 }
 
+const handleScroll = function() {
+  const pos = getScrollPosition();
+
+  for (let i = 0; i < projectCards.length; i++) {
+    toggleCardVisibility(projectCards[i], pos);
+  }
+};
+
 module.exports = {
-  addProjectCards
+  addProjectCards,
+  handleScroll
 }
