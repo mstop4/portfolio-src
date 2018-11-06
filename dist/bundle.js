@@ -172,7 +172,6 @@ var data = require('./data');
 var projectList;
 var contactList;
 document.addEventListener("DOMContentLoaded", function () {
-  // Prepare cards
   projectList = document.querySelector('.project-list');
   contactList = document.querySelector('.contact-list');
   projects.addProjectCards(projectList, data);
@@ -197,13 +196,11 @@ var addProjectCards = function addProjectCards(parentEl, data) {
   var pos = getScrollPosition();
 
   var _loop = function _loop(i) {
-    // Project Card
     var projectCard = document.createElement('article');
     projectCard.classList.add('project');
     coinFlip() === 0 ? projectCard.classList.add('project--left') : projectCard.classList.add('project--right');
     toggleCardVisibility(projectCard, pos);
-    projectCards.push(projectCard); // - Project Preview
-
+    projectCards.push(projectCard);
     var projectPreviewContainer = document.createElement('div');
     projectPreviewContainer.classList.add('project__preview--container');
     var projectPreviewStatic = document.createElement('img');
@@ -227,9 +224,7 @@ var addProjectCards = function addProjectCards(parentEl, data) {
     projectCard.addEventListener('click', function () {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
-      console.log(this.offsetTop);
-    }); // - Project Short Info
-
+    });
     var projectShortInfo = document.createElement('div');
     projectShortInfo.classList.add('project__short-info');
     var projectTitle = document.createElement('h3');

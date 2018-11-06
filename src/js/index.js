@@ -5,7 +5,7 @@ const data = require('./data');
 let projectList;
 let contactList;
 
-document.addEventListener("DOMContentLoaded", function() { 
+document.addEventListener("DOMContentLoaded", () => { 
 
   // Prepare cards
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   projects.addProjectCards(projectList, data);
   contacts.addContactCards(contactList, data);
 
-  document.addEventListener('scroll', function() {
+  document.addEventListener('scroll', () => {
     projects.handleScroll();
     contacts.handleScroll();
   });

@@ -1,3 +1,3 @@
-const getWeather = function(location) {
+const getWeather = (location) => {
   
 }

@@ -3,7 +3,7 @@ const contactCards = [];
 
 const contactCardBuffer = 50; 
 
-const addContactCards = function(parentEl, data) {
+const addContactCards = (parentEl, data) => {
   const pos = getScrollPosition();
 
   for (let i = 0 ; i < data.contacts.length; i++) {
@@ -32,7 +32,7 @@ const addContactCards = function(parentEl, data) {
   }
 }
 
-const toggleCardVisibility = function(card, pos) {
+const toggleCardVisibility = (card, pos) => {
   if (card.classList.contains('contact--hidden')) {
     if (card.offsetTop + contactCardBuffer < pos.bottom ||
       card.offsetTop + card.offsetHeight - contactCardBuffer > pos.top) {
@@ -62,7 +62,7 @@ const toggleCardVisibility = function(card, pos) {
   }
 }
 
-const handleScroll = function() {
+const handleScroll = () => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < contactCards.length; i++) {

@@ -3,7 +3,7 @@ const projectCards = [];
 
 const projectCardBuffer = 50;
 
-const addProjectCards = function(parentEl, data) {
+const addProjectCards = (parentEl, data) => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < data.projects.length; i++) {
@@ -34,21 +34,20 @@ const addProjectCards = function(parentEl, data) {
     projectPreviewAnimSrc.src = data.projects[i].previewAnim;
     projectPreviewAnimSrc.type = 'video/mp4';
 
-    projectCard.addEventListener('mouseenter', function() {
+    projectCard.addEventListener('mouseenter', () => {
       projectPreviewStatic.classList.add('project__preview--hidden');
       projectPreviewAnim.muted = true;
       projectPreviewAnim.play();
     });
 
-    projectCard.addEventListener('mouseleave', function() {
+    projectCard.addEventListener('mouseleave', () => {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
     });
 
-    projectCard.addEventListener('click', function() {
+    projectCard.addEventListener('click', () => {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
-      console.log(this.offsetTop);
     });
       
     // - Project Short Info
@@ -98,7 +97,7 @@ const addProjectCards = function(parentEl, data) {
   }
 };
 
-const toggleCardVisibility = function(card, pos) {
+const toggleCardVisibility = (card, pos) => {
   if (card.classList.contains('project--hidden')) {
     if (card.offsetTop + projectCardBuffer < pos.bottom ||
       card.offsetTop + card.offsetHeight - projectCardBuffer > pos.top) {
@@ -128,7 +127,7 @@ const toggleCardVisibility = function(card, pos) {
   }
 }
 
-const handleScroll = function() {
+const handleScroll = () => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < projectCards.length; i++) {
