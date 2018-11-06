@@ -58,18 +58,18 @@ module.exports = {
 
   "contacts": [
     {
-      "displayText": "bunny.rabbit.com",
-      "url": "bunny.rabbit.com",
+      "displayText": "jonathan.hs.lam@gmail.com",
+      "url": "mailto:jonathan.hs.lam@gmail.com",
       "faIconClasses": ["far", "fa-envelope"]
     },
     {
-      "displayText": "bunny.rabbit.com",
-      "url": "bunny.rabbit.com",
+      "displayText": "jonathanlam4",
+      "url": "https://www.linkedin.com/in/jonathanlam4/",
       "faIconClasses": ["fab", "fa-linkedin-in"]
     },
     {
-      "displayText": "bunny.rabbit.com",
-      "url": "bunny.rabbit.com",
+      "displayText": "mstop4",
+      "url": "https://github.com/mstop4",
       "faIconClasses": ["fab", "fa-github"]
     },
     {
