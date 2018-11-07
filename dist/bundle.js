@@ -185,6 +185,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   modal.back.addEventListener('click', function () {
     console.log('click modal');
+    modal.front.classList.add('modal__front--hidden');
+    modal.front.classList.remove('modal__front--show');
     modal.back.classList.add('modal__back--hidden');
     modal.back.classList.remove('modal__back--show');
   });
@@ -241,11 +243,12 @@ var addProjectCards = function addProjectCards(parentEl, modalGroup, data) {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
       modalGroup.root.classList.remove('modal--hidden');
-      console.log('emow');
       setTimeout(function () {
+        modalGroup.front.classList.add('modal__front--show');
+        modalGroup.front.classList.remove('modal__front--hidden');
         modalGroup.back.classList.add('modal__back--show');
         modalGroup.back.classList.remove('modal__back--hidden');
-      }, 100);
+      }, 1);
     });
     var projectShortInfo = document.createElement('div');
     projectShortInfo.classList.add('project__short-info');

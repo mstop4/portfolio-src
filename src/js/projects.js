@@ -51,6 +51,8 @@ const addProjectCards = (parentEl, modalGroup, data) => {
 
       modalGroup.root.classList.remove('modal--hidden');
       setTimeout(() => {
+        modalGroup.front.classList.add('modal__front--show');
+        modalGroup.front.classList.remove('modal__front--hidden');
         modalGroup.back.classList.add('modal__back--show');
         modalGroup.back.classList.remove('modal__back--hidden');
       }, 1);
