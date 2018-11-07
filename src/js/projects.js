@@ -1,9 +1,8 @@
 const { coinFlip, getScrollPosition } = require('./helpers.js');
 const projectCards = [];
-
 const projectCardBuffer = 50;
 
-const addProjectCards = (parentEl, modalGroup, data) => {
+const addProjectCards = (parentEl, modal, data) => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < data.projects.length; i++) {
@@ -49,12 +48,12 @@ const addProjectCards = (parentEl, modalGroup, data) => {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
 
-      modalGroup.root.classList.remove('modal--hidden');
+      modal.root.classList.remove('modal--hidden');
       setTimeout(() => {
-        modalGroup.front.classList.add('modal__front--show');
-        modalGroup.front.classList.remove('modal__front--hidden');
-        modalGroup.back.classList.add('modal__back--show');
-        modalGroup.back.classList.remove('modal__back--hidden');
+        modal.front.classList.add('modal__front--show');
+        modal.front.classList.remove('modal__front--hidden');
+        modal.back.classList.add('modal__back--show');
+        modal.back.classList.remove('modal__back--hidden');
       }, 1);
     });
       

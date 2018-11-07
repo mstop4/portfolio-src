@@ -1,20 +1,21 @@
-const projects = require('./projects.js');
-const contacts = require('./contacts.js');
+const projects = require('./projects');
+const contacts = require('./contacts');
+const modal = require('./modal')
 const data = require('./data');
 
 document.addEventListener('DOMContentLoaded', () => { 
 
-  // Prepare cards
-
   let projectList = document.querySelector('.project-list');
   let contactList = document.querySelector('.contact-list');
-  let modal = {
+  let modalEls = {
     root: document.querySelector('.modal'),
     back: document.querySelector('.modal__back'),
     front: document.querySelector('.modal__front')
   }; 
 
-  projects.addProjectCards(projectList, modal, data);
+  // Set up cards
+
+  projects.addProjectCards(projectList, modalEls, data);
   contacts.addContactCards(contactList, data);
 
   document.addEventListener('scroll', () => {
@@ -22,20 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
     contacts.handleScroll();
   });
 
-  modal.back.addEventListener('click', () => {
-    console.log('click modal');
-    modal.front.classList.add('modal__front--hidden');
-    modal.front.classList.remove('modal__front--show');
-    modal.back.classList.add('modal__back--hidden');
-    modal.back.classList.remove('modal__back--show');
-  });
-
-  modal.back.addEventListener('transitionend', () => {
-    if (modal.back.classList.contains('modal__back--hidden')) {
-      console.log('hide modal');
-      modal.root.classList.add('modal--hidden');
-    } else {
-      console.log('show modal');
-    }
-  })
+  modal.setUpListeners(modalEls);
 });

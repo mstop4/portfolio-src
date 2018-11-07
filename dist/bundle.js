@@ -163,26 +163,35 @@ module.exports = {
 },{}],4:[function(require,module,exports){
 "use strict";
 
-var projects = require('./projects.js');
+var projects = require('./projects');
 
-var contacts = require('./contacts.js');
+var contacts = require('./contacts');
+
+var modal = require('./modal');
 
 var data = require('./data');
 
 document.addEventListener('DOMContentLoaded', function () {
   var projectList = document.querySelector('.project-list');
   var contactList = document.querySelector('.contact-list');
-  var modal = {
+  var modalEls = {
     root: document.querySelector('.modal'),
     back: document.querySelector('.modal__back'),
     front: document.querySelector('.modal__front')
   };
-  projects.addProjectCards(projectList, modal, data);
+  projects.addProjectCards(projectList, modalEls, data);
   contacts.addContactCards(contactList, data);
   document.addEventListener('scroll', function () {
     projects.handleScroll();
     contacts.handleScroll();
   });
+  modal.setUpListeners(modalEls);
+});
+
+},{"./contacts":1,"./data":2,"./modal":5,"./projects":6}],5:[function(require,module,exports){
+"use strict";
+
+var setUpListeners = function setUpListeners(modal) {
   modal.back.addEventListener('click', function () {
     console.log('click modal');
     modal.front.classList.add('modal__front--hidden');
@@ -198,9 +207,13 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log('show modal');
     }
   });
-});
+};
 
-},{"./contacts.js":1,"./data":2,"./projects.js":5}],5:[function(require,module,exports){
+module.exports = {
+  setUpListeners: setUpListeners
+};
+
+},{}],6:[function(require,module,exports){
 "use strict";
 
 var _require = require('./helpers.js'),
@@ -210,7 +223,7 @@ var _require = require('./helpers.js'),
 var projectCards = [];
 var projectCardBuffer = 50;
 
-var addProjectCards = function addProjectCards(parentEl, modalGroup, data) {
+var addProjectCards = function addProjectCards(parentEl, modal, data) {
   var pos = getScrollPosition();
 
   var _loop = function _loop(i) {
@@ -242,12 +255,12 @@ var addProjectCards = function addProjectCards(parentEl, modalGroup, data) {
     projectCard.addEventListener('click', function () {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
-      modalGroup.root.classList.remove('modal--hidden');
+      modal.root.classList.remove('modal--hidden');
       setTimeout(function () {
-        modalGroup.front.classList.add('modal__front--show');
-        modalGroup.front.classList.remove('modal__front--hidden');
-        modalGroup.back.classList.add('modal__back--show');
-        modalGroup.back.classList.remove('modal__back--hidden');
+        modal.front.classList.add('modal__front--show');
+        modal.front.classList.remove('modal__front--hidden');
+        modal.back.classList.add('modal__back--show');
+        modal.back.classList.remove('modal__back--hidden');
       }, 1);
     });
     var projectShortInfo = document.createElement('div');
