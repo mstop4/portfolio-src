@@ -3,7 +3,7 @@ const projectCards = [];
 
 const projectCardBuffer = 50;
 
-const addProjectCards = (parentEl, data) => {
+const addProjectCards = (parentEl, modalGroup, data) => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < data.projects.length; i++) {
@@ -48,6 +48,12 @@ const addProjectCards = (parentEl, data) => {
     projectCard.addEventListener('click', () => {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
+
+      modalGroup.root.classList.remove('modal--hidden');
+      setTimeout(() => {
+        modalGroup.back.classList.add('modal__back--show');
+        modalGroup.back.classList.remove('modal__back--hidden');
+      }, 1);
     });
       
     // - Project Short Info

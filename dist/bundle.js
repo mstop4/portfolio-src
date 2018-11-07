@@ -169,16 +169,32 @@ var contacts = require('./contacts.js');
 
 var data = require('./data');
 
-var projectList;
-var contactList;
-document.addEventListener("DOMContentLoaded", function () {
-  projectList = document.querySelector('.project-list');
-  contactList = document.querySelector('.contact-list');
-  projects.addProjectCards(projectList, data);
+document.addEventListener('DOMContentLoaded', function () {
+  var projectList = document.querySelector('.project-list');
+  var contactList = document.querySelector('.contact-list');
+  var modal = {
+    root: document.querySelector('.modal'),
+    back: document.querySelector('.modal__back'),
+    front: document.querySelector('.modal__front')
+  };
+  projects.addProjectCards(projectList, modal, data);
   contacts.addContactCards(contactList, data);
   document.addEventListener('scroll', function () {
     projects.handleScroll();
     contacts.handleScroll();
+  });
+  modal.back.addEventListener('click', function () {
+    console.log('click modal');
+    modal.back.classList.add('modal__back--hidden');
+    modal.back.classList.remove('modal__back--show');
+  });
+  modal.back.addEventListener('transitionend', function () {
+    if (modal.back.classList.contains('modal__back--hidden')) {
+      console.log('hide modal');
+      modal.root.classList.add('modal--hidden');
+    } else {
+      console.log('show modal');
+    }
   });
 });
 
@@ -192,7 +208,7 @@ var _require = require('./helpers.js'),
 var projectCards = [];
 var projectCardBuffer = 50;
 
-var addProjectCards = function addProjectCards(parentEl, data) {
+var addProjectCards = function addProjectCards(parentEl, modalGroup, data) {
   var pos = getScrollPosition();
 
   var _loop = function _loop(i) {
@@ -224,6 +240,12 @@ var addProjectCards = function addProjectCards(parentEl, data) {
     projectCard.addEventListener('click', function () {
       projectPreviewStatic.classList.remove('project__preview--hidden');
       projectPreviewAnim.pause();
+      modalGroup.root.classList.remove('modal--hidden');
+      console.log('emow');
+      setTimeout(function () {
+        modalGroup.back.classList.add('modal__back--show');
+        modalGroup.back.classList.remove('modal__back--hidden');
+      }, 100);
     });
     var projectShortInfo = document.createElement('div');
     projectShortInfo.classList.add('project__short-info');
