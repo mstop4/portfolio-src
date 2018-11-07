@@ -45,8 +45,10 @@ const addProjectCards = (parentEl, modal, data) => {
     });
 
     projectCard.addEventListener('click', () => {
-      projectPreviewStatic.classList.remove('project__preview--hidden');
-      projectPreviewAnim.pause();
+      if (projectPreviewStatic.classList.contains('project__preview--hidden')) {
+        projectPreviewStatic.classList.remove('project__preview--hidden');
+        projectPreviewAnim.pause();
+      }
 
       modal.root.classList.remove('modal--hidden');
       setTimeout(() => {
@@ -54,7 +56,7 @@ const addProjectCards = (parentEl, modal, data) => {
         modal.front.classList.remove('modal__front--hidden');
         modal.back.classList.add('modal__back--show');
         modal.back.classList.remove('modal__back--hidden');
-      }, 1);
+      }, 10);
     });
       
     // - Project Short Info

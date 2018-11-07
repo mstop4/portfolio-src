@@ -31,17 +31,23 @@
 
 .modal__front {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 50vw;
+  top: -50vh;
+  width: 50vw;
+  height: 50vh;
+  background-color: white;
   transform: translate(-50%, -50%); 
-  color: white;
   transition: top 0.5s;
 }
 
 .modal__front--show {
-  top: 50%;
+  top: 50vh;
 }
 
 .modal__front--hidden {
-  top: -10%;
+  top: -50vh;
+}
+
+.info__text {
+  color: black;
 }
