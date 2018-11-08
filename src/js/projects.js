@@ -150,7 +150,7 @@ const toggleCardVisibility = (card, pos) => {
   }
 }
 
-const handleScroll = () => {
+const handleUpdate = () => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < projectCards.length; i++) {
@@ -160,5 +160,5 @@ const handleScroll = () => {
 
 module.exports = {
   addProjectCards,
-  handleScroll
+  handleUpdate
 }

@@ -62,7 +62,7 @@ const toggleCardVisibility = (card, pos) => {
   }
 }
 
-const handleScroll = () => {
+const handleUpdate = () => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < contactCards.length; i++) {
@@ -72,5 +72,5 @@ const handleScroll = () => {
 
 module.exports = {
   addContactCards,
-  handleScroll
+  handleUpdate
 }

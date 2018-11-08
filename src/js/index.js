@@ -17,10 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
   projects.addProjectCards(projectList, modalEls);
   contacts.addContactCards(contactList);
 
-  document.addEventListener('scroll', () => {
-    projects.handleScroll();
-    contacts.handleScroll();
-  });
+  const updateCards = (event) => {
+    projects.handleUpdate();
+    contacts.handleUpdate();
+    //console.log(event.type);
+  }
+
+  document.addEventListener('scroll', updateCards);
+  document.addEventListener('resize', updateCards);
+  document.addEventListener('orientationchange', updateCards);
 
   modal.setUpListeners(modalEls);
 });
