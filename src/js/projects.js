@@ -69,10 +69,15 @@ const addProjectCards = (parentEl, modal) => {
 
       // Set modal info
       const dataIndex = projectCard.getAttribute('data-index');
-      console.log(dataIndex);
-
+      const infoPreview = modal.front.querySelector('.info__preview');
+      const infoPreviewSrc = infoPreview.querySelector('source');
       const infoTitle = modal.front.querySelector('.info__title');
-      const infoText = modal.front.querySelector('.info__text')
+      const infoText = modal.front.querySelector('.info__text');
+
+      infoPreviewSrc.src = data.projects[dataIndex].previewAnim;
+      infoPreview.load();
+      infoPreview.play();
+
       infoTitle.innerText = data.projects[dataIndex].title;
       infoText.innerText = data.projects[dataIndex].description;
     });

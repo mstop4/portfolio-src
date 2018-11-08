@@ -45,7 +45,7 @@
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 
   grid-template-columns: 60% auto;
-  grid-template-rows: 80% auto;
+  grid-template-rows: 85% auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 
@@ -71,19 +71,35 @@
 }
 
 .info__preview {
-  background-color: red;
+  width: 100%;
+  align-self: center;
 }
 
 .info__title {
-  background-color: lime;
   color: black;
+  font-size: 3vmax;
+  align-self: center;
 }
 
 .info__text {
   grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  grid-row: 1 / 2;
   background-color: blue;
   color: black;
+}
+
+.links__container {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+
+.links__icon {
+  background-color: yellow;
+}
+
+.links__list {
+  background-color: lime;
 }
 
 @media screen and (max-width: 829px) {

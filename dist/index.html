@@ -9,17 +9,39 @@
   </head>
   <body>
 
-    <section class="modal modal--hidden">
+    <div class="modal modal--hidden">
       <div class="modal__back modal__back--hidden"></div>
-      <div class="modal__front modal__front--hidden">
-        <div class="info__preview"></div>
-        <div class="info__title">Hello</div>
-        <div class="info__text">Henlo</div>
-      </div>
-    </section>
+      <aside class="modal__front modal__front--hidden">
+        <video class="info__preview" controls loop>
+          <source src="vid/gifcentration.mp4" type="video/mp4">
+        </video>
+        <div class="info__title"></div>
+        <div class="info__text"></div>
+        <div class="links__container">
+
+          <div class="links__icon">
+            A
+          </div>
+
+          <ul class="links__list">
+            <li>Client Source</li>
+            <li>Server Source</li>
+          </ul>
+
+          <div class="links__icon">
+            B
+          </div>
+
+          <ul class="links__list">
+            <li>Demo</li>
+            <li>Download</li>
+          </ul>
+
+        </div>
+      </aside>
+    </div>
 
     <main>
-
       <h1>Jonathan Lam</h1>
       <div class="photo"></div>
       <section id="tagline">

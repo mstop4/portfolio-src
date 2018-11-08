@@ -5,8 +5,12 @@ module.exports = {
       "previewStatic": "img/gml-script-wizard.png",
       "previewAnim": "vid/gml-script-wizard.mp4",
       "description": "Henlo",
-      "sourceUrl": "https://github.com",
-      "demoUrl": "https://itch.io",
+      "sourceUrls": [
+        { url: "https://github.com/mstop4/gml-script-wizard", text: "Source" }
+      ],
+      "demoUrls": [
+        { url: "https://mstop4.github.io/gml-script-wizard", text: "Demo" }
+      ],
       "types": ["webapp"]
     },
     {
@@ -14,8 +18,13 @@ module.exports = {
       "previewStatic": "img/gifcentration.png",
       "previewAnim": "vid/gifcentration.mp4",
       "description": "Henlo",
-      "sourceUrl": "https://github.com",
-      "demoUrl": "https://itch.io",
+      "sourceUrls": [
+        { url: "https://github.com/mstop4/gifcentration-client", text: "Client Source" },
+        { url: "https://github.com/mstop4/gifcentration-server", text: "Server Source" },
+      ],
+      "demoUrls": [
+        { url: "https://mstop4.github.io/gifcentration-client", text: "Demo" }
+      ],
       "types": ["webapp", "game"]
     },
     {
@@ -23,8 +32,12 @@ module.exports = {
       "previewStatic": "img/fractured-flicks.png",
       "previewAnim": "vid/fractured-flicks.mp4",
       "description": "Henlo",
-      "sourceUrl": "https://github.com",
-      "demoUrl": "https://itch.io",
+      "sourceUrls": [
+        { url: "https://github.com/mstop4/fractured-flicks", text: "Source" },
+      ],
+      "demoUrls": [
+        { url: "https://mstop4.github.io/fractured-flicks", text: "Demo" }
+      ],
       "types": ["webapp", "game"]
     },
     {
@@ -32,8 +45,12 @@ module.exports = {
       "previewStatic": "img/sync-timer.png",
       "previewAnim": "vid/sync-timer.mp4",
       "description": "Henlo",
-      "sourceUrl": "https://github.com",
-      "demoUrl": "https://itch.io",
+      "sourceUrls": [
+        { url: "https://github.com/mstop4/sync-timer", text: "Source" },
+      ],
+      "demoUrls": [
+        { url: "https://sync-timer.herokuapp.com", text: "Demo" }
+      ],
       "types": ["webapp"]
     },
     {
@@ -41,8 +58,12 @@ module.exports = {
       "previewStatic": "img/fmodgms.png",
       "previewAnim": "vid/fmodgms.mp4",
       "description": "Henlo",
-      "sourceUrl": "https://github.com",
-      "demoUrl": "https://itch.io",
+      "sourceUrls": [
+        { url: "https://github.com/mstop4/fmodgms", text: "Source" },
+      ],
+      "demoUrls": [
+        { url: "https://itch.io", text: "Download" }
+      ],
       "types": ["utility"]
     },
     {
@@ -50,8 +71,10 @@ module.exports = {
       "previewStatic": "img/aborescence.png",
       "previewAnim": "vid/gifcentration.mp4",
       "description": "Henlo",
-      "sourceUrl": "https://github.com",
-      "demoUrl": "https://itch.io",
+      "sourceUrls": [],
+      "demoUrls": [
+        { url: "https://itch.io", text: "Download" }
+      ],
       "types": ["game"]
     },
     {
@@ -59,8 +82,10 @@ module.exports = {
       "previewStatic": "img/iamrubba.png",
       "previewAnim": "vid/gifcentration.mp4",
       "description": "Henlo",
-      "sourceUrl": "https://github.com",
-      "demoUrl": "https://itch.io",
+      "sourceUrls": [],
+      "demoUrls": [
+        { url: "https://itch.io", text: "Demo" }
+      ],
       "types": ["game"]
     },
     {
@@ -68,8 +93,12 @@ module.exports = {
       "previewStatic": "img/dot.market2.png",
       "previewAnim": "vid/gifcentration.mp4",
       "description": "Henlo",
-      "sourceUrl": "https://github.com",
-      "demoUrl": "https://itch.io",
+      "sourceUrls": [
+        { url: "https://github.com/mstop4/lowrezjam-2018", text: "Source" },
+      ],
+      "demoUrls": [
+        { url: "https://itch.io", text: "Demo" }
+      ],
       "types": ["game"]
     },
     {
@@ -77,8 +106,10 @@ module.exports = {
       "previewStatic": "img/moeblobadventure.png",
       "previewAnim": "vid/gifcentration.mp4",
       "description": "Henlo",
-      "sourceUrl": "https://github.com",
-      "demoUrl": "https://itch.io",
+      "sourceUrls": [],
+      "demoUrls": [
+        { url: "https://itch.io", text: "Demo" }
+      ],
       "types": ["game"]
     },
   ],
