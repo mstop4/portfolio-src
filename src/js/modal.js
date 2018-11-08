@@ -5,6 +5,9 @@ const setUpListeners = (modal) => {
     modal.front.classList.remove('modal__front--show');
     modal.back.classList.add('modal__back--hidden');
     modal.back.classList.remove('modal__back--show');
+
+    const bodyEl = document.querySelector('body');
+    bodyEl.classList.remove('no-scroll');
   });
 
   modal.back.addEventListener('transitionend', () => {

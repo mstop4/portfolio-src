@@ -49,10 +49,14 @@ const addProjectCards = (parentEl, modal) => {
     });
 
     projectCard.addEventListener('click', () => {
+
       if (projectPreviewStatic.classList.contains('project__preview--hidden')) {
         projectPreviewStatic.classList.remove('project__preview--hidden');
         projectPreviewAnim.pause();
       }
+
+      const bodyEl = document.querySelector('body');
+      bodyEl.classList.add('no-scroll');
 
       // Animate modals
       modal.root.classList.remove('modal--hidden');

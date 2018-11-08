@@ -59,6 +59,10 @@ h1 {
   display: none;
 }
 
+.no-scroll {
+  overflow-y: hidden; 
+}
+
 .heading__left {
   margin-left: 0;
   margin-right: auto;
