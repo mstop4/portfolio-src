@@ -4,54 +4,81 @@ module.exports = {
       "title": "GML Script Wizard",
       "previewStatic": "img/gml-script-wizard.png",
       "previewAnim": "vid/gml-script-wizard.mp4",
+      "description": "Henlo",
+      "sourceUrl": "https://github.com",
+      "demoUrl": "https://itch.io",
       "types": ["webapp"]
     },
     {
       "title": "GIFcentration",
       "previewStatic": "img/gifcentration.png",
       "previewAnim": "vid/gifcentration.mp4",
+      "description": "Henlo",
+      "sourceUrl": "https://github.com",
+      "demoUrl": "https://itch.io",
       "types": ["webapp", "game"]
     },
     {
       "title": "Fractured Flicks",
       "previewStatic": "img/fractured-flicks.png",
       "previewAnim": "vid/fractured-flicks.mp4",
+      "description": "Henlo",
+      "sourceUrl": "https://github.com",
+      "demoUrl": "https://itch.io",
       "types": ["webapp", "game"]
     },
     {
       "title": "Sync Timer",
       "previewStatic": "img/sync-timer.png",
       "previewAnim": "vid/sync-timer.mp4",
+      "description": "Henlo",
+      "sourceUrl": "https://github.com",
+      "demoUrl": "https://itch.io",
       "types": ["webapp"]
     },
     {
       "title": "FMODGMS",
       "previewStatic": "img/fmodgms.png",
       "previewAnim": "vid/fmodgms.mp4",
+      "description": "Henlo",
+      "sourceUrl": "https://github.com",
+      "demoUrl": "https://itch.io",
       "types": ["utility"]
     },
     {
       "title": "Aborescence",
       "previewStatic": "img/aborescence.png",
       "previewAnim": "vid/gifcentration.mp4",
+      "description": "Henlo",
+      "sourceUrl": "https://github.com",
+      "demoUrl": "https://itch.io",
       "types": ["game"]
     },
     {
       "title": "I am Rubba, You Are Gloo",
       "previewStatic": "img/iamrubba.png",
       "previewAnim": "vid/gifcentration.mp4",
+      "description": "Henlo",
+      "sourceUrl": "https://github.com",
+      "demoUrl": "https://itch.io",
       "types": ["game"]
     },
     {
       "title": "dot.Market 2",
       "previewStatic": "img/dot.market2.png",
       "previewAnim": "vid/gifcentration.mp4",
+      "description": "Henlo",
+      "sourceUrl": "https://github.com",
+      "demoUrl": "https://itch.io",
       "types": ["game"]
     },
     {
       "title": "Moeblob Adventure",
       "previewStatic": "img/moeblobadventure.png",
       "previewAnim": "vid/gifcentration.mp4",
+      "description": "Henlo",
+      "sourceUrl": "https://github.com",
+      "demoUrl": "https://itch.io",
       "types": ["game"]
     },
   ],

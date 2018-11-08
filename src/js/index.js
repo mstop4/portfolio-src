@@ -1,7 +1,6 @@
 const projects = require('./projects');
 const contacts = require('./contacts');
 const modal = require('./modal')
-const data = require('./data');
 
 document.addEventListener('DOMContentLoaded', () => { 
 
@@ -15,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Set up cards
 
-  projects.addProjectCards(projectList, modalEls, data);
-  contacts.addContactCards(contactList, data);
+  projects.addProjectCards(projectList, modalEls);
+  contacts.addContactCards(contactList);
 
   document.addEventListener('scroll', () => {
     projects.handleScroll();

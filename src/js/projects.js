@@ -1,8 +1,9 @@
 const { coinFlip, getScrollPosition } = require('./helpers.js');
+const data = require('./data');
 const projectCards = [];
 const projectCardBuffer = 50;
 
-const addProjectCards = (parentEl, modal, data) => {
+const addProjectCards = (parentEl, modal) => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < data.projects.length; i++) {
@@ -11,6 +12,7 @@ const addProjectCards = (parentEl, modal, data) => {
 
     let projectCard = document.createElement('article');
     projectCard.classList.add('project');
+    projectCard.setAttribute('data-index', i);
     coinFlip() === 0 ? projectCard.classList.add('project--left') : projectCard.classList.add('project--right');
 
     toggleCardVisibility(projectCard, pos);
@@ -33,6 +35,8 @@ const addProjectCards = (parentEl, modal, data) => {
     projectPreviewAnimSrc.src = data.projects[i].previewAnim;
     projectPreviewAnimSrc.type = 'video/mp4';
 
+    // -- Event listeners
+
     projectCard.addEventListener('mouseenter', () => {
       projectPreviewStatic.classList.add('project__preview--hidden');
       projectPreviewAnim.muted = true;
@@ -50,6 +54,7 @@ const addProjectCards = (parentEl, modal, data) => {
         projectPreviewAnim.pause();
       }
 
+      // Animate modals
       modal.root.classList.remove('modal--hidden');
       setTimeout(() => {
         modal.front.classList.add('modal__front--show');
@@ -57,6 +62,15 @@ const addProjectCards = (parentEl, modal, data) => {
         modal.back.classList.add('modal__back--show');
         modal.back.classList.remove('modal__back--hidden');
       }, 10);
+
+      // Set modal info
+      const dataIndex = projectCard.getAttribute('data-index');
+      console.log(dataIndex);
+
+      const infoTitle = modal.front.querySelector('.info__title');
+      const infoText = modal.front.querySelector('.info__text')
+      infoTitle.innerText = data.projects[dataIndex].title;
+      infoText.innerText = data.projects[dataIndex].description;
     });
       
     // - Project Short Info

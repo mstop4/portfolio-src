@@ -1,8 +1,9 @@
 const { coinFlip, getScrollPosition } = require('./helpers.js');
+const data = require('./data');
 const contactCards = [];
 const contactCardBuffer = 50; 
 
-const addContactCards = (parentEl, data) => {
+const addContactCards = (parentEl) => {
   const pos = getScrollPosition();
 
   for (let i = 0 ; i < data.contacts.length; i++) {
