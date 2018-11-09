@@ -4,7 +4,7 @@ module.exports = {
       "title": "GML Script Wizard",
       "previewStatic": "img/gml-script-wizard.png",
       "previewAnim": "vid/gml-script-wizard.mp4",
-      "description": "Henlo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.",
       "sourceUrls": [
         { url: "https://github.com/mstop4/gml-script-wizard", text: "Source" }
       ],
@@ -17,10 +17,10 @@ module.exports = {
       "title": "GIFcentration",
       "previewStatic": "img/gifcentration.png",
       "previewAnim": "vid/gifcentration.mp4",
-      "description": "Henlo",
+      "description": "Lorem ipsum dolor sit amet",
       "sourceUrls": [
-        { url: "https://github.com/mstop4/gifcentration-client", text: "Client Source" },
-        { url: "https://github.com/mstop4/gifcentration-server", text: "Server Source" },
+        { url: "https://github.com/mstop4/gifcentration-client", text: "Client Src" },
+        { url: "https://github.com/mstop4/gifcentration-server", text: "Server Src" },
       ],
       "demoUrls": [
         { url: "https://mstop4.github.io/gifcentration-client", text: "Demo" }
@@ -31,7 +31,7 @@ module.exports = {
       "title": "Fractured Flicks",
       "previewStatic": "img/fractured-flicks.png",
       "previewAnim": "vid/fractured-flicks.mp4",
-      "description": "Henlo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.",
       "sourceUrls": [
         { url: "https://github.com/mstop4/fractured-flicks", text: "Source" },
       ],
@@ -44,7 +44,7 @@ module.exports = {
       "title": "Sync Timer",
       "previewStatic": "img/sync-timer.png",
       "previewAnim": "vid/sync-timer.mp4",
-      "description": "Henlo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.",
       "sourceUrls": [
         { url: "https://github.com/mstop4/sync-timer", text: "Source" },
       ],
@@ -57,7 +57,7 @@ module.exports = {
       "title": "FMODGMS",
       "previewStatic": "img/fmodgms.png",
       "previewAnim": "vid/fmodgms.mp4",
-      "description": "Henlo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.",
       "sourceUrls": [
         { url: "https://github.com/mstop4/fmodgms", text: "Source" },
       ],
@@ -70,7 +70,7 @@ module.exports = {
       "title": "Aborescence",
       "previewStatic": "img/aborescence.png",
       "previewAnim": "vid/gifcentration.mp4",
-      "description": "Henlo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.",
       "sourceUrls": [],
       "demoUrls": [
         { url: "https://quadolorgames.itch.io/arborescence", text: "Download" }
@@ -81,7 +81,7 @@ module.exports = {
       "title": "I am Rubba, You Are Gloo",
       "previewStatic": "img/iamrubba.png",
       "previewAnim": "vid/gifcentration.mp4",
-      "description": "Henlo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.",
       "sourceUrls": [],
       "demoUrls": [
         { url: "https://itch.io", text: "Demo" }
@@ -92,7 +92,7 @@ module.exports = {
       "title": "dot.Market 2",
       "previewStatic": "img/dot.market2.png",
       "previewAnim": "vid/gifcentration.mp4",
-      "description": "Henlo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.",
       "sourceUrls": [
         { url: "https://github.com/mstop4/lowrezjam-2018", text: "Source" },
       ],
@@ -105,7 +105,7 @@ module.exports = {
       "title": "Moeblob Adventure",
       "previewStatic": "img/moeblobadventure.png",
       "previewAnim": "vid/gifcentration.mp4",
-      "description": "Henlo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.",
       "sourceUrls": [],
       "demoUrls": [
         { url: "https://itch.io", text: "Demo" }
