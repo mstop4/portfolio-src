@@ -1,9 +1,10 @@
 const { coinFlip, getScrollPosition } = require('./helpers.js');
+const { updateModal } = require('./modal');
 const data = require('./data');
 const projectCards = [];
 const projectCardBuffer = 50;
 
-const addProjectCards = (parentEl, modal) => {
+const addProjectCards = (parentEl) => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < data.projects.length; i++) {
@@ -49,7 +50,6 @@ const addProjectCards = (parentEl, modal) => {
     });
 
     projectCard.addEventListener('click', () => {
-
       if (projectPreviewStatic.classList.contains('project__preview--hidden')) {
         projectPreviewStatic.classList.remove('project__preview--hidden');
         projectPreviewAnim.pause();
@@ -58,28 +58,7 @@ const addProjectCards = (parentEl, modal) => {
       const bodyEl = document.querySelector('body');
       bodyEl.classList.add('no-scroll');
 
-      // Animate modals
-      modal.root.classList.remove('modal--hidden');
-      setTimeout(() => {
-        modal.front.classList.add('modal__front--show');
-        modal.front.classList.remove('modal__front--hidden');
-        modal.back.classList.add('modal__back--show');
-        modal.back.classList.remove('modal__back--hidden');
-      }, 10);
-
-      // Set modal info
-      const dataIndex = projectCard.getAttribute('data-index');
-      const infoPreview = modal.front.querySelector('.info__preview');
-      const infoPreviewSrc = infoPreview.querySelector('source');
-      const infoTitle = modal.front.querySelector('.info__title');
-      const infoText = modal.front.querySelector('.info__text');
-
-      infoPreviewSrc.src = data.projects[dataIndex].previewAnim;
-      infoPreview.load();
-      infoPreview.play();
-
-      infoTitle.innerText = data.projects[dataIndex].title;
-      infoText.innerText = data.projects[dataIndex].description;
+      updateModal(i);
     });
       
     // - Project Short Info
@@ -95,7 +74,6 @@ const addProjectCards = (parentEl, modal) => {
     projectTypes.classList.add('project__types');
 
     for (let j = 0; j < data.projects[i].types.length; j++) {
-
       let projectTypeIcon = document.createElement('i');
       projectTypeIcon.classList.add('fa-fw', 'fa-2x');
 
@@ -103,18 +81,23 @@ const addProjectCards = (parentEl, modal) => {
         case "game":
           projectTypeIcon.classList.add('fas', 'fa-gamepad');
           break;
+
         case "webapp":
           projectTypeIcon.classList.add('fas', 'fa-globe');
           break;
+
         case "utility":
           projectTypeIcon.classList.add('fas', 'fa-wrench');
           break;
+
         default:
           projectTypeIcon.classList.add('fas', 'fa-question');          
       }
 
       projectTypes.appendChild(projectTypeIcon);
     }
+
+    // Append all the things
 
     projectShortInfo.appendChild(projectTitle);
     projectShortInfo.appendChild(projectTypes);

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Set up cards
 
-  projects.addProjectCards(projectList, modalEls);
+  projects.addProjectCards(projectList);
   contacts.addContactCards(contactList);
 
   const updateCards = (event) => {
@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('resize', updateCards);
   document.addEventListener('orientationchange', updateCards);
 
-  modal.setUpListeners(modalEls);
+  modal.initialize(modalEls);
 });
