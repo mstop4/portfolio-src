@@ -51,6 +51,14 @@ const updateModal = (index) => {
 
   infoTitle.innerText = data.projects[index].title;
   infoText.innerText = data.projects[index].description;
+
+  while (sourceLinks.firstChild) {
+    sourceLinks.removeChild(sourceLinks.firstChild);
+  }
+
+  while (demoLinks.firstChild) {
+    demoLinks.removeChild(demoLinks.firstChild);
+  }
 };
 
 module.exports = {
