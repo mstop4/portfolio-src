@@ -2,14 +2,46 @@
 <html>
   <head>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/index.css">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
   </head>
   <body>
-    <main>
 
+    <div class="modal modal--hidden">
+      <div class="modal__back modal__back--hidden"></div>
+      <aside class="modal__front modal__front--hidden">
+        <video class="info__preview" controls loop>
+          <source src="vid/gifcentration.mp4" type="video/mp4">
+        </video>
+        <div class="info__title"></div>
+        <div class="info__text"></div>
+        <div class="links__container">
+
+          <div id="source-icon" class="links__icon">
+            A
+          </div>
+
+          <ul id="source-links" class="links__list">
+            <li><a href="">Client Source</a></li>
+            <li>Server Source</li>
+          </ul>
+
+          <div id="demo-icon" class="links__icon">
+            B
+          </div>
+
+          <ul id="demo-links" class="links__list">
+            <li>Demo</li>
+            <li>Download</li>
+          </ul>
+
+        </div>
+      </aside>
+    </div>
+
+    <main>
       <h1>Jonathan Lam</h1>
       <div class="photo"></div>
       <section id="tagline">
@@ -35,7 +67,6 @@
           <!-- Contact Cards go here -->
         </div>
       </section>
-
     </main>
   </body> 
   <script type="text/javascript" src="./bundle.js"></script>

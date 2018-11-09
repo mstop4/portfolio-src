@@ -1,22 +1,31 @@
-const projects = require('./projects.js');
-const contacts = require('./contacts.js');
-const data = require('./data');
+const projects = require('./projects');
+const contacts = require('./contacts');
+const modal = require('./modal')
 
-let projectList;
-let contactList;
+document.addEventListener('DOMContentLoaded', () => { 
 
-document.addEventListener("DOMContentLoaded", function() { 
+  let projectList = document.querySelector('.project-list');
+  let contactList = document.querySelector('.contact-list');
+  let modalEls = {
+    root: document.querySelector('.modal'),
+    back: document.querySelector('.modal__back'),
+    front: document.querySelector('.modal__front')
+  }; 
 
-  // Prepare cards
+  // Set up cards
 
-  projectList = document.querySelector('.project-list');
-  contactList = document.querySelector('.contact-list');
+  projects.addProjectCards(projectList);
+  contacts.addContactCards(contactList);
 
-  projects.addProjectCards(projectList, data);
-  contacts.addContactCards(contactList, data);
+  const updateCards = (event) => {
+    projects.handleUpdate();
+    contacts.handleUpdate();
+    //console.log(event.type);
+  }
 
-  document.addEventListener('scroll', function() {
-    projects.handleScroll();
-    contacts.handleScroll();
-  });
+  document.addEventListener('scroll', updateCards);
+  document.addEventListener('resize', updateCards);
+  document.addEventListener('orientationchange', updateCards);
+
+  modal.initialize(modalEls);
 });
