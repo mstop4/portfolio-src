@@ -42,7 +42,9 @@ const updateModal = (index) => {
   const infoText = modal.front.querySelector('.info__text');
 
   const linksContainer = modal.front.querySelector('.links__container');
+  const sourceIcon = linksContainer.querySelector('#source-icon');
   const sourceLinks = linksContainer.querySelector('#source-links');
+  const demoIcon = linksContainer.querySelector('#demo-icon');
   const demoLinks = linksContainer.querySelector('#demo-links');
 
   infoPreviewSrc.src = data.projects[index].previewAnim;
@@ -56,20 +58,48 @@ const updateModal = (index) => {
     sourceLinks.removeChild(sourceLinks.firstChild);
   }
 
-  for (let i = 0; i < data.projects[index].sourceUrls.length; i++) {
-    const link = document.createElement('li');
-    link.innerText = data.projects[index].sourceUrls[i].text;
-    sourceLinks.appendChild(link);
+  if (data.projects[index].sourceUrls.length > 0) {
+    sourceIcon.classList.remove('links--hidden');
+    sourceLinks.classList.remove('links--hidden');
+
+    for (let i = 0; i < data.projects[index].sourceUrls.length; i++) {
+      const listEl = document.createElement('li');
+      const linkEl = document.createElement('a');
+      linkEl.innerText = data.projects[index].sourceUrls[i].text;
+      linkEl.href = data.projects[index].sourceUrls[i].url;
+      linkEl.target = '_blank';
+      listEl.appendChild(linkEl);
+      sourceLinks.appendChild(listEl);
+    }
+  }
+
+  else {
+    sourceIcon.classList.add('links--hidden');
+    sourceLinks.classList.add('links--hidden');
   }
 
   while (demoLinks.firstChild) {
     demoLinks.removeChild(demoLinks.firstChild);
   }
 
-  for (let i = 0; i < data.projects[index].demoUrls.length; i++) {
-    const link = document.createElement('li');
-    link.innerText = data.projects[index].demoUrls[i].text;
-    demoLinks.appendChild(link);
+  if (data.projects[index].demoUrls.length > 0) {
+    demoIcon.classList.remove('links--hidden');
+    demoLinks.classList.remove('links--hidden');
+
+    for (let i = 0; i < data.projects[index].demoUrls.length; i++) {
+      const listEl = document.createElement('li');
+      const linkEl = document.createElement('a');
+      linkEl.innerText = data.projects[index].demoUrls[i].text;
+      linkEl.href = data.projects[index].demoUrls[i].url;
+      linkEl.target = '_blank';
+      listEl.appendChild(linkEl);
+      demoLinks.appendChild(listEl);
+    }
+  }
+
+  else {
+    demoIcon.classList.add('links--hidden');
+    demoLinks.classList.add('links--hidden');
   }
 };
 

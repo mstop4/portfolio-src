@@ -62,7 +62,7 @@ module.exports = {
         { url: "https://github.com/mstop4/fmodgms", text: "Source" },
       ],
       "demoUrls": [
-        { url: "https://itch.io", text: "Download" }
+        { url: "https://quadolorgames.itch.io/fmodgms", text: "Download" }
       ],
       "types": ["utility"]
     },
@@ -73,7 +73,7 @@ module.exports = {
       "description": "Henlo",
       "sourceUrls": [],
       "demoUrls": [
-        { url: "https://itch.io", text: "Download" }
+        { url: "https://quadolorgames.itch.io/arborescence", text: "Download" }
       ],
       "types": ["game"]
     },

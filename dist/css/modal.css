@@ -103,6 +103,10 @@
   background-color: lime;
 }
 
+.links--hidden {
+  display: none;
+}
+
 @media screen and (max-width: 829px) {
   .info__text {
     grid-column: 1 / 2;
