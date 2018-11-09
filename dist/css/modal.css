@@ -56,9 +56,9 @@
 @media screen and (max-width: 829px) {
   .modal__front {
     grid-template-columns: 100%;
-    grid-template-rows: 40% 10% auto;
+    grid-template-rows: auto 10% auto 10%;
     grid-column-gap: 0;
-    grid-row-gap: 0;
+    grid-row-gap: 10px;
   }
 }
 
@@ -90,17 +90,24 @@
 
 .links__container {
   display: flex;
+  padding: 0 10px;
   justify-content: center;
   align-items: center;
-  background-color: red;
 }
 
 .links__icon {
-  background-color: yellow;
 }
 
 .links__list {
-  background-color: lime;
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
+  font-size: 2vmax;
+  font-weight: 800;
+}
+
+.links__list li {
+  margin: 10px 0;
 }
 
 .links--hidden {

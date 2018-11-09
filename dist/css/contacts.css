@@ -1,6 +1,6 @@
 :root {
-  --contact__start-angle: 43deg;
-  --contact__end-angle: 2deg;
+  --contact__start-angle: 44deg;
+  --contact__end-angle: 1deg;
 }
 
 @keyframes contact-appear--left{
