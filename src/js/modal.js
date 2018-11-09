@@ -56,8 +56,20 @@ const updateModal = (index) => {
     sourceLinks.removeChild(sourceLinks.firstChild);
   }
 
+  for (let i = 0; i < data.projects[index].sourceUrls.length; i++) {
+    const link = document.createElement('li');
+    link.innerText = data.projects[index].sourceUrls[i].text;
+    sourceLinks.appendChild(link);
+  }
+
   while (demoLinks.firstChild) {
     demoLinks.removeChild(demoLinks.firstChild);
+  }
+
+  for (let i = 0; i < data.projects[index].demoUrls.length; i++) {
+    const link = document.createElement('li');
+    link.innerText = data.projects[index].demoUrls[i].text;
+    demoLinks.appendChild(link);
   }
 };
 
