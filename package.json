@@ -5,7 +5,8 @@
   "scripts": {
     "buildJs": "npx browserify src/js/index.js -t babelify --outfile dist/bundle.js",
     "buildCss": "css-concat src/css/index.css dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
-    "build": "npm run buildJs && npm run buildCss"
+    "buildHtml": "cp src/index.html dist/index.html",
+    "build": "npm run buildJs && npm run buildCss && npm run buildHtml"
   },
   "repository": {
     "type": "git",
