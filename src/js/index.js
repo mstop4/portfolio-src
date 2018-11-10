@@ -2,9 +2,12 @@ const projects = require('./projects');
 const contacts = require('./contacts');
 const modal = require('./modal');
 const headings = require('./headings');
+const weather = require('./weather');
 const { throttle } = require('./helpers');
 
 document.addEventListener('DOMContentLoaded', () => { 
+
+  weather.getWeather();
 
   headings.initialize();
 

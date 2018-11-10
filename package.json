@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "buildJs": "npx browserify src/js/index.js -t babelify --outfile dist/bundle.js",
+    "buildJs": "npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js",
     "buildCss": "css-concat src/css/index.css dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
     "buildHtml": "cp src/index.html dist/index.html",
     "build": "npm run buildJs && npm run buildCss && npm run buildHtml"
@@ -23,6 +23,7 @@
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "css-concat": "0.0.4",
+    "tinyify": "^2.4.3",
     "uglifycss": "0.0.29"
   }
 }
