@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:test": "BABEL_ENV=test npx browserify src/js/index.js -t babelify --outfile dist/bundle.js",
-    "build:dev": "BABEL_ENV=dev npx browserify src/js/index.js -t babelify --outfile dist/bundle.js",
-    "css": "npx css-concat src/css/index.css dist/index.css --no-comments"
+    "buildJs": "npx browserify src/js/index.js -t babelify --outfile dist/bundle.js",
+    "buildCss": "css-concat src/css/index.css dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
+    "build": "npm run buildJs && npm run buildCss"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "babel-preset-minify": "^0.5.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
-    "css-concat": "0.0.4"
+    "css-concat": "0.0.4",
+    "uglifycss": "0.0.29"
   }
 }
