@@ -112,6 +112,7 @@
   display: inline-block;
   flex-grow: 2;
   font-size: 2vmax;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 1280px) {
