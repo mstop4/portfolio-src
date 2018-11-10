@@ -35,9 +35,14 @@ const addContactCards = () => {
 }
 
 const toggleVisibility = (card, pos) => {
+  const elTop = card.offsetTop;
+  const elBottom = card.offsetTop + card.offsetHeight;
+
   if (card.classList.contains('contact--hidden')) {
-    if (card.offsetTop + scrollBuffer < pos.bottom ||
-      card.offsetTop + card.offsetHeight - scrollBuffer > pos.top) {
+    if ((elTop - scrollBuffer > pos.top && 
+        elTop - scrollBuffer < pos.bottom) ||
+        (elBottom < pos.bottom &&
+        elBottom + scrollBuffer > pos.top)) {
 
       card.classList.remove('contact--hidden');
 
@@ -50,8 +55,8 @@ const toggleVisibility = (card, pos) => {
   }
 
   else {
-    if (card.offsetTop >= pos.bottom ||
-      card.offsetTop + card.offsetHeight <= pos.top) {
+    if (elTop - scrollBuffer >= pos.bottom ||
+        elBottom + scrollBuffer <= pos.top) {
 
       card.classList.add('contact--hidden');
 

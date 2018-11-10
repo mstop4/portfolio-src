@@ -1,8 +1,11 @@
 const projects = require('./projects');
 const contacts = require('./contacts');
-const modal = require('./modal')
+const modal = require('./modal');
+const headings = require('./headings');
 
 document.addEventListener('DOMContentLoaded', () => { 
+
+  headings.initialize();
 
   // Set up cards
 
@@ -12,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateCards = (event) => {
     projects.handleUpdate();
     contacts.handleUpdate();
+    headings.handleUpdate();
     //console.log(event.type);
   }
 

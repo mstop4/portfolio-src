@@ -84,7 +84,7 @@ h1 {
 
   padding: 0 0 0 3vmax;
 
-  animation: slideInFromLeft 0.5s ease-out 0s 1 both;
+  animation: slideInFromLeft 0.5s ease-out 0s 1 forwards;
 }
 
 .heading__right {
@@ -98,5 +98,9 @@ h1 {
 
   padding: 0 3vmax 0 0;
 
-  animation: slideInFromRight 0.5s ease-out 0s 1 both;
+  animation: slideInFromRight 0.5s ease-out 0s 1 forwards;
+}
+
+.heading--hidden {
+  visibility: hidden;
 }

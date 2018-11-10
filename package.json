@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx browserify src/js/index.js -t babelify --outfile dist/bundle.js"
+    "build:test": "BABEL_ENV=test npx browserify src/js/index.js -t babelify --outfile dist/bundle.js",
+    "build:dev": "BABEL_ENV=dev npx browserify src/js/index.js -t babelify --outfile dist/bundle.js"
   },
   "repository": {
     "type": "git",
