@@ -2,7 +2,6 @@
   "name": "portfoliio-src",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "buildJs": "npx browserify src/js/index.js -t babelify --outfile dist/bundle.js",
     "buildCss": "css-concat src/css/index.css dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
@@ -13,12 +12,9 @@
     "url": "git+https://github.com/mstop4/portfolio-src.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jonathan Lam (M.S.T.O.P.)",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mstop4/portfolio-src/issues"
-  },
-  "homepage": "https://github.com/mstop4/portfolio-src",
+  "homepage": "https://jonathanlam.ca",
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
