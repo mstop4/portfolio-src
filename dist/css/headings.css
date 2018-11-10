@@ -1,0 +1,88 @@
+:root {
+  --slide-angle: 4deg;
+  --slide-angle-tan: 0.07; /* no trig functions in CSS yet :( */
+  --slide-start-x: 25vmax;
+  --slide-start-y: calc(var(--slide-start-x) * var(--slide-angle-tan)); 
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform:
+      translateX(calc(-1 * var(--slide-start-x))) 
+      translateY(var(--slide-start-y))
+      rotate(calc(-1 * var(--slide-angle)));
+    opacity: 0;
+  }
+
+  to {
+    transform:
+      translateX(0) 
+      translateY(0)
+      rotate(calc(-1 * var(--slide-angle)));
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform:
+      translateX(var(--slide-start-x))
+      translateY(var(--slide-start-y))
+      rotate(var(--slide-angle));
+    opacity: 0;
+  }
+
+  to {
+    transform:
+      translateX(0) 
+      translateY(0)
+      rotate(var(--slide-angle));
+    opacity: 1;
+  }
+}
+
+.heading {
+  position: relative;
+  background-color: white;
+  opacity: 1;
+
+  max-width: 22vmax;
+  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.33);
+  font-size: 4vmax;
+}
+
+.heading__left {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+  left: -2vmax;
+
+  border-radius: 0 2vmax 2vmax 0;
+  transform: rotate(-4deg);
+
+  padding: 0 0 0 3vmax;
+}
+
+.heading__left--appear {
+  animation: slideInFromLeft 0.5s ease-out 0s 1 forwards;
+}
+
+.heading__right {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+  right: -2vmax;
+
+  border-radius: 2vmax 0 0 2vmax;
+  transform: rotate(4deg);
+
+  padding: 0 3vmax 0 0;
+}
+
+.heading__right--appear {
+  animation: slideInFromRight 0.5s ease-out 0s 1 forwards;
+}
+
+.heading--hidden {
+  visibility: hidden;
+}

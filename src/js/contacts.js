@@ -10,7 +10,7 @@ const addContactCards = () => {
 
   for (let i = 0 ; i < data.contacts.length; i++) {
     const contactCard = document.createElement('article');
-    contactCard.classList.add('contact');
+    contactCard.classList.add('contact', 'contact--hidden');
     coinFlip() === 0 ? contactCard.classList.add('contact--left') : contactCard.classList.add('contact--right');
 
     toggleVisibility(contactCard, pos);

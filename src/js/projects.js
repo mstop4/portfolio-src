@@ -14,7 +14,7 @@ const addProjectCards = () => {
     // Project Card
 
     let projectCard = document.createElement('article');
-    projectCard.classList.add('project');
+    projectCard.classList.add('project', 'project--hidden');
     projectCard.setAttribute('data-index', i);
     coinFlip() === 0 ? projectCard.classList.add('project--left') : projectCard.classList.add('project--right');
 
