@@ -2,7 +2,7 @@ const projects = require('./projects');
 const contacts = require('./contacts');
 const modal = require('./modal');
 const headings = require('./headings');
-const throttle = require('lodash.throttle');
+const { throttle } = require('./helpers');
 
 document.addEventListener('DOMContentLoaded', () => { 
 

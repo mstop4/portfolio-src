@@ -12,7 +12,30 @@ const getScrollPosition = () => {
   };
 }
 
+const throttle = (func, delay) => {
+  let lastExecTime = 0;
+  let timeout = null;
+
+  return () => {
+    const now = Date.now();
+
+    if (lastExecTime > 0 && now - lastExecTime <  delay) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        lastExecTime = now;
+        func.apply();
+      }, delay);
+    } 
+    
+    else {
+      lastExecTime = now;
+      func.apply();
+    }
+  }
+}
+
 module.exports = {
   coinFlip,
-  getScrollPosition
+  getScrollPosition,
+  throttle
 }
