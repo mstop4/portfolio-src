@@ -63,22 +63,26 @@ h1 {
   overflow-y: hidden; 
 }
 
+.heading {
+  position: relative;
+  background-color: white;
+  opacity: 1;
+
+  max-width: 22vmax;
+  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.33);
+  font-size: 4vmax;
+}
+
 .heading__left {
   margin-left: 0;
   margin-right: auto;
   text-align: left;
-  position: relative;
   left: -2vmax;
 
-  background-color: white;
-  opacity: 1;
-  max-width: 22vmax;
   border-radius: 0 2vmax 2vmax 0;
   transform: rotate(-4deg);
-  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.33);
 
   padding: 0 0 0 3vmax;
-  font-size: 4vmax;
 
   animation: slideInFromLeft 0.5s ease-out 0s 1 both;
 }
@@ -87,18 +91,12 @@ h1 {
   margin-left: auto;
   margin-right: 0;
   text-align: right;
-  position: relative;
   right: -2vmax;
 
-  background-color: white;
-  opacity: 1;
-  max-width: 22vmax;
   border-radius: 2vmax 0 0 2vmax;
   transform: rotate(4deg);
-  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.33);
 
   padding: 0 3vmax 0 0;
-  font-size: 4vmax;
 
   animation: slideInFromRight 0.5s ease-out 0s 1 both;
 }

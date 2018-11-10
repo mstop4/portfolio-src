@@ -1,10 +1,12 @@
 const { coinFlip, getScrollPosition } = require('./helpers.js');
 const { updateModal } = require('./modal');
 const data = require('./data');
-const projectCards = [];
-const projectCardBuffer = 50;
 
-const addProjectCards = (parentEl) => {
+const projectList = document.querySelector('.project-list');
+const projectCards = [];
+const scrollBuffer = 50;
+
+const addProjectCards = () => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < data.projects.length; i++) {
@@ -16,7 +18,7 @@ const addProjectCards = (parentEl) => {
     projectCard.setAttribute('data-index', i);
     coinFlip() === 0 ? projectCard.classList.add('project--left') : projectCard.classList.add('project--right');
 
-    toggleCardVisibility(projectCard, pos);
+    toggleVisibility(projectCard, pos);
     projectCards.push(projectCard);
 
     // - Project Preview
@@ -108,14 +110,14 @@ const addProjectCards = (parentEl) => {
     projectCard.appendChild(projectPreviewContainer);
     projectCard.appendChild(projectShortInfo);
 
-    parentEl.appendChild(projectCard);
+    projectList.appendChild(projectCard);
   }
 };
 
-const toggleCardVisibility = (card, pos) => {
+const toggleVisibility = (card, pos) => {
   if (card.classList.contains('project--hidden')) {
-    if (card.offsetTop + projectCardBuffer < pos.bottom ||
-      card.offsetTop + card.offsetHeight - projectCardBuffer > pos.top) {
+    if (card.offsetTop + scrollBuffer < pos.bottom ||
+      card.offsetTop + card.offsetHeight - scrollBuffer > pos.top) {
 
       card.classList.remove('project--hidden');
 
@@ -146,7 +148,7 @@ const handleUpdate = () => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < projectCards.length; i++) {
-    toggleCardVisibility(projectCards[i], pos);
+    toggleVisibility(projectCards[i], pos);
   }
 };
 

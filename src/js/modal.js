@@ -1,8 +1,12 @@
 const data = require('./data');
-let modal = null;
 
-const initialize = (modalEls) => {
-  modal = modalEls;
+const modal = {
+  root: document.querySelector('.modal'),
+  back: document.querySelector('.modal__back'),
+  front: document.querySelector('.modal__front')
+};
+
+const initialize = () => {
 
   modal.back.addEventListener('click', () => {
     console.log('click modal');

@@ -4,18 +4,10 @@ const modal = require('./modal')
 
 document.addEventListener('DOMContentLoaded', () => { 
 
-  let projectList = document.querySelector('.project-list');
-  let contactList = document.querySelector('.contact-list');
-  let modalEls = {
-    root: document.querySelector('.modal'),
-    back: document.querySelector('.modal__back'),
-    front: document.querySelector('.modal__front')
-  }; 
-
   // Set up cards
 
-  projects.addProjectCards(projectList);
-  contacts.addContactCards(contactList);
+  projects.addProjectCards();
+  contacts.addContactCards();
 
   const updateCards = (event) => {
     projects.handleUpdate();
@@ -27,5 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('resize', updateCards);
   document.addEventListener('orientationchange', updateCards);
 
-  modal.initialize(modalEls);
+  modal.initialize();
 });

@@ -1,9 +1,11 @@
 const { coinFlip, getScrollPosition } = require('./helpers.js');
 const data = require('./data');
-const contactCards = [];
-const contactCardBuffer = 50; 
 
-const addContactCards = (parentEl) => {
+const contactList = document.querySelector('.contact-list');
+const contactCards = [];
+const scrollBuffer = 50; 
+
+const addContactCards = () => {
   const pos = getScrollPosition();
 
   for (let i = 0 ; i < data.contacts.length; i++) {
@@ -11,7 +13,7 @@ const addContactCards = (parentEl) => {
     contactCard.classList.add('contact');
     coinFlip() === 0 ? contactCard.classList.add('contact--left') : contactCard.classList.add('contact--right');
 
-    toggleCardVisibility(contactCard, pos);
+    toggleVisibility(contactCard, pos);
     contactCards.push(contactCard);
 
     const contactFAIcon = document.createElement('i');
@@ -28,14 +30,14 @@ const addContactCards = (parentEl) => {
     contactCard.appendChild(contactFAIcon);
     contactCard.appendChild(contactText);
 
-    parentEl.appendChild(contactCard);
+    contactList.appendChild(contactCard);
   }
 }
 
-const toggleCardVisibility = (card, pos) => {
+const toggleVisibility = (card, pos) => {
   if (card.classList.contains('contact--hidden')) {
-    if (card.offsetTop + contactCardBuffer < pos.bottom ||
-      card.offsetTop + card.offsetHeight - contactCardBuffer > pos.top) {
+    if (card.offsetTop + scrollBuffer < pos.bottom ||
+      card.offsetTop + card.offsetHeight - scrollBuffer > pos.top) {
 
       card.classList.remove('contact--hidden');
 
@@ -66,7 +68,7 @@ const handleUpdate = () => {
   const pos = getScrollPosition();
 
   for (let i = 0; i < contactCards.length; i++) {
-    toggleCardVisibility(contactCards[i], pos);
+    toggleVisibility(contactCards[i], pos);
   }
 };
 
