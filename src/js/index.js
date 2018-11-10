@@ -2,6 +2,7 @@ const projects = require('./projects');
 const contacts = require('./contacts');
 const modal = require('./modal');
 const headings = require('./headings');
+const throttle = require('lodash.throttle');
 
 document.addEventListener('DOMContentLoaded', () => { 
 
@@ -12,12 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
   projects.addProjectCards();
   contacts.addContactCards();
 
-  const updateCards = (event) => {
+  const updateCards = throttle(() => {
     projects.handleUpdate();
     contacts.handleUpdate();
     headings.handleUpdate();
-    //console.log(event.type);
-  }
+  }, 100);
 
   document.addEventListener('scroll', updateCards);
   document.addEventListener('resize', updateCards);
