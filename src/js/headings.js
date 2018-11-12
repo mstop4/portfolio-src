@@ -12,10 +12,10 @@ const toggleVisibility = (heading, pos) => {
   const elBottom = heading.offsetTop + heading.offsetHeight;
 
   if (heading.classList.contains('heading--hidden')) {
-    if ((elTop - scrollBuffer > pos.top && 
-        elTop - scrollBuffer < pos.bottom) ||
+    if ((elTop > pos.top && 
+        elTop + scrollBuffer < pos.bottom) ||
         (elBottom < pos.bottom &&
-        elBottom + scrollBuffer > pos.top)) {
+        elBottom - scrollBuffer > pos.top)) {
 
         heading.classList.remove('heading--hidden');
 

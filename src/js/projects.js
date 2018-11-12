@@ -1,6 +1,6 @@
 const { coinFlip, getScrollPosition } = require('./helpers.js');
 const { updateModal } = require('./modal');
-const data = require('./data');
+const { projects } = require('./data/info');
 
 const projectList = document.querySelector('.project-list');
 const projectCards = [];
@@ -9,7 +9,7 @@ const scrollBuffer = 50;
 const addProjectCards = () => {
   const pos = getScrollPosition();
 
-  for (let i = 0; i < data.projects.length; i++) {
+  for (let i = 0; i < projects.length; i++) {
 
     // Project Card
 
@@ -28,14 +28,14 @@ const addProjectCards = () => {
 
     let projectPreviewStatic = document.createElement('img');
     projectPreviewStatic.classList.add('project__preview--media', 'project__preview--static');
-    projectPreviewStatic.src = data.projects[i].previewStatic;
+    projectPreviewStatic.src = projects[i].previewStatic;
 
     let projectPreviewAnim = document.createElement('video');
     projectPreviewAnim.classList.add('project__preview--media');
     projectPreviewAnim.setAttribute('loop', '');
 
     let projectPreviewAnimSrc = document.createElement('source');
-    projectPreviewAnimSrc.src = data.projects[i].previewAnim;
+    projectPreviewAnimSrc.src = projects[i].previewAnim;
     projectPreviewAnimSrc.type = 'video/mp4';
 
     // -- Event listeners
@@ -70,16 +70,16 @@ const addProjectCards = () => {
 
     let projectTitle = document.createElement('h3');
     projectTitle.classList.add('project__title');
-    projectTitle.innerText = data.projects[i].title;
+    projectTitle.innerText = projects[i].title;
 
     let projectTypes = document.createElement('span');
     projectTypes.classList.add('project__types');
 
-    for (let j = 0; j < data.projects[i].types.length; j++) {
+    for (let j = 0; j < projects[i].types.length; j++) {
       let projectTypeIcon = document.createElement('i');
       projectTypeIcon.classList.add('fa-fw', 'fa-2x');
 
-      switch (data.projects[i].types[j]) {
+      switch (projects[i].types[j]) {
         case "game":
           projectTypeIcon.classList.add('fas', 'fa-gamepad');
           break;
