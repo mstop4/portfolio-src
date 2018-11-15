@@ -129,11 +129,11 @@ module.exports = {
       'displayText': 'mstop4',
       'url': 'https://github.com/mstop4',
       'faIconClasses': ['fab', 'fa-github']
-    },
-    {
-      'displayText': '@QuadolorGames',
-      'url': 'https://twitter.com/QuadolorGames',
-      'faIconClasses': ['fab', 'fa-twitter']
     }
+    // {
+    //   'displayText': '@QuadolorGames',
+    //   'url': 'https://twitter.com/QuadolorGames',
+    //   'faIconClasses': ['fab', 'fa-twitter']
+    // }
   ]
 }
