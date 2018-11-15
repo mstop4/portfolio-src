@@ -1,6 +1,9 @@
 .DS_Store
 sh.exe.stackdump
 node_modules/
+src/js/data/env.js
+
 dist/bundle.js
 dist/index.css
 dist/index.html
+dist/img/

@@ -1,4 +1,4 @@
-const data = require('./data');
+const { projects } = require('./data/info');
 
 const modal = {
   root: document.querySelector('.modal'),
@@ -51,26 +51,26 @@ const updateModal = (index) => {
   const demoIcon = linksContainer.querySelector('#demo-icon');
   const demoLinks = linksContainer.querySelector('#demo-links');
 
-  infoPreviewSrc.src = data.projects[index].previewAnim;
+  infoPreviewSrc.src = projects[index].previewAnim;
   infoPreview.load();
   infoPreview.play();
 
-  infoTitle.innerText = data.projects[index].title;
-  infoText.innerText = data.projects[index].description;
+  infoTitle.innerText = projects[index].title;
+  infoText.innerText = projects[index].description;
 
   while (sourceLinks.firstChild) {
     sourceLinks.removeChild(sourceLinks.firstChild);
   }
 
-  if (data.projects[index].sourceUrls.length > 0) {
+  if (projects[index].sourceUrls.length > 0) {
     sourceIcon.classList.remove('links--hidden');
     sourceLinks.classList.remove('links--hidden');
 
-    for (let i = 0; i < data.projects[index].sourceUrls.length; i++) {
+    for (let i = 0; i < projects[index].sourceUrls.length; i++) {
       const listEl = document.createElement('li');
       const linkEl = document.createElement('a');
-      linkEl.innerText = data.projects[index].sourceUrls[i].text;
-      linkEl.href = data.projects[index].sourceUrls[i].url;
+      linkEl.innerText = projects[index].sourceUrls[i].text;
+      linkEl.href = projects[index].sourceUrls[i].url;
       linkEl.target = '_blank';
       listEl.appendChild(linkEl);
       sourceLinks.appendChild(listEl);
@@ -86,15 +86,15 @@ const updateModal = (index) => {
     demoLinks.removeChild(demoLinks.firstChild);
   }
 
-  if (data.projects[index].demoUrls.length > 0) {
+  if (projects[index].demoUrls.length > 0) {
     demoIcon.classList.remove('links--hidden');
     demoLinks.classList.remove('links--hidden');
 
-    for (let i = 0; i < data.projects[index].demoUrls.length; i++) {
+    for (let i = 0; i < projects[index].demoUrls.length; i++) {
       const listEl = document.createElement('li');
       const linkEl = document.createElement('a');
-      linkEl.innerText = data.projects[index].demoUrls[i].text;
-      linkEl.href = data.projects[index].demoUrls[i].url;
+      linkEl.innerText = projects[index].demoUrls[i].text;
+      linkEl.href = projects[index].demoUrls[i].url;
       linkEl.target = '_blank';
       listEl.appendChild(linkEl);
       demoLinks.appendChild(listEl);

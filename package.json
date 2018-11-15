@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "buildJs": "npx browserify src/js/index.js -t babelify --outfile dist/bundle.js",
+    "buildJs": "npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js",
     "buildCss": "css-concat src/css/index.css dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
     "buildHtml": "cp src/index.html dist/index.html",
-    "build": "npm run buildJs && npm run buildCss && npm run buildHtml"
+    "copyMedia": "cp -R src/img/finalized/* dist/img",
+    "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyMedia\"",
+    "serve": "npx http-server dist"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,13 @@
     "babel-preset-minify": "^0.5.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
+    "concurrently": "^4.0.1",
     "css-concat": "0.0.4",
+    "http-server": "^0.11.1",
+    "tinyify": "^2.4.3",
     "uglifycss": "0.0.29"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
   }
 }

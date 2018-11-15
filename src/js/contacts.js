@@ -1,5 +1,5 @@
 const { coinFlip, getScrollPosition } = require('./helpers.js');
-const data = require('./data');
+const { contacts } = require('./data/info');
 
 const contactList = document.querySelector('.contact-list');
 const contactCards = [];
@@ -8,7 +8,7 @@ const scrollBuffer = 50;
 const addContactCards = () => {
   const pos = getScrollPosition();
 
-  for (let i = 0 ; i < data.contacts.length; i++) {
+  for (let i = 0 ; i < contacts.length; i++) {
     const contactCard = document.createElement('article');
     contactCard.classList.add('contact', 'contact--hidden');
     coinFlip() === 0 ? contactCard.classList.add('contact--left') : contactCard.classList.add('contact--right');
@@ -19,13 +19,13 @@ const addContactCards = () => {
     const contactFAIcon = document.createElement('i');
     contactFAIcon.classList.add('fa-4x');
 
-    for (let j = 0; j < data.contacts[i].faIconClasses.length; j++) {
-      contactFAIcon.classList.add(data.contacts[i].faIconClasses[j]);
+    for (let j = 0; j < contacts[i].faIconClasses.length; j++) {
+      contactFAIcon.classList.add(contacts[i].faIconClasses[j]);
     }
 
     const contactText = document.createElement('a');
-    contactText.href = data.contacts[i].url;
-    contactText.innerText = data.contacts[i].displayText;
+    contactText.href = contacts[i].url;
+    contactText.innerText = contacts[i].displayText;
 
     contactCard.appendChild(contactFAIcon);
     contactCard.appendChild(contactText);

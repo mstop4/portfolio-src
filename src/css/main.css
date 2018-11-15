@@ -1,6 +1,6 @@
 body {
   position: absolute;
-  background-color: cornflowerblue;
+  background-color: #85C1E9;
   font-family: "Quicksand", sans-serif;
   width: 100%;
   overflow-x: hidden;
@@ -10,6 +10,16 @@ h1 {
   text-align: center;
   font-size: 6vmax;
   margin: 1vmax 0;
+}
+
+p {
+  margin: 0 auto;
+  width: 90vw;
+}
+
+a {
+  color: #0E6251;
+  text-decoration: none;
 }
 
 .hidden {
