@@ -2,13 +2,11 @@ const projects = require('./projects');
 const contacts = require('./contacts');
 const modal = require('./modal');
 const headings = require('./headings');
-const weather = require('./weather');
+const { setWeather } = require('./weather');
+const { location } = require('./data/weather');
 const { throttle } = require('./helpers');
 
-document.addEventListener('DOMContentLoaded', () => { 
-
-  weather.getWeather();
-
+document.addEventListener('DOMContentLoaded', () => {
   headings.initialize();
 
   // Set up cards
@@ -27,4 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('orientationchange', updateCards);
 
   modal.initialize();
+
+  const locationSpan = document.querySelector('#location');
+  const weatherSpan = document.querySelector('#weather');
+
+  locationSpan.innerHTML = location;
+  setWeather(weatherSpan);
 });

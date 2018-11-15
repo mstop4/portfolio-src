@@ -1,18 +1,18 @@
 const { openWeatherApiKey }  = require('./data/env');
 const { location, weatherConditions, temperatureRanges } = require('./data/weather');
 
-const getWeather = () => {
+const setWeather = (weatherSpan) => {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${openWeatherApiKey}&units=metric`)
     .then((result) => result.json())
     .then((json) => {
-      console.log(evaluateWeather(json))
+      weatherSpan.innerHTML = evaluateWeather(json);
   });
-}
+};
 
 const evaluateWeather = (weatherObj) => {
   const weatherIdStr = String(weatherObj.weather[0].id);
   const temp = weatherObj.main.temp;
-  let output = 'where it\'s a ';
+  let output = 'where it\'s currently a ';
 
   // Temperature
   for (let i = 0; i < temperatureRanges.length; i++) {
@@ -42,5 +42,5 @@ const evaluateWeather = (weatherObj) => {
 }
 
 module.exports = {
-  getWeather
+  setWeather
 }

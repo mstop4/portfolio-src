@@ -12,6 +12,11 @@ h1 {
   margin: 1vmax 0;
 }
 
+p {
+  margin: 0 auto;
+  width: 90vw;
+}
+
 a {
   color: #0E6251;
   text-decoration: none;
