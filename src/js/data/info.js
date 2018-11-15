@@ -2,7 +2,7 @@ module.exports = {
   'projects': [
     {
       'title': 'GML Script Wizard',
-      'previewStatic': 'img/gml-script-wizard.png',
+      'previewStatic': 'img/gml-script-wizard.jpg',
       'previewAnim': 'vid/gml-script-wizard.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [
@@ -15,7 +15,7 @@ module.exports = {
     },
     {
       'title': 'GIFcentration',
-      'previewStatic': 'img/gifcentration.png',
+      'previewStatic': 'img/gifcentration.jpg',
       'previewAnim': 'vid/gifcentration.mp4',
       'description': 'Lorem ipsum dolor sit amet',
       'sourceUrls': [
@@ -29,7 +29,7 @@ module.exports = {
     },
     {
       'title': 'Fractured Flicks',
-      'previewStatic': 'img/fractured-flicks.png',
+      'previewStatic': 'img/fractured-flicks.jpg',
       'previewAnim': 'vid/fractured-flicks.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       'title': 'Sync Timer',
-      'previewStatic': 'img/sync-timer.png',
+      'previewStatic': 'img/sync-timer.jpg',
       'previewAnim': 'vid/sync-timer.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [
@@ -55,7 +55,7 @@ module.exports = {
     },
     {
       'title': 'FMODGMS',
-      'previewStatic': 'img/fmodgms.png',
+      'previewStatic': 'img/fmodgms.jpg',
       'previewAnim': 'vid/fmodgms.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [

@@ -6,7 +6,8 @@
     "buildJs": "npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js",
     "buildCss": "css-concat src/css/index.css dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
     "buildHtml": "cp src/index.html dist/index.html",
-    "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\"",
+    "copyMedia": "cp -R src/img/finalized/* dist/img",
+    "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyMedia\"",
     "serve": "npx http-server dist"
   },
   "repository": {
@@ -24,7 +25,6 @@
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "concurrently": "^4.0.1",
-    "copyfiles": "^2.1.0",
     "css-concat": "0.0.4",
     "http-server": "^0.11.1",
     "tinyify": "^2.4.3",
