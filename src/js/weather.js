@@ -31,8 +31,11 @@ const evaluateWeather = (weatherObj) => {
   }
 
   // Time of Day
-  const now = Date.now();
-  if (now >= weatherObj.sys.sunrise && now < weatherObj.sys.sunset) {
+  const now = Date.now()
+  const sunrise = weatherObj.sys.sunrise * 1000;
+  const sunset = weatherObj.sys.sunset * 1000;
+
+  if (now >= sunrise && now < sunset) {
     output += ' day';
   } else {
     output += ' night';
