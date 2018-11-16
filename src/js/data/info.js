@@ -69,7 +69,7 @@ module.exports = {
     {
       'title': 'Aborescence',
       'previewStatic': 'img/aborescence.png',
-      'previewAnim': 'vid/gifcentration.mp4',
+      'previewAnim': 'vid/aborescence.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [],
       'demoUrls': [
@@ -80,7 +80,7 @@ module.exports = {
     {
       'title': 'I am Rubba, You Are Gloo',
       'previewStatic': 'img/iamrubba.png',
-      'previewAnim': 'vid/gifcentration.mp4',
+      'previewAnim': 'vid/iamrubba.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [],
       'demoUrls': [
@@ -90,8 +90,8 @@ module.exports = {
     },
     {
       'title': 'dot.Market 2',
-      'previewStatic': 'img/dot.market2.png',
-      'previewAnim': 'vid/gifcentration.mp4',
+      'previewStatic': 'img/dotMarket2.png',
+      'previewAnim': 'vid/dotMarket2.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [
         { url: 'https://github.com/mstop4/lowrezjam-2018', text: 'Source' },
@@ -102,9 +102,9 @@ module.exports = {
       'types': ['game']
     },
     {
-      'title': 'Moeblob Adventure',
-      'previewStatic': 'img/moeblobadventure.png',
-      'previewAnim': 'vid/gifcentration.mp4',
+      'title': 'Toutatis',
+      'previewStatic': 'img/toutatis.jpg',
+      'previewAnim': 'vid/toutatis.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [],
       'demoUrls': [
