@@ -71,10 +71,10 @@ module.exports = {
       'types': ['utility']
     },
     {
-      'title': 'Aborescence',
-      'previewStatic': 'img/aborescence.png',
-      'previewAnim': 'vid/preview/aborescence.mp4',
-      'fullAnim': 'vid/aborescence.mp4',
+      'title': 'Arborescence',
+      'previewStatic': 'img/arborescence.png',
+      'previewAnim': 'vid/preview/arborescence.mp4',
+      'fullAnim': 'vid/arborescence.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [],
       'demoUrls': [
