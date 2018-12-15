@@ -33,6 +33,7 @@ const addProjectCards = () => {
     let projectPreviewAnim = document.createElement('video');
     projectPreviewAnim.classList.add('project__preview--media');
     projectPreviewAnim.setAttribute('loop', '');
+    projectPreviewAnim.setAttribute('preload', 'none');
 
     let projectPreviewAnimSrc = document.createElement('source');
     projectPreviewAnimSrc.src = projects[i].previewAnim;
