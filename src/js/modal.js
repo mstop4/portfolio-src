@@ -51,7 +51,7 @@ const updateModal = (index) => {
   const demoIcon = linksContainer.querySelector('#demo-icon');
   const demoLinks = linksContainer.querySelector('#demo-links');
 
-  infoPreviewSrc.src = projects[index].previewAnim;
+  infoPreviewSrc.src = projects[index].fullAnim;
   infoPreview.load();
   infoPreview.play();
 

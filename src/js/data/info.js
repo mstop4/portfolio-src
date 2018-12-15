@@ -3,7 +3,8 @@ module.exports = {
     {
       'title': 'GML Script Wizard',
       'previewStatic': 'img/gml-script-wizard.jpg',
-      'previewAnim': 'vid/gml-script-wizard.mp4',
+      'previewAnim': 'vid/preview/gml-script-wizard.mp4',
+      'fullAnim': 'vid/gml-script-wizard.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [
         { url: 'https://github.com/mstop4/gml-script-wizard', text: 'Source' }
@@ -16,7 +17,8 @@ module.exports = {
     {
       'title': 'GIFcentration',
       'previewStatic': 'img/gifcentration.jpg',
-      'previewAnim': 'vid/gifcentration.mp4',
+      'previewAnim': 'vid/preview/gifcentration.mp4',
+      'fullAnim': 'vid/gifcentration.mp4',
       'description': 'Lorem ipsum dolor sit amet',
       'sourceUrls': [
         { url: 'https://github.com/mstop4/gifcentration-client', text: 'Client Src' },
@@ -30,7 +32,8 @@ module.exports = {
     {
       'title': 'Fractured Flicks',
       'previewStatic': 'img/fractured-flicks.jpg',
-      'previewAnim': 'vid/fractured-flicks.mp4',
+      'previewAnim': 'vid/preview/fractured-flicks.mp4',
+      'fullAnim': 'vid/fractured-flicks.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [
         { url: 'https://github.com/mstop4/fractured-flicks', text: 'Source' },
@@ -43,7 +46,8 @@ module.exports = {
     {
       'title': 'Sync Timer',
       'previewStatic': 'img/sync-timer.jpg',
-      'previewAnim': 'vid/sync-timer.mp4',
+      'previewAnim': 'vid/preview/sync-timer.mp4',
+      'fullAnim': 'vid/sync-timer.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [
         { url: 'https://github.com/mstop4/sync-timer', text: 'Source' },
@@ -69,7 +73,8 @@ module.exports = {
     {
       'title': 'Aborescence',
       'previewStatic': 'img/aborescence.png',
-      'previewAnim': 'vid/aborescence.mp4',
+      'previewAnim': 'vid/preview/aborescence.mp4',
+      'fullAnim': 'vid/aborescence.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [],
       'demoUrls': [
@@ -80,7 +85,8 @@ module.exports = {
     {
       'title': 'I am Rubba, You Are Gloo',
       'previewStatic': 'img/iamrubba.png',
-      'previewAnim': 'vid/iamrubba.mp4',
+      'previewAnim': 'vid/preview/iamrubba.mp4',
+      'fullAnim': 'vid/iamrubba.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [],
       'demoUrls': [
@@ -91,7 +97,8 @@ module.exports = {
     {
       'title': 'dot.Market 2',
       'previewStatic': 'img/dotMarket2.png',
-      'previewAnim': 'vid/dotMarket2.mp4',
+      'previewAnim': 'vid/preview/dotMarket2.mp4',
+      'fullAnim': 'vid/dotMarket2.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [
         { url: 'https://github.com/mstop4/lowrezjam-2018', text: 'Source' },
@@ -104,7 +111,8 @@ module.exports = {
     {
       'title': 'Toutatis',
       'previewStatic': 'img/toutatis.jpg',
-      'previewAnim': 'vid/toutatis.mp4',
+      'previewAnim': 'vid/preview/toutatis.mp4',
+      'fullAnim': 'vid/toutatis.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [],
       'demoUrls': [
