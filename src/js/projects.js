@@ -73,38 +73,8 @@ const addProjectCards = () => {
     projectTitle.classList.add('project__title');
     projectTitle.innerText = projects[i].title;
 
-    let projectTypes = document.createElement('span');
-    projectTypes.classList.add('project__types');
-
-    for (let j = 0; j < projects[i].types.length; j++) {
-      let projectTypeIcon = document.createElement('i');
-      projectTypeIcon.classList.add('fa-fw', 'fa-2x');
-
-      switch (projects[i].types[j]) {
-        case "game":
-          projectTypeIcon.classList.add('fas', 'fa-gamepad');
-          break;
-
-        case "webapp":
-          projectTypeIcon.classList.add('fas', 'fa-globe');
-          break;
-
-        case "utility":
-          projectTypeIcon.classList.add('fas', 'fa-wrench');
-          break;
-
-        default:
-          projectTypeIcon.classList.add('fas', 'fa-question');          
-      }
-
-      projectTypes.appendChild(projectTypeIcon);
-    }
-
     // Append all the things
-
     projectShortInfo.appendChild(projectTitle);
-    projectShortInfo.appendChild(projectTypes);
-
     projectPreviewContainer.appendChild(projectPreviewStatic);
     projectPreviewAnim.appendChild(projectPreviewAnimSrc);
     projectPreviewContainer.appendChild(projectPreviewAnim);

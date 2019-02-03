@@ -82,7 +82,7 @@ module.exports = {
       ],
       'types': ['game']
     },
-    {
+    /*{
       'title': 'I am Rubba, You Are Gloo',
       'previewStatic': 'img/iamrubba.png',
       'previewAnim': 'vid/preview/iamrubba.mp4',
@@ -93,7 +93,7 @@ module.exports = {
         { url: 'https://itch.io', text: 'Demo' }
       ],
       'types': ['game']
-    },
+    },*/
     {
       'title': 'dot.Market 2',
       'previewStatic': 'img/dotMarket2.png',
