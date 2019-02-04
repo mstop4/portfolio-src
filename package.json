@@ -1,12 +1,12 @@
 {
-  "name": "portfoliio-src",
+  "name": "portfolio-src",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "buildJs": "npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js",
     "buildCss": "css-concat src/css/index.css dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
     "buildHtml": "cp src/index.html dist/index.html",
-    "copyMedia": "rm -rf dist/img && mkdir dist/img && cp -R src/img/finalized/* dist/img",
+    "copyMedia": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img",
     "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyMedia\"",
     "serve": "npx http-server dist"
   },
@@ -16,7 +16,7 @@
   },
   "keywords": [],
   "author": "Jonathan Lam (M.S.T.O.P.)",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://jonathanlam.ca",
   "devDependencies": {
     "@babel/core": "^7.1.5",
@@ -27,6 +27,8 @@
     "concurrently": "^4.0.1",
     "css-concat": "0.0.4",
     "http-server": "^0.11.1",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.3",
     "tinyify": "^2.4.3",
     "uglifycss": "0.0.29"
   }
