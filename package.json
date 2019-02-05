@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "buildJs": "npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js",
-    "buildCss": "css-concat src/css/index.css dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
+    "buildCss": "npx css-combine src/css/index.css > dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
     "buildHtml": "cp src/index.html dist/index.html",
     "copyMedia": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img",
     "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyMedia\"",
@@ -26,11 +26,14 @@
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "concurrently": "^4.1.0",
-    "css-concat": "0.0.4",
     "http-server": "^0.11.1",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.3",
     "tinyify": "^2.5.0",
     "uglifycss": "0.0.29"
+  },
+  "dependencies": {
+    "css-combine": "^1.0.0",
+    "save-dev": "^2.0.0"
   }
 }
