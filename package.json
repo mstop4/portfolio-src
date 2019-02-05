@@ -8,7 +8,8 @@
     "buildHtml": "cp src/index.html dist/index.html",
     "copyMedia": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img",
     "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyMedia\"",
-    "serve": "npx http-server dist"
+    "serve": "npx http-server dist",
+    "start": "npm run build && npm run serve"
   },
   "repository": {
     "type": "git",
