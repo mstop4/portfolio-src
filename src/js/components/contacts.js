@@ -1,5 +1,5 @@
-const { coinFlip, getScrollPosition } = require('./helpers.js');
-const { contacts } = require('./data/info');
+const { coinFlip, getScrollPosition } = require('../helpers');
+const { contacts } = require('../data/info');
 
 const contactList = document.querySelector('.contact-list');
 const contactCards = [];

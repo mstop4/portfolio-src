@@ -1,4 +1,4 @@
-const { projects } = require('./data/info');
+const { projects } = require('../data/info');
 
 const modal = {
   root: document.querySelector('.modal'),

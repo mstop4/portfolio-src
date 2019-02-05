@@ -1,4 +1,4 @@
-const { getScrollPosition } = require('./helpers');
+const { getScrollPosition } = require('../helpers');
 
 const headings = document.querySelectorAll('.heading');
 const scrollBuffer = 50;

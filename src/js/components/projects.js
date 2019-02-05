@@ -1,6 +1,6 @@
-const { coinFlip, getScrollPosition } = require('./helpers.js');
-const { updateModal } = require('./modal');
-const { projects } = require('./data/info');
+const { coinFlip, getScrollPosition } = require('../helpers');
+const { updateModal } = require('../components/modal');
+const { projects } = require('../data/info');
 
 const projectList = document.querySelector('.project__list');
 const projectCards = [];
