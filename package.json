@@ -1,14 +1,15 @@
 {
-  "name": "portfoliio-src",
+  "name": "portfolio-src",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "buildJs": "npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js",
-    "buildCss": "css-concat src/css/index.css dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
+    "buildCss": "npx css-combine src/css/index.css > dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
     "buildHtml": "cp src/index.html dist/index.html",
-    "copyMedia": "rm -rf dist/img && mkdir dist/img && cp -R src/img/finalized/* dist/img",
+    "copyMedia": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img",
     "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyMedia\"",
-    "serve": "npx http-server dist"
+    "serve": "npx http-server dist",
+    "start": "npm run build && npm run serve"
   },
   "repository": {
     "type": "git",
@@ -16,18 +17,20 @@
   },
   "keywords": [],
   "author": "Jonathan Lam (M.S.T.O.P.)",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://jonathanlam.ca",
   "devDependencies": {
-    "@babel/core": "^7.1.5",
-    "@babel/preset-env": "^7.1.5",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
     "babel-preset-minify": "^0.5.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
-    "concurrently": "^4.0.1",
-    "css-concat": "0.0.4",
+    "concurrently": "^4.1.0",
+    "css-combine": "github:mstop4/css-combine",
     "http-server": "^0.11.1",
-    "tinyify": "^2.4.3",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.3",
+    "tinyify": "^2.5.0",
     "uglifycss": "0.0.29"
   }
 }
