@@ -3,11 +3,8 @@ const location = require('../data/location');
 const { googleMapsApiKey } = require('../data/env');
 
 const setupWeather = () => {
-  const locationSpan = document.querySelector('#location__text');
-  const weatherSpan = document.querySelector('#weather');
-
-  locationSpan.innerHTML = location.location;
-  setWeather(weatherSpan);
+  const weatherElem = document.querySelector('.weather__text');
+  setWeather(weatherElem);
 }
 
 const setupMap = () => {
@@ -21,7 +18,7 @@ const setupMap = () => {
   mapLink.target = '_blank';
   mapLink.appendChild(mapImg);
   
-  const mapCard = document.querySelector('#location__map');
+  const mapCard = document.querySelector('.bio__map');
   mapCard.appendChild(mapLink);
 }
 

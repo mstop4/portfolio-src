@@ -1,4 +1,31 @@
-#location__map {
-  width: 400px;
-  height: 400px;
+.bio_list {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1280px;
+  grid-template-columns: 1;
+  justify-content: space-around;
+}
+
+.bio__map {
+  width: 315px;
+  height: 315px;
+  background-color: #D4E6F1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.bio__map img {
+  width: 100%;
+}
+
+.bio__weather {
+  width: 315px;
+  height: 315px;
+  background-color: #D4E6F1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.bio__weather div {
+  font-weight: bold;
 }

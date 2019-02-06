@@ -1,19 +1,32 @@
 const { openWeatherApiKey } = require('../data/env');
-const { location } = require('../data/location');
+const { location, location_shortName } = require('../data/location');
 const { weatherConditions, temperatureRanges } = require('../data/weather');
 
-const setWeather = (weatherSpan) => {
+const setWeather = (weatherElem) => {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${openWeatherApiKey}&units=metric`)
     .then((result) => result.json())
     .then((json) => {
-      weatherSpan.innerHTML = evaluateWeather(json);
+      weatherElem.innerHTML = evaluateWeather(json);
   });
 };
 
 const evaluateWeather = (weatherObj) => {
   const weatherIdStr = String(weatherObj.weather[0].id);
   const temp = weatherObj.main.temp;
-  let output = 'where it\'s currently a ';
+  let output = '';
+
+  // Time of Day
+  const now = Date.now();
+  const sunrise = weatherObj.sys.sunrise * 1000;
+  const sunset = weatherObj.sys.sunset * 1000;
+
+  if (now >= sunrise && now < sunset) {
+    output += 'Today\'s';
+  } else {
+    output += 'Tonight\'s';
+  }
+
+  output += ` weather in ${location_shortName}: `;
 
   // Temperature
   for (let i = 0; i < temperatureRanges.length; i++) {
@@ -26,20 +39,9 @@ const evaluateWeather = (weatherObj) => {
   // Weather
   for (let i = 0; i < weatherConditions.length; i++) {
     if (weatherConditions[i].pattern.test(weatherIdStr)) {
-      output += weatherConditions[i].descriptor;
+      output += `${weatherConditions[i].descriptor}.`;
       break;
     }
-  }
-
-  // Time of Day
-  const now = Date.now()
-  const sunrise = weatherObj.sys.sunrise * 1000;
-  const sunset = weatherObj.sys.sunset * 1000;
-
-  if (now >= sunrise && now < sunset) {
-    output += ' day';
-  } else {
-    output += ' night';
   }
 
   return output;
