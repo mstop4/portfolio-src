@@ -1,6 +1,4 @@
 module.exports = {
-  'location': 'Toronto, Canada',
-
   'weatherConditions': [
     { 'descriptor': 'stormy', 'pattern': RegExp('^2', 'g') },
     { 'descriptor': 'drizzling', 'pattern': RegExp('^3', 'g') },

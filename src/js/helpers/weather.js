@@ -1,5 +1,6 @@
-const { openWeatherApiKey }  = require('../data/env');
-const { location, weatherConditions, temperatureRanges } = require('../data/weather');
+const { openWeatherApiKey } = require('../data/env');
+const { location } = require('../data/location');
+const { weatherConditions, temperatureRanges } = require('../data/weather');
 
 const setWeather = (weatherSpan) => {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${openWeatherApiKey}&units=metric`)

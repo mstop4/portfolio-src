@@ -10,6 +10,7 @@
   </head>
   <body>
 
+    <!-- Modal -->
     <div class="modal modal--hidden">
       <div class="modal__back modal__back--hidden"></div>
       <aside class="modal__front modal__front--hidden">
@@ -42,6 +43,7 @@
       </aside>
     </div>
 
+    <!-- Rest of the Page-->
     <main>
       <h1>Jonathan Lam</h1>
       <div class="photo"></div>
@@ -51,7 +53,10 @@
 
       <section id="bio">
         <h2 class="heading heading__left heading--hidden">About Me</h2>
-        <p>I am from <span id="location"></span>, <span id="weather"></span>.</p>
+        <p>I am from <span id="location__text"></span>, <span id="weather"></span>.</p>
+        <div id="location__map">
+          <!-- Map goes in here-->
+        </div>
       </section>
       
       <section id="projects">
@@ -69,6 +74,7 @@
         </div>
       </section>
     </main>
-  </body> 
+
+  </body>
   <script type="text/javascript" src="./bundle.js"></script>
 </html>
