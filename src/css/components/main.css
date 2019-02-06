@@ -4,6 +4,7 @@ body {
   font-family: "Quicksand", sans-serif;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: auto; 
 }
 
 h1 {
@@ -27,5 +28,6 @@ a {
 }
 
 .no-scroll {
-  overflow-y: hidden; 
+  position: fixed;
+  overflow-y: scroll; 
 }
