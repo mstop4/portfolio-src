@@ -11,9 +11,9 @@ module.exports = {
       ],
       'demoUrls': [
         { url: 'https://mstop4.github.io/gml-script-wizard', text: 'Demo' }
-      ],
-      'types': ['webapp']
+      ]
     },
+
     {
       'title': 'GIFcentration',
       'previewStatic': 'img/gifcentration.jpg',
@@ -26,9 +26,9 @@ module.exports = {
       ],
       'demoUrls': [
         { url: 'https://mstop4.github.io/gifcentration-client', text: 'Demo' }
-      ],
-      'types': ['webapp', 'game']
+      ]
     },
+
     {
       'title': 'Fractured Flicks',
       'previewStatic': 'img/fractured-flicks.jpg',
@@ -40,9 +40,9 @@ module.exports = {
       ],
       'demoUrls': [
         { url: 'https://mstop4.github.io/fractured-flicks', text: 'Demo' }
-      ],
-      'types': ['webapp', 'game']
+      ]
     },
+
     {
       'title': 'Sync Timer',
       'previewStatic': 'img/sync-timer.jpg',
@@ -54,22 +54,23 @@ module.exports = {
       ],
       'demoUrls': [
         { url: 'https://sync-timer.herokuapp.com', text: 'Demo' }
-      ],
-      'types': ['webapp']
+      ]
     },
+
     {
       'title': 'FMODGMS',
       'previewStatic': 'img/fmodgms.jpg',
-      'previewAnim': 'vid/fmodgms.mp4',
+      'previewAnim': 'vid/preview/fmodgms.mp4',
+      'fullAnim': 'vid/fmodgms.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
       'sourceUrls': [
         { url: 'https://github.com/mstop4/fmodgms', text: 'Source' },
       ],
       'demoUrls': [
         { url: 'https://quadolorgames.itch.io/fmodgms', text: 'Download' }
-      ],
-      'types': ['utility']
+      ]
     },
+
     {
       'title': 'Arborescence',
       'previewStatic': 'img/arborescence.png',
@@ -79,9 +80,9 @@ module.exports = {
       'sourceUrls': [],
       'demoUrls': [
         { url: 'https://quadolorgames.itch.io/arborescence', text: 'Download' }
-      ],
-      'types': ['game']
+      ]
     },
+
     /*{
       'title': 'I am Rubba, You Are Gloo',
       'previewStatic': 'img/iamrubba.png',
@@ -91,9 +92,24 @@ module.exports = {
       'sourceUrls': [],
       'demoUrls': [
         { url: 'https://itch.io', text: 'Demo' }
-      ],
-      'types': ['game']
+      ]
     },*/
+
+      {
+      'title': 'Worker #11812',
+      'previewStatic': 'img/worker-11812.jpg',
+      'previewAnim': 'vid/preview/worker-11812.mp4',
+      'fullAnim': 'vid/worker-11812.mp4',
+      'description': 'A game inspired by the clock-like "paternoster machine" from the 1927 film <em>Metropolis</em> by Fritz Lang.',
+      'sourceUrls': [
+        { url: 'https://github.com/mstop4/worker-11812-phaser', text: 'Web Src' },
+        { url: 'https://github.com/mstop4/worker-11812-gms', text: 'Native Src' }
+      ],
+      'demoUrls': [
+        { url: 'https://quadolorgames.itch.io/worker-11812', text: 'Demo' }
+      ]
+    },
+
     {
       'title': 'dot.Market 2',
       'previewStatic': 'img/dotMarket2.png',
@@ -105,9 +121,9 @@ module.exports = {
       ],
       'demoUrls': [
         { url: 'https://itch.io', text: 'Demo' }
-      ],
-      'types': ['game']
+      ]
     },
+
     {
       'title': 'Toutatis',
       'previewStatic': 'img/toutatis.jpg',
@@ -117,8 +133,7 @@ module.exports = {
       'sourceUrls': [],
       'demoUrls': [
         { url: 'https://itch.io', text: 'Demo' }
-      ],
-      'types': ['game']
+      ]
     },
   ],
 
@@ -128,16 +143,19 @@ module.exports = {
       'url': 'mailto:jonathan.hs.lam@gmail.com',
       'faIconClasses': ['far', 'fa-envelope']
     },
+
     {
       'displayText': 'jonathanlam4',
       'url': 'https://www.linkedin.com/in/jonathanlam4/',
       'faIconClasses': ['fab', 'fa-linkedin-in']
     },
+
     {
       'displayText': 'mstop4',
       'url': 'https://github.com/mstop4',
       'faIconClasses': ['fab', 'fa-github']
     }
+
     // {
     //   'displayText': '@QuadolorGames',
     //   'url': 'https://twitter.com/QuadolorGames',

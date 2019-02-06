@@ -6,8 +6,9 @@
     "buildJs": "npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js",
     "buildCss": "npx css-combine src/css/index.css > dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
     "buildHtml": "cp src/index.html dist/index.html",
-    "copyMedia": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img",
-    "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyMedia\"",
+    "copyImg": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img",
+    "copyVid": "rimraf dist/vid && mkdirp dist/vid && cp -R src/vid/finalized/* dist/vid",
+    "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyImg\" \"npm run copyVid\"",
     "serve": "npx http-server dist",
     "start": "npm run build && npm run serve"
   },
