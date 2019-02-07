@@ -59,6 +59,8 @@ const addProjectCards = () => {
       }
 
       const bodyEl = document.querySelector('body');
+      const scrollPos = getScrollPosition();
+      bodyEl.style.top = (-scrollPos.top).toString() + 'px';
       bodyEl.classList.add('no-scroll');
 
       updateModal(i);
@@ -86,14 +88,15 @@ const addProjectCards = () => {
 };
 
 const toggleVisibility = (card, pos) => {
+  const bodyTop = -parseInt(document.querySelector('body').style.top) || 0;
   const elTop = card.offsetTop;
   const elBottom = card.offsetTop + card.offsetHeight;
 
   if (card.classList.contains('project--hidden')) {
-    if ((elTop - scrollBuffer > pos.top && 
-      elTop - scrollBuffer < pos.bottom) ||
-      (elBottom < pos.bottom &&
-      elBottom + scrollBuffer > pos.top)) {
+    if ((elTop - scrollBuffer > pos.top + bodyTop && 
+      elTop - scrollBuffer < pos.bottom + bodyTop) ||
+      (elBottom < pos.bottom + bodyTop &&
+      elBottom + scrollBuffer > pos.top + bodyTop)) {
 
       card.classList.remove('project--hidden');
 
@@ -106,8 +109,8 @@ const toggleVisibility = (card, pos) => {
   }
 
   else {
-    if (elTop - scrollBuffer >= pos.bottom ||
-        elBottom + scrollBuffer <= pos.top) {
+    if (elTop - scrollBuffer >= pos.bottom + bodyTop ||
+        elBottom + scrollBuffer <= pos.top + bodyTop) {
 
       card.classList.add('project--hidden');
 

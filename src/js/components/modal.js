@@ -9,22 +9,21 @@ const modal = {
 const initialize = () => {
 
   modal.back.addEventListener('click', () => {
-    console.log('click modal');
     modal.front.classList.add('modal__front--hidden');
     modal.front.classList.remove('modal__front--show');
     modal.back.classList.add('modal__back--hidden');
     modal.back.classList.remove('modal__back--show');
 
     const bodyEl = document.querySelector('body');
+    const scrollPos = -parseInt(bodyEl.style.top);
+    bodyEl.style = null;
     bodyEl.classList.remove('no-scroll');
+    window.scrollTo(0, scrollPos);
   });
 
   modal.back.addEventListener('transitionend', () => {
     if (modal.back.classList.contains('modal__back--hidden')) {
-      console.log('hide modal');
       modal.root.classList.add('modal--hidden');
-    } else {
-      console.log('show modal');
     }
   });
 }

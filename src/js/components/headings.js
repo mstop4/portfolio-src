@@ -8,14 +8,15 @@ const initialize = () => {
 }
 
 const toggleVisibility = (heading, pos) => {
+  const bodyTop = -parseInt(document.querySelector('body').style.top) || 0;
   const elTop = heading.offsetTop;
   const elBottom = heading.offsetTop + heading.offsetHeight;
 
   if (heading.classList.contains('heading--hidden')) {
-    if ((elTop > pos.top && 
-        elTop + scrollBuffer < pos.bottom) ||
-        (elBottom < pos.bottom &&
-        elBottom - scrollBuffer > pos.top)) {
+    if ((elTop > pos.top + bodyTop && 
+        elTop + scrollBuffer < pos.bottom + bodyTop) ||
+        (elBottom < pos.bottom + bodyTop &&
+        elBottom - scrollBuffer > pos.top + bodyTop)) {
 
         heading.classList.remove('heading--hidden');
 
@@ -28,8 +29,8 @@ const toggleVisibility = (heading, pos) => {
   }
 
   else {
-    if (elTop - scrollBuffer >= pos.bottom ||
-        elBottom + scrollBuffer <= pos.top) {
+    if (elTop - scrollBuffer >= pos.bottom + bodyTop ||
+        elBottom + scrollBuffer <= pos.top + bodyTop) {
 
         heading.classList.add('heading--hidden');
 

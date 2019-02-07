@@ -2,8 +2,8 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 2;
   overflow: hidden;
 }
@@ -46,7 +46,7 @@
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 
   grid-template-columns: 60% auto;
-  grid-template-rows: 65% 10% auto;
+  grid-template-rows: auto auto 20%;
   grid-column-gap: 15px;
 
   transform: translate(-50%, -50%); 
@@ -103,6 +103,24 @@
 .info__stack {
   grid-column: 2 / 3;
   background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+}
+
+.stack-list li {
+  background-color: white;
+  padding: 10px;
+  border-radius: 26px;
+  font-size: 16px;
+  margin: 4px 4px;
 }
 
 .links__container {
