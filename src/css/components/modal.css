@@ -46,7 +46,7 @@
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 
   grid-template-columns: 60% auto;
-  grid-template-rows: 75% 5% auto;
+  grid-template-rows: 65% 10% auto;
   grid-column-gap: 15px;
 
   transform: translate(-50%, -50%); 
@@ -82,6 +82,7 @@
 .info__preview {
   width: 100%;
   display: block;
+  background-color: orange;
 }
 
 .info__title {
@@ -89,25 +90,33 @@
   color: black;
   font-size: 3vmax;
   align-self: center;
+  background-color: yellow;
 }
 
 .info__text {
   overflow-y: auto;
   grid-column: 2 / 3;
-  grid-row: 1 / 2;
   color: black;
+  background-color: red;
+}
+
+.info__stack {
+  grid-column: 2 / 3;
+  background-color: green;
 }
 
 .links__container {
-  grid-row: 2 / 4;
+  grid-column: 2 / 3;
   display: flex;
   padding: 0 5px;
   justify-content: center;
   align-items: center;
+  background-color: blue;
 }
 
 .links__list {
   list-style: none;
+  margin: 0 10px;
   padding: 0 10px;
   font-size: 2vmax;
   font-weight: 800;
