@@ -1,6 +1,4 @@
 module.exports = {
-  'location': 'Toronto, Canada',
-
   'weatherConditions': [
     { 'descriptor': 'stormy', 'pattern': RegExp('^2', 'g') },
     { 'descriptor': 'drizzling', 'pattern': RegExp('^3', 'g') },
@@ -15,7 +13,7 @@ module.exports = {
     { 'descriptor': 'dusty', 'pattern': RegExp('^761', 'g') },
     { 'descriptor': 'volcanic(?!)', 'pattern': RegExp('^762', 'g') },    
     { 'descriptor': 'blustery', 'pattern': RegExp('^771', 'g') },   
-    { 'descriptor': 'tornado(!)', 'pattern': RegExp('^781', 'g') },   
+    { 'descriptor': 'a tornado(!)', 'pattern': RegExp('^781', 'g') },   
     { 'descriptor': 'cloudy', 'pattern': RegExp('^80', 'g') },
     { 'descriptor': 'clear', 'pattern': RegExp('^800', 'g') }
   ],
@@ -26,6 +24,6 @@ module.exports = {
     { 'descriptor': 'cool', 'maxTemp': 10},
     { 'descriptor': 'mild', 'maxTemp': 15},
     { 'descriptor': 'warm', 'maxTemp': 25},
-    { 'descriptor': 'hot', 'maxTemp': 100 },
+    { 'descriptor': 'hot', 'maxTemp': 999 },
   ]
 }

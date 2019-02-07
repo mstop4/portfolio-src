@@ -56,7 +56,7 @@ const updateModal = (index) => {
   infoPreview.play();
 
   infoTitle.innerText = projects[index].title;
-  infoText.innerText = projects[index].description;
+  infoText.innerHTML = projects[index].description;
 
   while (sourceLinks.firstChild) {
     sourceLinks.removeChild(sourceLinks.firstChild);
