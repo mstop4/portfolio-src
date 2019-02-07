@@ -149,27 +149,27 @@ module.exports = {
 
   'contacts': [
     {
-      'displayText': 'jonathan.hs.lam@gmail.com',
+      'displayText': 'Email',
       'url': 'mailto:jonathan.hs.lam@gmail.com',
       'faIconClasses': ['far', 'fa-envelope']
     },
 
     {
-      'displayText': 'jonathanlam4',
+      'displayText': 'LinkedIn',
       'url': 'https://www.linkedin.com/in/jonathanlam4/',
       'faIconClasses': ['fab', 'fa-linkedin-in']
     },
 
     {
-      'displayText': 'mstop4',
+      'displayText': 'Github',
       'url': 'https://github.com/mstop4',
       'faIconClasses': ['fab', 'fa-github']
-    }
+    },
 
-    // {
-    //   'displayText': '@QuadolorGames',
-    //   'url': 'https://twitter.com/QuadolorGames',
-    //   'faIconClasses': ['fab', 'fa-twitter']
-    // }
+    {
+      'displayText': 'Twitter',
+      'url': 'https://twitter.com/QuadolorGames',
+      'faIconClasses': ['fab', 'fa-twitter']
+    }
   ]
 }

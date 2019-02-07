@@ -1,31 +1,49 @@
-.bio_list {
+:root {
+  --bio__start-angle: 43deg;
+  --bio__end-angle: 2deg;
+  --bio-card-width: 325px;
+  --bio-text-width: 500px;
+}
+
+.bio-list {
   margin: 0 auto;
-  display: grid;
-  max-width: 1280px;
-  grid-template-columns: 1;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  align-content: space-around;
+  align-items: center;
   justify-content: space-around;
 }
 
-.bio__map {
-  width: 315px;
-  height: 315px;
+.bio__text {
+  width: var(--bio-text-width);
+  max-height: var(--bio-card-width);
+  margin: 1vmax 0;
+  padding: 10px;
+  /* background-color: white; */
+  font-size: 2.5vmax;
+  display: inline-flex;
+  align-items: center;
+}
+
+#bio__location {
+  font-weight: bold;
+}
+
+.bio__card {
+  width: var(--bio-card-width);
+  height: var(--bio-card-width);
   background-color: #D4E6F1;
+  margin: 1vmax 0;
   padding: 10px;
   border-radius: 10px;
 }
 
 .bio__map img {
-  width: 100%;
+  border: .5vmax solid white;
+  border-radius: .25vmax;
 }
 
-.bio__weather {
-  width: 315px;
-  height: 315px;
-  background-color: #D4E6F1;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.bio__weather div {
-  font-weight: bold;
+.bio__factoids {
+  font-size: 1.5vmax;
 }
