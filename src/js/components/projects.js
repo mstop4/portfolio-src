@@ -9,8 +9,7 @@ const scrollBuffer = 50;
 const addProjectCards = () => {
   const pos = getScrollPosition();
 
-  for (let i = 0; i < projects.length; i++) {
-
+  projects.forEach((project, i) => {
     // Project Card
 
     let projectCard = document.createElement('article');
@@ -28,7 +27,7 @@ const addProjectCards = () => {
 
     let projectPreviewStatic = document.createElement('img');
     projectPreviewStatic.classList.add('project__preview--media', 'project__preview--static');
-    projectPreviewStatic.src = projects[i].previewStatic;
+    projectPreviewStatic.src = project.previewStatic;
 
     let projectPreviewAnim = document.createElement('video');
     projectPreviewAnim.classList.add('project__preview--media');
@@ -36,7 +35,7 @@ const addProjectCards = () => {
     projectPreviewAnim.setAttribute('preload', 'auto');
 
     let projectPreviewAnimSrc = document.createElement('source');
-    projectPreviewAnimSrc.src = projects[i].previewAnim;
+    projectPreviewAnimSrc.src = project.previewAnim;
     projectPreviewAnimSrc.type = 'video/mp4';
 
     // -- Event listeners
@@ -73,7 +72,7 @@ const addProjectCards = () => {
 
     let projectTitle = document.createElement('h3');
     projectTitle.classList.add('project__title');
-    projectTitle.innerText = projects[i].title;
+    projectTitle.textContent = project.title;
 
     // Append all the things
     projectShortInfo.appendChild(projectTitle);
@@ -84,7 +83,7 @@ const addProjectCards = () => {
     projectCard.appendChild(projectShortInfo);
 
     projectList.appendChild(projectCard);
-  }
+  });
 };
 
 const toggleVisibility = (card, pos) => {
@@ -126,9 +125,9 @@ const toggleVisibility = (card, pos) => {
 const handleUpdate = () => {
   const pos = getScrollPosition();
 
-  for (let i = 0; i < projectCards.length; i++) {
-    toggleVisibility(projectCards[i], pos);
-  }
+  projectCards.forEach(card => {
+    toggleVisibility(card, pos);
+  });
 };
 
 module.exports = {

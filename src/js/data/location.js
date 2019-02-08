@@ -5,7 +5,8 @@ module.exports = {
 
   'zoom': 10,
   'scale': 1,
-  'size': 315,
+  'mapWidth': 417,
+  'mapHeight': 309,
   'maptype': 'roadmap',
   'marker': {
     'size': 'mid',

@@ -154,17 +154,11 @@
     margin-top: 10px;
   }
 
-  .info__preview {
-  }
-
   .info__title {
     margin: 5px 0;
   }
 
   .info__text {
     flex-grow: 1;
-  }
-
-  .links__container {
   }
 }

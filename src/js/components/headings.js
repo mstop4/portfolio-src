@@ -46,9 +46,9 @@ const toggleVisibility = (heading, pos) => {
 const handleUpdate = () => {
   const pos = getScrollPosition();
 
-  for (let i = 0; i < headings.length; i++) {
-    toggleVisibility(headings[i], pos);
-  }
+  headings.forEach(heading => {
+    toggleVisibility(heading, pos);
+  });
 };
 
 module.exports = {

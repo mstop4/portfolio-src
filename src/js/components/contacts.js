@@ -8,7 +8,7 @@ const scrollBuffer = 50;
 const addContactCards = () => {
   const pos = getScrollPosition();
 
-  for (let i = 0 ; i < contacts.length; i++) {
+  contacts.forEach(contact => {
     const contactCard = document.createElement('article');
     contactCard.classList.add('contact', 'contact--hidden');
     coinFlip() === 0 ? contactCard.classList.add('contact--left') : contactCard.classList.add('contact--right');
@@ -19,19 +19,19 @@ const addContactCards = () => {
     const contactFAIcon = document.createElement('i');
     contactFAIcon.classList.add('fa-4x');
 
-    for (let j = 0; j < contacts[i].faIconClasses.length; j++) {
-      contactFAIcon.classList.add(contacts[i].faIconClasses[j]);
-    }
+    contact.faIconClasses.forEach(iconClass => {
+      contactFAIcon.classList.add(iconClass);
+    });
 
     const contactText = document.createElement('a');
-    contactText.href = contacts[i].url;
-    contactText.innerText = contacts[i].displayText;
+    contactText.href = contact.url;
+    contactText.textContent = contact.displayText;
 
     contactCard.appendChild(contactFAIcon);
     contactCard.appendChild(contactText);
 
     contactList.appendChild(contactCard);
-  }
+  });
 }
 
 const toggleVisibility = (card, pos) => {
@@ -72,9 +72,9 @@ const toggleVisibility = (card, pos) => {
 const handleUpdate = () => {
   const pos = getScrollPosition();
 
-  for (let i = 0; i < contactCards.length; i++) {
-    toggleVisibility(contactCards[i], pos);
-  }
+  contactCards.forEach(card => {
+    toggleVisibility(card, pos);
+  });
 };
 
 module.exports = {

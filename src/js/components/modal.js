@@ -70,7 +70,7 @@ const updateModal = (index) => {
   infoPreview.load();
   infoPreview.play();
 
-  infoTitle.innerText = projects[index].title;
+  infoTitle.textContent = projects[index].title;
   infoText.innerHTML = projects[index].description;
 
   projects[index].stack.forEach(elem => {
@@ -106,7 +106,7 @@ const updateModal = (index) => {
     projects[index].demoUrls.forEach(link => {
       const listEl = document.createElement('li');
       const linkEl = document.createElement('a');
-      linkEl.innerText = link.text;
+      linkEl.textContext = link.text;
       linkEl.href = link.url;
       linkEl.target = '_blank';
       listEl.appendChild(linkEl);
