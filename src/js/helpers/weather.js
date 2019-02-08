@@ -26,7 +26,7 @@ const evaluateWeather = (weatherObj) => {
     output += 'Tonight\'s';
   }
 
-  output += ` weather in ${location_shortName}: `;
+  output += ` weather in ${location_shortName}? <strong>`;
 
   // Temperature
   for (let i = 0; i < temperatureRanges.length; i++) {
@@ -39,7 +39,7 @@ const evaluateWeather = (weatherObj) => {
   // Weather
   for (let i = 0; i < weatherConditions.length; i++) {
     if (weatherConditions[i].pattern.test(weatherIdStr)) {
-      output += `${weatherConditions[i].descriptor}.`;
+      output += `${weatherConditions[i].descriptor}</strong>.`;
       break;
     }
   }

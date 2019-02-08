@@ -35,5 +35,8 @@
     "rimraf": "^2.6.3",
     "tinyify": "^2.5.0",
     "uglifycss": "0.0.29"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
   }
 }

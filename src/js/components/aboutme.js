@@ -1,24 +1,23 @@
 const { setWeather } = require('../helpers/weather');
 const location = require('../data/location');
 const { googleMapsApiKey } = require('../data/env');
-const { getWindowSize } = require('../helpers');
+const { getWindowSize, capitalize } = require('../helpers');
+const moment = require('moment');
 
-const breakpointWidth = 882;
-const maxGithubEvents = 30;
+const breakpointWidth = 921;
+const maxGithubEvents = 4;
 
 const handleResize = () => {
   const winWidth = getWindowSize().width;
   const bioElems = document.querySelectorAll('.bio__base');
 
   if (winWidth < breakpointWidth) {
-    console.log("single");
     bioElems.forEach((elem, i) => {
       elem.style.order = i;
     });
   }
 
   else {
-    console.log("double");
     bioElems.forEach((elem, i) => {
       if (i % 4 === 2) {
         elem.style.order = i+1;
@@ -37,7 +36,7 @@ const handleResize = () => {
 
 const setupMap = () => {
   const locationElem = document.querySelector('#bio__location');
-  locationElem.textContent = location.location;
+  locationElem.innerHTML += location.location;
 
   const mapLink = document.createElement('a');
   const mapImg = document.createElement('img');
@@ -65,39 +64,47 @@ const setupGithub = () => {
     res.json()
     .then(json => {
 
-      //console.log(json);
+      console.log(json);
       
       for (let i = 0; i < maxGithubEvents; i++) {
+        const eventList = document.querySelector('.github-event-list');
+        const eventElem = document.createElement('li');
+
+        const timestamp = moment(json[i].created_at);
+        const timeDiff = timestamp.diff(moment());
+        eventElem.innerHTML += `<strong>${moment.duration(timeDiff).humanize(true)}</strong> - `;
+
         switch (json[i].type) {
           case 'PushEvent':
-            console.log(`Pushed ${json[i].payload.size} commits to ${json[i].repo.name}`);
+            eventElem.innerHTML += `Pushed ${json[i].payload.size} commits to ${json[i].repo.name}`;
             break;
 
           case 'PullRequestEvent':
-            console.log(`${json[i].payload.action} pull request #${json[i].payload.number} in ${json[i].repo.name}`);
+            eventElem.innerHTML += capitalize(`${json[i].payload.action} pull request #${json[i].payload.number} in ${json[i].repo.name}`);
             break;
 
           case 'CreateEvent':
-            console.log(`Created ${json[i].payload.ref_type} "${json[i].payload.ref}" in ${json[i].repo.name}`);
+            eventElem.innerHTML += `Created ${json[i].payload.ref_type} "${json[i].payload.ref}" in ${json[i].repo.name}`;
             break;
 
           case 'DeleteEvent':
-            console.log(`Deleted ${json[i].payload.ref_type} "${json[i].payload.ref}" in ${json[i].repo.name}`);
+            eventElem.innerHTML += `Deleted ${json[i].payload.ref_type} "${json[i].payload.ref}" in ${json[i].repo.name}`;
             break;
 
           case 'WatchEvent':
-            console.log(`${json[i].payload.action} watching ${json[i].repo.name} `);
+            eventElem.innerHTML += capitalize(`${json[i].payload.action} watching ${json[i].repo.name} `);
             break;
 
           case 'ForkEvent':
-            console.log(`Forked ${json[i].repo.name}`);
+            eventElem.innerHTML += `Forked ${json[i].repo.name}`;
             break;
 
           default:
-            console.log('Meep');
+            eventElem.innerHTML += 'Tried something new that even this site doesn\'t know about';
         }
-      }
 
+        eventList.appendChild(eventElem);
+      }
     });
   
   });
