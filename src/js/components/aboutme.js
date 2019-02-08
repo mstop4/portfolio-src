@@ -4,6 +4,7 @@ const { googleMapsApiKey } = require('../data/env');
 const { getWindowSize } = require('../helpers');
 
 const breakpointWidth = 882;
+const maxGithubEvents = 30;
 
 const handleResize = () => {
   const winWidth = getWindowSize().width;
@@ -34,11 +35,6 @@ const handleResize = () => {
   }
 }
 
-const setupWeather = () => {
-  const weatherElem = document.querySelector('.weather__text');
-  setWeather(weatherElem);
-}
-
 const setupMap = () => {
   const locationElem = document.querySelector('#bio__location');
   locationElem.textContent = location.location;
@@ -57,8 +53,59 @@ const setupMap = () => {
   mapCard.appendChild(mapLink);
 }
 
+const setupWeather = () => {
+  const weatherElem = document.querySelector('.weather__text');
+  setWeather(weatherElem);
+}
+
+const setupGithub = () => {
+  fetch('https://api.github.com/users/mstop4/events')
+  .then(res => {
+    
+    res.json()
+    .then(json => {
+
+      //console.log(json);
+      
+      for (let i = 0; i < maxGithubEvents; i++) {
+        switch (json[i].type) {
+          case 'PushEvent':
+            console.log(`Pushed ${json[i].payload.size} commits to ${json[i].repo.name}`);
+            break;
+
+          case 'PullRequestEvent':
+            console.log(`${json[i].payload.action} pull request #${json[i].payload.number} in ${json[i].repo.name}`);
+            break;
+
+          case 'CreateEvent':
+            console.log(`Created ${json[i].payload.ref_type} "${json[i].payload.ref}" in ${json[i].repo.name}`);
+            break;
+
+          case 'DeleteEvent':
+            console.log(`Deleted ${json[i].payload.ref_type} "${json[i].payload.ref}" in ${json[i].repo.name}`);
+            break;
+
+          case 'WatchEvent':
+            console.log(`${json[i].payload.action} watching ${json[i].repo.name} `);
+            break;
+
+          case 'ForkEvent':
+            console.log(`Forked ${json[i].repo.name}`);
+            break;
+
+          default:
+            console.log('Meep');
+        }
+      }
+
+    });
+  
+  });
+}
+
 module.exports = {
   handleResize,
   setupMap,
-  setupWeather
+  setupWeather,
+  setupGithub
 }

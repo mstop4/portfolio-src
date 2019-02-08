@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   aboutme.setupWeather();
   aboutme.setupMap();
   aboutme.handleResize();
+  aboutme.setupGithub();
 
   // - Cards
   projects.addProjectCards();
