@@ -2,6 +2,13 @@ const coinFlip = () => {
   return Math.floor(Math.random() * 2);
 }
 
+const getWindowSize = () => {
+  return {
+    height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+    width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+  };
+}
+
 const getScrollPosition = () => {
   const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
   const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
@@ -36,6 +43,7 @@ const throttle = (func, delay) => {
 
 module.exports = {
   coinFlip,
+  getWindowSize,
   getScrollPosition,
   throttle
 }

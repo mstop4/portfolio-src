@@ -43,12 +43,28 @@ const updateModal = (index) => {
   const infoPreviewSrc = infoPreview.querySelector('source');
   const infoTitle = modal.front.querySelector('.info__title');
   const infoText = modal.front.querySelector('.info__text');
+  const infoStack = modal.front.querySelector('.stack-list');
 
   const linksContainer = modal.front.querySelector('.links__container');
   const sourceIcon = linksContainer.querySelector('#source-icon');
   const sourceLinks = linksContainer.querySelector('#source-links');
   const demoIcon = linksContainer.querySelector('#demo-icon');
   const demoLinks = linksContainer.querySelector('#demo-links');
+
+  // clear out old info
+  while (infoStack.firstChild) {
+    infoStack.removeChild(infoStack.firstChild);
+  }
+
+  while (sourceLinks.firstChild) {
+    sourceLinks.removeChild(sourceLinks.firstChild);
+  }
+
+  while (demoLinks.firstChild) {
+    demoLinks.removeChild(demoLinks.firstChild);
+  }
+
+  // add new info
 
   infoPreviewSrc.src = projects[index].fullAnim;
   infoPreview.load();
@@ -57,23 +73,25 @@ const updateModal = (index) => {
   infoTitle.innerText = projects[index].title;
   infoText.innerHTML = projects[index].description;
 
-  while (sourceLinks.firstChild) {
-    sourceLinks.removeChild(sourceLinks.firstChild);
-  }
+  projects[index].stack.forEach(elem => {
+    const chip = document.createElement('li');
+    chip.textContent = elem;
+    infoStack.appendChild(chip);
+  });
 
   if (projects[index].sourceUrls.length > 0) {
     sourceIcon.classList.remove('links--hidden');
     sourceLinks.classList.remove('links--hidden');
-
-    for (let i = 0; i < projects[index].sourceUrls.length; i++) {
+  
+    projects[index].sourceUrls.forEach(link => {
       const listEl = document.createElement('li');
       const linkEl = document.createElement('a');
-      linkEl.innerText = projects[index].sourceUrls[i].text;
-      linkEl.href = projects[index].sourceUrls[i].url;
+      linkEl.textContent = link.text;
+      linkEl.href = link.url;
       linkEl.target = '_blank';
       listEl.appendChild(linkEl);
       sourceLinks.appendChild(listEl);
-    }
+    });
   }
 
   else {
@@ -81,23 +99,19 @@ const updateModal = (index) => {
     sourceLinks.classList.add('links--hidden');
   }
 
-  while (demoLinks.firstChild) {
-    demoLinks.removeChild(demoLinks.firstChild);
-  }
-
   if (projects[index].demoUrls.length > 0) {
     demoIcon.classList.remove('links--hidden');
     demoLinks.classList.remove('links--hidden');
 
-    for (let i = 0; i < projects[index].demoUrls.length; i++) {
+    projects[index].demoUrls.forEach(link => {
       const listEl = document.createElement('li');
       const linkEl = document.createElement('a');
-      linkEl.innerText = projects[index].demoUrls[i].text;
-      linkEl.href = projects[index].demoUrls[i].url;
+      linkEl.innerText = link.text;
+      linkEl.href = link.url;
       linkEl.target = '_blank';
       listEl.appendChild(linkEl);
       demoLinks.appendChild(listEl);
-    }
+    });
   }
 
   else {

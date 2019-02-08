@@ -1,6 +1,38 @@
 const { setWeather } = require('../helpers/weather');
 const location = require('../data/location');
 const { googleMapsApiKey } = require('../data/env');
+const { getWindowSize } = require('../helpers');
+
+const breakpointWidth = 882;
+
+const handleResize = () => {
+  const winWidth = getWindowSize().width;
+  const bioElems = document.querySelectorAll('.bio__base');
+
+  if (winWidth < breakpointWidth) {
+    console.log("single");
+    bioElems.forEach((elem, i) => {
+      elem.style.order = i;
+    });
+  }
+
+  else {
+    console.log("double");
+    bioElems.forEach((elem, i) => {
+      if (i % 4 === 2) {
+        elem.style.order = i+1;
+      }
+      
+      else if (i % 4 === 3) {
+        elem.style.order = i-1;
+      }
+
+      else {
+        elem.style.order = i;
+      }
+    });
+  }
+}
 
 const setupWeather = () => {
   const weatherElem = document.querySelector('.weather__text');
@@ -8,6 +40,9 @@ const setupWeather = () => {
 }
 
 const setupMap = () => {
+  const locationElem = document.querySelector('#bio__location');
+  locationElem.textContent = location.location;
+
   const mapLink = document.createElement('a');
   const mapImg = document.createElement('img');
 
@@ -23,6 +58,7 @@ const setupMap = () => {
 }
 
 module.exports = {
+  handleResize,
   setupMap,
   setupWeather
 }

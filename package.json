@@ -8,7 +8,7 @@
     "buildHtml": "cp src/index.html dist/index.html",
     "copyImg": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img",
     "copyVid": "rimraf dist/vid && mkdirp dist/vid && cp -R src/vid/finalized/* dist/vid",
-    "refresh": "concurrently \"npm run buildCss\" \"npm run buildHtml\"",
+    "refresh": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\"",
     "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyImg\" \"npm run copyVid\"",
     "serve": "npx http-server dist",
     "start": "npm run build && npm run serve"
@@ -29,6 +29,7 @@
     "browserify": "^16.2.3",
     "concurrently": "^4.1.0",
     "css-combine": "github:mstop4/css-combine",
+    "extend": "^3.0.2",
     "http-server": "^0.11.1",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.3",
