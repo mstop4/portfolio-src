@@ -1,7 +1,7 @@
 const moment = require('moment');
 const { capitalize } = require('../helpers');
 
-const parseEvent = (event) => {
+const parseGithubEvent = (event) => {
   const timestamp = moment(event.created_at);
   const timeDiff = timestamp.diff(moment());
   let message = `<strong>${moment.duration(timeDiff).humanize(true)}</strong> - `;
@@ -45,5 +45,5 @@ const parseEvent = (event) => {
 }
 
 module.exports = {
-  parseEvent
+  parseGithubEvent
 }

@@ -1,5 +1,6 @@
+const moment = require('moment');
 const { setWeather } = require('../helpers/weather');
-const { parseEvent } = require('../helpers/github');
+const { parseGithubEvent } = require('../helpers/github');
 const { getWindowSize } = require('../helpers');
 
 const location = require('../data/location');
@@ -58,6 +59,20 @@ const setupWeather = () => {
   setWeather(weatherElem);
 }
 
+const setupDailyFact = () => {
+  const month = moment().month() + 1;
+  const day = moment().date();
+
+  fetch(`http://numbersapi.com/${month}/${day}/date?json&fragment`)
+  .then(res => {
+    res.json()
+    .then(json => {
+      const factElem = document.querySelector('.today__text');
+      factElem.innerHTML = `<strong>This day in ${json.year}:</strong> ${json.text}.`;
+    });
+  });
+}
+
 const setupGithub = () => {
   fetch('https://api.github.com/users/mstop4/events')
   .then(res => {
@@ -71,7 +86,7 @@ const setupGithub = () => {
         const eventList = document.querySelector('.github-event-list');
         const eventElem = document.createElement('li');
 
-        eventElem.innerHTML = parseEvent(json[i]);
+        eventElem.innerHTML = parseGithubEvent(json[i]);
         eventList.appendChild(eventElem);
       }
     });
@@ -83,5 +98,6 @@ module.exports = {
   handleResize,
   setupMap,
   setupWeather,
+  setupDailyFact,
   setupGithub
 }
