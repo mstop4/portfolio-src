@@ -35,6 +35,30 @@
   }
 }
 
+@keyframes bio-appearLeft {
+  from {
+    transform: scale(0) rotate(calc(var(--bio__start-angle) * -1));
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) rotate(var(--bio__end-angle));
+    opacity: 1;
+  }
+}
+
+@keyframes bio-appearRight {
+  from {
+    transform: scale(0) rotate(var(--bio__start-angle));
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) rotate(calc(var(--bio__end-angle) * -1));
+    opacity: 1;
+  }
+}
+
 .bio-list {
   margin: 0 auto;
   display: flex;
@@ -86,9 +110,9 @@
 }
 
 .bio__card-left--appear {
-  animation: bio-slideInFromLeft 0.5s ease-out 0s 1 forwards;
+  animation: bio-appearLeft 0.5s ease-out 0s 1 forwards;
 }
 
 .bio__card-right--appear {
-  animation: bio-slideInFromRight 0.5s ease-out 0s 1 forwards;
+  animation: bio-appearRight 0.5s ease-out 0s 1 forwards;
 }
