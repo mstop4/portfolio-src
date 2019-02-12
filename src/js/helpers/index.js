@@ -1,5 +1,12 @@
-const coinFlip = () => {
-  return Math.floor(Math.random() * 2);
+const coinFlip = () => Math.floor(Math.random() * 2);
+
+const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+
+const getWindowSize = () => {
+  return {
+    height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+    width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+  };
 }
 
 const getScrollPosition = () => {
@@ -36,6 +43,8 @@ const throttle = (func, delay) => {
 
 module.exports = {
   coinFlip,
+  capitalize,
+  getWindowSize,
   getScrollPosition,
   throttle
 }

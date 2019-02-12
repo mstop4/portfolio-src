@@ -4,7 +4,7 @@
   <head>
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Mali:400,700" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
   </head>
@@ -21,7 +21,11 @@
         </div>
         <div class="info__title"></div>
         <div class="info__text"></div>
-        <div class="info__stack"></div>
+        <div class="info__stack">
+          <ul class="stack-list">
+            <!-- Stack chips go here -->
+          </ul>
+        </div>
         <div class="links__container">
 
           <div id="source-icon">
@@ -56,38 +60,49 @@
         <h2 class="heading heading__left heading--hidden">About Me</h2>
         <div class="bio-list">
 
-          <div class="bio__text">
+          <div class="bio__base bio__text">
             <div>Hails from the city of <span id="bio__location"></span></div>
           </div>
 
-          <div class="bio__card bio__map">
+          <div class="bio__base bio__card bio__map bio--left">
             <!-- Map goes in here-->
           </div>
 
-          <div class="bio__text">
+          <div class="bio__base bio__text">
             <div>Fascinated by the <strong>Internet of things</strong> and the <strong>web as a programmable platform</strong></div>
           </div>
 
-          <div class="bio__card">
-            <div class="bio__factoids">
-              <div class="weather__text"><!-- Weather info --></div>
-            </div>
+          <div class="bio__base bio__card bio--right">
+            <ul class="bio__factoids">
+              <li class="weather-text"><!-- Weather info --></li>
+              <li class="today-text"></li>
+              <li>
+                <strong>What's that word that sounds like<br/>"<input type="text" class="datamuse-query" value="wusstersher">"?</strong>
+                <input type="button" value="👈 Try Me" class="datamuse-search">
+                <div class="datamuse-answer datamuse-answer--hidden"></div>
+              </li>
+            </ul>
           </div>
 
-          <div class="bio__text">
-            <div>Enjoys learning new things and teaching others</div>
+          <div class="bio__base bio__text">
+            <div>Enjoys <strong>learning</strong> new things and <strong>teaching</strong> others</div>
           </div>
 
-          <div class="bio__card">
+          <div class="bio__base bio__card bio--left">
             Text
           </div>
 
-          <div class="bio__text">
-            <div>Always strives to <strong>make a little something each day, be it code or art</strong></div>
+          <div class="bio__base bio__text">
+            <div>Always strives to <strong>practice my craft regularly</strong>, be it <strong>code or art</strong></div>
           </div>
   
-          <div class="bio__card">
-            Text
+          <div class="bio__base bio__card bio__activity bio--right">
+            <div class="github-chart">
+              <div class="github-events">
+                <h4 class="github-event-title">Latest Github Activity</h4>
+                <ul class="github-event-list"></ul>
+              </div>
+            </div>
           </div>
 
         </div>

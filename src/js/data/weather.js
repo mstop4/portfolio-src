@@ -19,11 +19,11 @@ module.exports = {
   ],
 
   'temperatureRanges': [
-    { 'descriptor': 'freezing', 'maxTemp': -10},
-    { 'descriptor': 'cold', 'maxTemp': 4},
-    { 'descriptor': 'cool', 'maxTemp': 10},
-    { 'descriptor': 'mild', 'maxTemp': 15},
-    { 'descriptor': 'warm', 'maxTemp': 25},
-    { 'descriptor': 'hot', 'maxTemp': 999 },
+    { 'descriptor': 'Freezing', 'maxTemp': -10},
+    { 'descriptor': 'Cold', 'maxTemp': 4},
+    { 'descriptor': 'Cool', 'maxTemp': 10},
+    { 'descriptor': 'Mild', 'maxTemp': 15},
+    { 'descriptor': 'Warm', 'maxTemp': 25},
+    { 'descriptor': 'Hot', 'maxTemp': 999 },
   ]
 }

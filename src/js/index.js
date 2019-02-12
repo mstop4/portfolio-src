@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   headings.initialize();
 
   // - About Me
-  aboutme.setupWeather();
-  aboutme.setupMap();
+  aboutme.initialize();
 
   // - Cards
   projects.addProjectCards();
@@ -26,8 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 100);
 
   document.addEventListener('scroll', updateCards);
-  document.addEventListener('resize', updateCards);
-  document.addEventListener('orientationchange', updateCards);
+  window.addEventListener('resize', updateCards);
+  window.addEventListener('resize', aboutme.handleResize);
+  window.addEventListener('orientationchange', updateCards);
 
   // - Modal
   modal.initialize();

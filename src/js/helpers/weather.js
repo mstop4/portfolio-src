@@ -21,12 +21,12 @@ const evaluateWeather = (weatherObj) => {
   const sunset = weatherObj.sys.sunset * 1000;
 
   if (now >= sunrise && now < sunset) {
-    output += 'Today\'s';
+    output += '<strong>Today\'s';
   } else {
-    output += 'Tonight\'s';
+    output += '<strong>Tonight\'s';
   }
 
-  output += ` weather in ${location_shortName}: `;
+  output += ` weather in ${location_shortName}?</strong> `;
 
   // Temperature
   for (let i = 0; i < temperatureRanges.length; i++) {
