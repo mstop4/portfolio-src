@@ -1,7 +1,4 @@
-const { innerScrollBuffer, outerScrollBuffer } = require('../data/config');
-
 const coinFlip = () => Math.floor(Math.random() * 2);
-
 const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 const getWindowSize = () => {
@@ -20,6 +17,9 @@ const getScrollPosition = () => {
     bottom: scrollPos + windowHeight
   };
 }
+
+const innerScrollBuffer = 100;
+const outerScrollBuffer = 50;
 
 const toggleVisibilityFactory = (hiddenClass, visibleCb, hiddenCb) => {
   return (elem, pos) => {
