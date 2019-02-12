@@ -106,7 +106,7 @@ const updateModal = (index) => {
     projects[index].demoUrls.forEach(link => {
       const listEl = document.createElement('li');
       const linkEl = document.createElement('a');
-      linkEl.textContext = link.text;
+      linkEl.innerText = link.text;
       linkEl.href = link.url;
       linkEl.target = '_blank';
       listEl.appendChild(linkEl);

@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     projects.handleUpdate();
     contacts.handleUpdate();
     headings.handleUpdate();
+    aboutme.handleUpdate();
   }, 100);
 
   document.addEventListener('scroll', updateCards);

@@ -1,16 +1,16 @@
 :root {
-  --slide-angle: 4deg;
-  --slide-angle-tan: 0.07; /* no trig functions in CSS yet :( */
-  --slide-start-x: 25vmax;
-  --slide-start-y: calc(var(--slide-start-x) * var(--slide-angle-tan)); 
+  --heading-slide-angle: 4deg;
+  --heading-slide-angle-tan: 0.07; /* no trig functions in CSS yet :( */
+  --heading-slide-start-x: 25vmax;
+  --heading-slide-start-y: calc(var(--heading-slide-start-x) * var(--heading-slide-angle-tan)); 
 }
 
-@keyframes slideInFromLeft {
+@keyframes heading-slideInFromLeft {
   from {
     transform:
-      translateX(calc(-1 * var(--slide-start-x))) 
-      translateY(var(--slide-start-y))
-      rotate(calc(-1 * var(--slide-angle)));
+      translateX(calc(-1 * var(--heading-slide-start-x))) 
+      translateY(var(--heading-slide-start-y))
+      rotate(calc(-1 * var(--heading-slide-angle)));
     opacity: 0;
   }
 
@@ -18,17 +18,17 @@
     transform:
       translateX(0) 
       translateY(0)
-      rotate(calc(-1 * var(--slide-angle)));
+      rotate(calc(-1 * var(--heading-slide-angle)));
     opacity: 1;
   }
 }
 
-@keyframes slideInFromRight {
+@keyframes heading-slideInFromRight {
   from {
     transform:
-      translateX(var(--slide-start-x))
-      translateY(var(--slide-start-y))
-      rotate(var(--slide-angle));
+      translateX(var(--heading-slide-start-x))
+      translateY(var(--heading-slide-start-y))
+      rotate(var(--heading-slide-angle));
     opacity: 0;
   }
 
@@ -36,7 +36,7 @@
     transform:
       translateX(0) 
       translateY(0)
-      rotate(var(--slide-angle));
+      rotate(var(--heading-slide-angle));
     opacity: 1;
   }
 }
@@ -64,7 +64,7 @@
 }
 
 .heading__left--appear {
-  animation: slideInFromLeft 0.5s ease-out 0s 1 forwards;
+  animation: heading-slideInFromLeft 0.5s ease-out 0s 1 forwards;
 }
 
 .heading__right {
@@ -80,7 +80,7 @@
 }
 
 .heading__right--appear {
-  animation: slideInFromRight 0.5s ease-out 0s 1 forwards;
+  animation: heading-slideInFromRight 0.5s ease-out 0s 1 forwards;
 }
 
 .heading--hidden {

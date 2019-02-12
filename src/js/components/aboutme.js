@@ -1,12 +1,14 @@
 const { setWeather } = require('../helpers/weather');
 const { parseGithubEvent } = require('../helpers/github');
-const { getWindowSize, capitalize } = require('../helpers');
+const { getWindowSize, capitalize, getScrollPosition } = require('../helpers');
 
 const location = require('../data/location');
 const { googleMapsApiKey } = require('../data/env');
 
 const breakpointWidth = 921;
 const maxGithubEvents = 4;
+const scrollBuffer = 50;
+let bioCards = null;
 let datamuseQueryChanged = false;
 
 const initialize = () => {
@@ -16,6 +18,8 @@ const initialize = () => {
   setupDailyFact();
   setupDatamuse();
   handleResize();
+
+  bioCards = document.querySelectorAll('.bio__base');
 }
 
 const handleResize = () => {
@@ -139,6 +143,53 @@ const setupGithub = () => {
   });
 }
 
+const toggleVisibility = (card, pos) => {
+  const bodyTop = -parseInt(document.querySelector('body').style.top) || 0;
+  const elTop = card.offsetTop;
+  const elBottom = card.offsetTop + card.offsetHeight;
+
+  if (card.classList.contains('bio__base--hidden')) {
+    if ((elTop - scrollBuffer > pos.top + bodyTop && 
+      elTop - scrollBuffer < pos.bottom + bodyTop) ||
+      (elBottom < pos.bottom + bodyTop &&
+      elBottom + scrollBuffer > pos.top + bodyTop)) {
+
+      card.classList.remove('bio__base--hidden');
+
+      if (card.classList.contains('bio__text-left')) {
+        card.classList.add('bio__text-left--appear');
+      }
+      else if (card.classList.contains('bio__text-right')) {
+        card.classList.add('bio__text-right--appear');
+      }
+    }
+  }
+
+  else {
+    if (elTop - scrollBuffer >= pos.bottom + bodyTop ||
+        elBottom + scrollBuffer <= pos.top + bodyTop) {
+
+      card.classList.add('bio__base--hidden');
+
+      if (card.classList.contains('bio__text-left')) {
+        card.classList.remove('bio__text-left--appear');
+      }
+      else if (card.classList.contains('bio__text-right')) {
+        card.classList.remove('bio__text-right--appear');
+      }
+    }
+  }
+}
+
+const handleUpdate = () => {
+  const pos = getScrollPosition();
+
+  bioCards.forEach(card => {
+    toggleVisibility(card, pos);
+  });
+};
+
 module.exports = {
-  initialize
+  initialize,
+  handleUpdate
 }

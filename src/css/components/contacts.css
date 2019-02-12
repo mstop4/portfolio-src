@@ -48,19 +48,19 @@
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 }
 
-.contact--left {
+.contact-left {
   transform: rotate(2deg);
 }
 
-.contact--left-appear {
+.contact-left--appear {
   animation: contact-appear--left 0.3s ease-out 0s forwards;
 }
 
-.contact--right {
+.contact-right {
   transform: rotate(-2deg);
 }
 
-.contact--right-appear {
+.contact-right--appear {
   animation: contact-appear--right 0.3s ease-out 0s forwards;
 }
 

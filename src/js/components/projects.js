@@ -15,7 +15,7 @@ const addProjectCards = () => {
     let projectCard = document.createElement('article');
     projectCard.classList.add('project', 'project--hidden');
     projectCard.setAttribute('data-index', i);
-    coinFlip() === 0 ? projectCard.classList.add('project--left') : projectCard.classList.add('project--right');
+    coinFlip() === 0 ? projectCard.classList.add('project-left') : projectCard.classList.add('project-right');
 
     toggleVisibility(projectCard, pos);
     projectCards.push(projectCard);
@@ -99,10 +99,11 @@ const toggleVisibility = (card, pos) => {
 
       card.classList.remove('project--hidden');
 
-      if (card.classList.contains('project--left')) {
-        card.classList.add('project--left-appear');
-      } else if (card.classList.contains('project--right')) {
-        card.classList.add('project--right-appear');
+      if (card.classList.contains('project-left')) {
+        card.classList.add('project-left--appear');
+      }
+      else if (card.classList.contains('project-right')) {
+        card.classList.add('project-right--appear');
       }
     }
   }
@@ -113,10 +114,11 @@ const toggleVisibility = (card, pos) => {
 
       card.classList.add('project--hidden');
 
-      if (card.classList.contains('project--left')) {
-        card.classList.remove('project--left-appear');
-      } else if (card.classList.contains('project--right')) {
-        card.classList.remove('project--right-appear');
+      if (card.classList.contains('project-left')) {
+        card.classList.remove('project-left--appear');
+      }
+      else if (card.classList.contains('project-right')) {
+        card.classList.remove('project-right--appear');
       }
     }
   }

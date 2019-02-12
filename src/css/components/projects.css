@@ -48,19 +48,19 @@
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 }
 
-.project--left {
+.project-left {
   transform: rotate(2deg);
 }
 
-.project--left-appear {
+.project-left--appear {
   animation: project-appear--left 0.3s ease-out 0s forwards;
 }
 
-.project--right {
+.project-right {
   transform: rotate(-2deg);
 }
 
-.project--right-appear {
+.project-right--appear {
   animation: project-appear--right 0.3s ease-out 0s forwards;
 }
 

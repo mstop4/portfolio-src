@@ -4,6 +4,35 @@
   --bio-card-width: 433px;
   --bio-card-height: 325px;
   --bio-text-width: 500px;
+  --bio-slide-start-x: 25vmax;
+}
+
+@keyframes bio-slideInFromLeft {
+  from {
+    transform:
+      translateX(calc(-1 * var(--bio-slide-start-x)));
+    opacity: 0;
+  }
+
+  to {
+    transform:
+      translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bio-slideInFromRight {
+  from {
+    transform:
+      translateX(var(--bio-slide-start-x));
+    opacity: 0;
+  }
+
+  to {
+    transform:
+      translateX(0);
+    opacity: 1;
+  }
 }
 
 .bio-list {
@@ -16,6 +45,10 @@
   justify-content: space-around;
 }
 
+.bio__base--hidden {
+  visibility: hidden;
+}
+
 .bio__text {
   width: var(--bio-text-width);
   max-height: var(--bio-card-height);
@@ -24,6 +57,14 @@
   font-size: 3em;
   display: inline-flex;
   align-items: center;
+}
+
+.bio__text-left--appear {
+  animation: bio-slideInFromLeft 0.5s ease-out 0s 1 forwards;
+}
+
+.bio__text-right--appear {
+  animation: bio-slideInFromRight 0.5s ease-out 0s 1 forwards;
 }
 
 .bio__card {
@@ -36,10 +77,10 @@
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 }
 
-.bio--left {
+.bio__card-left {
   transform: rotate(var(--bio__end-angle));
 }
 
-.bio--right {
+.bio__card-right {
   transform: rotate(calc(-1 * var(--bio__end-angle)));
 }

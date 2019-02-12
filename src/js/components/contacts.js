@@ -11,7 +11,7 @@ const addContactCards = () => {
   contacts.forEach(contact => {
     const contactCard = document.createElement('article');
     contactCard.classList.add('contact', 'contact--hidden');
-    coinFlip() === 0 ? contactCard.classList.add('contact--left') : contactCard.classList.add('contact--right');
+    coinFlip() === 0 ? contactCard.classList.add('contact-left') : contactCard.classList.add('contact-right');
 
     toggleVisibility(contactCard, pos);
     contactCards.push(contactCard);
@@ -46,10 +46,11 @@ const toggleVisibility = (card, pos) => {
 
       card.classList.remove('contact--hidden');
 
-      if (card.classList.contains('contact--left')) {
-        card.classList.add('contact--left-appear');
-      } else if (card.classList.contains('contact--right')) {
-        card.classList.add('contact--right-appear');
+      if (card.classList.contains('contact-left')) {
+        card.classList.add('contact-left--appear');
+      }
+      else if (card.classList.contains('contact-right')) {
+        card.classList.add('contact-right--appear');
       }
     }
   }
@@ -60,10 +61,11 @@ const toggleVisibility = (card, pos) => {
 
       card.classList.add('contact--hidden');
 
-      if (card.classList.contains('contact--left')) {
-        card.classList.remove('contact--left-appear');
-      } else if (card.classList.contains('contact--right')) {
-        card.classList.remove('contact--right-appear');
+      if (card.classList.contains('contact-left')) {
+        card.classList.remove('contact-left--appear');
+      }
+      else if (card.classList.contains('contact-right')) {
+        card.classList.remove('contact-right--appear');
       }
     }
   }
