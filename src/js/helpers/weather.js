@@ -1,6 +1,6 @@
 const { openWeatherApiKey } = require('../data/env');
 const { location, location_shortName } = require('../data/location');
-const { weatherConditions, temperatureRanges } = require('../data/weather');
+const { temperatureRanges } = require('../data/weather');
 
 const setWeather = (weatherElem) => {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${openWeatherApiKey}&units=metric`)
@@ -11,7 +11,8 @@ const setWeather = (weatherElem) => {
 };
 
 const evaluateWeather = (weatherObj) => {
-  const weatherIdStr = String(weatherObj.weather[0].id);
+  console.log(weatherObj);
+  const weatherList = weatherObj.weather;
   const temp = weatherObj.main.temp;
   let output = '';
 
@@ -26,23 +27,33 @@ const evaluateWeather = (weatherObj) => {
     output += '<strong>Tonight\'s';
   }
 
-  output += ` weather in ${location_shortName}?</strong> `;
+  output += ` weather in ${location_shortName}?</strong> A `;
 
   // Temperature
   for (let i = 0; i < temperatureRanges.length; i++) {
     if (temp < temperatureRanges[i].maxTemp) {
-      output += `${temperatureRanges[i].descriptor} and `;
+      output += `${temperatureRanges[i].descriptor} ${Math.round(temp)} °C with `;
       break;
     }
   }
 
   // Weather
-  for (let i = 0; i < weatherConditions.length; i++) {
-    if (weatherConditions[i].pattern.test(weatherIdStr)) {
-      output += `${weatherConditions[i].descriptor}.`;
-      break;
+  weatherList.forEach((condition, i) => {
+    output += condition.description;
+
+    switch (i) {
+      case weatherList.length-1:
+        output += '.';
+        break;
+
+      case weatherList.length-2:
+        output += weatherList.length > 2 ? ', and ' : ' and ';
+        break;
+
+      default:
+        output += ', ';
     }
-  }
+  });
 
   return output;
 }
