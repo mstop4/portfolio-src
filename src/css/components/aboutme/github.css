@@ -1,0 +1,31 @@
+.bio__activity {
+  overflow: hidden;
+}
+
+.github-chart {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75)), white url(http://ghchart.rshah.org/mstop4) 100% 3% no-repeat;
+}
+
+.github-events {
+  font-family: 'Mali', cursive;
+  margin: 0;
+  position: relative;
+  top: 37.5%;
+  overflow: hidden;
+}
+
+.github-event-title {
+  margin: 0 4px 8px;
+}
+
+.github-event-list {
+  margin: 0;
+  padding: 0 8px;
+  list-style-type: none;
+}
+
+.github-event-list li {
+  margin: 8px 0;
+}

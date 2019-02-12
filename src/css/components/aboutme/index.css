@@ -1,0 +1,49 @@
+@import url("aboutme/map.css");
+@import url("aboutme/factoids.css");
+@import url("aboutme/github.css");
+
+:root {
+  --bio__start-angle: 43deg;
+  --bio__end-angle: 2deg;
+  --bio-card-width: 433px;
+  --bio-card-height: 325px;
+  --bio-text-width: 500px;
+}
+
+.bio-list {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1280px;
+  align-content: space-around;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bio__text {
+  width: var(--bio-text-width);
+  max-height: var(--bio-card-height);
+  margin: 1vmax 0;
+  padding: 10px;
+  font-size: 3em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.bio__card {
+  width: var(--bio-card-width);
+  height: var(--bio-card-height);
+  background-color: #D4E6F1;
+  margin: 1vmax 0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
+}
+
+.bio--left {
+  transform: rotate(var(--bio__end-angle));
+}
+
+.bio--right {
+  transform: rotate(calc(-1 * var(--bio__end-angle)));
+}

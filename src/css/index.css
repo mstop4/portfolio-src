@@ -2,7 +2,7 @@
 @import url("components/main.css");
 @import url("components/headings.css");
 @import url("components/tagline.css");
-@import url("components/aboutme.css");
+@import url("components/aboutme/index.css");
 @import url("components/projects.css");
 @import url("components/contacts.css");
 @import url("components/modal.css");

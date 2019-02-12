@@ -1,0 +1,11 @@
+#bio__location {
+  font-weight: bold;
+}
+
+.bio__map img {
+  width: 100%;
+  height: 100%;
+  border: 8px solid white;
+  border-radius: .25vmax;
+  box-sizing: border-box;
+}
