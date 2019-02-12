@@ -78,7 +78,8 @@
 .datamuse-query {
   border: 0;
   border-bottom: 1px solid gray;
-  width: 33%;
+  width: 35%;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -88,14 +89,23 @@
 
 .datamuse-answer {
   margin: 4px 0 0;
+  color: black;
+  transition: color 500ms linear;
+}
+
+.datamuse-answer--hidden {
+  color: white;
+  transition: color 0s linear;
 }
 
 .datamuse-search {
+  box-sizing: content-box;
+  width: 105px;
   background-color: #6bc4ff;
   border: none;
   border-radius: 1em;
   outline: none;
-  padding: 2px 12px;
+  padding: 4px 12px;
   transition: background-color 150ms linear;
 }
 

@@ -8,6 +8,7 @@ const { googleMapsApiKey } = require('../data/env');
 
 const breakpointWidth = 921;
 const maxGithubEvents = 4;
+let datamuseQueryChanged = false;
 
 const initialize = () => {
   setupWeather();
@@ -88,6 +89,11 @@ const setupDatamuse = () => {
     if (event.keyCode === 13) {
       queryDatamuse();
     }
+
+    if (!datamuseQueryChanged) {
+      datamuseQueryChanged = true;
+      document.querySelector('.datamuse-search').value = '🔍 Search'; 
+    }
   });
 
   document.querySelector('.datamuse-search').addEventListener('click', queryDatamuse);
@@ -103,7 +109,11 @@ const queryDatamuse = () => {
     res.json()
     .then(json => {
       const answer = document.querySelector('.datamuse-answer');
-      answer.textContent = `👉 ${capitalize(json[0].word)}`;
+      answer.classList.add('datamuse-answer--hidden');
+      setTimeout(() => {
+        answer.textContent = `📖 ${capitalize(json[0].word)}`;
+        answer.classList.remove("datamuse-answer--hidden")
+      }, 50);
     })
   });
 }
