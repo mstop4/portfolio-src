@@ -12,11 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   headings.initialize();
 
   // - About Me
-  aboutme.setupWeather();
-  aboutme.setupMap();
-  aboutme.setupGithub();
-  aboutme.setupDailyFact();
-  aboutme.handleResize();
+  aboutme.initialize();
 
   // - Cards
   projects.addProjectCards();

@@ -1,13 +1,22 @@
 const moment = require('moment');
 const { setWeather } = require('../helpers/weather');
 const { parseGithubEvent } = require('../helpers/github');
-const { getWindowSize } = require('../helpers');
+const { getWindowSize, capitalize } = require('../helpers');
 
 const location = require('../data/location');
 const { googleMapsApiKey } = require('../data/env');
 
 const breakpointWidth = 921;
 const maxGithubEvents = 4;
+
+const initialize = () => {
+  setupWeather();
+  setupMap();
+  setupGithub();
+  setupDailyFact();
+  setupDatamuse();
+  handleResize();
+}
 
 const handleResize = () => {
   const winWidth = getWindowSize().width;
@@ -55,7 +64,7 @@ const setupMap = () => {
 }
 
 const setupWeather = () => {
-  const weatherElem = document.querySelector('.weather__text');
+  const weatherElem = document.querySelector('.weather-text');
   setWeather(weatherElem);
 }
 
@@ -67,9 +76,35 @@ const setupDailyFact = () => {
   .then(res => {
     res.json()
     .then(json => {
-      const factElem = document.querySelector('.today__text');
+      const factElem = document.querySelector('.today-text');
       factElem.innerHTML = `<strong>This day in ${json.year}:</strong> ${json.text}.`;
     });
+  });
+}
+
+const setupDatamuse = () => {
+  
+  document.querySelector('.datamuse-query').addEventListener('keypress', event => {
+    if (event.keyCode === 13) {
+      queryDatamuse();
+    }
+  });
+
+  document.querySelector('.datamuse-search').addEventListener('click', queryDatamuse);
+
+  queryDatamuse();
+}
+
+const queryDatamuse = () => {
+  const query = document.querySelector('.datamuse-query').value;
+
+  fetch(`https://api.datamuse.com/words?sl=${query}`)
+  .then(res => {
+    res.json()
+    .then(json => {
+      const answer = document.querySelector('.datamuse-answer');
+      answer.textContent = `👉 ${capitalize(json[0].word)}`;
+    })
   });
 }
 
@@ -95,9 +130,5 @@ const setupGithub = () => {
 }
 
 module.exports = {
-  handleResize,
-  setupMap,
-  setupWeather,
-  setupDailyFact,
-  setupGithub
+  initialize
 }
