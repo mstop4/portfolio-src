@@ -1,7 +1,3 @@
-@import url("aboutme/map.css");
-@import url("aboutme/factoids.css");
-@import url("aboutme/github.css");
-
 :root {
   --bio__start-angle: 43deg;
   --bio__end-angle: 2deg;
