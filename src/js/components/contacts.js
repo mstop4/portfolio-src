@@ -1,9 +1,8 @@
-const { coinFlip, getScrollPosition } = require('../helpers');
+const { coinFlip, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
 const { contacts } = require('../data/info');
 
 const contactList = document.querySelector('.contact-list');
 const contactCards = [];
-const scrollBuffer = 50; 
 
 const addContactCards = () => {
   const pos = getScrollPosition();
@@ -34,42 +33,29 @@ const addContactCards = () => {
   });
 }
 
-const toggleVisibility = (card, pos) => {
-  const elTop = card.offsetTop;
-  const elBottom = card.offsetTop + card.offsetHeight;
+const showCard = (card) => {
+  card.classList.remove('contact--hidden');
 
-  if (card.classList.contains('contact--hidden')) {
-    if ((elTop - scrollBuffer > pos.top && 
-        elTop - scrollBuffer < pos.bottom) ||
-        (elBottom < pos.bottom &&
-        elBottom + scrollBuffer > pos.top)) {
-
-      card.classList.remove('contact--hidden');
-
-      if (card.classList.contains('contact-left')) {
-        card.classList.add('contact-left--appear');
-      }
-      else if (card.classList.contains('contact-right')) {
-        card.classList.add('contact-right--appear');
-      }
-    }
+  if (card.classList.contains('contact-left')) {
+    card.classList.add('contact-left--appear');
   }
-
-  else {
-    if (elTop - scrollBuffer >= pos.bottom ||
-        elBottom + scrollBuffer <= pos.top) {
-
-      card.classList.add('contact--hidden');
-
-      if (card.classList.contains('contact-left')) {
-        card.classList.remove('contact-left--appear');
-      }
-      else if (card.classList.contains('contact-right')) {
-        card.classList.remove('contact-right--appear');
-      }
-    }
+  else if (card.classList.contains('contact-right')) {
+    card.classList.add('contact-right--appear');
   }
 }
+
+const hideCard = (card) => {
+  card.classList.add('contact--hidden');
+
+  if (card.classList.contains('contact-left')) {
+    card.classList.remove('contact-left--appear');
+  }
+  else if (card.classList.contains('contact-right')) {
+    card.classList.remove('contact-right--appear');
+  }
+}
+
+const toggleVisibility = toggleVisibilityFactory('contact--hidden', showCard, hideCard);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();

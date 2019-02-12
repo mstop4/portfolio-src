@@ -1,10 +1,9 @@
-const { coinFlip, getScrollPosition } = require('../helpers');
+const { coinFlip, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
 const { updateModal } = require('../components/modal');
 const { projects } = require('../data/info');
 
 const projectList = document.querySelector('.project__list');
 const projectCards = [];
-const scrollBuffer = 50;
 
 const addProjectCards = () => {
   const pos = getScrollPosition();
@@ -86,43 +85,29 @@ const addProjectCards = () => {
   });
 };
 
-const toggleVisibility = (card, pos) => {
-  const bodyTop = -parseInt(document.querySelector('body').style.top) || 0;
-  const elTop = card.offsetTop;
-  const elBottom = card.offsetTop + card.offsetHeight;
+const showProject = (project) => {
+  project.classList.remove('project--hidden');
 
-  if (card.classList.contains('project--hidden')) {
-    if ((elTop - scrollBuffer > pos.top + bodyTop && 
-      elTop - scrollBuffer < pos.bottom + bodyTop) ||
-      (elBottom < pos.bottom + bodyTop &&
-      elBottom + scrollBuffer > pos.top + bodyTop)) {
-
-      card.classList.remove('project--hidden');
-
-      if (card.classList.contains('project-left')) {
-        card.classList.add('project-left--appear');
-      }
-      else if (card.classList.contains('project-right')) {
-        card.classList.add('project-right--appear');
-      }
-    }
+  if (project.classList.contains('project-left')) {
+    project.classList.add('project-left--appear');
   }
-
-  else {
-    if (elTop - scrollBuffer >= pos.bottom + bodyTop ||
-        elBottom + scrollBuffer <= pos.top + bodyTop) {
-
-      card.classList.add('project--hidden');
-
-      if (card.classList.contains('project-left')) {
-        card.classList.remove('project-left--appear');
-      }
-      else if (card.classList.contains('project-right')) {
-        card.classList.remove('project-right--appear');
-      }
-    }
+  else if (project.classList.contains('project-right')) {
+    project.classList.add('project-right--appear');
   }
 }
+
+const hideProject = (project) => {
+  project.classList.add('project--hidden');
+
+  if (project.classList.contains('project-left')) {
+    project.classList.remove('project-left--appear');
+  }
+  else if (project.classList.contains('project-right')) {
+    project.classList.remove('project-right--appear');
+  }
+}
+
+const toggleVisibility = toggleVisibilityFactory('project--hidden', showProject, hideProject);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();

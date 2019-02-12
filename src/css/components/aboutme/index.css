@@ -84,3 +84,11 @@
 .bio__card-right {
   transform: rotate(calc(-1 * var(--bio__end-angle)));
 }
+
+.bio__card-left--appear {
+  animation: bio-slideInFromLeft 0.5s ease-out 0s 1 forwards;
+}
+
+.bio__card-right--appear {
+  animation: bio-slideInFromRight 0.5s ease-out 0s 1 forwards;
+}

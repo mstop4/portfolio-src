@@ -1,14 +1,14 @@
 const { setWeather } = require('../helpers/weather');
 const { parseGithubEvent } = require('../helpers/github');
-const { getWindowSize, capitalize, getScrollPosition } = require('../helpers');
+const { getWindowSize, capitalize, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
 
 const location = require('../data/location');
 const { googleMapsApiKey } = require('../data/env');
 
 const breakpointWidth = 921;
 const maxGithubEvents = 4;
-const scrollBuffer = 50;
-let bioCards = null;
+
+const bioCards = document.querySelectorAll('.bio__base');
 let datamuseQueryChanged = false;
 
 const initialize = () => {
@@ -18,8 +18,6 @@ const initialize = () => {
   setupDailyFact();
   setupDatamuse();
   handleResize();
-
-  bioCards = document.querySelectorAll('.bio__base');
 }
 
 const handleResize = () => {
@@ -139,47 +137,46 @@ const setupGithub = () => {
         eventList.appendChild(eventElem);
       }
     });
-  
+
   });
 }
 
-const toggleVisibility = (card, pos) => {
-  const bodyTop = -parseInt(document.querySelector('body').style.top) || 0;
-  const elTop = card.offsetTop;
-  const elBottom = card.offsetTop + card.offsetHeight;
+const showCard = (card) => {
+  card.classList.remove('bio__base--hidden');
 
-  if (card.classList.contains('bio__base--hidden')) {
-    if ((elTop - scrollBuffer > pos.top + bodyTop && 
-      elTop - scrollBuffer < pos.bottom + bodyTop) ||
-      (elBottom < pos.bottom + bodyTop &&
-      elBottom + scrollBuffer > pos.top + bodyTop)) {
-
-      card.classList.remove('bio__base--hidden');
-
-      if (card.classList.contains('bio__text-left')) {
-        card.classList.add('bio__text-left--appear');
-      }
-      else if (card.classList.contains('bio__text-right')) {
-        card.classList.add('bio__text-right--appear');
-      }
-    }
+  if (card.classList.contains('bio__text-left')) {
+    card.classList.add('bio__text-left--appear');
+  }
+  else if (card.classList.contains('bio__text-right')) {
+    card.classList.add('bio__text-right--appear');
   }
 
-  else {
-    if (elTop - scrollBuffer >= pos.bottom + bodyTop ||
-        elBottom + scrollBuffer <= pos.top + bodyTop) {
-
-      card.classList.add('bio__base--hidden');
-
-      if (card.classList.contains('bio__text-left')) {
-        card.classList.remove('bio__text-left--appear');
-      }
-      else if (card.classList.contains('bio__text-right')) {
-        card.classList.remove('bio__text-right--appear');
-      }
-    }
+  else if (card.classList.contains('bio__card-left')) {
+    card.classList.add('bio__card-left--appear');
+  }
+  else if (card.classList.contains('bio__card-right')) {
+    card.classList.add('bio__card-right--appear');
   }
 }
+const hideCard = (card) => {
+  card.classList.add('bio__base--hidden');
+
+  if (card.classList.contains('bio__text-left')) {
+    card.classList.remove('bio__text-left--appear');
+  }
+  else if (card.classList.contains('bio__text-right')) {
+    card.classList.remove('bio__text-right--appear');
+  }
+
+  else if (card.classList.contains('bio__card-left')) {
+    card.classList.remove('bio__card-left--appear');
+  }
+  else if (card.classList.contains('bio__card-right')) {
+    card.classList.remove('bio__card-right--appear');
+  }
+}
+
+const toggleVisibility = toggleVisibilityFactory('bio__base--hidden', showCard, hideCard);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();

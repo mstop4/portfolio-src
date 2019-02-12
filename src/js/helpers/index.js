@@ -1,3 +1,5 @@
+const { innerScrollBuffer, outerScrollBuffer } = require('../data/config');
+
 const coinFlip = () => Math.floor(Math.random() * 2);
 
 const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
@@ -17,6 +19,32 @@ const getScrollPosition = () => {
     top: scrollPos,
     bottom: scrollPos + windowHeight
   };
+}
+
+const toggleVisibilityFactory = (hiddenClass, visibleCb, hiddenCb) => {
+  return (elem, pos) => {
+    const bodyTop = -parseInt(document.querySelector('body').style.top) || 0;
+    const elTop = elem.offsetTop;
+    const elBottom = elem.offsetTop + elem.offsetHeight;
+
+    if (elem.classList.contains(hiddenClass)) {
+      if ((elTop - innerScrollBuffer > pos.top + bodyTop && 
+        elTop + innerScrollBuffer < pos.bottom + bodyTop) ||
+        (elBottom + innerScrollBuffer < pos.bottom + bodyTop &&
+        elBottom - innerScrollBuffer > pos.top + bodyTop)) {
+
+        visibleCb(elem);
+      }
+    }
+
+    else {
+      if (elTop - outerScrollBuffer >= pos.bottom + bodyTop ||
+          elBottom + outerScrollBuffer <= pos.top + bodyTop) {
+
+        hiddenCb(elem);
+      }
+    }
+  }
 }
 
 const throttle = (func, delay) => {
@@ -46,5 +74,6 @@ module.exports = {
   capitalize,
   getWindowSize,
   getScrollPosition,
+  toggleVisibilityFactory,
   throttle
 }
