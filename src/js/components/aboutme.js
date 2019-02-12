@@ -73,7 +73,7 @@ const setupDailyFact = () => {
   const month = now.getMonth() + 1;
   const day = now.getDate();
 
-  fetch(`http://numbersapi.com/${month}/${day}/date?json&fragment`)
+  fetch(`https://cors-anywhere.herokuapp.com/http://numbersapi.com/${month}/${day}/date?json&fragment`)
   .then(res => {
     res.json()
     .then(json => {
