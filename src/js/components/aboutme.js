@@ -1,4 +1,3 @@
-const moment = require('moment');
 const { setWeather } = require('../helpers/weather');
 const { parseGithubEvent } = require('../helpers/github');
 const { getWindowSize, capitalize } = require('../helpers');
@@ -70,10 +69,11 @@ const setupWeather = () => {
 }
 
 const setupDailyFact = () => {
-  const month = moment().month() + 1;
-  const day = moment().date();
+  const now =  new Date();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
 
-  fetch(`http://numbersapi.com/${month}/${day}/date?json&fragment`)
+  fetch(`https://cors-anywhere.herokuapp.com/http://numbersapi.com/${month}/${day}/date?json&fragment`)
   .then(res => {
     res.json()
     .then(json => {

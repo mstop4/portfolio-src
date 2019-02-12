@@ -5,7 +5,7 @@
 .github-chart {
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75)), white url(http://ghchart.rshah.org/mstop4) 100% 3% no-repeat;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75)), white url(https://ghchart.rshah.org/mstop4) 100% 3% no-repeat;
 }
 
 .github-events {

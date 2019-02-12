@@ -37,6 +37,6 @@
     "uglifycss": "0.0.29"
   },
   "dependencies": {
-    "moment": "^2.24.0"
+    "human-date": "^1.4.0"
   }
 }
