@@ -1,10 +1,10 @@
-const moment = require('moment');
+const hdate = require('human-date');
 const { capitalize } = require('../helpers');
 
 const parseGithubEvent = (event) => {
-  const timestamp = moment(event.created_at);
-  const timeDiff = timestamp.diff(moment());
-  let message = `<strong>${moment.duration(timeDiff).humanize(true)}</strong> - `;
+  const timestamp = new Date(event.created_at);
+  const timeDiff = hdate.relativeTime(timestamp);
+  let message = `<strong>${timeDiff}</strong> - `;
 
   switch (event.type) {
     case 'PushEvent':
