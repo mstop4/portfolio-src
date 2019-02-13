@@ -130,7 +130,7 @@ const setupGithub = () => {
       //console.log(json);
       
       for (let i = 0; i < maxGithubEvents; i++) {
-        const eventList = document.querySelector('.github-event-list');
+        const eventList = document.querySelector('.github-events');
         const eventElem = document.createElement('li');
 
         eventElem.innerHTML = parseGithubEvent(json[i]);

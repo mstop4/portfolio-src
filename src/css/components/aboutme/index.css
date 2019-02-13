@@ -75,10 +75,11 @@
 
 .bio__text {
   width: var(--bio-text-width);
+  max-width: 70vw;
   max-height: var(--bio-card-height);
   margin: 1vmax 0;
   padding: 10px;
-  font-size: 3em;
+  font-size: 2em;
   display: inline-flex;
   align-items: center;
 }
@@ -92,13 +93,22 @@
 }
 
 .bio__card {
-  width: var(--bio-card-width);
-  height: var(--bio-card-height);
-  background-color: #D4E6F1;
+  width: 85vw;
+  max-width: var(--bio-card-width);
+  height: 63.75vw;
+  max-height: var(--bio-card-height);
+  background-color: #d4e6f1;
   margin: 1vmax 0;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
+  padding: 2vw;
+  border-radius: 2vw;
+  box-shadow: 1vmax 1vmax rgba(0,0,0,0.1);
+}
+
+@media screen and (min-width: 500px) {
+  .bio__card {
+    padding: 10px;
+    border-radius: 10px;
+  }
 }
 
 .bio__card-left {

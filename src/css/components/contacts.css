@@ -29,18 +29,16 @@
 
 .contact-list {
   margin: 0 auto;
-  display: grid;
-  max-width: 960px;
-  grid-template-columns: repeat(auto-fit, minmax(465px, 1fr));
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 640px;
   justify-content: space-around;
 }
 
 .contact {
   display: inline-flex;
   align-items: center;
-  width: 92.5%;
+  width: 40%;
   background-color: #D4E6F1;
   padding: 10px;
   margin: 1vmax;
@@ -72,11 +70,4 @@
 
 .contact--hidden {
   visibility: hidden;
-}
-
-@media screen and (max-width: 939px) {
-  .contact-list {
-    grid-column-gap: 0;
-    grid-template-columns: 100vw;
-  }
 }

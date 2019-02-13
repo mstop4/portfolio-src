@@ -3,10 +3,10 @@
   border-radius: 10px;
   background-color: white;
   list-style-type: none;
-  font-size: 1.25em;
-  font-family: 'Mali', cursive;
+  font-size: 4vw;
+  font-family: 'Mali',cursive;
   margin: 0;
-  padding: 8px;
+  padding: 2vw;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -42,21 +42,29 @@
 
 .datamuse-search {
   box-sizing: content-box;
-  width: 105px;
+  width: 20vw;
   background-color: #6bc4ff;
-  border: none;
-  border-radius: 1em;
-  outline: none;
-  padding: 4px 12px;
-  transition: background-color 150ms linear;
-}
-
-.datamuse-search:hover {
-  background-color: #7eeaf2;
+  border: 0;
+  border-radius: 5vw;
+  outline: 0;
+  padding: 1.25vw 4vw;
   transition: background-color 150ms linear;
 }
 
 .datamuse-search:active {
-  background-color: #47cc95;
+  background-color: #7eeaf2;
   transition: background-color 150ms linear;
+}
+
+@media screen and (min-width: 667px) {
+  .bio__factoids {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .datamuse-search {
+    width: 100px;
+    border-radius: 25px;
+    padding: 6.25px 20px;
+  }
 }
