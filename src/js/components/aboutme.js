@@ -188,5 +188,6 @@ const handleUpdate = () => {
 
 module.exports = {
   initialize,
-  handleUpdate
+  handleUpdate,
+  handleResize
 }
