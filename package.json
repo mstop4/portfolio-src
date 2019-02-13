@@ -8,8 +8,9 @@
     "buildHtml": "cp src/index.html dist/index.html",
     "copyImg": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img",
     "copyVid": "rimraf dist/vid && mkdirp dist/vid && cp -R src/vid/finalized/* dist/vid",
+    "copyFont": "rimraf dist/fonts && mkdirp dist/fonts && cp -R src/fonts/* dist/fonts",
     "refresh": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\"",
-    "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyImg\" \"npm run copyVid\"",
+    "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyImg\" \"npm run copyVid\" \"npm run copyFont\"",
     "serve": "npx http-server dist",
     "start": "npm run build && npm run serve"
   },

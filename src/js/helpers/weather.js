@@ -32,7 +32,7 @@ const evaluateWeather = (weatherObj) => {
   // Temperature
   for (let i = 0; i < temperatureRanges.length; i++) {
     if (temp < temperatureRanges[i].maxTemp) {
-      output += `${temperatureRanges[i].descriptor} ${Math.round(temp)} °C with `;
+      output += `${temperatureRanges[i].descriptor} ${Math.round(temp)}°C with `;
       break;
     }
   }

@@ -67,7 +67,7 @@
 .contact a {
   margin: 10px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 27px;
 }
 
 .contact--hidden {
@@ -79,14 +79,4 @@
     grid-column-gap: 0;
     grid-template-columns: 100vw;
   }
-
-  .contact a {
-    font-size: 27px;
-  }  
-}
-
-@media screen and (max-width: 549px) {
-  .contact a {
-    font-size: 5vw;
-  }  
 }

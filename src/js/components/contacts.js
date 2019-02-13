@@ -15,18 +15,14 @@ const addContactCards = () => {
     toggleVisibility(contactCard, pos);
     contactCards.push(contactCard);
 
-    const contactFAIcon = document.createElement('i');
-    contactFAIcon.classList.add('fa-4x');
-
-    contact.faIconClasses.forEach(iconClass => {
-      contactFAIcon.classList.add(iconClass);
-    });
+    const contactIcon = document.createElement('span');
+    contactIcon.classList.add(contact.iconClass);
 
     const contactText = document.createElement('a');
     contactText.href = contact.url;
     contactText.textContent = contact.displayText;
 
-    contactCard.appendChild(contactFAIcon);
+    contactCard.appendChild(contactIcon);
     contactCard.appendChild(contactText);
 
     contactList.appendChild(contactCard);
