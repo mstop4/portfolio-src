@@ -11,7 +11,6 @@ const setWeather = (weatherElem) => {
 };
 
 const evaluateWeather = (weatherObj) => {
-  console.log(weatherObj);
   const weatherList = weatherObj.weather;
   const temp = weatherObj.main.temp;
   let output = '';

@@ -3,6 +3,7 @@ const { parseGithubEvent } = require('../helpers/github');
 const { getWindowSize, capitalize, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
 
 const location = require('../data/location');
+const techs = require('../data/techs');
 const { googleMapsApiKey } = require('../data/env');
 
 const breakpointWidth = 921;
@@ -16,6 +17,7 @@ const initialize = () => {
   setupMap();
   setupGithub();
   setupDailyFact();
+  setupTechs();
   setupDatamuse();
   handleResize();
 }
@@ -82,6 +84,16 @@ const setupDailyFact = () => {
       const factElem = document.querySelector('.today-text');
       factElem.innerHTML = `<strong>This day in ${json.year}:</strong> ${json.text}.`;
     });
+  });
+}
+
+const setupTechs = () => {
+  const techImgs = document.querySelectorAll('.bio__techs img');
+
+  techs.forEach((tech, i) => {
+    techImgs[i].src = tech.image;
+    techImgs[i].alt = tech.name;
+    techImgs[i].title = tech.name;
   });
 }
 
