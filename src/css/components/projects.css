@@ -35,7 +35,7 @@
   grid-template-columns: repeat(auto-fit, minmax(var(--project-card-width), 1fr));
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 
 .project {
