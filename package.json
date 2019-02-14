@@ -6,7 +6,7 @@
     "buildJs": "npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js",
     "buildCss": "npx css-combine src/css/index.css > dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
     "buildHtml": "cp src/index.html dist/index.html",
-    "copyImg": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img",
+    "copyImg": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img && cp -R src/favicon.ico dist/favicon.ico",
     "copyVid": "rimraf dist/vid && mkdirp dist/vid && cp -R src/vid/finalized/* dist/vid",
     "copyFont": "rimraf dist/fonts && mkdirp dist/fonts && cp -R src/fonts/* dist/fonts",
     "refresh": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\"",

@@ -31,7 +31,9 @@ const addProjectCards = () => {
     let projectPreviewAnim = document.createElement('video');
     projectPreviewAnim.classList.add('project__preview--media');
     projectPreviewAnim.setAttribute('loop', '');
-    projectPreviewAnim.setAttribute('preload', 'auto');
+    projectPreviewAnim.setAttribute('preload', 'none');
+    projectPreviewAnim.setAttribute('playsinline', 'true');
+    projectPreviewAnim.setAttribute('poster', project.previewStatic);
 
     let projectPreviewAnimSrc = document.createElement('source');
     projectPreviewAnimSrc.src = project.previewAnim;

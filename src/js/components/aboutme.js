@@ -2,9 +2,9 @@ const { setWeather } = require('../helpers/weather');
 const { parseGithubEvent } = require('../helpers/github');
 const { getWindowSize, capitalize, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
 
-const location = require('../data/location');
+//const location = require('../data/location');
 const techs = require('../data/techs');
-const { googleMapsApiKey } = require('../data/env');
+//const { googleMapsApiKey } = require('../data/env');
 
 const breakpointWidth = 921;
 const maxGithubEvents = 4;
@@ -14,7 +14,7 @@ let datamuseQueryChanged = false;
 
 const initialize = () => {
   setupWeather();
-  setupMap();
+  //setupMap();
   setupGithub();
   setupDailyFact();
   setupTechs();
@@ -49,23 +49,23 @@ const handleResize = () => {
   }
 }
 
-const setupMap = () => {
-  const locationElem = document.querySelector('#bio__location');
-  locationElem.innerHTML += location.location;
+// const setupMap = () => {
+//   const locationElem = document.querySelector('#bio__location');
+//   locationElem.innerHTML += location.location;
 
-  const mapLink = document.createElement('a');
-  const mapImg = document.createElement('img');
+//   const mapLink = document.createElement('a');
+//   const mapImg = document.createElement('img');
 
-  mapImg.src = `https://maps.googleapis.com/maps/api/staticmap?center=${location.coordinates}&zoom=${location.zoom}&scale=${location.scale}&size=${location.mapWidth}x${location.mapHeight}&markers=size:${location.marker.size}|color:${location.marker.color}|${location.coordinates}&maptype=${location.maptype}&key=${googleMapsApiKey}&format=png&visual_refresh=true`
-  mapImg.alt = `Map of ${location.location}`;
+//   mapImg.src = `https://maps.googleapis.com/maps/api/staticmap?center=${location.coordinates}&zoom=${location.zoom}&scale=${location.scale}&size=${location.mapWidth}x${location.mapHeight}&markers=size:${location.marker.size}|color:${location.marker.color}|${location.coordinates}&maptype=${location.maptype}&key=${googleMapsApiKey}&format=png&visual_refresh=true`
+//   mapImg.alt = `Map of ${location.location}`;
 
-  mapLink.href = `https://www.google.com/maps/place/${location.location}/`;
-  mapLink.target = '_blank';
-  mapLink.appendChild(mapImg);
+//   mapLink.href = `https://www.google.com/maps/place/${location.location}/`;
+//   mapLink.target = '_blank';
+//   mapLink.appendChild(mapImg);
   
-  const mapCard = document.querySelector('.bio__map');
-  mapCard.appendChild(mapLink);
-}
+//   const mapCard = document.querySelector('.bio__map');
+//   mapCard.appendChild(mapLink);
+// }
 
 const setupWeather = () => {
   const weatherElem = document.querySelector('.weather-text');
