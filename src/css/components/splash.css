@@ -1,9 +1,11 @@
-#tagline {
+#splash {
   margin: 0 auto;
   width: 90vw;
+  height: 100vh;
+  background-color: gray;
 }
 
-.tagline__text {
+.tagline {
   text-align: center;
 }
 

@@ -1,4 +1,5 @@
 .DS_Store
+.htaccess
 sh.exe.stackdump
 node_modules/
 src/js/data/env.js

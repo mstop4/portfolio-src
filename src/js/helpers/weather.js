@@ -1,5 +1,5 @@
 const { openWeatherApiKey } = require('../data/env');
-const { location, location_shortName } = require('../data/location');
+const { location, locationShortName } = require('../data/location');
 const { temperatureRanges } = require('../data/weather');
 
 const setWeather = (weatherElem) => {
@@ -26,7 +26,7 @@ const evaluateWeather = (weatherObj) => {
     output += '<strong>Tonight\'s';
   }
 
-  output += ` weather in ${location_shortName}?</strong> A `;
+  output += ` weather in ${locationShortName}?</strong> A `;
 
   // Temperature
   for (let i = 0; i < temperatureRanges.length; i++) {

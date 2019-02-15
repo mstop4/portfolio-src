@@ -11,7 +11,7 @@
     "copyFont": "rimraf dist/fonts && mkdirp dist/fonts && cp -R src/fonts/* dist/fonts",
     "refresh": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\"",
     "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyImg\" \"npm run copyVid\" \"npm run copyFont\"",
-    "serve": "npx http-server dist",
+    "serve": "npx http-server dist -c600",
     "start": "npm run build && npm run serve"
   },
   "repository": {
