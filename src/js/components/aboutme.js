@@ -59,8 +59,9 @@ const setupMap = () => {
   
   mapImg.src = `https://api.mapbox.com/v4/mapbox.${location.mapTheme}/geojson(${geoJson})}/${location.coordinates},${location.zoom}/${location.mapWidth}x${location.mapHeight}.${location.imgFormat}?access_token=${mapBoxApiKey}`;
   mapImg.alt = `Map of ${location.location}`;
+  mapImg.title = `Map of ${location.location}`;
 
-  mapLink.href = `https://www.google.com/maps/place/${location.location}/`;
+  mapLink.href = `https://en.wikipedia.org/wiki/${location.locationShortName}/`;
   mapLink.target = '_blank';
   mapLink.appendChild(mapImg);
   

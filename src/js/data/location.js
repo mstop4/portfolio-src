@@ -1,6 +1,6 @@
 module.exports = {
   'location': 'Toronto, Ontario, Canada',
-  'location_shortName': 'Toronto',
+  'locationShortName': 'Toronto',
   'coordinates': '-79.3642,43.7153',
 
   'zoom': 10,
