@@ -57,8 +57,7 @@ const setupMap = () => {
   const mapImg = document.createElement('img');
   const geoJson = encodeURIComponent(JSON.stringify(location.geoJson));
   
-  mapImg.src = `https://api.mapbox.com/v4/mapbox.${location.mapTheme}/geoJson(${geoJson})}/${location.coordinates},${location.zoom}/${location.mapWidth}x${location.mapHeight}.${location.imgFormat}?access_token=${mapBoxApiKey}`;
-  //mapImg.src = 'https://api.mapbox.com/v4/mapbox.run-bike-hike/geojson(%7B%22type%22%3A%22FeatureCollection%22%2C%22features%22%3A%5B%7B%22type%22%3A%22Feature%22%2C%22properties%22%3A%7B%22marker-color%22%3A%22%2385c1e9%22%2C%22marker-size%22%3A%22large%22%2C%22marker-symbol%22%3A%22star%22%7D%2C%22geometry%22%3A%7B%22type%22%3A%22Point%22%2C%22coordinates%22%3A%5B-79.3642%2C43.7153%5D%7D%7D%5D%7D)/-79.3642,43.7153,10/417x309.png32?access_token=pk.eyJ1IjoibXN0b3A0IiwiYSI6ImNqczVhdnZ6MzBkcms0NG54YXB6cnJiZzIifQ.wPiHjyA7Ixue2U178Vc2zg';
+  mapImg.src = `https://api.mapbox.com/v4/mapbox.${location.mapTheme}/geojson(${geoJson})}/${location.coordinates},${location.zoom}/${location.mapWidth}x${location.mapHeight}.${location.imgFormat}?access_token=${mapBoxApiKey}`;
   mapImg.alt = `Map of ${location.location}`;
 
   mapLink.href = `https://www.google.com/maps/place/${location.location}/`;
