@@ -18,30 +18,21 @@ const getScrollPosition = () => {
   };
 }
 
-const innerScrollBuffer = 100;
-const outerScrollBuffer = 50;
+const scrollBuffer = 100;
 
-const toggleVisibilityFactory = (hiddenClass, visibleCb, hiddenCb) => {
+const toggleVisibilityFactory = (hiddenClass, visibleCb) => {
   return (elem, pos) => {
     const bodyTop = -parseInt(document.querySelector('body').style.top) || 0;
     const elTop = elem.offsetTop;
     const elBottom = elem.offsetTop + elem.offsetHeight;
 
     if (elem.classList.contains(hiddenClass)) {
-      if ((elTop - innerScrollBuffer > pos.top + bodyTop && 
-        elTop + innerScrollBuffer < pos.bottom + bodyTop) ||
-        (elBottom + innerScrollBuffer < pos.bottom + bodyTop &&
-        elBottom - innerScrollBuffer > pos.top + bodyTop)) {
+      if ((elTop - scrollBuffer > pos.top + bodyTop && 
+        elTop + scrollBuffer < pos.bottom + bodyTop) ||
+        (elBottom + scrollBuffer < pos.bottom + bodyTop &&
+        elBottom - scrollBuffer > pos.top + bodyTop)) {
 
         visibleCb(elem);
-      }
-    }
-
-    else {
-      if (elTop - outerScrollBuffer >= pos.bottom + bodyTop ||
-          elBottom + outerScrollBuffer <= pos.top + bodyTop) {
-
-        hiddenCb(elem);
       }
     }
   }

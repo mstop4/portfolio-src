@@ -4,7 +4,7 @@ const { getWindowSize, capitalize, getScrollPosition, toggleVisibilityFactory } 
 
 const location = require('../data/location');
 const techs = require('../data/techs');
-const { googleMapsApiKey } = require('../data/env');
+const { mapBoxApiKey } = require('../data/env');
 
 const breakpointWidth = 921;
 const maxGithubEvents = 4;
@@ -55,11 +55,13 @@ const setupMap = () => {
 
   const mapLink = document.createElement('a');
   const mapImg = document.createElement('img');
-
-  mapImg.src = `https://maps.googleapis.com/maps/api/staticmap?center=${location.coordinates}&zoom=${location.zoom}&scale=${location.scale}&size=${location.mapWidth}x${location.mapHeight}&markers=size:${location.marker.size}|color:${location.marker.color}|${location.coordinates}&maptype=${location.maptype}&key=${googleMapsApiKey}&format=png&visual_refresh=true`
+  const geoJson = encodeURIComponent(JSON.stringify(location.geoJson));
+  
+  mapImg.src = `https://api.mapbox.com/v4/mapbox.${location.mapTheme}/geojson(${geoJson})}/${location.coordinates},${location.zoom}/${location.mapWidth}x${location.mapHeight}.${location.imgFormat}?access_token=${mapBoxApiKey}`;
   mapImg.alt = `Map of ${location.location}`;
+  mapImg.title = `Map of ${location.location}`;
 
-  mapLink.href = `https://www.google.com/maps/place/${location.location}/`;
+  mapLink.href = `https://en.wikipedia.org/wiki/${location.locationShortName}/`;
   mapLink.target = '_blank';
   mapLink.appendChild(mapImg);
   
@@ -170,25 +172,8 @@ const showCard = (card) => {
     card.classList.add('bio__card-right--appear');
   }
 }
-const hideCard = (card) => {
-  card.classList.add('bio__base--hidden');
 
-  if (card.classList.contains('bio__text-left')) {
-    card.classList.remove('bio__text-left--appear');
-  }
-  else if (card.classList.contains('bio__text-right')) {
-    card.classList.remove('bio__text-right--appear');
-  }
-
-  else if (card.classList.contains('bio__card-left')) {
-    card.classList.remove('bio__card-left--appear');
-  }
-  else if (card.classList.contains('bio__card-right')) {
-    card.classList.remove('bio__card-right--appear');
-  }
-}
-
-const toggleVisibility = toggleVisibilityFactory('bio__base--hidden', showCard, hideCard);
+const toggleVisibility = toggleVisibilityFactory('bio__base--hidden', showCard);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();
