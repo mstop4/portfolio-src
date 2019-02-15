@@ -1,16 +1,31 @@
 module.exports = {
-  'location': 'Toronto, Canada',
+  'location': 'Toronto, Ontario, Canada',
   'location_shortName': 'Toronto',
-  'coordinates': '43.6942538,-79.370979',
+  'coordinates': '-79.3642,43.7153',
 
   'zoom': 10,
-  'scale': 1,
   'mapWidth': 417,
   'mapHeight': 309,
-  'maptype': 'roadmap',
-  'marker': {
-    'size': 'mid',
-    'color': 'blue',
-    'label': ''
+  'mapTheme': 'run-bike-hike',
+  'imgFormat': 'png32',
+  'geoJson': {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#85c1e9",
+          "marker-size": "large",
+          "marker-symbol": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.3642,
+            43.7153
+          ]
+        }
+      }
+    ]
   }
 }

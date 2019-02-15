@@ -2,9 +2,9 @@ const { setWeather } = require('../helpers/weather');
 const { parseGithubEvent } = require('../helpers/github');
 const { getWindowSize, capitalize, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
 
-//const location = require('../data/location');
+const location = require('../data/location');
 const techs = require('../data/techs');
-//const { googleMapsApiKey } = require('../data/env');
+const { mapBoxApiKey } = require('../data/env');
 
 const breakpointWidth = 921;
 const maxGithubEvents = 4;
@@ -14,7 +14,7 @@ let datamuseQueryChanged = false;
 
 const initialize = () => {
   setupWeather();
-  //setupMap();
+  setupMap();
   setupGithub();
   setupDailyFact();
   setupTechs();
@@ -49,23 +49,25 @@ const handleResize = () => {
   }
 }
 
-// const setupMap = () => {
-//   const locationElem = document.querySelector('#bio__location');
-//   locationElem.innerHTML += location.location;
+const setupMap = () => {
+  const locationElem = document.querySelector('#bio__location');
+  locationElem.innerHTML += location.location;
 
-//   const mapLink = document.createElement('a');
-//   const mapImg = document.createElement('img');
-
-//   mapImg.src = `https://maps.googleapis.com/maps/api/staticmap?center=${location.coordinates}&zoom=${location.zoom}&scale=${location.scale}&size=${location.mapWidth}x${location.mapHeight}&markers=size:${location.marker.size}|color:${location.marker.color}|${location.coordinates}&maptype=${location.maptype}&key=${googleMapsApiKey}&format=png&visual_refresh=true`
-//   mapImg.alt = `Map of ${location.location}`;
-
-//   mapLink.href = `https://www.google.com/maps/place/${location.location}/`;
-//   mapLink.target = '_blank';
-//   mapLink.appendChild(mapImg);
+  const mapLink = document.createElement('a');
+  const mapImg = document.createElement('img');
+  const geoJson = encodeURIComponent(JSON.stringify(location.geoJson));
   
-//   const mapCard = document.querySelector('.bio__map');
-//   mapCard.appendChild(mapLink);
-// }
+  mapImg.src = `https://api.mapbox.com/v4/mapbox.${location.mapTheme}/geoJson(${geoJson})}/${location.coordinates},${location.zoom}/${location.mapWidth}x${location.mapHeight}.${location.imgFormat}?access_token=${mapBoxApiKey}`;
+  //mapImg.src = 'https://api.mapbox.com/v4/mapbox.run-bike-hike/geojson(%7B%22type%22%3A%20%22FeatureCollection%22%2C%22features%22%3A%5B%7B%22type%22%3A%22Feature%22%2C%22properties%22%3A%7B%22marker-color%22%3A%22%2385c1e9%22%2C%0A%20%20%20%20%20%20%20%20%22marker-size%22%3A%20%22large%22%2C%0A%20%20%20%20%20%20%20%20%22marker-symbol%22%3A%20%22star%22%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%22geometry%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22type%22%3A%20%22Point%22%2C%0A%20%20%20%20%20%20%20%20%22coordinates%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20-79.3642%2C%0A%20%20%20%20%20%20%20%20%20%2043.7153%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%5D%0A%7D)/-79.3642,43.7153,10/409x317.png32?access_token=pk.eyJ1IjoibXN0b3A0IiwiYSI6ImNqczVhdnZ6MzBkcms0NG54YXB6cnJiZzIifQ.wPiHjyA7Ixue2U178Vc2zg';
+  mapImg.alt = `Map of ${location.location}`;
+
+  mapLink.href = `https://www.google.com/maps/place/${location.location}/`;
+  mapLink.target = '_blank';
+  mapLink.appendChild(mapImg);
+  
+  const mapCard = document.querySelector('.bio__map');
+  mapCard.appendChild(mapLink);
+}
 
 const setupWeather = () => {
   const weatherElem = document.querySelector('.weather-text');
