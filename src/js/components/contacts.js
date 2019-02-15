@@ -40,18 +40,7 @@ const showCard = (card) => {
   }
 }
 
-const hideCard = (card) => {
-  card.classList.add('contact--hidden');
-
-  if (card.classList.contains('contact-left')) {
-    card.classList.remove('contact-left--appear');
-  }
-  else if (card.classList.contains('contact-right')) {
-    card.classList.remove('contact-right--appear');
-  }
-}
-
-const toggleVisibility = toggleVisibilityFactory('contact--hidden', showCard, hideCard);
+const toggleVisibility = toggleVisibilityFactory('contact--hidden', showCard);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();

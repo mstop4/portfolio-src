@@ -17,18 +17,7 @@ const showHeading = (heading) => {
   }
 }
 
-const hideHeading = (heading) => {
-  heading.classList.add('heading--hidden');
-
-  if (heading.classList.contains('heading__left')) {
-    heading.classList.remove('heading__left--appear');
-  }
-  else if (heading.classList.contains('heading__right')) {
-    heading.classList.remove('heading__right--appear');
-  }
-}
-
-const toggleVisibility = toggleVisibilityFactory('heading--hidden', showHeading, hideHeading);
+const toggleVisibility = toggleVisibilityFactory('heading--hidden', showHeading);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();

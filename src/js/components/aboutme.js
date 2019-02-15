@@ -172,25 +172,8 @@ const showCard = (card) => {
     card.classList.add('bio__card-right--appear');
   }
 }
-const hideCard = (card) => {
-  card.classList.add('bio__base--hidden');
 
-  if (card.classList.contains('bio__text-left')) {
-    card.classList.remove('bio__text-left--appear');
-  }
-  else if (card.classList.contains('bio__text-right')) {
-    card.classList.remove('bio__text-right--appear');
-  }
-
-  else if (card.classList.contains('bio__card-left')) {
-    card.classList.remove('bio__card-left--appear');
-  }
-  else if (card.classList.contains('bio__card-right')) {
-    card.classList.remove('bio__card-right--appear');
-  }
-}
-
-const toggleVisibility = toggleVisibilityFactory('bio__base--hidden', showCard, hideCard);
+const toggleVisibility = toggleVisibilityFactory('bio__base--hidden', showCard);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();

@@ -98,18 +98,7 @@ const showProject = (project) => {
   }
 }
 
-const hideProject = (project) => {
-  project.classList.add('project--hidden');
-
-  if (project.classList.contains('project-left')) {
-    project.classList.remove('project-left--appear');
-  }
-  else if (project.classList.contains('project-right')) {
-    project.classList.remove('project-right--appear');
-  }
-}
-
-const toggleVisibility = toggleVisibilityFactory('project--hidden', showProject, hideProject);
+const toggleVisibility = toggleVisibilityFactory('project--hidden', showProject);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();
