@@ -3,14 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "buildJs": "npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js",
-    "buildCss": "npx css-combine src/css/index.css > dist/temp.css && uglifycss dist/temp.css > dist/index.css && rm dist/temp.css",
-    "buildHtml": "cp src/index.html dist/index.html",
-    "copyImg": "rimraf dist/img && mkdirp dist/img && cp -R src/img/finalized/* dist/img && cp -R src/favicon.ico dist/favicon.ico",
-    "copyVid": "rimraf dist/vid && mkdirp dist/vid && cp -R src/vid/finalized/* dist/vid",
-    "copyFont": "rimraf dist/fonts && mkdirp dist/fonts && cp -R src/fonts/* dist/fonts",
-    "refresh": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\"",
-    "build": "concurrently \"npm run buildJs\" \"npm run buildCss\" \"npm run buildHtml\" \"npm run copyImg\" \"npm run copyVid\" \"npm run copyFont\"",
+    "build": "npx gulp",
     "serve": "npx http-server dist -c600",
     "start": "npm run build && npm run serve"
   },
@@ -28,14 +21,14 @@
     "babel-preset-minify": "^0.5.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
-    "concurrently": "^4.1.0",
-    "css-combine": "github:mstop4/css-combine",
-    "extend": "^3.0.2",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-uglifycss": "^1.1.0",
     "http-server": "^0.11.1",
-    "mkdirp": "^0.5.1",
-    "rimraf": "^2.6.3",
     "tinyify": "^2.5.0",
-    "uglifycss": "0.0.29"
+    "vinyl-paths": "^2.1.0",
+    "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
     "human-date": "^1.4.0"
