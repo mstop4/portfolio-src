@@ -3,5 +3,6 @@
 sh.exe.stackdump
 node_modules/
 src/js/data/env.js
+src/img/wip/
 
 dist/
