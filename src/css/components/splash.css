@@ -15,7 +15,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(4px);
+  filter: blur(8px);
 }
 
 .splash__wrapper {
