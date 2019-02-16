@@ -1,8 +1,17 @@
 #splash {
   margin: 0 auto;
-  width: 90vw;
+  width: 100%;
   height: 100vh;
   background-color: gray;
+  display: table;
+  table-layout: fixed;
+}
+
+.splash__wrapper {
+  margin: auto 0;
+  padding: 0 5vw;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .tagline {

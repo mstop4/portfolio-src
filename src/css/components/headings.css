@@ -43,9 +43,10 @@
 
 .heading {
   position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
   background-color: white;
   opacity: 1;
-
   max-width: 22vmax;
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.33);
   font-size: 4vmax;
