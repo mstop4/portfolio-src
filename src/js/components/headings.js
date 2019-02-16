@@ -3,7 +3,7 @@ const { getScrollPosition, toggleVisibilityFactory } = require('../helpers');
 const headings = document.querySelectorAll('.heading');
 
 const initialize = () => {
-  //handleUpdate();
+  handleUpdate();
 }
 
 const showHeading = (heading) => {

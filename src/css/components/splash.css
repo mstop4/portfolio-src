@@ -1,9 +1,20 @@
-#tagline {
+#splash {
   margin: 0 auto;
-  width: 90vw;
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+  display: table;
+  table-layout: fixed;
 }
 
-.tagline__text {
+.splash__wrapper {
+  margin: auto 0;
+  padding: 0 5vw;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.tagline {
   text-align: center;
 }
 
@@ -17,7 +28,7 @@
   border-radius: 20vmax;
   border-color: white;
   background-color: white;
-  background-image: url("img/photo.jpg");
+  background-image: url("../img/photo.jpg");
   background-position: center;
   background-size: cover;
 }

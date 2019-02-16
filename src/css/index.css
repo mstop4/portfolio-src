@@ -2,12 +2,8 @@
 @import url("icomoon/style.css");
 @import url("components/main.css");
 @import url("components/headings.css");
-@import url("components/tagline.css");
+@import url("components/splash.css");
 @import url("components/aboutme/index.css");
-@import url("components/aboutme/map.css");
-@import url("components/aboutme/factoids.css");
-@import url("components/aboutme/techs.css");
-@import url("components/aboutme/github.css");
 @import url("components/projects.css");
 @import url("components/contacts.css");
 @import url("components/modal.css");
