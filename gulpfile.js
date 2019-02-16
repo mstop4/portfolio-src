@@ -1,4 +1,5 @@
-const { src, dest, parallel, series } = require('gulp');
+const path = require('path');
+const gulp = require('gulp');
 const del = require('del');
 const vinylPaths = require('vinyl-paths');
 const source = require('vinyl-source-stream');
@@ -8,21 +9,21 @@ const uglifycss = require('gulp-uglifycss');
 const browserify = require('browserify');
 const babelify = require('babelify');
 const tinyify = require('tinyify');
+const imagemin = require('gulp-imagemin');
 
 const buildHtml = () => {
-  return src('src/index.html')
-    .pipe(dest('dist/'));
+  return gulp.src('src/index.html')
+    .pipe(gulp.dest('dist/'));
 }
 
 const buildCss = () => {
-  return src('src/css/index.css')
+  return gulp.src('src/css/index.css')
     .pipe(concatCss('index.css'))
     .pipe(uglifycss({}))
-    .pipe(dest('dist/'))
+    .pipe(gulp.dest('dist/'))
 }
 
 const buildJs = () => {
-  //npx browserify src/js/index.js -t babelify -p tinyify -o dist/bundle.js
   const b = browserify({
     entries: 'src/js/index.js',
     plugin: [tinyify],
@@ -31,34 +32,58 @@ const buildJs = () => {
 
   return b.bundle()
     .pipe(source('bundle.js'))
-    .pipe(dest('dist/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 const copyImg = () => {
-  src('dist/img/*')
-    .pipe(vinylPaths(del));
-
-  src('src/img/finalized/*')
-    .pipe(dest('dist/img/'));
-
-  return src('src/favicon.ico')
-    .pipe(dest('dist/'));
+  return gulp.src('src/img/finalized/**/*', {since: gulp.lastRun(copyImg)})
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img/'));
 }
 
-const copyVid = () => {
-  src('dist/vid/*')
-    .pipe(vinylPaths(del));
+const copyFavicon = () => {
+  return gulp.src('src/favicon.ico', {since: gulp.lastRun(copyFavicon)})
+    .pipe(gulp.dest('dist/'));
+};
 
-  return src('src/vid/finalized/*')
-    .pipe(dest('dist/vid/'));
+const copyVid = () => {
+  return gulp.src('src/vid/finalized/**/*', {since: gulp.lastRun(copyVid)})
+    .pipe(gulp.dest('dist/vid/'));
 }
 
 const copyFonts = () => {
-  src('dist/fonts/*')
-    .pipe(vinylPaths(del));
-
-  return src('src/fonts/*')
-    .pipe(dest('dist/fonts/'));
+  return gulp.src('src/fonts/**/*',  {since: gulp.lastRun(copyFonts)})
+    .pipe(gulp.dest('dist/fonts/'));
 }
 
-exports.default = parallel(buildHtml, buildCss, buildJs, copyImg, copyVid, copyFonts);
+gulp.task('static', gulp.parallel(copyImg, copyFavicon, copyVid, copyFonts));
+
+gulp.task('watch', () => {
+  const htmlWatcher = gulp.watch('src/index.html', buildHtml);
+  const cssWatcher = gulp.watch('src/css/**/*.css', buildCss);
+  const jsWatcher = gulp.watch('src/js/**/*.js', buildJs);
+  const imgWatcher = gulp.watch('src/img/finalized/**/*', copyImg);
+  const faviconWatcher = gulp.watch('src/favicon.ico', copyFavicon);
+  const vidWatcher = gulp.watch('src/vid/finalized/**/*', copyVid);
+  const fontWatcher = gulp.watch('src/fonts/*', copyFonts);
+
+  imgWatcher.on('unlink', function (filePath) {
+    var srcPath = path.relative(path.resolve('src/img/finalized'), filePath);
+    var destPath = path.resolve('dist/img', srcPath);
+    del.sync(destPath);
+  });
+
+  vidWatcher.on('unlink', function (filePath) {
+    var srcPath = path.relative(path.resolve('src/vid/finalized'), filePath);
+    var destPath = path.resolve('dist/vid', srcPath);
+    del.sync(destPath);
+  });
+
+  fontWatcher.on('unlink', function (filePath) {
+    var srcPath = path.relative(path.resolve('src/fonts'), filePath);
+    var destPath = path.resolve('dist/fonts', srcPath);
+    del.sync(destPath);
+  });
+});
+
+exports.default = gulp.parallel(buildHtml, buildCss, buildJs, copyImg, copyFavicon, copyVid, copyFonts);

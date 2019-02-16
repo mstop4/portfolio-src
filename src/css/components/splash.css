@@ -19,7 +19,7 @@
   border-radius: 20vmax;
   border-color: white;
   background-color: white;
-  background-image: url("img/photo.jpg");
+  background-image: url("../img/photo.jpg");
   background-position: center;
   background-size: cover;
 }
