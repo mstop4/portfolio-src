@@ -1,8 +1,9 @@
-const projects = require('./components/projects');
-const contacts = require('./components/contacts');
+const header = require('./components/header');
 const modal = require('./components/modal');
 const headings = require('./components/headings');
-const aboutme = require('./components/aboutme')
+const aboutme = require('./components/aboutme');
+const projects = require('./components/projects');
+const contacts = require('./components/contacts');
 
 const { throttle } = require('./helpers');
 
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contacts.handleUpdate();
     headings.handleUpdate();
     aboutme.handleUpdate();
+    header.handleUpdate();
   }, 100);
 
   document.addEventListener('scroll', updateCards);
