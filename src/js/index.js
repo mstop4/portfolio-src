@@ -1,4 +1,3 @@
-const header = require('./components/header');
 const modal = require('./components/modal');
 const headings = require('./components/headings');
 const aboutme = require('./components/aboutme');
@@ -23,13 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     projects.handleUpdate();
     contacts.handleUpdate();
     headings.handleUpdate();
-    aboutme.handleUpdate();
-    header.handleUpdate();
+    //aboutme.handleUpdate();
   }, 100);
 
   document.addEventListener('scroll', updateCards);
   window.addEventListener('resize', updateCards);
-  window.addEventListener('resize', aboutme.handleResize);
   window.addEventListener('orientationchange', updateCards);
 
   // - Modal

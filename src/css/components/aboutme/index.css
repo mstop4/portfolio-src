@@ -1,29 +1,7 @@
-@import url("map.css");
-@import url("factoids.css");
 @import url("techs.css");
-@import url("github.css");
 
 :root {
-  --bio__start-angle: 21deg;
-  --bio__end-angle: 2deg;
-  --bio-card-width: 433px;
-  --bio-card-height: 325px;
-  --bio-text-width: 433px;
   --bio-slide-start-x: 10vmax;
-}
-
-@keyframes bio-slideInFromLeft {
-  from {
-    transform:
-      translateX(calc(-1 * var(--bio-slide-start-x)));
-    opacity: 0;
-  }
-
-  to {
-    transform:
-      translateX(0);
-    opacity: 1;
-  }
 }
 
 @keyframes bio-slideInFromRight {
@@ -40,94 +18,28 @@
   }
 }
 
-@keyframes bio-appearLeft {
-  from {
-    transform: scale(0) rotate(calc(var(--bio__start-angle) * -1));
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1) rotate(var(--bio__end-angle));
-    opacity: 1;
-  }
-}
-
-@keyframes bio-appearRight {
-  from {
-    transform: scale(0) rotate(var(--bio__start-angle));
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1) rotate(calc(var(--bio__end-angle) * -1));
-    opacity: 1;
-  }
-}
-
-.bio-list {
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 1280px;
-  align-content: space-around;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.bio__base--hidden {
+.bio__text--hidden {
   visibility: hidden;
 }
 
 .bio__text {
-  width: var(--bio-text-width);
-  max-width: 70vw;
-  max-height: var(--bio-card-height);
-  margin: 1vmax 0;
-  padding: 10px;
-  font-size: 2em;
-  display: inline-flex;
-  align-items: center;
+  margin: 0 auto;
+  list-style: none;
+  font-size: 2vmax;
+  width: 90%;
 }
 
-.bio__text-left--appear {
-  animation: bio-slideInFromLeft 0.5s ease-out 0s 1 forwards;
+.bio__text li {
+  padding-left: 2em;
+  text-indent: -2em;
+  margin: 1vmax 0;
+}
+
+.bio__text li:before {
+  content: attr(data-bullet);
+  padding-right: 1vmax;
 }
 
 .bio__text-right--appear {
   animation: bio-slideInFromRight 0.5s ease-out 0s 1 forwards;
-}
-
-.bio__card {
-  width: 85vw;
-  max-width: var(--bio-card-width);
-  height: 63.75vw;
-  max-height: var(--bio-card-height);
-  background-color: #d4e6f1;
-  margin: 1vmax 0;
-  padding: 2vw;
-  border-radius: 2vw;
-  box-shadow: 1vmax 1vmax rgba(0,0,0,0.1);
-}
-
-@media screen and (min-width: 500px) {
-  .bio__card {
-    padding: 10px;
-    border-radius: 10px;
-  }
-}
-
-.bio__card-left {
-  transform: rotate(var(--bio__end-angle));
-}
-
-.bio__card-right {
-  transform: rotate(calc(-1 * var(--bio__end-angle)));
-}
-
-.bio__card-left--appear {
-  animation: bio-appearLeft 0.5s ease-out 0s 1 forwards;
-}
-
-.bio__card-right--appear {
-  animation: bio-appearRight 0.5s ease-out 0s 1 forwards;
 }
