@@ -13,6 +13,9 @@
     <!-- Modal -->
     <div class="modal modal--hidden">
       <div class="modal__back modal__back--hidden"></div>
+      <!-- <div class="modal__close">
+        <span class="icon-cross"></span>
+      </div> -->
       <aside class="modal__front modal__front--hidden">
         <div class="info__preview-border">
           <video class="info__preview" loop preload="none">
@@ -28,21 +31,25 @@
         </div>
         <div class="links__container">
 
-          <div id="source-icon">
-            <span class="icon-files-empty"></span>
+          <div id="source-column" class="links__column">
+            <div class="links__icon">
+              <span class="icon-files-empty"></span>
+            </div>
+
+            <ul id="source-links" class="links__list">
+              <!-- Source links go here -->
+            </ul>
           </div>
 
-          <ul id="source-links" class="links__list">
-            <!-- Source links go here -->
-          </ul>
+          <div id="demo-column" class="links__column">
+            <div class="links__icon">
+              <span class="icon-cloud-download"></span>
+            </div>
 
-          <div id="demo-icon">
-            <span class="icon-cloud-download"></span>
+            <ul id="demo-links" class="links__list">
+              <!-- Demo links go here -->
+            </ul>
           </div>
-
-          <ul id="demo-links" class="links__list">
-            <!-- Demo links go here -->
-          </ul>
 
         </div>
       </aside>

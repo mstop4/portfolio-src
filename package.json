@@ -1,6 +1,6 @@
 {
   "name": "portfolio-src",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "build": "npx gulp",
@@ -33,7 +33,5 @@
     "vinyl-paths": "^2.1.0",
     "vinyl-source-stream": "^2.0.0"
   },
-  "dependencies": {
-    "human-date": "^1.4.0"
-  }
+  "dependencies": {}
 }
