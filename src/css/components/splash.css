@@ -28,6 +28,13 @@
   vertical-align: middle;
 }
 
+/* .splash__wrapper h1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+} */
+
 .tagline {
   text-align: center;
 }
