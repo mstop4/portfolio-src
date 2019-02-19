@@ -6,7 +6,7 @@ const initialize = () => {
 }
 
 const setupTechs = () => {
-  const techImgs = document.querySelectorAll('.bio__techs img');
+  const techImgs = [...document.querySelectorAll('.bio__techs img')];
 
   techs.forEach((tech, i) => {
     techImgs[i].src = tech.image;
@@ -20,7 +20,7 @@ const showList = (list) => {
     console.log('show');
     list.classList.remove('bio__text--hidden');
 
-    document.querySelectorAll('.bio__text li').forEach((text, i) => {
+    [...document.querySelectorAll('.bio__text li')].forEach((text, i) => {
       setTimeout(() => {
         text.classList.remove('bio__text--hidden');
         text.classList.add('bio__text-right--appear');
