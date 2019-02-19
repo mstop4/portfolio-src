@@ -157,7 +157,7 @@ module.exports = {
     {
       'displayText': 'itch.io',
       'url': 'https://quadolorgames.itch.io/',
-      'iconClass': ['icon-github']
+      'iconClass': ['icon-itchio-textless-black']
     },
   ],
 
@@ -165,7 +165,7 @@ module.exports = {
     {
       'displayText': 'Email',
       'url': 'mailto:jonathan.hs.lam@gmail.com',
-      'iconClass': ['icon-envelop']
+      'iconClass': ['icon-envelope-o']
     },
 
     {

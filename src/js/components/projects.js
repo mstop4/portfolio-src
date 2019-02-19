@@ -1,9 +1,17 @@
 const { coinFlip, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
 const { updateModal } = require('../components/modal');
-const { projects } = require('../data/info');
+const { projects, portfolios } = require('../data/info');
 
 const projectList = document.querySelector('.project__list');
 const projectCards = [];
+
+const portfolioList = document.querySelector('#portfolio-list');
+const portfolioCards = [];
+
+const initialize = () => {
+  addProjectCards();
+  addPortfolioLinks();
+}
 
 const addProjectCards = () => {
   const pos = getScrollPosition();
@@ -16,7 +24,7 @@ const addProjectCards = () => {
     projectCard.setAttribute('data-index', i);
     coinFlip() === 0 ? projectCard.classList.add('project-left') : projectCard.classList.add('project-right');
 
-    toggleVisibility(projectCard, pos);
+    toggleProjectVisibility(projectCard, pos);
     projectCards.push(projectCard);
 
     // - Project Preview
@@ -87,6 +95,35 @@ const addProjectCards = () => {
   });
 };
 
+const addPortfolioLinks = () => {
+  const pos = getScrollPosition();
+
+  portfolios.forEach(portfolio => {
+    const portfolioCard = document.createElement('article');
+    portfolioCard.classList.add('external', 'external--hidden');
+    coinFlip() === 0 ? portfolioCard.classList.add('external-left') : portfolioCard.classList.add('external-right');
+
+    togglePortfolioVisibility(portfolioCard, pos);
+    portfolioCards.push(portfolioCard);
+
+    const portfolioIconContainer = document.createElement('div');
+    portfolioIconContainer.classList.add('external-icon');
+    const portfolioIcon = document.createElement('span');
+    portfolioIcon.classList.add(portfolio.iconClass);
+
+    const portfolioText = document.createElement('a');
+    portfolioText.href = portfolio.url;
+    portfolioText.textContent = portfolio.displayText;
+    portfolioText.target = '_blank';
+
+    portfolioIconContainer.appendChild(portfolioIcon);
+    portfolioCard.appendChild(portfolioIconContainer);
+    portfolioCard.appendChild(portfolioText);
+
+    portfolioList.appendChild(portfolioCard);
+  });
+}
+
 const showProject = (project) => {
   project.classList.remove('project--hidden');
 
@@ -98,17 +135,33 @@ const showProject = (project) => {
   }
 }
 
-const toggleVisibility = toggleVisibilityFactory('project--hidden', showProject);
+const showPortfolio = (portfolio) => {
+  portfolio.classList.remove('external--hidden');
+
+  if (portfolio.classList.contains('external-left')) {
+    portfolio.classList.add('external-left--appear');
+  }
+  else if (portfolio.classList.contains('external-right')) {
+    portfolio.classList.add('external-right--appear');
+  }
+}
+
+const togglePortfolioVisibility = toggleVisibilityFactory('external--hidden', showPortfolio);
+const toggleProjectVisibility = toggleVisibilityFactory('project--hidden', showProject);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();
 
   projectCards.forEach(card => {
-    toggleVisibility(card, pos);
+    toggleProjectVisibility(card, pos);
+  });
+
+  portfolioCards.forEach(card => {
+    togglePortfolioVisibility(card, pos);
   });
 };
 
 module.exports = {
-  addProjectCards,
+  initialize,
   handleUpdate
 }

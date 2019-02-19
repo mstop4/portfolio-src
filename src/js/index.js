@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   aboutme.initialize();
 
   // - Cards
-  projects.addProjectCards();
-  contacts.addContactCards();
+  projects.initialize();
+  contacts.initialize();
 
   const updateCards = throttle(() => {
     projects.handleUpdate();
