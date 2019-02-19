@@ -39,16 +39,16 @@ const updateModal = (index) => {
   }, 10);
 
   // Set modal info
-  const infoPreview = modal.front.querySelector('.info__preview');
-  const infoPreviewSrc = infoPreview.querySelector('source');
+  const infoPreviewVideo = modal.front.querySelector('.info__preview-video');
+  const infoPreviewSrc = infoPreviewVideo.querySelector('source');
   const infoTitle = modal.front.querySelector('.info__title');
   const infoText = modal.front.querySelector('.info__text');
   const infoStack = modal.front.querySelector('.stack-list');
 
   const linksContainer = modal.front.querySelector('.links__container');
-  const sourceIcon = linksContainer.querySelector('#source-icon');
+  const sourceColumn = linksContainer.querySelector('#source-column');
   const sourceLinks = linksContainer.querySelector('#source-links');
-  const demoIcon = linksContainer.querySelector('#demo-icon');
+  const demoColumn = linksContainer.querySelector('#demo-column');
   const demoLinks = linksContainer.querySelector('#demo-links');
 
   // clear out old info
@@ -67,8 +67,8 @@ const updateModal = (index) => {
   // add new info
 
   infoPreviewSrc.src = projects[index].fullAnim;
-  infoPreview.load();
-  infoPreview.play();
+  infoPreviewVideo.load();
+  infoPreviewVideo.play();
 
   infoTitle.textContent = projects[index].title;
   infoText.innerHTML = projects[index].description;
@@ -80,9 +80,8 @@ const updateModal = (index) => {
   });
 
   if (projects[index].sourceUrls.length > 0) {
-    sourceIcon.classList.remove('links--hidden');
-    sourceLinks.classList.remove('links--hidden');
-  
+    sourceColumn.classList.remove('links--hidden');
+
     projects[index].sourceUrls.forEach(link => {
       const listEl = document.createElement('li');
       const linkEl = document.createElement('a');
@@ -95,13 +94,11 @@ const updateModal = (index) => {
   }
 
   else {
-    sourceIcon.classList.add('links--hidden');
-    sourceLinks.classList.add('links--hidden');
+    sourceColumn.classList.add('links--hidden');
   }
 
   if (projects[index].demoUrls.length > 0) {
-    demoIcon.classList.remove('links--hidden');
-    demoLinks.classList.remove('links--hidden');
+    demoColumn.classList.remove('links--hidden');
 
     projects[index].demoUrls.forEach(link => {
       const listEl = document.createElement('li');
@@ -115,8 +112,7 @@ const updateModal = (index) => {
   }
 
   else {
-    demoIcon.classList.add('links--hidden');
-    demoLinks.classList.add('links--hidden');
+    demoColumn.classList.add('links--hidden');
   }
 };
 

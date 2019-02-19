@@ -14,12 +14,14 @@
     <div class="modal modal--hidden">
       <div class="modal__back modal__back--hidden"></div>
       <aside class="modal__front modal__front--hidden">
-        <div class="info__preview-border">
-          <video class="info__preview" loop preload="none">
-            <source src="" type="video/mp4">
-          </video>
+        <div class="info__preview">
+          <div class="info__preview-border">
+            <video class="info__preview-video" loop preload="none">
+              <source src="" type="video/mp4">
+            </video>
+          </div>
+          <div class="info__title"></div>
         </div>
-        <div class="info__title"></div>
         <div class="info__text"></div>
         <div class="info__stack">
           <ul class="stack-list">
@@ -28,21 +30,25 @@
         </div>
         <div class="links__container">
 
-          <div id="source-icon">
-            <span class="icon-files-empty"></span>
+          <div id="source-column" class="links__column">
+            <div class="links__icon">
+              <span class="icon-files-empty"></span>
+            </div>
+
+            <ul id="source-links" class="links__list">
+              <!-- Source links go here -->
+            </ul>
           </div>
 
-          <ul id="source-links" class="links__list">
-            <!-- Source links go here -->
-          </ul>
+          <div id="demo-column" class="links__column">
+            <div class="links__icon">
+              <span class="icon-cloud-download"></span>
+            </div>
 
-          <div id="demo-icon">
-            <span class="icon-cloud-download"></span>
+            <ul id="demo-links" class="links__list">
+              <!-- Demo links go here -->
+            </ul>
           </div>
-
-          <ul id="demo-links" class="links__list">
-            <!-- Demo links go here -->
-          </ul>
 
         </div>
       </aside>
@@ -50,93 +56,41 @@
 
     <!-- Rest of the Page-->
     <main>
-      <header class="header--hidden">
-        <p>LOL</p>
-      </header>
-
       <section id="splash">
         <div class="splash__background"></div>
         <div class="splash__wrapper">
           <h1>Jonathan Lam</h1>
           <div class="photo"></div>
-          <h3 class="tagline">Developer of games and interactive web applications. Believes that the marriage of code, art, and music can create beautiful things.</h3>
+          <h3 class="tagline">Game and Full-Stack Web Developer</h3>
         </div>
       </section>
 
       <section id="bio">
         <h2 class="heading heading__left heading--hidden">About Me</h2>
-        <div class="bio-list">
-
-          <div class="bio__base bio__text bio__text-left bio__base--hidden">
-            <div>Hails from the city of <span id="bio__location"></span></div>
-          </div>
-
-          <div class="bio__base bio__card bio__map bio__card-left bio__base--hidden">
-            <!-- Map goes in here-->
-          </div>
-
-          <div class="bio__base bio__text bio__text-right bio__base--hidden">
-            <div>Fascinated by the <strong>Internet of things</strong> and the <strong>web as a programmable platform</strong></div>
-          </div>
-
-          <div class="bio__base bio__card bio__card-right bio__base--hidden">
-            <ul class="bio__factoids">
-              <li class="weather-text"><!-- Weather info --></li>
-              <li class="today-text"></li>
-              <li>
-                <strong>What's that word that sounds like<br/>"<input type="search" class="datamuse-query" value="wusstersher">"?</strong>
-                <input type="button" value="👈 Try Me" class="datamuse-search">
-                <div class="datamuse-answer datamuse-answer--hidden"></div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="bio__base bio__text bio__text-left bio__base--hidden">
-            <div>Enjoys <strong>learning</strong> new things and <strong>teaching</strong> others</div>
-          </div>
-
-          <div class="bio__base bio__card bio__card-left bio__base--hidden">
-            <div class="bio__techs">
-              <img src="img/tech/placeholder.png" alt="Loading...">
-              <img src="img/tech/placeholder.png" alt="Loading...">
-              <img src="img/tech/placeholder.png" alt="Loading...">
-              <img src="img/tech/placeholder.png" alt="Loading...">
-              <img src="img/tech/placeholder.png" alt="Loading...">
-              <img src="img/tech/placeholder.png" alt="Loading...">
-              <img src="img/tech/placeholder.png" alt="Loading...">
-              <img src="img/tech/placeholder.png" alt="Loading...">
-              <img src="img/tech/placeholder.png" alt="Loading...">
-            </div>
-          </div>
-
-          <div class="bio__base bio__text bio__text-right bio__base--hidden">
-            <div>Always strives to <strong>practice my craft regularly</strong>, be it <strong>code or art</strong></div>
-          </div>
-  
-          <div class="bio__base bio__card bio__activity bio__card-right bio__base--hidden">
-            <div class="github-chart">
-              <ul class="github-events"></ul>
-            </div>
-          </div>
-
-        </div>
+          <ul class="bio__text">
+            <li data-bullet=🖼️>Developer of games and web applications from Toronto who believes the marriage of code, art, and music can create beautiful things</li>
+            <li data-bullet=🌐>Fascinated by the Internet of things and the web as a programmable platform</li>
+            <li data-bullet=🛠️>Enjoys learning new technologies and coding techniques and teaching others</li>
+            <li data-bullet=📅>Strives to exercise my creativity regularly, be it code, art, or music</li>
+          </ul>
       </section>
       
       <section id="projects">
         <h2 class="heading heading__right heading--hidden">Projects</h2>
+        <p>Click on a card to learn more about a project!</p>
         <div class="project__list">
           <!-- Project Cards go here -->
         </div>
       </section>
 
       <section id="contact">
-        <h2 class="heading heading__left heading--hidden">Contact</h2>
+        <h2 class="heading heading__left heading--hidden">Contact Me</h2>
+        <p>Want to have a chat? You can get in touch with me via:</p>
         <div class="contact-list">
           <!-- Contact Cards go here -->
         </div>
       </section>
       <footer>
-        <p>LOL</p>
       </footer>
     </main>
 
