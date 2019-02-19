@@ -43,6 +43,22 @@ footer {
   overflow-y: scroll; 
 }
 
+/* IE 10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  h1 {
+    text-align: center;
+    font-size: calc(6 * (1vw + 1vh - 1vmin));
+    margin: calc(1 * (1vw + 1vh - 1vmin)) 0;
+  }
+  
+  p {
+    font-size: calc(2 * (1vw + 1vh - 1vmin));
+    margin: calc(3 * (1vw + 1vh - 1vmin)) auto;
+    width: 90vw;
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 1600px) {
   p {
     font-size: 32px;

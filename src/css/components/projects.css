@@ -30,18 +30,16 @@
 
 .project__list {
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   max-width: 1280px;
-  grid-template-columns: repeat(auto-fit, minmax(var(--project-card-width), 1fr));
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
   justify-items: center;
   /* justify-content: space-around; */
 }
 
 .project {
   visibility: visible;
-  width: 87.5%;
+  width: var(--project-card-width);
   background-color: #D4E6F1;
   padding: 10px;
   margin: 1vmax;
@@ -108,6 +106,20 @@
   display: inline-block;
   flex-grow: 2;
   font-weight: bold;
+}
+
+/* IE 10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .project {
+    margin: calc(1 * (1vw + 1vh - 1vmin));
+    box-shadow: calc(1 * (1vw + 1vh - 1vmin)) calc(1 * (1vw + 1vh - 1vmin)) rgba(0, 0, 0, 0.1);
+    justify-self: center;
+  }
+  
+  .project__preview--container {
+    border-width: calc(0.5 * (1vw + 1vh - 1vmin));
+    border-radius: calc(0.25 * (1vw + 1vh - 1vmin));
+  }
 }
 
 @media screen and (min-width: 1280px) {

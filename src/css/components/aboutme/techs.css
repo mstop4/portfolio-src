@@ -10,3 +10,10 @@
 .bio__techs img {
   height: 100%;
 }
+
+/* IE10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .bio__techs img {
+    justify-self: center;
+  }
+}

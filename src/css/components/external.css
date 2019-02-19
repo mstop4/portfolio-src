@@ -73,6 +73,18 @@
   visibility: hidden;
 }
 
+/* IE 10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .external-list {
+    font-size: calc(4 * (1vw + 1vh - 1vmin));
+  }
+  
+  .external {
+    margin: calc(1 * (1vw + 1vh - 1vmin));
+    box-shadow: calc(1 * (1vw + 1vh - 1vmin)) calc(1 * (1vw + 1vh - 1vmin)) rgba(0, 0, 0, 0.1);
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .external-list {
     font-size: 40px;

@@ -1,10 +1,13 @@
 const path = require('path');
 const gulp = require('gulp');
 const del = require('del');
-const vinylPaths = require('vinyl-paths');
 const source = require('vinyl-source-stream');
 
 const concatCss = require('gulp-concat-css');
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
 const uglifycss = require('gulp-uglifycss');
 const browserify = require('browserify');
 const babelify = require('babelify');
@@ -17,8 +20,12 @@ const buildHtml = () => {
 }
 
 const buildCss = () => {
-  return gulp.src('src/css/index.css')
-    .pipe(concatCss('index.css'))
+  return gulp.src('src/sass/index.sass')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([ autoprefixer({
+      grid: "autoplace",
+      remove: true
+    })]))
     .pipe(uglifycss({}))
     .pipe(gulp.dest('dist/'))
 }
