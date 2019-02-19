@@ -48,6 +48,20 @@
   background-size: cover;
 }
 
+/* IE 10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .tagline {
+    font-size: calc(3 * (1vw + 1vh - 1vmin));
+  }
+  
+  .photo {
+    width: calc(20 * (1vw + 1vh - 1vmin));
+    height: calc(20 * (1vw + 1vh - 1vmin));
+    border-width: calc(1 * (1vw + 1vh - 1vmin));
+    border-radius: calc(20 * (1vw + 1vh - 1vmin));
+  }
+}
+
 @media screen and (min-width: 1600px) {
   .tagline {
     font-size: 48px;
