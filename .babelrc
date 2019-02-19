@@ -1,8 +1,16 @@
 {
-  "presets": ["@babel/preset-env", 
+  "presets": [
+    ["@babel/preset-env",
+      {
+        "useBuiltIns": false //"usage"
+      }
+    ],
+    
     ["minify", {
       "builtIns": false
     }]
-  ],
+  ]
+  ,
+
   "comments": false
 }
