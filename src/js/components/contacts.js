@@ -15,6 +15,8 @@ const addContactCards = () => {
     toggleVisibility(contactCard, pos);
     contactCards.push(contactCard);
 
+    const contactIconContainer = document.createElement('div');
+    contactIconContainer.classList.add('contact-icon');
     const contactIcon = document.createElement('span');
     contactIcon.classList.add(contact.iconClass);
 
@@ -22,7 +24,8 @@ const addContactCards = () => {
     contactText.href = contact.url;
     contactText.textContent = contact.displayText;
 
-    contactCard.appendChild(contactIcon);
+    contactIconContainer.appendChild(contactIcon);
+    contactCard.appendChild(contactIconContainer);
     contactCard.appendChild(contactText);
 
     contactList.appendChild(contactCard);

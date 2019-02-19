@@ -2,7 +2,7 @@ const { getScrollPosition, toggleVisibilityFactory } = require('../helpers');
 const bioText = document.querySelector('.bio__text');
 
 const initialize = () => {
-  console.log(bioText);
+  handleUpdate();
 }
 
 const setupTechs = () => {

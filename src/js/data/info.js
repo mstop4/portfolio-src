@@ -147,6 +147,20 @@ module.exports = {
     },
   ],
 
+  'portfolios': [
+    {
+      'displayText': 'Github',
+      'url': 'https://github.com/mstop4',
+      'iconClass': ['icon-github']
+    },
+
+    {
+      'displayText': 'itch.io',
+      'url': 'https://quadolorgames.itch.io/',
+      'iconClass': ['icon-github']
+    },
+  ],
+
   'contacts': [
     {
       'displayText': 'Email',
@@ -158,12 +172,6 @@ module.exports = {
       'displayText': 'LinkedIn',
       'url': 'https://www.linkedin.com/in/jonathanlam4/',
       'iconClass': ['icon-linkedin2']
-    },
-
-    {
-      'displayText': 'Github',
-      'url': 'https://github.com/mstop4',
-      'iconClass': ['icon-github']
     },
 
     {
