@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npx gulp",
     "static": "npx gulp static",
-    "watch": "npx gulp watch",
+    "watch": "npm run build && npx gulp watch",
     "serve": "npx http-server dist -c600",
     "start": "npm run build && npm run serve"
   },

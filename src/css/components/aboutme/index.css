@@ -24,16 +24,16 @@
 
 .bio__text {
   padding-left: 0;
-  margin: 0 auto;
+  margin: 6vmax auto;
   list-style: none;
   font-size: 2vmax;
-  width: 90%;
+  width: 80%;
 }
 
 .bio__text li {
   padding-left: 2em;
   text-indent: -2em;
-  margin: 1vmax 0;
+  margin: 2vmax 0;
 }
 
 .bio__text li:before {
@@ -43,4 +43,15 @@
 
 .bio__text-right--appear {
   animation: bio-slideInFromRight 0.5s ease-out 0s 1 forwards;
+}
+
+@media screen and (min-width: 1600px) {
+  .bio__text {
+    font-size: 32px;
+    margin: 96px auto;
+  }
+
+  .bio__text li {
+    margin: 32px 0;
+  }
 }

@@ -18,6 +18,7 @@ h1 {
 }
 
 p {
+  font-size: 2vmax;
   margin: 0 auto;
   width: 90vw;
 }
@@ -39,4 +40,10 @@ footer {
 .no-scroll {
   position: fixed;
   overflow-y: scroll; 
+}
+
+@media screen and (min-width: 1600px) {
+  p {
+    font-size: 32px;
+  }
 }

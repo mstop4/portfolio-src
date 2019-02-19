@@ -28,14 +28,8 @@
   vertical-align: middle;
 }
 
-/* .splash__wrapper h1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-} */
-
 .tagline {
+  font-size: 3vmax;
   text-align: center;
 }
 
@@ -52,4 +46,10 @@
   background-image: url("../img/photo.jpg");
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (min-width: 1600px) {
+  .tagline {
+    font-size: 48px;
+  }
 }

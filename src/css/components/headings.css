@@ -88,3 +88,11 @@
 .heading--hidden {
   visibility: hidden;
 }
+
+@media screen and (min-width: 1600px) {
+  .heading {
+    max-width: 400px;
+    box-shadow: 16px 16px rgba(0, 0, 0, 0.33);
+    font-size: 64px;
+  }
+}

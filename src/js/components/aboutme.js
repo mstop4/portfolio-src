@@ -1,6 +1,8 @@
 const { getScrollPosition, toggleVisibilityFactory } = require('../helpers');
+const bioText = document.querySelector('.bio__text');
 
 const initialize = () => {
+  console.log(bioText);
 }
 
 const setupTechs = () => {
@@ -13,32 +15,24 @@ const setupTechs = () => {
   });
 }
 
-const showCard = (card) => {
-  card.classList.remove('bio__base--hidden');
+const showList = (list) => {
+  console.log('show');
+  list.classList.remove('bio__text--hidden');
 
-  if (card.classList.contains('bio__text-left')) {
-    card.classList.add('bio__text-left--appear');
-  }
-  else if (card.classList.contains('bio__text-right')) {
-    card.classList.add('bio__text-right--appear');
-  }
-
-  else if (card.classList.contains('bio__card-left')) {
-    card.classList.add('bio__card-left--appear');
-  }
-  else if (card.classList.contains('bio__card-right')) {
-    card.classList.add('bio__card-right--appear');
-  }
+  document.querySelector('.bio__text li').forEach((text, i) => {
+    setTimeout(() => {
+      text.classList.remove('bio__text--hidden');
+      text.classList.add('bio__text-right--appear');
+    }, i * 250);
+  });
 }
 
-const toggleVisibility = toggleVisibilityFactory('bio__base--hidden', showCard);
+const toggleVisibility = toggleVisibilityFactory('bio__text--hidden', showList);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();
-
-  bioCards.forEach(card => {
-    toggleVisibility(card, pos);
-  });
+  console.log(pos, bioText.offsetTop, );
+  toggleVisibility(bioText, pos);
 };
 
 module.exports = {
