@@ -39,8 +39,8 @@ const updateModal = (index) => {
   }, 10);
 
   // Set modal info
-  const infoPreview = modal.front.querySelector('.info__preview');
-  const infoPreviewSrc = infoPreview.querySelector('source');
+  const infoPreviewVideo = modal.front.querySelector('.info__preview-video');
+  const infoPreviewSrc = infoPreviewVideo.querySelector('source');
   const infoTitle = modal.front.querySelector('.info__title');
   const infoText = modal.front.querySelector('.info__text');
   const infoStack = modal.front.querySelector('.stack-list');
@@ -67,8 +67,8 @@ const updateModal = (index) => {
   // add new info
 
   infoPreviewSrc.src = projects[index].fullAnim;
-  infoPreview.load();
-  infoPreview.play();
+  infoPreviewVideo.load();
+  infoPreviewVideo.play();
 
   infoTitle.textContent = projects[index].title;
   infoText.innerHTML = projects[index].description;
