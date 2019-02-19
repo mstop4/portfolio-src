@@ -16,22 +16,23 @@ const setupTechs = () => {
 }
 
 const showList = (list) => {
-  console.log('show');
-  list.classList.remove('bio__text--hidden');
+  if (list.classList.contains('bio__text--hidden')) {
+    console.log('show');
+    list.classList.remove('bio__text--hidden');
 
-  document.querySelector('.bio__text li').forEach((text, i) => {
-    setTimeout(() => {
-      text.classList.remove('bio__text--hidden');
-      text.classList.add('bio__text-right--appear');
-    }, i * 250);
-  });
+    document.querySelectorAll('.bio__text li').forEach((text, i) => {
+      setTimeout(() => {
+        text.classList.remove('bio__text--hidden');
+        text.classList.add('bio__text-right--appear');
+      }, i * 250);
+    });
+  }
 }
 
 const toggleVisibility = toggleVisibilityFactory('bio__text--hidden', showList);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();
-  console.log(pos, bioText.offsetTop, );
   toggleVisibility(bioText, pos);
 };
 

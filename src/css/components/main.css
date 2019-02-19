@@ -19,8 +19,9 @@ h1 {
 
 p {
   font-size: 2vmax;
-  margin: 0 auto;
+  margin: 3vmax auto;
   width: 90vw;
+  text-align: center;
 }
 
 a {
@@ -45,5 +46,6 @@ footer {
 @media screen and (min-width: 1600px) {
   p {
     font-size: 32px;
+    margin: 48px auto;
   }
 }

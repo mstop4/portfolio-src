@@ -23,8 +23,8 @@ module.exports = {
       'description': 'Lorem ipsum dolor sit amet',
       'stack': [ 'MongoDB', 'Express', 'React', 'Node.js', 'Giphy JS SDK', 'Redis', 'Chance.js' ],
       'sourceUrls': [
-        { url: 'https://github.com/mstop4/gifcentration-client', text: 'Client Src' },
-        { url: 'https://github.com/mstop4/gifcentration-server', text: 'Server Src' },
+        { url: 'https://github.com/mstop4/gifcentration-client', text: 'Client Source' },
+        { url: 'https://github.com/mstop4/gifcentration-server', text: 'Server Source' },
       ],
       'demoUrls': [
         { url: 'https://mstop4.github.io/gifcentration-client', text: 'Play' }
@@ -37,7 +37,7 @@ module.exports = {
       'previewAnim': 'vid/preview/fractured-flicks.mp4',
       'fullAnim': 'vid/fractured-flicks.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
-      'stack': ['Pixi.js', 'pixi-sound', 'Node.js', 'Babel', 'Webpack', 'Amazon Web Services S3'],
+      'stack': ['Pixi.js', 'pixi-sound', 'Node.js', 'Babel', 'Webpack', 'Amazon S3'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/fractured-flicks', text: 'Source' },
       ],
@@ -52,7 +52,7 @@ module.exports = {
       'previewAnim': 'vid/preview/sync-timer.mp4',
       'fullAnim': 'vid/sync-timer.mp4',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
-      'stack': ['Node.js', 'Express', 'Socket.io', 'Pug', 'Sass', 'uniqid', 'Mocha', 'Chai', 'Puppeteer', 'jsdom'],
+      'stack': ['Node.js', 'Express', 'Socket.io', 'Pug', 'Sass', 'Mocha', 'Chai', 'Puppeteer', 'jsdom'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/sync-timer', text: 'Source' },
       ],
@@ -110,8 +110,8 @@ module.exports = {
       'description': 'A game inspired by the clock-like "paternoster machine" from the 1927 film <em>Metropolis</em> by Fritz Lang.',
       'stack': ['Phaser 3', 'Node.js', 'Babel', 'Webpack', 'GameMaker Studio 2'],
       'sourceUrls': [
-        { url: 'https://github.com/mstop4/worker-11812-phaser', text: 'Web Src' },
-        { url: 'https://github.com/mstop4/worker-11812-gms', text: 'Native Src' }
+        { url: 'https://github.com/mstop4/worker-11812-phaser', text: 'Web Source' },
+        { url: 'https://github.com/mstop4/worker-11812-gms', text: 'Native Source' }
       ],
       'demoUrls': [
         { url: 'https://quadolorgames.itch.io/worker-11812', text: 'Play' }
