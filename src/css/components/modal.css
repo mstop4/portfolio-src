@@ -87,18 +87,16 @@
 .info__preview-video {
   width: 100%;
   display: block;
-  background-color: orange;
 }
 
 .info__title {
   position: absolute;
   left: 1.5vmax;
-  bottom: 0;
+  bottom: 1vmax;
   grid-row: 3 / 4;
   color: black;
   font-size: 3vmax;
   align-self: center;
-  background-color: yellow;
 }
 
 .info__text {
@@ -106,13 +104,11 @@
   overflow-y: auto;
   grid-column: 2 / 3;
   color: black;
-  background-color: red;
 }
 
 .info__stack {
   padding: 5px;
   grid-column: 2 / 3;
-  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +137,6 @@
   padding: 10px;
   justify-content: center;
   align-items: center;
-  background-color: #8080FF;
 }
 
 .links__column {
@@ -217,7 +212,11 @@
   }
 
   .info__title {
+    position: static;
+    left: 0;
+    bottom: 0;
     padding: 10px 0;
+    text-align: center;
   }
 
   .info__text {

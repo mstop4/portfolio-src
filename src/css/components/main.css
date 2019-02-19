@@ -29,8 +29,7 @@ a {
 
 footer {
   margin: 25px 0 0;
-  min-height: 100px;
-  background-color: white;
+  min-height: 10px;
 }
 
 .hidden {
