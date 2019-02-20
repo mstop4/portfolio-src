@@ -1,10 +1,10 @@
 module.exports = [
   {
-    'name': 'MongoDB',
+    'name': 'mongoDB',
     'image': 'img/tech/mongodb.png'
   },
   {
-    'name': 'Express',
+    'name': 'express',
     'image': 'img/tech/express.png'
   },
   {
@@ -17,11 +17,11 @@ module.exports = [
   },
   {
     'name': 'Babel',
-    'image': 'img/tech/placeholder.png'
+    'image': 'img/tech/babel.png'
   },
   {
-    'name': 'Webpack',
-    'image': 'img/tech/placeholder.png'
+    'name': 'webpack',
+    'image': 'img/tech/webpack.png'
   },
   {
     'name': 'Sass',
@@ -36,7 +36,7 @@ module.exports = [
     'image': 'img/tech/gulp.png'
   },
   {
-    'name': 'Git',
+    'name': 'git',
     'image': 'img/tech/git.png'
   },
   {
