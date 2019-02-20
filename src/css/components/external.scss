@@ -1,28 +1,28 @@
-:root {
-  --external__start-angle: 21deg;
-  --external__end-angle: 1deg;
-}
+@import '../partials/vmax';
+
+$external__start-angle: 21deg;
+$external__end-angle: 1deg;
 
 @keyframes external-appear--left{
   from {
-    transform: scale(0) rotate(calc(var(--external__start-angle) * -1));
+    transform: scale(0) rotate(-$external__start-angle);
     opacity: 0;
   }
 
   to {
-    transform: scale(1) rotate(var(--external__end-angle));
+    transform: scale(1) rotate($external__end-angle);
     opacity: 1;
   }
 }
 
 @keyframes external-appear--right {
   from {
-    transform: scale(0) rotate(var(--external__start-angle));
+    transform: scale(0) rotate($external__start-angle);
     opacity: 0;
   }
 
   to {
-    transform: scale(1) rotate(calc(var(--external__end-angle) * -1));
+    transform: scale(1) rotate(-$external__end-angle);
     opacity: 1;
   }
 }
@@ -76,12 +76,12 @@
 /* IE 10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .external-list {
-    font-size: calc(4 * (1vw + 1vh - 1vmin));
+    font-size: vmax(4);
   }
   
   .external {
-    margin: calc(1 * (1vw + 1vh - 1vmin));
-    box-shadow: calc(1 * (1vw + 1vh - 1vmin)) calc(1 * (1vw + 1vh - 1vmin)) rgba(0, 0, 0, 0.1);
+    margin: vmax(1);
+    box-shadow: vmax(1) vmax(1) rgba(0, 0, 0, 0.1);
   }
 }
 

@@ -20,13 +20,13 @@ const buildHtml = () => {
 }
 
 const buildCss = () => {
-  return gulp.src('src/sass/index.sass')
+  return gulp.src('src/css/index.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([ autoprefixer({
       grid: "autoplace",
       remove: true
     })]))
-    .pipe(uglifycss({}))
+    //.pipe(uglifycss({}))
     .pipe(gulp.dest('dist/'))
 }
 
@@ -67,7 +67,7 @@ gulp.task('static', gulp.parallel(copyImg, copyFavicon, copyVid, copyFonts));
 
 gulp.task('watch', () => {
   const htmlWatcher = gulp.watch('src/index.html', buildHtml);
-  const cssWatcher = gulp.watch('src/css/**/*.css', buildCss);
+  const cssWatcher = gulp.watch('src/css/**/*', buildCss);
   const jsWatcher = gulp.watch('src/js/**/*.js', buildJs);
   const imgWatcher = gulp.watch('src/img/finalized/**/*', copyImg);
   const faviconWatcher = gulp.watch('src/favicon.ico', copyFavicon);
@@ -75,20 +75,20 @@ gulp.task('watch', () => {
   const fontWatcher = gulp.watch('src/fonts/*', copyFonts);
 
   imgWatcher.on('unlink', function (filePath) {
-    var srcPath = path.relative(path.resolve('src/img/finalized'), filePath);
-    var destPath = path.resolve('dist/img', srcPath);
+    const srcPath = path.relative(path.resolve('src/img/finalized'), filePath);
+    const destPath = path.resolve('dist/img', srcPath);
     del.sync(destPath);
   });
 
   vidWatcher.on('unlink', function (filePath) {
-    var srcPath = path.relative(path.resolve('src/vid/finalized'), filePath);
-    var destPath = path.resolve('dist/vid', srcPath);
+    const srcPath = path.relative(path.resolve('src/vid/finalized'), filePath);
+    const destPath = path.resolve('dist/vid', srcPath);
     del.sync(destPath);
   });
 
   fontWatcher.on('unlink', function (filePath) {
-    var srcPath = path.relative(path.resolve('src/fonts'), filePath);
-    var destPath = path.resolve('dist/fonts', srcPath);
+    const srcPath = path.relative(path.resolve('src/fonts'), filePath);
+    const destPath = path.resolve('dist/fonts', srcPath);
     del.sync(destPath);
   });
 });

@@ -1,29 +1,29 @@
-:root {
-  --project__start-angle: 43deg;
-  --project__end-angle: 2deg;
-  --project-card-width: 360px;
-}
+@import '../partials/vmax';
+
+$project__start-angle: 43deg;
+$project__end-angle: 2deg;
+$project-card-width: 360px;
 
 @keyframes project-appearLeft{
   from {
-    transform: scale(0) rotate(calc(var(--project__start-angle) * -1));
+    transform: scale(0) rotate(-$project__start-angle);
     opacity: 0;
   }
 
   to {
-    transform: scale(1) rotate(var(--project__end-angle));
+    transform: scale(1) rotate($project__end-angle);
     opacity: 1;
   }
 }
 
 @keyframes project-appearRight {
   from {
-    transform: scale(0) rotate(var(--project__start-angle));
+    transform: scale(0) rotate($project__start-angle);
     opacity: 0;
   }
 
   to {
-    transform: scale(1) rotate(calc(var(--project__end-angle) * -1));
+    transform: scale(1) rotate(-$project__end-angle);
     opacity: 1;
   }
 }
@@ -34,12 +34,11 @@
   flex-wrap: wrap;
   max-width: 1280px;
   justify-items: center;
-  /* justify-content: space-around; */
 }
 
 .project {
   visibility: visible;
-  width: var(--project-card-width);
+  width: $project-card-width;
   background-color: #D4E6F1;
   padding: 10px;
   margin: 1vmax;
@@ -111,14 +110,14 @@
 /* IE 10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .project {
-    margin: calc(1 * (1vw + 1vh - 1vmin));
-    box-shadow: calc(1 * (1vw + 1vh - 1vmin)) calc(1 * (1vw + 1vh - 1vmin)) rgba(0, 0, 0, 0.1);
+    margin: vmax(1);
+    box-shadow: vmax(1) vmax(1) rgba(0, 0, 0, 0.1);
     justify-self: center;
   }
   
   .project__preview--container {
-    border-width: calc(0.5 * (1vw + 1vh - 1vmin));
-    border-radius: calc(0.25 * (1vw + 1vh - 1vmin));
+    border-width: vmax(0.5);
+    border-radius: vmax(0.25);
   }
 }
 

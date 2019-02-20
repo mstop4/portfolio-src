@@ -51,14 +51,14 @@
 /* IE 10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .tagline {
-    font-size: calc(3 * (1vw + 1vh - 1vmin));
+    font-size: vmax(3);
   }
   
   .photo {
-    width: calc(20 * (1vw + 1vh - 1vmin));
-    height: calc(20 * (1vw + 1vh - 1vmin));
-    border-width: calc(1 * (1vw + 1vh - 1vmin));
-    border-radius: calc(20 * (1vw + 1vh - 1vmin));
+    width: vmax(20);
+    height: vmax(20);
+    border-width: vmax(1);
+    border-radius: vmax(20);
   }
 }
 

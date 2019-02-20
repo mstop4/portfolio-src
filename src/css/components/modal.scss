@@ -1,3 +1,5 @@
+@import '../partials/vmax';
+
 .modal {
   position: fixed;
   left: 0;
@@ -166,46 +168,46 @@
 /* IE 10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .modal__close {
-    top: calc(2 * (1vw + 1vh - 1vmin));
-    right: calc(2 * (1vw + 1vh - 1vmin));
+    top: vmax(2);
+    right: vmax(2);
   }
   
   .modal__front {
 
-    border-radius: calc(1.5 * (1vw + 1vh - 1vmin));
-    padding: calc(1.5 * (1vw + 1vh - 1vmin));
-    box-shadow: calc(1 * (1vw + 1vh - 1vmin)) calc(1 * (1vw + 1vh - 1vmin)) rgba(0, 0, 0, 0.1);
-    grid-column-gap: calc(1 * (1vw + 1vh - 1vmin));
+    border-radius: vmax(1.5);
+    padding: vmax(1.5);
+    box-shadow: vmax(1) vmax(1) rgba(0, 0, 0, 0.1);
+    grid-column-gap: vmax(1);
   }
   
   .info__preview-border {
-    border-width: calc(0.5 * (1vw + 1vh - 1vmin));
-    border-radius: calc(0.25 * (1vw + 1vh - 1vmin));
+    border-width: vmax(0.5);
+    border-radius: vmax(0.25); 
   }
   
   .info__title {
-    left: calc(1.5 * (1vw + 1vh - 1vmin));
-    bottom: calc(1 * (1vw + 1vh - 1vmin));
-    font-size: calc(3 * (1vw + 1vh - 1vmin));
+    left: vmax(1.5);
+    bottom: vmax(1);
+    font-size: vmax(3);
   }
   
   .info__text {
-    font-size: calc(2 * (1vw + 1vh - 1vmin));
+    font-size: vmax(2);
   }
   
   .stack-list li {
-    padding: calc(1 * (1vw + 1vh - 1vmin));
-    border-radius: calc(2.6 * (1vw + 1vh - 1vmin));
-    font-size: calc(1.6 * (1vw + 1vh - 1vmin));
-    margin: calc(0.4 * (1vw + 1vh - 1vmin));
+    padding: vmax(1);
+    border-radius: vmax(2.6);
+    font-size: vmax(1.6);
+    margin: vmax(0.4);
   }
   
   .links__icon {
-    font-size: calc(3 * (1vw + 1vh - 1vmin));
+    font-size: vmax(3);
   }
   
   .links__list {
-    font-size: calc(2.5 * (1vw + 1vh - 1vmin));
+    font-size: vmax(2.5);
   }
 }
 

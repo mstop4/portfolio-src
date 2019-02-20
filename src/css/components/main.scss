@@ -1,3 +1,5 @@
+@import '../partials/vmax';
+
 html {
   overflow-x: hidden;
 }
@@ -47,13 +49,13 @@ footer {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   h1 {
     text-align: center;
-    font-size: calc(6 * (1vw + 1vh - 1vmin));
-    margin: calc(1 * (1vw + 1vh - 1vmin)) 0;
+    font-size: vmax(6);
+    margin: vmax(1);
   }
   
   p {
-    font-size: calc(2 * (1vw + 1vh - 1vmin));
-    margin: calc(3 * (1vw + 1vh - 1vmin)) auto;
+    font-size: vmax(2);
+    margin: vmax(3) auto;
     width: 90vw;
     text-align: center;
   }
