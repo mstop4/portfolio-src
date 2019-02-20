@@ -1,23 +1,25 @@
 const { getScrollPosition, toggleVisibilityFactory } = require('../helpers');
+const data = require('../data/aboutme');
 const bioText = document.querySelector('.bio__text');
 
 const initialize = () => {
+  addText();
   handleUpdate();
 }
 
-const setupTechs = () => {
-  const techImgs = [...document.querySelectorAll('.bio__techs img')];
+const addText = () => {
+  data.forEach(text => {
+    const bulletPoint = document.createElement('li');
+    bulletPoint.setAttribute('data-bullet', text.bullet);
+    bulletPoint.classList.add('bio__text--hidden');
+    bulletPoint.textContent = text.text;
 
-  techs.forEach((tech, i) => {
-    techImgs[i].src = tech.image;
-    techImgs[i].alt = tech.name;
-    techImgs[i].title = tech.name;
+    bioText.appendChild(bulletPoint);
   });
 }
 
 const showList = (list) => {
   if (list.classList.contains('bio__text--hidden')) {
-    console.log('show');
     list.classList.remove('bio__text--hidden');
 
     [...document.querySelectorAll('.bio__text li')].forEach((text, i) => {

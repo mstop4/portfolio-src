@@ -1,0 +1,3 @@
+@function vmax($value) {
+  @return calc(#{$value} * (1vw + 1vh - 1vmin));
+}

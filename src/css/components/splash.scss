@@ -11,7 +11,7 @@
   height: 133vh;
   z-index: -1;
   position: absolute;
-  background: linear-gradient(to bottom, rgba(133, 193, 233, 0) 0%, rgba(133, 193, 233, 0) 75%, rgba(133, 193, 233, 1)) 100%, #85C1E9 url("../img/banner.jpg");
+  background: linear-gradient(to bottom, rgba(133, 193, 233, 0) 0%, rgba(133, 193, 233, 0) 75%, rgba(81, 181, 207, 1)) 100%, #51b5cf url("../img/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,6 +46,20 @@
   background-image: url("../img/photo.jpg");
   background-position: center;
   background-size: cover;
+}
+
+/* IE 10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .tagline {
+    font-size: vmax(3);
+  }
+  
+  .photo {
+    width: vmax(20);
+    height: vmax(20);
+    border-width: vmax(1);
+    border-radius: vmax(20);
+  }
 }
 
 @media screen and (min-width: 1600px) {

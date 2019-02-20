@@ -1,0 +1,69 @@
+@import '../partials/vmax';
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  position: absolute;
+  background-color: #51b5cf;
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
+
+h1 {
+  text-align: center;
+  font-size: 6vmax;
+  margin: 1vmax 0;
+}
+
+p {
+  font-size: 2.5vmax;
+  margin: 3vmax auto;
+  width: 90vw;
+  text-align: center;
+}
+
+a {
+  color: #166a9c;
+  text-decoration: none;
+}
+
+footer {
+  margin: 25px 0 0;
+  min-height: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  position: fixed;
+  overflow-y: scroll; 
+}
+
+/* IE 10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  h1 {
+    text-align: center;
+    font-size: vmax(6);
+    margin: vmax(1);
+  }
+  
+  p {
+    font-size: vmax(2.5);
+    margin: vmax(3) auto;
+    width: 90vw;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  p {
+    font-size: 25px;
+    margin: 30px auto;
+  }
+}

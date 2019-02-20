@@ -1,0 +1,106 @@
+@import '../partials/vmax';
+
+$external__start-angle: 21deg;
+$external__end-angle: 1deg;
+
+@keyframes external-appear--left{
+  from {
+    transform: scale(0) rotate(-$external__start-angle);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) rotate($external__end-angle);
+    opacity: 1;
+  }
+}
+
+@keyframes external-appear--right {
+  from {
+    transform: scale(0) rotate($external__start-angle);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) rotate(-$external__end-angle);
+    opacity: 1;
+  }
+}
+
+.external-list {
+  font-size: 4vmax;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 640px;
+  justify-content: space-around;
+}
+
+.external {
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  width: 25vmax;
+  height: 6vmax;
+  background-color: #D4E6F1;
+  padding: 1vmax;
+  margin: 1vmax;
+  border-radius: 3vmax;
+  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
+
+  a {
+    margin: 10px;
+    font-weight: bold;
+  }
+}
+
+.external-left {
+  transform: rotate(2deg);
+}
+
+.external-left--appear {
+  animation: external-appear--left 0.3s ease-out 0s forwards;
+}
+
+.external-right {
+  transform: rotate(-2deg);
+}
+
+.external-right--appear {
+  animation: external-appear--right 0.3s ease-out 0s forwards;
+}
+
+.external--hidden {
+  visibility: hidden;
+}
+
+/* IE 10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .external-list {
+    font-size: vmax(4);
+  }
+  
+  .external {
+    width: vmax(25);
+    height: vmax(6);
+    padding: vmax(1);
+    margin: vmax(1);
+    border-radius: vmax(3);
+    box-shadow: vmax(1) vmax(1) rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .external-list {
+    font-size: 40px;
+  }
+
+  .external {
+    width: 250px;
+    height: 60px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  }
+}

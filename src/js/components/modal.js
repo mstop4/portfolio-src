@@ -7,7 +7,6 @@ const modal = {
 };
 
 const initialize = () => {
-
   modal.back.addEventListener('click', () => {
     modal.front.classList.add('modal__front--hidden');
     modal.front.classList.remove('modal__front--show');
@@ -16,7 +15,7 @@ const initialize = () => {
 
     const bodyEl = document.querySelector('body');
     const scrollPos = -parseInt(bodyEl.style.top);
-    bodyEl.style = null;
+    bodyEl.removeAttribute('style');
     bodyEl.classList.remove('no-scroll');
     window.scrollTo(0, scrollPos);
   });

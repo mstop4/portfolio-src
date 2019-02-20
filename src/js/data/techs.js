@@ -1,38 +1,50 @@
 module.exports = [
   {
-    'name': 'Node.js',
-    'image': 'img/tech/nodejs.png'
-  },
-  {
-    'name': 'React',
-    'image': 'img/tech/react.png'
+    'name': 'MongoDB',
+    'image': 'img/tech/mongodb.png'
   },
   {
     'name': 'Express',
     'image': 'img/tech/express.png'
   },
   {
-    'name': 'GameMaker Studio 2',
-    'image': 'img/tech/gms2.png'
+    'name': 'React',
+    'image': 'img/tech/react.png'
   },
   {
-    'name': 'MongoDB',
-    'image': 'img/tech/mongodb.png'
+    'name': 'Node.js',
+    'image': 'img/tech/nodejs.png'
   },
   {
-    'name': 'C++',
-    'image': 'img/tech/cpp.png'
+    'name': 'Babel',
+    'image': 'img/tech/placeholder.png'
+  },
+  {
+    'name': 'Webpack',
+    'image': 'img/tech/placeholder.png'
+  },
+  {
+    'name': 'Sass',
+    'image': 'img/tech/sass.png'
+  },
+  {
+    'name': 'Mocha',
+    'image': 'img/tech/mocha.png'
+  },
+  {
+    'name': 'Gulp',
+    'image': 'img/tech/gulp.png'
   },
   {
     'name': 'Git',
     'image': 'img/tech/git.png'
   },
   {
-    'name': 'MySQL',
-    'image': 'img/tech/mysql.png'
+    'name': 'GameMaker Studio 2',
+    'image': 'img/tech/gms2.png'
   },
   {
-    'name': 'Mocha',
-    'image': 'img/tech/mocha.png'
-  }
+    'name': 'C++',
+    'image': 'img/tech/cpp.png'
+  },
 ]
