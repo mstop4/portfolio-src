@@ -1,5 +1,4 @@
-@import 'techs';
-@import '../../partials/vmax';
+@import '../partials/vmax';
 
 $bio-slide-start-x: 10vmax;
 $bio-slide-start-x-ie11: vmax(10);
@@ -28,18 +27,18 @@ $bio-slide-start-x-ie11: vmax(10);
   list-style: none;
   font-size: 2vmax;
   width: 80%;
-}
 
-.bio__text li {
-  padding-left: 2em;
-  text-indent: -2em;
-  margin: 2vmax 0;
-}
+  li {
+    padding-left: 2em;
+    text-indent: -2em;
+    margin: 2vmax 0;
+  }
 
-.bio__text li:before {
-  content: attr(data-bullet);
-  padding-right: 1.5vmax;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.33);
+  li:before {
+    content: attr(data-bullet);
+    padding-right: 1.5vmax;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.33);
+  }
 }
 
 .bio__text-right--appear {
@@ -68,18 +67,18 @@ $bio-slide-start-x-ie11: vmax(10);
     list-style: none;
     font-size: vmax(2);
     width: 80%;
-  }
-  
-  .bio__text li {
-    padding-left: 2em;
-    text-indent: -2em;
-    margin: vmax(2) 0;
-  }
-  
-  .bio__text li:before {
-    content: attr(data-bullet);
-    padding-right: vmax(1.5);
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.33);
+
+    li {
+      padding-left: 2em;
+      text-indent: -2em;
+      margin: vmax(2) 0;
+    }
+
+    li:before {
+      content: attr(data-bullet);
+      padding-right: vmax(1.5);
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.33);
+    }
   }
 }
 
@@ -87,13 +86,13 @@ $bio-slide-start-x-ie11: vmax(10);
   .bio__text {
     font-size: 32px;
     margin: 96px auto;
-  }
 
-  .bio__text li {
-    margin: 32px 0;
-  }
-
-  .bio__text li:before {
-    padding-right: 24px;
+    li {
+      margin: 32px 0;
+    }
+  
+    li:before {
+      padding-right: 24px;
+    }
   }
 }

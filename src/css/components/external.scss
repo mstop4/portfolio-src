@@ -45,6 +45,12 @@ $external__end-angle: 1deg;
   margin: 1vmax;
   border-radius: 10px;
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
+
+  a {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 27px;
+  }
 }
 
 .external-left {
@@ -61,12 +67,6 @@ $external__end-angle: 1deg;
 
 .external-right--appear {
   animation: external-appear--right 0.3s ease-out 0s forwards;
-}
-
-.external a {
-  margin: 10px;
-  font-weight: bold;
-  font-size: 27px;
 }
 
 .external--hidden {

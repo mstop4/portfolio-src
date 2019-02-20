@@ -23,7 +23,7 @@ const buildCss = () => {
   return gulp.src('src/css/index.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([ autoprefixer({
-      grid: "autoplace",
+      grid: false,
       remove: true
     })]))
     //.pipe(uglifycss({}))

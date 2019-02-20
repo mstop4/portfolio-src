@@ -1,6 +1,7 @@
 const modal = require('./components/modal');
 const headings = require('./components/headings');
 const aboutme = require('./components/aboutme');
+const skills = require('./components/skills');
 const projects = require('./components/projects');
 const contacts = require('./components/contacts');
 
@@ -8,13 +9,9 @@ const { throttle } = require('./helpers');
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // - Headings
   headings.initialize();
-
-  // - About Me
   aboutme.initialize();
-
-  // - Cards
+  skills.initialize();
   projects.initialize();
   contacts.initialize();
 
@@ -23,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contacts.handleUpdate();
     headings.handleUpdate();
     aboutme.handleUpdate();
+    skills.handleUpdate();
   }, 100);
 
   document.addEventListener('scroll', updateCards);

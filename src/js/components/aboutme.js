@@ -5,19 +5,8 @@ const initialize = () => {
   handleUpdate();
 }
 
-const setupTechs = () => {
-  const techImgs = [...document.querySelectorAll('.bio__techs img')];
-
-  techs.forEach((tech, i) => {
-    techImgs[i].src = tech.image;
-    techImgs[i].alt = tech.name;
-    techImgs[i].title = tech.name;
-  });
-}
-
 const showList = (list) => {
   if (list.classList.contains('bio__text--hidden')) {
-    console.log('show');
     list.classList.remove('bio__text--hidden');
 
     [...document.querySelectorAll('.bio__text li')].forEach((text, i) => {

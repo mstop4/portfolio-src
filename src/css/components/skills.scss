@@ -1,0 +1,29 @@
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.skills__tech {
+  list-style-type: none;
+  margin: 1vmax 1vmax;
+  text-align: center;
+
+  img {
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+    border: silver solid 0.25vmax;
+  }
+}
+
+/* IE10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .skills__list img {
+    justify-self: center;
+  }
+}
