@@ -2,32 +2,58 @@
 
 ### Internet Explorer
 
-*Version Tested:* **11**
+*Version Tested / Latest:* **11**
+
+⚠️ Alignment issues in modal
+⚠️ CSS rotation transforms not working
 
 ### Edge
 
-*Version Tested:* **11**
+*Version Tested / Latest:* **18**
+
+✔️ No problems
 
 ### Firefox
 
-*Version Tested:* **11**
+*Version Tested / Latest:* **65**
+
+✔️ No problems
 
 ### Chrome
 
-*Version Tested:* **11**
+*Version Tested / Latest:* **72**
+
+✔️ No problems
 
 ### Chrome for Android
 
-*Version Tested:* **11**
+*Version Tested / Latest:* **71**
 
-### Safari
-
-*Version Tested:* **11**
-
-### iOS Safari
-
-*Version Tested:* **11**
+✔️ No problems
+💡 Increase size of modal links for phones
 
 ### Opera
 
-*Version Tested:* **11**
+*Version Tested / Latest:* **58**
+
+✔️ No problems
+
+### Safari
+
+*Version Tested / Latest:* **12.0** / 12.1
+
+⚠️ Minor flash of modal background
+
+### iOS Safari & Chrome
+
+*Version Tested / Latest:* **9.3** / 12.1
+
+⚠️ Needs to be tested on newer version
+❌ Issues with modal due to CSS grid incompatibility
+
+### Android Browser
+
+*Version Tested / Latest:* **4.4** / 67
+
+⚠️ Needs to be tested on newer version
+❌ Nothing works
