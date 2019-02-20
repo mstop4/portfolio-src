@@ -1,23 +1,29 @@
 @import '../partials/vmax';
 
+$icon-width: 12vmax;
+
 .skills__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-left: 0;
   width: 90%;
-  max-width: 1280px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .skills__tech {
   list-style-type: none;
+  word-wrap: break-word;
   margin: 1vmax 1vmax;
   text-align: center;
+  width: $icon-width;
+  max-width: 120px;
 
   img {
+    width: $icon-width;
+    max-width: 120px;
     background-color: white;
-    display: block;
     border-radius: 50%;
     border: silver solid 0.25vmax;
   }
@@ -29,3 +35,4 @@
     margin: vmax(1) vmax(1);
   }
 }
+

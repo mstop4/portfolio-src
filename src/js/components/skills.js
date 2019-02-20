@@ -13,7 +13,8 @@ const setupTechs = () => {
   techs.forEach(tech => {
     const techChip = document.createElement('li');
     const techIcon = document.createElement('img');
-    const techName = document.createTextNode(tech.name);
+    const techName = document.createElement('div');
+    techName.innerText = tech.name;
 
     techChip.classList.add('skills__tech');
     techIcon.src = tech.image;

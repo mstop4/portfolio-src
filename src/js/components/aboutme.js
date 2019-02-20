@@ -1,8 +1,19 @@
 const { getScrollPosition, toggleVisibilityFactory } = require('../helpers');
+const data = require('../data/aboutme');
 const bioText = document.querySelector('.bio__text');
 
 const initialize = () => {
+  addText();
   handleUpdate();
+}
+
+const addText = () => {
+  data.forEach(text => {
+    const bulletPoint = document.createElement('li');
+    bulletPoint.setAttribute('data', `bullet: ${text.bullet}`);
+    bulletPoint.classList.add('bio__text--hidden');
+    bulletPoint.textContent = text.text;
+  });
 }
 
 const showList = (list) => {

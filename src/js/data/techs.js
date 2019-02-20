@@ -16,6 +16,14 @@ module.exports = [
     'image': 'img/tech/nodejs.png'
   },
   {
+    'name': 'Babel',
+    'image': 'img/tech/placeholder.png'
+  },
+  {
+    'name': 'Webpack',
+    'image': 'img/tech/placeholder.png'
+  },
+  {
     'name': 'Sass',
     'image': 'img/tech/sass.png'
   },
