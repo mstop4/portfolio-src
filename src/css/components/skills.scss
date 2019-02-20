@@ -1,6 +1,9 @@
 @import '../partials/vmax';
 
-$icon-width: 12vmax;
+$icon-width: 9vmax;
+$icon-width-ie11: vmax(9);
+$chip-width: 12vmax;
+$chip-width-ie11: vmax(12);
 
 .skills__list {
   display: flex;
@@ -10,29 +13,51 @@ $icon-width: 12vmax;
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
-}
 
-.skills__tech {
-  list-style-type: none;
-  word-wrap: break-word;
-  margin: 1vmax 1vmax;
-  text-align: center;
-  width: $icon-width;
-  max-width: 120px;
-
-  img {
-    width: $icon-width;
+  li {
+    list-style-type: none;
+    word-wrap: break-word;
+    margin: 1vmax 1vmax;
+    text-align: center;
+    width: $chip-width;
     max-width: 120px;
-    background-color: white;
-    border-radius: 50%;
-    border: silver solid 0.25vmax;
+
+    .skills__tech {
+      font-size: 2vmax;
+    }
+  
+    img {
+      width: $icon-width;
+      max-width: 90px;
+      background-color: white;
+      border-radius: 50%;
+      border: silver solid 0.25vmax;
+    }
   }
 }
 
 /* IE10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .skills__tech {
+  .skills__list li {
+    width: $chip-width-ie11;
     margin: vmax(1) vmax(1);
+
+    .skills__tech {
+      font-size: vmax(2);
+    }
+
+    img {
+      width: $icon-width-ie11;     
+    }
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .skills__list li {
+    margin: 10px 10px;
+
+    .skills__tech {
+      font-size: 20px;
+    }
+  }
+}

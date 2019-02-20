@@ -16,7 +16,7 @@ const setupTechs = () => {
     const techName = document.createElement('div');
     techName.innerText = tech.name;
 
-    techChip.classList.add('skills__tech');
+    techName.classList.add('skills__tech');
     techIcon.src = tech.image;
     techIcon.alt = tech.name;
 
