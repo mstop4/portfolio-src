@@ -10,9 +10,11 @@ const initialize = () => {
 const addText = () => {
   data.forEach(text => {
     const bulletPoint = document.createElement('li');
-    bulletPoint.setAttribute('data', `bullet: ${text.bullet}`);
+    bulletPoint.setAttribute('data-bullet', text.bullet);
     bulletPoint.classList.add('bio__text--hidden');
     bulletPoint.textContent = text.text;
+
+    bioText.appendChild(bulletPoint);
   });
 }
 

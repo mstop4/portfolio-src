@@ -2,7 +2,7 @@
 
 $project__start-angle: 43deg;
 $project__end-angle: 2deg;
-$project-card-width: 360px;
+$project-card-width: 340px;
 
 @keyframes project-appearLeft{
   from {
@@ -29,7 +29,7 @@ $project-card-width: 360px;
 }
 
 .project__list {
-  margin: 0 auto;
+  margin: 0 auto 1vmax;
   display: flex;
   flex-wrap: wrap;
   max-width: 1280px;
@@ -40,10 +40,10 @@ $project-card-width: 360px;
 .project {
   visibility: visible;
   width: $project-card-width;
-  background-color: #D4E6F1;
-  padding: 10px;
-  margin: 1vmax;
-  border-radius: 10px;
+  background-color: #cef0f5;
+  padding: 1vmax;
+  margin: 2vmax;
+  border-radius: 2vmax;
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 }
 
@@ -102,6 +102,8 @@ $project-card-width: 360px;
 }
 
 .project__title {
+  font-size: 3vmax;
+  margin: 2vmax 0 1vmax 1.5vmax;
   padding: 0 auto;
   display: inline-block;
   flex-grow: 2;
@@ -110,8 +112,14 @@ $project-card-width: 360px;
 
 /* IE 10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .project__list {
+    margin: 0 auto vmax(1);
+  }
+
   .project {
-    margin: vmax(1);
+    padding: vmax(1);
+    margin: vmax(2);
+    border-radius: vmax(2);
     box-shadow: vmax(1) vmax(1) rgba(0, 0, 0, 0.1);
     justify-self: center;
   }
@@ -120,10 +128,32 @@ $project-card-width: 360px;
     border-width: vmax(0.5);
     border-radius: vmax(0.25);
   }
+
+  .project__title {
+    margin: vmax(2) 0 vmax(1) vmax(1.5);
+    font-size: vmax(3);
+  }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1000px) {
+  .project__list {
+    margin: 0 auto 10px;
+  }
+
+  .project {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .project__preview--container {
+    border-width: 5px;
+    border-radius: 2.5px;
+  }
+
   .project__title {
-    font-size: 25.6px;
+    margin: 20px 0 10px 15px;
+    font-size: 30px;
   }
 }

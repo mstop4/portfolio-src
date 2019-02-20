@@ -6,7 +6,7 @@ html {
 
 body {
   position: absolute;
-  background-color: #85C1E9;
+  background-color: #51b5cf;
   font-family: "Quicksand", sans-serif;
   width: 100%;
   overflow-x: hidden;
@@ -27,7 +27,7 @@ p {
 }
 
 a {
-  color: #487dc2;
+  color: #166a9c;
   text-decoration: none;
 }
 
@@ -61,9 +61,9 @@ footer {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1000px) {
   p {
-    font-size: 32px;
-    margin: 48px auto;
+    font-size: 25px;
+    margin: 30px auto;
   }
 }

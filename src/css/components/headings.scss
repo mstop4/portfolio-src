@@ -51,7 +51,7 @@ $heading-slide-start-y-ie11: calc(#{$heading-slide-start-x-ie11} * #{$heading-sl
   background-color: white;
   opacity: 1;
   max-width: 25vmax;
-  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.33);
+  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.2);
   font-size: 4vmax;
   overflow: hidden;
 }
@@ -133,7 +133,7 @@ $heading-slide-start-y-ie11: calc(#{$heading-slide-start-x-ie11} * #{$heading-sl
 
   .heading {
     max-width: vmax(25);
-    box-shadow: vmax(1) vmax(1) rgba(0, 0, 0, 0.33);
+    box-shadow: vmax(1) vmax(1) rgba(0, 0, 0, 0.2);
     font-size: vmax(4);
   }
   
@@ -154,7 +154,7 @@ $heading-slide-start-y-ie11: calc(#{$heading-slide-start-x-ie11} * #{$heading-sl
 @media screen and (min-width: 1600px) {
   .heading {
     max-width: 400px;
-    box-shadow: 16px 16px rgba(0, 0, 0, 0.33);
+    box-shadow: 16px 16px rgba(0, 0, 0, 0.2);
     font-size: 64px;
   }
 }

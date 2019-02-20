@@ -13,6 +13,6 @@ module.exports = [
   },
   {
     'bullet': '📅',
-    'text': 'trives to exercise my creativity regularly, be it code, art, or music'
+    'text': 'Strives to exercise my creativity regularly, be it code, art, or music'
   }
 ]
