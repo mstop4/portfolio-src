@@ -23,8 +23,8 @@ module.exports = {
       'description': 'Lorem ipsum dolor sit amet',
       'stack': [ 'MongoDB', 'Express', 'React', 'Node.js', 'Giphy JS SDK', 'Redis', 'Chance.js' ],
       'sourceUrls': [
-        { url: 'https://github.com/mstop4/gifcentration-client', text: 'Client Source' },
-        { url: 'https://github.com/mstop4/gifcentration-server', text: 'Server Source' },
+        { url: 'https://github.com/mstop4/gifcentration-client', text: 'Client' },
+        { url: 'https://github.com/mstop4/gifcentration-server', text: 'Server' },
       ],
       'demoUrls': [
         { url: 'https://mstop4.github.io/gifcentration-client', text: 'Play' }
@@ -110,8 +110,8 @@ module.exports = {
       'description': 'A game inspired by the clock-like "paternoster machine" from the 1927 film <em>Metropolis</em> by Fritz Lang.',
       'stack': ['Phaser 3', 'Node.js', 'Babel', 'Webpack', 'GameMaker Studio 2'],
       'sourceUrls': [
-        { url: 'https://github.com/mstop4/worker-11812-phaser', text: 'Web Source' },
-        { url: 'https://github.com/mstop4/worker-11812-gms', text: 'Native Source' }
+        { url: 'https://github.com/mstop4/worker-11812-phaser', text: 'Web' },
+        { url: 'https://github.com/mstop4/worker-11812-gms', text: 'Native' }
       ],
       'demoUrls': [
         { url: 'https://quadolorgames.itch.io/worker-11812', text: 'Play' }

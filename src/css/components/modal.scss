@@ -155,18 +155,19 @@
 .links__icon {
   display: table;
   margin: 0 auto;
-  font-size: 3vmax;
+  font-size: 4vmax;
 }
 
 .links__list {
   list-style: none;
   margin: 0 10px;
   padding: 0 10px;
-  font-size: 2.5vmax;
+  font-size: 3vmax;
   font-weight: bold;
+  text-align: center;
 
   li {
-    margin: 0;
+    margin: 5px 0;
   }
 }
 
@@ -215,11 +216,11 @@
   }
 
   .links__icon {
-    font-size: vmax(3);
+    font-size: vmax(4);
   }
   
   .links__list {
-    font-size: vmax(2.5);
+    font-size: vmax(3);
   }
 }
 
@@ -238,11 +239,11 @@
   }
 
   .links__list {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .links__icon {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .info__title {

@@ -35,7 +35,7 @@ const updateModal = (index) => {
     modal.front.classList.remove('modal__front--hidden');
     modal.back.classList.add('modal__back--show');
     modal.back.classList.remove('modal__back--hidden');
-  }, 10);
+  }, 0);
 
   // Set modal info
   const infoPreviewVideo = modal.front.querySelector('.info__preview-video');
@@ -65,6 +65,7 @@ const updateModal = (index) => {
 
   // add new info
 
+  infoPreviewVideo.poster = projects[index].previewStatic;
   infoPreviewSrc.src = projects[index].fullAnim;
   infoPreviewVideo.load();
   infoPreviewVideo.play();
