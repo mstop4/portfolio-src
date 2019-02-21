@@ -33,21 +33,6 @@
   text-align: center;
 }
 
-.photo {
-  width: 20vmax;
-  height: 20vmax;
-  display: block;
-  margin: 0 auto;
-  border-style: solid;
-  border-width: 1vmax;
-  border-radius: 20vmax;
-  border-color: white;
-  background-color: white;
-  background-image: url("../img/photo.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
 /* IE 10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .tagline {

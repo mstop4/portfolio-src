@@ -36,6 +36,19 @@ footer {
   min-height: 20px;
 }
 
+#is-ie10- {
+  background-color: #cef0f5;
+  border-bottom: 4px solid #8fb7c2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 25px;
+  text-align: center;
+  width: 100%;
+  min-height: 100px;
+  z-index: 3;
+}
+
 .hidden {
   display: none;
 }

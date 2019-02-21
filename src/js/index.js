@@ -9,6 +9,11 @@ const { throttle } = require('./helpers');
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  if (navigator.userAgent.indexOf("MSIE") >= 0) {
+    const warning = document.getElementById('is-ie10-');
+    warning.classList.remove("hidden");
+  }
+
   headings.initialize();
   aboutme.initialize();
   skills.initialize();
