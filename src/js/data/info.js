@@ -5,7 +5,7 @@ module.exports = {
       'previewStatic': 'img/gml-script-wizard.jpg',
       'previewAnim': 'vid/preview/gml-script-wizard.mp4',
       'fullAnim': 'vid/gml-script-wizard.mp4',
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
+      'description': 'A tool that will help you generate and modify GML script headers just be filling in a few fields.<br/><br/>Add, remove, and rearrange arguments and additional local variables with ease, then copy the script template with a simple click of a button. Conforms to both GM:S 1.4 and GMS 2 (JSDoc) documentation styles for documenting scripts.',
       'stack': [ 'React', 'Redux', 'Node.js', 'Material-UI', 'Babel', 'Webpack' ],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/gml-script-wizard', text: 'Source' }
@@ -20,8 +20,8 @@ module.exports = {
       'previewStatic': 'img/gifcentration.jpg',
       'previewAnim': 'vid/preview/gifcentration.mp4',
       'fullAnim': 'vid/gifcentration.mp4',
-      'description': 'Lorem ipsum dolor sit amet',
-      'stack': [ 'MongoDB', 'Express', 'React', 'Node.js', 'Giphy JS SDK', 'Redis', 'Chance.js' ],
+      'description': 'Concentration (pairs-matching) game powered by Giphy.<br/><br/>The Client app allows users to search for GIFs that populate the cards in a game on Concentration. The Server app relays results and queries between the Client and the Giphy API and keeps track of the most popular searches.',
+      'stack': [ 'MongoDB', 'Mongoose', 'Express', 'React', 'Node.js', 'Giphy JS SDK', 'Redis', 'Chance.js' ],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/gifcentration-client', text: 'Client' },
         { url: 'https://github.com/mstop4/gifcentration-server', text: 'Server' },
@@ -36,7 +36,7 @@ module.exports = {
       'previewStatic': 'img/fractured-flicks.jpg',
       'previewAnim': 'vid/preview/fractured-flicks.mp4',
       'fullAnim': 'vid/fractured-flicks.mp4',
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
+      'description': 'A jigsaw puzzle-like web game where you put pieces of a video back together. Contains multiple puzzles of vary difficulty levels and saves the best solve times locally.',
       'stack': ['Pixi.js', 'pixi-sound', 'Node.js', 'Babel', 'Webpack', 'Amazon S3'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/fractured-flicks', text: 'Source' },
@@ -51,7 +51,7 @@ module.exports = {
       'previewStatic': 'img/sync-timer.jpg',
       'previewAnim': 'vid/preview/sync-timer.mp4',
       'fullAnim': 'vid/sync-timer.mp4',
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
+      'description': 'An online stopwatch service.<br/><br/>During my time as a teaching assistant at the University of Toronto, I had students needing to time their presentations. Since the presenters and I, as part of the audience, were facing in opposite directions, a timer on a single screen did not suffice. <em>Sync Timer</em> solves that problem by running timers on a central server, which is broadcasted to multiple devices for different viewers.',
       'stack': ['Node.js', 'Express', 'Socket.io', 'Pug', 'Sass', 'Mocha', 'Chai', 'Puppeteer', 'jsdom'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/sync-timer', text: 'Source' },
@@ -66,7 +66,7 @@ module.exports = {
       'previewStatic': 'img/fmodgms.jpg',
       'previewAnim': 'vid/preview/fmodgms.mp4',
       'fullAnim': 'vid/fmodgms.mp4',
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
+      'description': 'A <em>GameMaker: Studio</em> and <em>GameMaker Studio 2</em> extension that provides GML bindings to the FMOD Studio low-level API. Can be used in Windows, macOS, and Linux games.<br/><br/>My longest running project, it was started about a decade ago as a means to extend the audio capabilities of <em>Game Maker 8.0</em> and has been maintained and updated as newer editions of <em>GameMaker</em> have been released.',
       'stack': ['FMOD Low Level API', 'GameMaker Studio 2', 'GameMaker: Studio 1.4'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/fmodgms', text: 'Source' },
@@ -81,7 +81,7 @@ module.exports = {
       'previewStatic': 'img/arborescence.png',
       'previewAnim': 'vid/preview/arborescence.mp4',
       'fullAnim': 'vid/arborescence.mp4',
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
+      'description': 'A relaxing point-and-click puzzle game where the player must strategically use the keys at their disposal in order to undo all the locks and get all the trees ready for the season.<br/><br/>Every tree sprite and level is procedurally-generated, modelled after binary search trees. As such, every level has at least one solution.',
       'stack': ['GameMaker Studio 2'],
       'sourceUrls': [],
       'demoUrls': [
