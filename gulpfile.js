@@ -26,7 +26,7 @@ const buildCss = () => {
       grid: false,
       remove: true
     })]))
-    //.pipe(uglifycss({}))
+    .pipe(uglifycss({}))
     .pipe(gulp.dest('dist/'))
 }
 

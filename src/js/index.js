@@ -9,9 +9,11 @@ const { throttle } = require('./helpers');
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  if (navigator.userAgent.indexOf("MSIE") >= 0) {
+  // IE 10- detection
+  if (!((/*@cc_on!@*/false || !!document.documentMode) && 
+       !(!!window.MSInputMethodContext)) ) {
     const warning = document.getElementById('is-ie10-');
-    warning.classList.remove("hidden");
+    warning.classList.add('hidden');
   }
 
   headings.initialize();
