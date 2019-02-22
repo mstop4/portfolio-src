@@ -6,28 +6,37 @@ const modal = {
   front: document.querySelector('.modal__front')
 };
 
+let canClick = true;
+const getCanClick = () => canClick;
+const setCanClick = (state) => canClick = state;
+
 const initialize = () => {
   modal.back.addEventListener('click', () => {
-    modal.front.classList.add('modal__front--hidden');
-    modal.front.classList.remove('modal__front--show');
-    modal.back.classList.add('modal__back--hidden');
-    modal.back.classList.remove('modal__back--show');
+    if (getCanClick()) {
+      setCanClick(false);
+      modal.front.classList.add('modal__front--hidden');
+      modal.front.classList.remove('modal__front--show');
+      modal.back.classList.add('modal__back--hidden');
+      modal.back.classList.remove('modal__back--show');
 
-    const bodyEl = document.querySelector('body');
-    const scrollPos = -parseInt(bodyEl.style.top);
-    bodyEl.removeAttribute('style');
-    bodyEl.classList.remove('no-scroll');
-    window.scrollTo(0, scrollPos);
+      const bodyEl = document.querySelector('body');
+      const scrollPos = -parseInt(bodyEl.style.top);
+      bodyEl.removeAttribute('style');
+      bodyEl.classList.remove('no-scroll');
+      window.scrollTo(0, scrollPos);
+    }
   });
 
   modal.back.addEventListener('transitionend', () => {
     if (modal.back.classList.contains('modal__back--hidden')) {
       modal.root.classList.add('modal--hidden');
     }
+    setCanClick(true);
   });
 }
 
 const updateModal = (index) => {
+  setCanClick(false);
   // Animate modals
   modal.root.classList.remove('modal--hidden');
   setTimeout(() => {
@@ -118,5 +127,7 @@ const updateModal = (index) => {
 
 module.exports = {
   initialize,
-  updateModal
+  updateModal,
+  getCanClick,
+  setCanClick
 }

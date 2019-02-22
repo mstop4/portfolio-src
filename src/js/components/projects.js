@@ -1,5 +1,5 @@
 const { coinFlip, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
-const { updateModal } = require('../components/modal');
+const { updateModal, getCanClick } = require('../components/modal');
 const { projects, portfolios } = require('../data/info');
 
 const projectList = document.querySelector('.project__list');
@@ -61,17 +61,19 @@ const addProjectCards = () => {
     });
 
     projectCard.addEventListener('click', () => {
-      if (projectPreviewStatic.classList.contains('project__preview--hidden')) {
-        projectPreviewStatic.classList.remove('project__preview--hidden');
-        projectPreviewAnim.pause();
+      if (getCanClick()) {
+        if (projectPreviewStatic.classList.contains('project__preview--hidden')) {
+          projectPreviewStatic.classList.remove('project__preview--hidden');
+          projectPreviewAnim.pause();
+        }
+
+        const bodyEl = document.querySelector('body');
+        const scrollPos = getScrollPosition();
+        bodyEl.style.top = (-scrollPos.top).toString() + 'px';
+        bodyEl.classList.add('no-scroll');
+
+        updateModal(i);
       }
-
-      const bodyEl = document.querySelector('body');
-      const scrollPos = getScrollPosition();
-      bodyEl.style.top = (-scrollPos.top).toString() + 'px';
-      bodyEl.classList.add('no-scroll');
-
-      updateModal(i);
     });
       
     // - Project Short Info
