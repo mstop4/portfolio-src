@@ -6,7 +6,7 @@ module.exports = {
       'previewStatic': 'img/gml-script-wizard.jpg',
       'previewAnim': 'vid/preview/gml-script-wizard.mp4',
       'fullAnim': 'vid/gml-script-wizard.mp4',
-      'description': 'A tool that will help you generate and modify GML script headers just be filling in a few fields.<br/><br/>Add, remove, and rearrange arguments and additional local variables with ease, then copy the script template with a simple click of a button. Conforms to both GM:S 1.4 and GMS 2 (JSDoc) documentation styles for documenting scripts.',
+      'description': 'A tool that will help users generate and modify GML script headers just be filling in a few fields.<br/><br/>Add, remove, and rearrange arguments and additional local variables with ease, then copy the script template with a simple click of a button. Conforms to both GM:S 1.4 and GMS 2 (JSDoc) documentation styles for documenting scripts.',
       'stack': [ 'React', 'Redux', 'Node.js', 'Material-UI', 'Babel', 'Webpack' ],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/gml-script-wizard', text: 'Source' }
@@ -115,7 +115,7 @@ module.exports = {
       'previewStatic': 'img/worker-11812.jpg',
       'previewAnim': 'vid/preview/worker-11812.mp4',
       'fullAnim': 'vid/worker-11812.mp4',
-      'description': 'A point-and-drag game inspired by the "paternoster machine" (better known as the "clock scene") from the 1927 film <em>Metropolis</em> by Fritz Lang.<br/><br/>As lights around a giant clock-like dial light up, players must move and point the hands towards them to turn them off, and prevent the pressure meter from topping out. The game was first created with Phaser 3 so it could be played in-browser, then it was ported to GameMaker Studio 2 for native builds (Windows, macOS, Linux) after deciding that packing the web app with Electron made it too large.',
+      'description': 'A point-and-drag game inspired by the "paternoster machine" (better known as the "clock scene") from the 1927 film <em>Metropolis</em> by Fritz Lang.<br/><br/> The game was first created with Phaser 3 as an exercise in learning the framework, then it was ported to GameMaker Studio 2 for native builds (Windows, macOS, Linux) after deciding that packing the web app with Electron made it too large.',
       'stack': ['Phaser 3', 'Node.js', 'Babel', 'Webpack', 'GameMaker Studio 2'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/worker-11812-phaser', text: 'Web' },
@@ -182,12 +182,12 @@ module.exports = {
       'displayText': 'LinkedIn',
       'url': 'https://www.linkedin.com/in/jonathanlam4/',
       'iconClass': ['icon-linkedin2']
-    },
-
-    {
-      'displayText': 'Twitter',
-      'url': 'https://twitter.com/QuadolorGames',
-      'iconClass': ['icon-twitter']
     }
+
+    // {
+    //   'displayText': 'Twitter',
+    //   'url': 'https://twitter.com/QuadolorGames',
+    //   'iconClass': ['icon-twitter']
+    // }
   ]
 }
