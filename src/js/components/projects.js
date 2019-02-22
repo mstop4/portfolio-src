@@ -15,8 +15,9 @@ const initialize = () => {
 
 const addProjectCards = () => {
   const pos = getScrollPosition();
+  const orderedProjects = projects.sort((a, b) => a.id - b.id);
 
-  projects.forEach((project, i) => {
+  orderedProjects.forEach((project, i) => {
     // Project Card
 
     let projectCard = document.createElement('article');

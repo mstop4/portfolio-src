@@ -1,6 +1,7 @@
 module.exports = {  
   'projects': [
     {
+      'id': 5,
       'title': 'GML Script Wizard',
       'previewStatic': 'img/gml-script-wizard.jpg',
       'previewAnim': 'vid/preview/gml-script-wizard.mp4',
@@ -16,6 +17,7 @@ module.exports = {
     },
 
     {
+      'id': 1,
       'title': 'GIFcentration',
       'previewStatic': 'img/gifcentration.jpg',
       'previewAnim': 'vid/preview/gifcentration.mp4',
@@ -32,6 +34,7 @@ module.exports = {
     },
 
     {
+      'id': 2,
       'title': 'Fractured Flicks',
       'previewStatic': 'img/fractured-flicks.jpg',
       'previewAnim': 'vid/preview/fractured-flicks.mp4',
@@ -47,6 +50,7 @@ module.exports = {
     },
 
     {
+      'id': 0,
       'title': 'Sync Timer',
       'previewStatic': 'img/sync-timer.jpg',
       'previewAnim': 'vid/preview/sync-timer.mp4',
@@ -62,6 +66,7 @@ module.exports = {
     },
 
     {
+      'id': 3,
       'title': 'FMODGMS',
       'previewStatic': 'img/fmodgms.jpg',
       'previewAnim': 'vid/preview/fmodgms.mp4',
@@ -77,6 +82,7 @@ module.exports = {
     },
 
     {
+      'id': 6,
       'title': 'Arborescence',
       'previewStatic': 'img/arborescence.png',
       'previewAnim': 'vid/preview/arborescence.mp4',
@@ -90,6 +96,7 @@ module.exports = {
     },
 
     /*{
+      'id': 7,
       'title': 'I am Rubba, You Are Gloo',
       'previewStatic': 'img/iamrubba.png',
       'previewAnim': 'vid/preview/iamrubba.mp4',
@@ -102,12 +109,13 @@ module.exports = {
       ]
     },*/
 
-      {
+    {
+      'id': 4,
       'title': 'Worker #11812',
       'previewStatic': 'img/worker-11812.jpg',
       'previewAnim': 'vid/preview/worker-11812.mp4',
       'fullAnim': 'vid/worker-11812.mp4',
-      'description': 'A game inspired by the clock-like "paternoster machine" from the 1927 film <em>Metropolis</em> by Fritz Lang.',
+      'description': 'A point-and-drag game inspired by the "paternoster machine" (better known as the "clock scene") from the 1927 film <em>Metropolis</em> by Fritz Lang.<br/><br/>As lights around a giant clock-like dial light up, players must move and point the hands towards them to turn them off, and prevent the pressure meter from topping out. The game was first created with Phaser 3 so it could be played in-browser, then it was ported to GameMaker Studio 2 for native builds (Windows, macOS, Linux) after deciding that packing the web app with Electron made it too large.',
       'stack': ['Phaser 3', 'Node.js', 'Babel', 'Webpack', 'GameMaker Studio 2'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/worker-11812-phaser', text: 'Web' },
@@ -119,11 +127,12 @@ module.exports = {
     },
 
     {
+      'id': 7,
       'title': 'dot.Market 2',
       'previewStatic': 'img/dotMarket2.png',
       'previewAnim': 'vid/preview/dotMarket2.mp4',
       'fullAnim': 'vid/dotMarket2.mp4',
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
+      'description': 'A fantasy business simulator about the exciting world of pixel art restoration.<br/><br/>Players buy second-hand broken art and the pixels needed to fix them, then sell the restored art for a profit. The value of pixels and pixel art fluctuate depending on market forces, encouraging players to buy low, sell high.',
       'stack': ['GameMaker Studio 2'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/lowrezjam-2018', text: 'Source' },
@@ -134,11 +143,12 @@ module.exports = {
     },
 
     {
+      'id': 8,
       'title': 'Toutatis',
       'previewStatic': 'img/toutatis.jpg',
       'previewAnim': 'vid/preview/toutatis.mp4',
       'fullAnim': 'vid/toutatis.mp4',
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet dolor vitae sapien consectetur fringilla. Nulla gravida, ipsum viverra varius rutrum, arcu nisl consectetur ante, at congue turpis diam ut mauris. Vivamus vel viverra felis. Duis vel rhoncus tellus. Donec accumsan fermentum diam ut consequat. Duis commodo augue nec condimentum finibus. Aenean ut ullamcorper augue. Aenean scelerisque consequat quam et fringilla. Sed scelerisque nisl sed augue molestie gravida. Nam tempus ex ullamcorper, congue est vel, efficitur ex.',
+      'description': 'A collaborative project with Cirrus Studios for Global Game Jam 2017. A bunch of space rocks and UFOs have decided to team up to attack and hate on Earth, and it\'s up to the player to protect it by clicking or tapping the screen to create waves to fend them off.',
       'stack': ['GameMaker Studio 2'],
       'sourceUrls': [],
       'demoUrls': [
