@@ -73,25 +73,23 @@
 }
 
 .info__preview {
+  align-self: center;
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-row: 1 / 4;
 }
 
-.info__preview-border {
+.info__preview-video {
+  position: relative;
+  top: -3vmax;
   width: 100%;
   align-self: center;
   box-sizing: border-box;
   border-style: solid;
-  border-width: 0.5vmax;
-  border-radius: 0.25vmax;
+  border-width: .5vmax;
+  border-radius: .25vmax;
   border-color: white;
-}
-
-.info__preview-video {
-  width: 100%;
-  display: block;
 }
 
 .info__title {
@@ -104,7 +102,7 @@
 }
 
 .info__text {
-  padding: 10px;
+  padding: 1vmax;
   overflow-y: auto;
   color: black;
   font-size: 2vmax;
@@ -113,7 +111,7 @@
 }
 
 .info__stack {
-  padding: 5px;
+  padding: 1vmax 0.5vmax;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,12 +133,15 @@
     border-radius: 2.6vmax;
     font-size: 1.6vmax;
     margin: 0.4vmax;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 
 .links__container {
   display: flex;
-  padding: 10px 10px 0 10px;
+  padding: 0.5vmax 1vmax 0;
   justify-content: center;
   align-items: center;
   -ms-grid-row: 3;
@@ -160,8 +161,8 @@
 
 .links__list {
   list-style: none;
-  margin: 0 10px;
-  padding: 0 10px;
+  margin: 0 1vmax;
+  padding: 0 1vmax;
   font-size: 3vmax;
   font-weight: bold;
   text-align: center;
@@ -193,11 +194,6 @@
     grid-column-gap: vmax(1);
   }
   
-  .info__preview-border {
-    border-width: vmax(0.5);
-    border-radius: vmax(0.25); 
-  }
-  
   .info__title {
     left: vmax(1.5);
     bottom: vmax(1);
@@ -205,7 +201,12 @@
   }
   
   .info__text {
+    padding: vmax(1);
     font-size: vmax(2);
+  }
+
+  .info__stack {
+    padding: vmax(1) vmax(0.5);
   }
   
   .stack-list li {
@@ -221,6 +222,12 @@
   
   .links__list {
     font-size: vmax(3);
+    margin: 0 vmax(1);
+    padding: 0 vmax(1);
+  }
+
+  .links__container {
+    padding: vmax(0.5) vmax(1) 0;
   }
 }
 
@@ -240,10 +247,16 @@
 
   .links__list {
     font-size: 30px;
+    margin: 0 10px;
+    padding: 0 10px;
   }
 
   .links__icon {
     font-size: 40px;
+  }
+
+  .links__container {
+    padding: 5px 10px 0;
   }
 
   .info__title {
@@ -252,6 +265,11 @@
 
   .info__text {
     font-size: 20px;
+    padding: 10px;
+  }
+
+  .info__stack {
+    padding: 10px 5px;
   }
 }
 

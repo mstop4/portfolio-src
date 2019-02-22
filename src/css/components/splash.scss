@@ -11,7 +11,7 @@
   height: calc(100vh + 200px);
   z-index: -1;
   position: absolute;
-  background: linear-gradient(to bottom, rgba(133, 193, 233, 0) 0%, rgba(133, 193, 233, 0) 100vh, rgba(81, 181, 207, 1)) 100%, #51b5cf url("../img/banner.jpg");
+  background: linear-gradient(to bottom, rgba(133, 193, 233, 0) 0%, rgba(133, 193, 233, 0) 100vh, rgba(81, 181, 207, 1)) 100%, #51b5cf url("../img/banner2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,6 +26,17 @@
   padding: 0 5vw;
   display: table-cell;
   vertical-align: middle;
+
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 6vmax;
+    margin: 1vmax 0;
+  }
+
+  h3 {
+    color: white;
+  }
 }
 
 .tagline {
