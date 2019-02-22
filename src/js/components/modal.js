@@ -14,9 +14,7 @@ const initialize = () => {
   modal.back.addEventListener('click', () => {
     if (getCanClick()) {
       setCanClick(false);
-      modal.front.classList.add('modal__front--hidden');
       modal.front.classList.remove('modal__front--show');
-      modal.back.classList.add('modal__back--hidden');
       modal.back.classList.remove('modal__back--show');
 
       const bodyEl = document.querySelector('body');
@@ -28,7 +26,7 @@ const initialize = () => {
   });
 
   modal.back.addEventListener('transitionend', () => {
-    if (modal.back.classList.contains('modal__back--hidden')) {
+    if (!modal.back.classList.contains('modal__back--show')) {
       modal.root.classList.add('modal--hidden');
     }
     setCanClick(true);
@@ -41,10 +39,8 @@ const updateModal = (index) => {
   modal.root.classList.remove('modal--hidden');
   setTimeout(() => {
     modal.front.classList.add('modal__front--show');
-    modal.front.classList.remove('modal__front--hidden');
     modal.back.classList.add('modal__back--show');
-    modal.back.classList.remove('modal__back--hidden');
-  }, 0);
+  }, 10);
 
   // Set modal info
   const infoPreviewVideo = modal.front.querySelector('.info__preview-video');
