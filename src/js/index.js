@@ -1,3 +1,4 @@
+const { initScrollBuffer } = require('./helpers')
 const modal = require('./components/modal');
 const headings = require('./components/headings');
 const aboutme = require('./components/aboutme');
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     warning.classList.add('hidden');
   }
 
+  initScrollBuffer(0.1);
   headings.initialize();
   aboutme.initialize();
   skills.initialize();

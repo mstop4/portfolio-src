@@ -1,3 +1,13 @@
+let scrollBuffer;
+
+const initScrollBuffer = (percent) => {
+  updateScrollBuffer(percent);
+  document.addEventListener('scroll', () => {
+    updateScrollBuffer(percent);
+  });
+}
+
+const updateScrollBuffer = (percent) => scrollBuffer = getWindowSize().height * percent;
 const coinFlip = () => Math.floor(Math.random() * 2);
 const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
@@ -17,8 +27,6 @@ const getScrollPosition = () => {
     bottom: scrollPos + windowHeight
   };
 }
-
-const scrollBuffer = 100;
 
 const toggleVisibilityFactory = (hiddenClass, visibleCb) => {
   return (elem, pos) => {
@@ -61,6 +69,7 @@ const throttle = (func, delay) => {
 }
 
 module.exports = {
+  initScrollBuffer,
   coinFlip,
   capitalize,
   getWindowSize,

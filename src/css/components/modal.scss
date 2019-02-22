@@ -90,6 +90,7 @@
   border-width: .5vmax;
   border-radius: .25vmax;
   border-color: white;
+  background-color: white;
 }
 
 .info__title {
@@ -168,7 +169,7 @@
   text-align: center;
 
   li {
-    margin: 5px 0;
+    margin: 0.5vmax 0;
   }
 }
 
@@ -224,6 +225,10 @@
     font-size: vmax(3);
     margin: 0 vmax(1);
     padding: 0 vmax(1);
+
+    li {
+      margin: vmax(0.5) 0;
+    }
   }
 
   .links__container {
@@ -249,6 +254,10 @@
     font-size: 30px;
     margin: 0 10px;
     padding: 0 10px;
+
+    li {
+      margin: 5px 0;
+    }
   }
 
   .links__icon {
@@ -273,13 +282,19 @@
   }
 }
 
-@media screen and (max-height: 414px) {
+@media screen and (max-height: 414px) and (min-aspect-ratio: 1/1) {
+  .info__preview-video {
+    max-height: 64vh;
+    max-width: 54vw;
+    width: auto;
+  }
+
   .links__icon {
     display: none;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 650px) and (max-aspect-ratio: 1/1) {
   .modal__front {
     display: flex;
     flex-direction: column;
@@ -292,6 +307,10 @@
 
   .stack-list {
     margin: 10px 0;
+  }
+
+  .info__preview-video {
+    top: 0;
   }
 
   .links__container {
