@@ -5,7 +5,7 @@ const initialize = () => {
   if (getScrollPosition().top <= getScrollBuffer()) {
     showText(splashWrapper);
   }
-}
+};
 
 const showText = (list) => {
   if (list.classList.contains('splash--hidden')) {
@@ -18,7 +18,7 @@ const showText = (list) => {
       }, i * 650 + 500);
     });
   }
-}
+};
 
 const toggleVisibility = toggleVisibilityFactory('splash--hidden', showText);
 
@@ -30,4 +30,4 @@ const handleUpdate = () => {
 module.exports = {
   initialize,
   handleUpdate
-}
+};

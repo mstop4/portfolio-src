@@ -5,7 +5,7 @@ const techs = require('../data/techs');
 const initialize = () => {
   setupTechs();
   handleUpdate();
-}
+};
 
 const setupTechs = () => {
   const skillList = document.querySelector('.skills__list');
@@ -14,7 +14,7 @@ const setupTechs = () => {
     const techChip = document.createElement('li');
     const techIcon = document.createElement('img');
     const techName = document.createElement('div');
-    techChip.classList.add('skills--hidden')
+    techChip.classList.add('skills--hidden');
 
     techName.innerText = tech.name;
     techName.classList.add('skills__tech');
@@ -25,7 +25,7 @@ const setupTechs = () => {
     techChip.appendChild(techName);
     skillList.appendChild(techChip);
   });
-}
+};
 
 const showList = (list) => {
   if (list.classList.contains('skills--hidden')) {
@@ -38,7 +38,7 @@ const showList = (list) => {
       }, i * 150);
     });
   }
-}
+};
 
 const toggleVisibility = toggleVisibilityFactory('skills--hidden', showList);
 
@@ -50,4 +50,4 @@ const handleUpdate = () => {
 module.exports = {
   initialize,
   handleUpdate
-}
+};

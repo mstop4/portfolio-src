@@ -31,7 +31,7 @@ const initialize = () => {
     }
     setCanClick(true);
   });
-}
+};
 
 const updateModal = (index) => {
   setCanClick(false);
@@ -126,4 +126,4 @@ module.exports = {
   updateModal,
   getCanClick,
   setCanClick
-}
+};

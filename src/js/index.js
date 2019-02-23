@@ -1,4 +1,4 @@
-const { initScrollBuffer } = require('./helpers')
+const { initScrollBuffer } = require('./helpers');
 const modal = require('./components/modal');
 const headings = require('./components/headings');
 const splash = require('./components/splash');
@@ -12,8 +12,8 @@ const { throttle } = require('./helpers');
 document.addEventListener('DOMContentLoaded', () => {
 
   // IE 10- detection
-  if (((/*@cc_on!@*/false || !!document.documentMode) && 
-       !(!!window.MSInputMethodContext)) ) {
+  if (((/*@cc_on!@*/false || Boolean(document.documentMode)) && 
+       !window.MSInputMethodContext) ) {
     const warning = document.getElementById('is-ie10-');
     warning.classList.remove('hidden');
   }

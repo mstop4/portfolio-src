@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "scripts": {
+    "lint": "npx eslint src/js",
     "build": "npx gulp",
     "static": "npx gulp static",
     "watch": "npm run build && npx gulp watch",
@@ -28,6 +29,7 @@
     "browserify": "^16.2.3",
     "browserslist": "^4.4.1",
     "del": "^3.0.0",
+    "eslint": "^5.14.1",
     "gulp": "^4.0.0",
     "gulp-concat-css": "^3.1.0",
     "gulp-imagemin": "^5.0.3",

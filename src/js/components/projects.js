@@ -11,7 +11,7 @@ const portfolioCards = [];
 const initialize = () => {
   addProjectCards();
   addPortfolioLinks();
-}
+};
 
 const addProjectCards = () => {
   const pos = getScrollPosition();
@@ -125,7 +125,7 @@ const addPortfolioLinks = () => {
 
     portfolioList.appendChild(portfolioCard);
   });
-}
+};
 
 const showProject = (project) => {
   project.classList.remove('project--hidden');
@@ -136,7 +136,7 @@ const showProject = (project) => {
   else if (project.classList.contains('project-right')) {
     project.classList.add('project-right--appear');
   }
-}
+};
 
 const showPortfolio = (portfolio) => {
   portfolio.classList.remove('external--hidden');
@@ -147,7 +147,7 @@ const showPortfolio = (portfolio) => {
   else if (portfolio.classList.contains('external-right')) {
     portfolio.classList.add('external-right--appear');
   }
-}
+};
 
 const togglePortfolioVisibility = toggleVisibilityFactory('external--hidden', showPortfolio);
 const toggleProjectVisibility = toggleVisibilityFactory('project--hidden', showProject);
@@ -167,4 +167,4 @@ const handleUpdate = () => {
 module.exports = {
   initialize,
   handleUpdate
-}
+};

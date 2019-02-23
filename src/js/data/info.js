@@ -190,4 +190,4 @@ module.exports = {
     //   'iconClass': ['icon-twitter']
     // }
   ]
-}
+};

@@ -47,4 +47,4 @@ module.exports = [
     'name': 'C++',
     'image': 'img/tech/cpp.png'
   },
-]
+];

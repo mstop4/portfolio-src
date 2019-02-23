@@ -19,4 +19,4 @@ module.exports = [
     'bullet': '📅',
     'text': 'Strives to exercise my creativity regularly, be it code, art, or music'
   }
-]
+];

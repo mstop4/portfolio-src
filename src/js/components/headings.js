@@ -4,7 +4,7 @@ const headings = [...document.querySelectorAll('.heading')];
 
 const initialize = () => {
   handleUpdate();
-}
+};
 
 const showHeading = (heading) => {
   heading.classList.remove('heading--hidden');
@@ -15,7 +15,7 @@ const showHeading = (heading) => {
   else if (heading.classList.contains('heading__right')) {
     heading.classList.add('heading__right--appear');
   }
-}
+};
 
 const toggleVisibility = toggleVisibilityFactory('heading--hidden', showHeading);
 
@@ -30,4 +30,4 @@ const handleUpdate = () => {
 module.exports = {
   initialize,
   handleUpdate
-}
+};

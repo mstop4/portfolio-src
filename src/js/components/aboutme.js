@@ -5,7 +5,7 @@ const bioText = document.querySelector('.bio__text');
 const initialize = () => {
   addText();
   handleUpdate();
-}
+};
 
 const addText = () => {
   data.forEach(text => {
@@ -16,7 +16,7 @@ const addText = () => {
 
     bioText.appendChild(bulletPoint);
   });
-}
+};
 
 const showList = (list) => {
   if (list.classList.contains('bio__text--hidden')) {
@@ -29,7 +29,7 @@ const showList = (list) => {
       }, i * 250);
     });
   }
-}
+};
 
 const toggleVisibility = toggleVisibilityFactory('bio__text--hidden', showList);
 
@@ -41,4 +41,4 @@ const handleUpdate = () => {
 module.exports = {
   initialize,
   handleUpdate
-}
+};

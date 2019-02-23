@@ -33,7 +33,7 @@ const addContactCards = () => {
 
     contactList.appendChild(contactCard);
   });
-}
+};
 
 const showCard = (card) => {
   card.classList.remove('external--hidden');
@@ -44,7 +44,7 @@ const showCard = (card) => {
   else if (card.classList.contains('external-right')) {
     card.classList.add('external-right--appear');
   }
-}
+};
 
 const toggleVisibility = toggleVisibilityFactory('external--hidden', showCard);
 
@@ -59,4 +59,4 @@ const handleUpdate = () => {
 module.exports = {
   initialize,
   handleUpdate
-}
+};

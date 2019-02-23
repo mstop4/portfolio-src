@@ -5,7 +5,7 @@ const initScrollBuffer = (percent) => {
   document.addEventListener('scroll', () => {
     updateScrollBuffer(percent);
   });
-}
+};
 
 const updateScrollBuffer = (percent) => scrollBuffer = getWindowSize().height * percent;
 const getScrollBuffer = () => scrollBuffer;
@@ -17,7 +17,7 @@ const getWindowSize = () => {
     height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
     width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
   };
-}
+};
 
 const getScrollPosition = () => {
   const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
@@ -27,7 +27,7 @@ const getScrollPosition = () => {
     top: scrollPos,
     bottom: scrollPos + windowHeight
   };
-}
+};
 
 const toggleVisibilityFactory = (hiddenClass, visibleCb) => {
   return (elem, pos) => {
@@ -44,8 +44,8 @@ const toggleVisibilityFactory = (hiddenClass, visibleCb) => {
         visibleCb(elem);
       }
     }
-  }
-}
+  };
+};
 
 const throttle = (func, delay) => {
   let lastExecTime = 0;
@@ -66,8 +66,8 @@ const throttle = (func, delay) => {
       lastExecTime = now;
       func.apply();
     }
-  }
-}
+  };
+};
 
 module.exports = {
   initScrollBuffer,
@@ -78,4 +78,4 @@ module.exports = {
   getScrollBuffer,
   toggleVisibilityFactory,
   throttle
-}
+};
