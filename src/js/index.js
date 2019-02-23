@@ -1,6 +1,7 @@
 const { initScrollBuffer } = require('./helpers')
 const modal = require('./components/modal');
 const headings = require('./components/headings');
+const splash = require('./components/splash');
 const aboutme = require('./components/aboutme');
 const skills = require('./components/skills');
 const projects = require('./components/projects');
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initScrollBuffer(0.1);
   headings.initialize();
+  splash.initialize();
   aboutme.initialize();
   skills.initialize();
   projects.initialize();
@@ -30,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     headings.handleUpdate();
     aboutme.handleUpdate();
     skills.handleUpdate();
+    splash.handleUpdate();
   }, 100);
 
   document.addEventListener('scroll', updateCards);

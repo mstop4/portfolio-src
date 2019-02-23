@@ -29,7 +29,6 @@ const setupTechs = () => {
 
 const showList = (list) => {
   if (list.classList.contains('skills--hidden')) {
-    console.log('show');
     list.classList.remove('skills--hidden');
 
     [...document.querySelectorAll('.skills__list li')].forEach((text, i) => {

@@ -44,6 +44,16 @@
   text-align: center;
 }
 
+.splash--show {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.splash--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* IE 10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .tagline {

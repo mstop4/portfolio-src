@@ -8,6 +8,7 @@ const initScrollBuffer = (percent) => {
 }
 
 const updateScrollBuffer = (percent) => scrollBuffer = getWindowSize().height * percent;
+const getScrollBuffer = () => scrollBuffer;
 const coinFlip = () => Math.floor(Math.random() * 2);
 const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
@@ -74,6 +75,7 @@ module.exports = {
   capitalize,
   getWindowSize,
   getScrollPosition,
+  getScrollBuffer,
   toggleVisibilityFactory,
   throttle
 }
