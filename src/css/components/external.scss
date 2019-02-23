@@ -1,4 +1,4 @@
-@import '../partials/vmax';
+@import '../partials/helpers';
 
 $external-start-angle: 21deg;
 $external-end-angle: 1deg;
@@ -59,7 +59,7 @@ $external-end-angle: 1deg;
 }
 
 .external-left--appear {
-  animation: external-appear--left 0.3s ease-out 0s forwards;
+  animation: external-appear--left 0.5s $ease-out-back 0s forwards;
 }
 
 .external-right {
@@ -67,7 +67,7 @@ $external-end-angle: 1deg;
 }
 
 .external-right--appear {
-  animation: external-appear--right 0.3s ease-out 0s forwards;
+  animation: external-appear--right 0.5s $ease-out-back 0s forwards;
 }
 
 .external--hidden {

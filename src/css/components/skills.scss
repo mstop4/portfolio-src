@@ -1,4 +1,4 @@
-@import '../partials/vmax';
+@import '../partials/helpers';
 
 $icon-width: 9vmax;
 $icon-width-ie11: vmax(9);
@@ -51,7 +51,7 @@ $skill-end-angle: 2deg;
 }
 
 .skills__tech--show {
-  animation: skill-appearLeft 0.3s ease-out 0s forwards;
+  animation: skill-appearLeft 0.6s $ease-out-back 0s forwards;
 }
 
 .skills--hidden {

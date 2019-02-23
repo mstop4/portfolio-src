@@ -1,4 +1,4 @@
-@import '../partials/vmax';
+@import '../partials/helpers';
 
 $project-start-angle: 43deg;
 $project-end-angle: 2deg;
@@ -52,7 +52,7 @@ $project-card-width: 340px;
 }
 
 .project-left--appear {
-  animation: project-appearLeft 0.3s ease-out 0s forwards;
+  animation: project-appearLeft 0.5s $ease-out-back 0s forwards;
 }
 
 .project-right {
@@ -60,7 +60,7 @@ $project-card-width: 340px;
 }
 
 .project-right--appear {
-  animation: project-appearRight 0.3s ease-out 0s forwards;
+  animation: project-appearRight 0.5s $ease-out-back 0s forwards;
 }
 
 .project--hidden {
