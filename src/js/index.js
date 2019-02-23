@@ -11,10 +11,10 @@ const { throttle } = require('./helpers');
 document.addEventListener('DOMContentLoaded', () => {
 
   // IE 10- detection
-  if (!((/*@cc_on!@*/false || !!document.documentMode) && 
+  if (((/*@cc_on!@*/false || !!document.documentMode) && 
        !(!!window.MSInputMethodContext)) ) {
     const warning = document.getElementById('is-ie10-');
-    warning.classList.add('hidden');
+    warning.classList.remove('hidden');
   }
 
   initScrollBuffer(0.1);
