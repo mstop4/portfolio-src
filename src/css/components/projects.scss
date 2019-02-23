@@ -1,29 +1,29 @@
 @import '../partials/vmax';
 
-$project__start-angle: 43deg;
-$project__end-angle: 2deg;
+$project-start-angle: 43deg;
+$project-end-angle: 2deg;
 $project-card-width: 340px;
 
 @keyframes project-appearLeft{
   from {
-    transform: scale(0) rotate(-$project__start-angle);
+    transform: scale(0) rotate(-$project-start-angle);
     opacity: 0;
   }
 
   to {
-    transform: scale(1) rotate($project__end-angle);
+    transform: scale(1) rotate($project-end-angle);
     opacity: 1;
   }
 }
 
 @keyframes project-appearRight {
   from {
-    transform: scale(0) rotate($project__start-angle);
+    transform: scale(0) rotate($project-start-angle);
     opacity: 0;
   }
 
   to {
-    transform: scale(1) rotate(-$project__end-angle);
+    transform: scale(1) rotate(-$project-end-angle);
     opacity: 1;
   }
 }

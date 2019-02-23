@@ -1,28 +1,28 @@
 @import '../partials/vmax';
 
-$external__start-angle: 21deg;
-$external__end-angle: 1deg;
+$external-start-angle: 21deg;
+$external-end-angle: 1deg;
 
 @keyframes external-appear--left{
   from {
-    transform: scale(0) rotate(-$external__start-angle);
+    transform: scale(0) rotate(-$external-start-angle);
     opacity: 0;
   }
 
   to {
-    transform: scale(1) rotate($external__end-angle);
+    transform: scale(1) rotate($external-end-angle);
     opacity: 1;
   }
 }
 
 @keyframes external-appear--right {
   from {
-    transform: scale(0) rotate($external__start-angle);
+    transform: scale(0) rotate($external-start-angle);
     opacity: 0;
   }
 
   to {
-    transform: scale(1) rotate(-$external__end-angle);
+    transform: scale(1) rotate(-$external-end-angle);
     opacity: 1;
   }
 }

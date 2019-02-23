@@ -4,6 +4,20 @@ $icon-width: 9vmax;
 $icon-width-ie11: vmax(9);
 $chip-width: 12vmax;
 $chip-width-ie11: vmax(12);
+$skill-start-angle: 43deg;
+$skill-end-angle: 2deg;
+
+@keyframes skill-appearLeft {
+  from {
+    transform: scale(0) rotate(-$skill-start-angle);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) rotate($skill-end-angle);
+    opacity: 1;
+  }
+}
 
 .skills__list {
   display: flex;
@@ -34,6 +48,14 @@ $chip-width-ie11: vmax(12);
       border: #acdee8 solid 0.25vmax;
     }
   }
+}
+
+.skills__tech--show {
+  animation: skill-appearLeft 0.3s ease-out 0s forwards;
+}
+
+.skills--hidden {
+  visibility: hidden;
 }
 
 /* IE10+ */

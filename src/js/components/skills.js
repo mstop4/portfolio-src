@@ -14,8 +14,9 @@ const setupTechs = () => {
     const techChip = document.createElement('li');
     const techIcon = document.createElement('img');
     const techName = document.createElement('div');
-    techName.innerText = tech.name;
+    techChip.classList.add('skills--hidden')
 
+    techName.innerText = tech.name;
     techName.classList.add('skills__tech');
     techIcon.src = tech.image;
     techIcon.alt = tech.name;
@@ -27,19 +28,20 @@ const setupTechs = () => {
 }
 
 const showList = (list) => {
-  if (list.classList.contains('skills__list--hidden')) {
-    list.classList.remove('skills__list--hidden');
+  if (list.classList.contains('skills--hidden')) {
+    console.log('show');
+    list.classList.remove('skills--hidden');
 
     [...document.querySelectorAll('.skills__list li')].forEach((text, i) => {
       setTimeout(() => {
-        text.classList.remove('skills__list--hidden');
-        text.classList.add('skills__tech--appear');
-      }, i * 250);
+        text.classList.remove('skills--hidden');
+        text.classList.add('skills__tech--show');
+      }, i * 150);
     });
   }
 }
 
-const toggleVisibility = toggleVisibilityFactory('skills__list--hidden', showList);
+const toggleVisibility = toggleVisibilityFactory('skills--hidden', showList);
 
 const handleUpdate = () => {
   const pos = getScrollPosition();
