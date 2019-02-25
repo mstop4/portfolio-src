@@ -26,8 +26,9 @@ a {
 }
 
 footer {
-  margin: 25px 0 0;
-  min-height: 30px;
+  margin-top: 3vmax;
+  min-height: 10vmax;
+  background: linear-gradient(#51b5cf, #1b729c);
 }
 
 #is-ie10- {
@@ -66,11 +67,21 @@ footer {
     width: 90vw;
     text-align: center;
   }
+
+  footer {
+    margin-top: vmax(3);
+    min-height: vmax(10);
+  }
 }
 
 @media screen and (min-width: 1000px) {
   p {
     font-size: 25px;
     margin: 30px auto;
+  }
+
+  footer {
+    margin-top: 30px;
+    min-height: 100px;
   }
 }
