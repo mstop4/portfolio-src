@@ -1,4 +1,4 @@
-const { initScrollBuffer } = require('./helpers');
+const { initScrollBuffer, tourPage } = require('./helpers');
 const modal = require('./components/modal');
 const headings = require('./components/headings');
 const splash = require('./components/splash');
@@ -38,6 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('scroll', updateCards);
   window.addEventListener('resize', updateCards);
   window.addEventListener('orientationchange', updateCards);
+
+  document.addEventListener('keydown', e => {
+    if (e.keyCode == 13) {
+      tourPage();
+    }
+  });
 
   // - Modal
   modal.initialize();

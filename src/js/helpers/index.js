@@ -69,6 +69,21 @@ const throttle = (func, delay) => {
   };
 };
 
+const tourPage = () => {
+  const docHeight = document.body.scrollHeight;
+
+  console.log('Scroll');
+  const scroll = () => {
+    console.log('down');
+    document.documentElement.scrollTop++;
+    if (getScrollPosition().bottom < docHeight) {
+      requestAnimationFrame(scroll);
+    }
+  };
+
+  scroll();
+};
+
 module.exports = {
   initScrollBuffer,
   coinFlip,
@@ -77,5 +92,6 @@ module.exports = {
   getScrollPosition,
   getScrollBuffer,
   toggleVisibilityFactory,
-  throttle
+  throttle,
+  tourPage
 };
