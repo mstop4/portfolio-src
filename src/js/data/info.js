@@ -22,7 +22,7 @@ module.exports = {
       'previewStatic': 'img/gifcentration.jpg',
       'previewAnim': 'vid/preview/gifcentration.mp4',
       'fullAnim': 'vid/gifcentration.mp4',
-      'description': 'Concentration (pairs-matching) game powered by Giphy.<br/><br/>The Client app allows users to search for GIFs that populate the cards in a game on Concentration. The Server app relays results and queries between the Client and the Giphy API and keeps track of the most popular searches.',
+      'description': 'Concentration (pairs-matching) game powered by Giphy and the MERN stack.<br/><br/>The Client app allows users to search for GIFs that populate the cards in a game on Concentration. The Server app relays results and queries between the Client and the Giphy API and keeps track of the most popular searches.',
       'stack': [ 'MongoDB', 'Mongoose', 'Express', 'React', 'Node.js', 'Giphy JS SDK', 'Redis', 'Chance.js' ],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/gifcentration-client', text: 'Client' },
@@ -39,7 +39,7 @@ module.exports = {
       'previewStatic': 'img/fractured-flicks.jpg',
       'previewAnim': 'vid/preview/fractured-flicks.mp4',
       'fullAnim': 'vid/fractured-flicks.mp4',
-      'description': 'A jigsaw puzzle-like web game where you put pieces of a video back together. Contains multiple puzzles of vary difficulty levels and saves the best solve times locally.',
+      'description': 'A jigsaw puzzle-like web game where you put pieces of a video back together. Contains multiple puzzles of vary difficulty levels and saves the best solve times locally in the user\'s browser.<br/><br/>It was very well received in <a href="https://itch.io/jam/finally-finish-something-2018/rate/181663" target=_blank>Finally Finish Something Jam 2018</a>, ranked 3rd place overall out of 109 entries.',
       'stack': ['Pixi.js', 'pixi-sound', 'Node.js', 'Babel', 'Webpack', 'Amazon S3'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/fractured-flicks', text: 'Source' },
@@ -55,7 +55,7 @@ module.exports = {
       'previewStatic': 'img/sync-timer.jpg',
       'previewAnim': 'vid/preview/sync-timer.mp4',
       'fullAnim': 'vid/sync-timer.mp4',
-      'description': 'An online stopwatch service.<br/><br/>During my time as a teaching assistant at the University of Toronto, I had students needing to time their presentations. Since the presenters and I, as part of the audience, were facing in opposite directions, a timer on a single screen did not suffice. <em>Sync Timer</em> solves that problem by running timers on a central server, which is broadcasted to multiple devices for different viewers.',
+      'description': 'An online stopwatch microservice where multiple users can view the same timer on multiple devices.<br/><br/>During my time as a teaching assistant at the University of Toronto, I had students needing to time the length of their presentations. Since the presenters and the audience (myself included), were facing in opposite directions, a timer on a single screen did not suffice. That gave me the idea to build Sync Timer, which solves that problem by running timers on a central server, which is broadcasted to multiple devices for different viewers.<br/><br/>It caught the attention of lead instructor of my class and he loved the idea',
       'stack': ['Node.js', 'Express', 'Socket.io', 'Pug', 'Sass', 'Mocha', 'Chai', 'Puppeteer', 'jsdom'],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/sync-timer', text: 'Source' },

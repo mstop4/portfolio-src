@@ -14,6 +14,8 @@ const initialize = () => {
   modal.back.addEventListener('click', () => {
     if (getCanClick()) {
       setCanClick(false);
+      setTimeout(() => setCanClick(true), 550);
+
       modal.front.classList.remove('modal__front--show');
       modal.back.classList.remove('modal__back--show');
 
@@ -29,12 +31,13 @@ const initialize = () => {
     if (!modal.back.classList.contains('modal__back--show')) {
       modal.root.classList.add('modal--hidden');
     }
-    setCanClick(true);
   });
 };
 
 const updateModal = (index) => {
   setCanClick(false);
+  setTimeout(() => setCanClick(true), 550);
+
   // Animate modals
   modal.root.classList.remove('modal--hidden');
   setTimeout(() => {

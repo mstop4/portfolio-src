@@ -75,7 +75,7 @@ const tourPage = () => {
   console.log('Scroll');
   const scroll = () => {
     console.log('down');
-    document.documentElement.scrollTop++;
+    document.documentElement.scrollTop += 4;
     if (getScrollPosition().bottom < docHeight) {
       requestAnimationFrame(scroll);
     }
