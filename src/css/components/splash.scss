@@ -20,7 +20,7 @@
 
 .splash__wrapper {
   position: relative;
-  top: -16.5vh;
+  top: -100px;
   width: 100%;
   margin: auto 0;
   padding: 0 5vw;
@@ -44,6 +44,22 @@
   text-align: center;
 }
 
+.resume {
+  display: block;
+  text-align: center;
+  line-height: 5vmax;
+  margin: 4.5vmax 0;
+}
+
+.resume__link {
+  color: white;
+  font-size: 3vmax;
+  border: .5vmax solid white;
+  width: 15vmax;
+  padding: 1.5vmax 4.5vmax;
+  border-radius: 4.5vmax;
+}
+
 .splash--show {
   position: relative;
   top: 0;
@@ -63,12 +79,33 @@
   .tagline {
     font-size: vmax(3);
   }
+
+  .resume {
+    line-height: vmax(5);
+    margin: vmax(4.5);
+  }
   
-  .photo {
-    width: vmax(20);
-    height: vmax(20);
-    border-width: vmax(1);
-    border-radius: vmax(20);
+  .resume__link {
+    font-size: vmax(3);
+    border: vmax(0.5) solid white;
+    width: vmax(15);
+    padding: vmax(1.5) vmax(4.5);
+    border-radius: vmax(4.5);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .resume {
+    line-height: 50px;
+    margin: 45px 0;
+  }
+  
+  .resume__link {
+    font-size: 30px;
+    border: 5px solid white;
+    width: 15px;
+    padding: 15px 45px;
+    border-radius: 45px;
   }
 }
 
