@@ -1,0 +1,3 @@
+- Add close button to modal
+- Add resume
+- Add proper favicon
