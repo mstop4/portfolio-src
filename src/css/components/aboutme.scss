@@ -1,7 +1,7 @@
 @import '../partials/helpers';
 
 $bio-slide-start-x: 10vmax;
-$bio-slide-start-x-ie11: vmax(10);
+$bio-slide-start-x-ie: vmax(10);
 
 @keyframes bio-slideInFromRight {
   from {
@@ -50,7 +50,7 @@ $bio-slide-start-x-ie11: vmax(10);
   @keyframes bio-slideInFromRight {
     from {
       transform:
-        translateX($bio-slide-start-x-ie11);
+        translateX($bio-slide-start-x-ie);
       opacity: 0;
     }
   

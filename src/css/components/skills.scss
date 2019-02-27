@@ -1,9 +1,9 @@
 @import '../partials/helpers';
 
 $icon-width: 9vmax;
-$icon-width-ie11: vmax(9);
+$icon-width-ie: vmax(9);
 $chip-width: 12vmax;
-$chip-width-ie11: vmax(12);
+$chip-width-ie: vmax(12);
 $skill-start-angle: 43deg;
 $skill-end-angle: 2deg;
 
@@ -61,7 +61,7 @@ $skill-end-angle: 2deg;
 /* IE10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .skills__list li {
-    width: $chip-width-ie11;
+    width: $chip-width-ie;
     margin: vmax(1) vmax(1);
 
     .skills__tech {
@@ -69,7 +69,7 @@ $skill-end-angle: 2deg;
     }
 
     img {
-      width: $icon-width-ie11;     
+      width: $icon-width-ie;     
     }
   }
 }

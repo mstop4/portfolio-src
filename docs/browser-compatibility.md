@@ -5,7 +5,7 @@
 *Version Tested / Latest:* **11**
 
 ⚠️ Alignment issues in modal
-⚠️ CSS rotation transforms not working
+⚠️ CSS rotation transforms not all working, possibly due to bugs with `calc` (https://caniuse.com/#feat=calc)
 
 ### Edge
 
@@ -30,7 +30,6 @@
 *Version Tested / Latest:* **71**
 
 ✔️ No problems
-💡 Increase size of modal links for phones
 
 ### Opera
 

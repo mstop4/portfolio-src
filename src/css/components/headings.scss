@@ -5,8 +5,8 @@ $heading-slide-angle-tan: 0.07; /* no trig functions in SASS yet :( */
 $heading-slide-start-x: 25vmax;
 $heading-slide-start-y: $heading-slide-start-x * $heading-slide-angle-tan;
 
-$heading-slide-start-x-ie11: vmax(25);
-$heading-slide-start-y-ie11: calc(#{$heading-slide-start-x-ie11} * #{$heading-slide-angle-tan});
+$heading-slide-start-x-ie: vmax(25);
+$heading-slide-start-y-ie: calc(#{$heading-slide-start-x-ie} * #{$heading-slide-angle-tan});
 
 @keyframes heading-slideInFromLeft {
   from {
@@ -98,8 +98,8 @@ $heading-slide-start-y-ie11: calc(#{$heading-slide-start-x-ie11} * #{$heading-sl
   @keyframes heading-slideInFromLeft {
     from {
       transform:
-        translateX(-$heading-slide-start-x-ie11)
-        translateY($heading-slide-start-y-ie11)
+        translateX(-$heading-slide-start-x-ie)
+        translateY($heading-slide-start-y-ie)
         rotate(-$heading-slide-angle);
       opacity: 0;
     }
@@ -116,8 +116,8 @@ $heading-slide-start-y-ie11: calc(#{$heading-slide-start-x-ie11} * #{$heading-sl
   @keyframes heading-slideInFromRight {
     from {
       transform:
-        translateX($heading-slide-start-x-ie11)
-        translateY($heading-slide-start-y-ie11)
+        translateX($heading-slide-start-x-ie)
+        translateY($heading-slide-start-y-ie)
         rotate($heading-slide-angle);
       opacity: 0;
     }
