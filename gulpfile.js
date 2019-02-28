@@ -3,7 +3,6 @@ const gulp = require('gulp');
 const del = require('del');
 const source = require('vinyl-source-stream');
 
-const concatCss = require('gulp-concat-css');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const autoprefixer = require('autoprefixer');
@@ -17,7 +16,7 @@ const imagemin = require('gulp-imagemin');
 const buildHtml = () => {
   return gulp.src('src/index.html')
     .pipe(gulp.dest('dist/'));
-}
+};
 
 const buildCss = () => {
   return gulp.src('src/css/index.scss')
@@ -27,8 +26,8 @@ const buildCss = () => {
       remove: true
     })]))
     .pipe(uglifycss({}))
-    .pipe(gulp.dest('dist/'))
-}
+    .pipe(gulp.dest('dist/'));
+};
 
 const buildJs = () => {
   const b = browserify({
@@ -40,13 +39,13 @@ const buildJs = () => {
   return b.bundle()
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('dist/'));
-}
+};
 
 const copyImg = () => {
   return gulp.src('src/img/finalized/**/*', {since: gulp.lastRun(copyImg)})
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img/'));
-}
+};
 
 const copyFavicon = () => {
   return gulp.src('src/favicon.ico', {since: gulp.lastRun(copyFavicon)})
@@ -56,12 +55,17 @@ const copyFavicon = () => {
 const copyVid = () => {
   return gulp.src('src/vid/finalized/**/*', {since: gulp.lastRun(copyVid)})
     .pipe(gulp.dest('dist/vid/'));
-}
+};
 
 const copyFonts = () => {
   return gulp.src('src/fonts/**/*',  {since: gulp.lastRun(copyFonts)})
     .pipe(gulp.dest('dist/fonts/'));
-}
+};
+
+const copyDownloads = () => {
+  return gulp.src('src/downloads/**/*',  {since: gulp.lastRun(copyDownloads)})
+    .pipe(gulp.dest('dist/downloads/'));
+};
 
 gulp.task('static', gulp.parallel(copyImg, copyFavicon, copyVid, copyFonts));
 
@@ -72,7 +76,8 @@ gulp.task('watch', () => {
   const imgWatcher = gulp.watch('src/img/finalized/**/*', copyImg);
   const faviconWatcher = gulp.watch('src/favicon.ico', copyFavicon);
   const vidWatcher = gulp.watch('src/vid/finalized/**/*', copyVid);
-  const fontWatcher = gulp.watch('src/fonts/*', copyFonts);
+  const fontWatcher = gulp.watch('src/fonts/**/*', copyFonts);
+  const dlWatcher = gulp.watch('src/downloads/**/*', copyDownloads);
 
   imgWatcher.on('unlink', function (filePath) {
     const srcPath = path.relative(path.resolve('src/img/finalized'), filePath);
@@ -91,6 +96,12 @@ gulp.task('watch', () => {
     const destPath = path.resolve('dist/fonts', srcPath);
     del.sync(destPath);
   });
+
+  dlWatcher.on('unlink', function (filePath) {
+    const srcPath = path.relative(path.resolve('src/downloads'), filePath);
+    const destPath = path.resolve('dist/downloads', srcPath);
+    del.sync(destPath);
+  });
 });
 
-exports.default = gulp.parallel(buildHtml, buildCss, buildJs, copyImg, copyFavicon, copyVid, copyFonts);
+exports.default = gulp.parallel(buildHtml, buildCss, buildJs, copyImg, copyFavicon, copyVid, copyFonts, copyDownloads);

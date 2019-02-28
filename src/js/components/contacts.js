@@ -2,6 +2,7 @@ const { coinFlip, getScrollPosition, toggleVisibilityFactory } = require('../hel
 const { contacts } = require('../data/info');
 
 const contactList = document.querySelector('#contact-list');
+const resumeRedux = document.querySelector('#resume-redux');
 const contactCards = [];
 
 const initialize = () => addContactCards();
@@ -33,6 +34,29 @@ const addContactCards = () => {
 
     contactList.appendChild(contactCard);
   });
+
+  const resumeCard = document.createElement('article');
+  resumeCard.classList.add('external', 'external--hidden');
+  coinFlip() === 0 ? resumeCard.classList.add('external-left') : resumeCard.classList.add('external-right');
+
+  toggleVisibility(resumeCard, pos);
+  contactCards.push(resumeCard);
+
+  const resumeIconContainer = document.createElement('div');
+  resumeIconContainer.classList.add('external-icon');
+  const resumeIcon = document.createElement('span');
+  resumeIcon.classList.add('icon-file-text');
+
+  const resumeText = document.createElement('a');
+  resumeText.href = 'downloads/Jonathan-Lam-resume.pdf';
+  resumeText.textContent = 'Resumé';
+  resumeText.target = '_blank';
+
+  resumeIconContainer.appendChild(resumeIcon);
+  resumeCard.appendChild(resumeIconContainer);
+  resumeCard.appendChild(resumeText);
+
+  resumeRedux.appendChild(resumeCard);
 };
 
 const showCard = (card) => {
