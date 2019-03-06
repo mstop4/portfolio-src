@@ -8,8 +8,7 @@
     "static": "npx gulp static",
     "watch": "npm run build && npx gulp watch",
     "serve": "npx http-server dist -c600",
-    "start": "npm run build && npm run serve",
-    "resume": "npx http-server resume"
+    "start": "npm run build && npm run serve"
   },
   "repository": {
     "type": "git",
