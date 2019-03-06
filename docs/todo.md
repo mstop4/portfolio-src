@@ -1,4 +1,3 @@
 - Add close button to modal
 - Add better resume
-- Add proper favicon
 - Double-check all HTML elements to make sure they fit semantically 
