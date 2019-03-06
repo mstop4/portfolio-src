@@ -47,6 +47,10 @@ $project-card-width: 340px;
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 }
 
+.project:hover {
+  cursor: pointer;
+}
+
 .project-left {
   transform: rotate(2deg);
 }

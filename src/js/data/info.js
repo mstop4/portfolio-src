@@ -7,7 +7,7 @@ module.exports = {
       'previewAnim': 'vid/preview/gml-script-wizard.mp4',
       'fullAnim': 'vid/gml-script-wizard.mp4',
       'description': 'A tool that will help users generate and modify GML script headers just be filling in a few fields.<br/><br/>Add, remove, and rearrange arguments and additional local variables with ease, then copy the script template with a simple click of a button. Conforms to both GM:S 1.4 and GMS 2 (JSDoc) documentation styles for documenting scripts.',
-      'stack': [ 'React', 'Redux', 'Node.js', 'Material-UI', 'Babel', 'Webpack' ],
+      'stack': [ 'React', 'Redux', 'Node.js', 'Material-UI', 'Babel', 'Webpack', 'Electron' ],
       'sourceUrls': [
         { url: 'https://github.com/mstop4/gml-script-wizard', text: 'Source' }
       ],

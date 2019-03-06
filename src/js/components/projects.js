@@ -23,6 +23,7 @@ const addProjectCards = () => {
     let projectCard = document.createElement('article');
     projectCard.classList.add('project', 'project--hidden');
     projectCard.setAttribute('data-index', i);
+    projectCard.setAttribute('tabindex', '0');
     coinFlip() === 0 ? projectCard.classList.add('project-left') : projectCard.classList.add('project-right');
 
     toggleProjectVisibility(projectCard, pos);

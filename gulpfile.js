@@ -47,11 +47,6 @@ const copyImg = () => {
     .pipe(gulp.dest('dist/img/'));
 };
 
-const copyFavicon = () => {
-  return gulp.src('src/favicon.ico', {since: gulp.lastRun(copyFavicon)})
-    .pipe(gulp.dest('dist/'));
-};
-
 const copyVid = () => {
   return gulp.src('src/vid/finalized/**/*', {since: gulp.lastRun(copyVid)})
     .pipe(gulp.dest('dist/vid/'));
@@ -67,14 +62,23 @@ const copyDownloads = () => {
     .pipe(gulp.dest('dist/downloads/'));
 };
 
-gulp.task('static', gulp.parallel(copyImg, copyFavicon, copyVid, copyFonts));
+const copyConfig = (done) => {
+  gulp.src('src/browserconfig.xml',  {since: gulp.lastRun(copyConfig)})
+    .pipe(gulp.dest('dist/'));
+
+  gulp.src('src/site.webmanifest',  {since: gulp.lastRun(copyConfig)})
+    .pipe(gulp.dest('dist/'));
+
+  done();
+};
+
+gulp.task('static', gulp.parallel(copyImg, copyVid, copyFonts, copyConfig));
 
 gulp.task('watch', () => {
-  const htmlWatcher = gulp.watch('src/index.html', buildHtml);
-  const cssWatcher = gulp.watch('src/css/**/*', buildCss);
-  const jsWatcher = gulp.watch('src/js/**/*.js', buildJs);
+  gulp.watch('src/index.html', buildHtml);
+  gulp.watch('src/css/**/*', buildCss);
+  gulp.watch('src/js/**/*.js', buildJs);
   const imgWatcher = gulp.watch('src/img/finalized/**/*', copyImg);
-  const faviconWatcher = gulp.watch('src/favicon.ico', copyFavicon);
   const vidWatcher = gulp.watch('src/vid/finalized/**/*', copyVid);
   const fontWatcher = gulp.watch('src/fonts/**/*', copyFonts);
   const dlWatcher = gulp.watch('src/downloads/**/*', copyDownloads);
@@ -104,4 +108,4 @@ gulp.task('watch', () => {
   });
 });
 
-exports.default = gulp.parallel(buildHtml, buildCss, buildJs, copyImg, copyFavicon, copyVid, copyFonts, copyDownloads);
+exports.default = gulp.parallel(buildHtml, buildCss, buildJs, copyImg, copyVid, copyFonts, copyDownloads, copyConfig);
