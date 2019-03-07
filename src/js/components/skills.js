@@ -1,6 +1,7 @@
-const { getScrollPosition, toggleVisibilityFactory } = require('../helpers');
+import { getScrollPosition, toggleVisibilityFactory } from '../helpers';
+import techs from '../data/techs';
 const skills = document.querySelector('.skills__list');
-const techs = require('../data/techs');
+
 
 const initialize = () => {
   setupTechs();
@@ -47,7 +48,7 @@ const handleUpdate = () => {
   toggleVisibility(skills, pos);
 };
 
-module.exports = {
+export {
   initialize,
   handleUpdate
 };

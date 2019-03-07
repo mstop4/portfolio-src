@@ -72,9 +72,7 @@ const throttle = (func, delay) => {
 const tourPage = () => {
   const docHeight = document.body.scrollHeight;
 
-  console.log('Scroll');
   const scroll = () => {
-    console.log('down');
     document.documentElement.scrollTop += 4;
     if (getScrollPosition().bottom < docHeight) {
       requestAnimationFrame(scroll);
@@ -84,7 +82,7 @@ const tourPage = () => {
   scroll();
 };
 
-module.exports = {
+export {
   initScrollBuffer,
   coinFlip,
   capitalize,

@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     'bullet': '🖼️',
     'text': 'Developer of games and web applications from Toronto who believes the marriage of code, art, and music can create beautiful things'

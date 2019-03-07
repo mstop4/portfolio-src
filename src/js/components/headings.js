@@ -1,4 +1,4 @@
-const { getScrollPosition, toggleVisibilityFactory } = require('../helpers');
+import { getScrollPosition, toggleVisibilityFactory } from '../helpers';
 
 const headings = [...document.querySelectorAll('.heading')];
 
@@ -27,7 +27,7 @@ const handleUpdate = () => {
   });
 };
 
-module.exports = {
+export {
   initialize,
   handleUpdate
 };

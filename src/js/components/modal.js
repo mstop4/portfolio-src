@@ -1,4 +1,4 @@
-const { projects } = require('../data/info');
+import { projects } from '../data/info';
 
 const modal = {
   root: document.querySelector('.modal'),
@@ -124,7 +124,7 @@ const updateModal = (index) => {
   }
 };
 
-module.exports = {
+export {
   initialize,
   updateModal,
   getCanClick,

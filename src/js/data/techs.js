@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     'name': 'mongoDB',
     'image': 'img/tech/mongodb.png'

@@ -1,5 +1,5 @@
-const { coinFlip, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
-const { contacts } = require('../data/info');
+import { coinFlip, getScrollPosition, toggleVisibilityFactory } from '../helpers';
+import { contacts } from '../data/info';
 
 const contactList = document.querySelector('#contact-list');
 const resumeRedux = document.querySelector('#resume-redux');
@@ -80,7 +80,7 @@ const handleUpdate = () => {
   });
 };
 
-module.exports = {
+export {
   initialize,
   handleUpdate
 };

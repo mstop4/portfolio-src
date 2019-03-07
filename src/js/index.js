@@ -1,13 +1,13 @@
-const { initScrollBuffer } = require('./helpers');
-const modal = require('./components/modal');
-const headings = require('./components/headings');
-const splash = require('./components/splash');
-const aboutme = require('./components/aboutme');
-const skills = require('./components/skills');
-const projects = require('./components/projects');
-const contacts = require('./components/contacts');
+import { initScrollBuffer } from './helpers';
+import * as modal from './components/modal';
+import * as headings from './components/headings';
+import * as splash from './components/splash';
+import * as aboutme from './components/aboutme';
+import * as skills from './components/skills';
+import * as projects from './components/projects';
+import * as contacts from './components/contacts';
 
-const { throttle } = require('./helpers');
+import { throttle } from './helpers';
 
 document.addEventListener('DOMContentLoaded', () => {
 

@@ -1,4 +1,4 @@
-const { getScrollPosition, getScrollBuffer, toggleVisibilityFactory } = require('../helpers');
+import { getScrollPosition, getScrollBuffer, toggleVisibilityFactory } from '../helpers';
 const splashWrapper = document.querySelector('.splash__wrapper');
 
 const initialize = () => {
@@ -27,7 +27,7 @@ const handleUpdate = () => {
   toggleVisibility(splashWrapper, pos);
 };
 
-module.exports = {
+export {
   initialize,
   handleUpdate
 };

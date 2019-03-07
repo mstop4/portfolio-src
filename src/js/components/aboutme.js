@@ -1,5 +1,5 @@
-const { getScrollPosition, toggleVisibilityFactory } = require('../helpers');
-const data = require('../data/aboutme');
+import { getScrollPosition, toggleVisibilityFactory } from '../helpers';
+import data from '../data/aboutme';
 const bioText = document.querySelector('.bio__text');
 
 const initialize = () => {
@@ -38,7 +38,7 @@ const handleUpdate = () => {
   toggleVisibility(bioText, pos);
 };
 
-module.exports = {
+export {
   initialize,
   handleUpdate
 };

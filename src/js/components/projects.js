@@ -1,6 +1,6 @@
-const { coinFlip, getScrollPosition, toggleVisibilityFactory } = require('../helpers');
-const { updateModal, getCanClick } = require('../components/modal');
-const { projects, portfolios } = require('../data/info');
+import { coinFlip, getScrollPosition, toggleVisibilityFactory } from '../helpers';
+import { updateModal, getCanClick } from '../components/modal';
+import { projects, portfolios } from '../data/info';
 
 const projectList = document.querySelector('.project__list');
 const projectCards = [];
@@ -165,7 +165,7 @@ const handleUpdate = () => {
   });
 };
 
-module.exports = {
+export {
   initialize,
   handleUpdate
 };
