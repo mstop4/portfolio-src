@@ -54,7 +54,7 @@ const projects = [
     'previewStatic': 'img/sync-timer.jpg',
     'previewAnim': 'vid/preview/sync-timer.mp4',
     'fullAnim': 'vid/sync-timer.mp4',
-    'description': 'An online stopwatch microservice where multiple users can view the same timer on multiple devices.<br/><br/>During my time as a teaching assistant at the University of Toronto, I had students needing to time the length of their presentations. Since the presenters and the audience (myself included), were facing in opposite directions, a timer on a single screen did not suffice. That gave me the idea to build Sync Timer, which solves that problem by running timers on a central server, which is broadcasted to multiple devices for different viewers.<br/><br/>It caught the attention of lead instructor of my class and he loved the idea',
+    'description': 'An online stopwatch microservice where multiple groups of users or parties can each create and observe a common timer hosted on an express server on multiple devices via web sockets.<br/><br/>During my time as a teaching assistant at the University of Toronto, I had students needing to time the length of their presentations. Since the presenters and the audience (myself included), were facing in opposite directions, a timer on a single screen did not suffice. That gave me the idea to build Sync Timer, which solves that problem by running timers on a central server, which is broadcasted to multiple devices for different viewers.<br/><br/>It caught the attention of lead instructor of my class and he loved the idea.',
     'stack': ['Node.js', 'Express', 'Socket.io', 'Pug', 'Sass', 'Mocha', 'Chai', 'Puppeteer', 'jsdom'],
     'sourceUrls': [
       { url: 'https://github.com/mstop4/sync-timer', text: 'Source' },
@@ -70,7 +70,7 @@ const projects = [
     'previewStatic': 'img/fmodgms.jpg',
     'previewAnim': 'vid/preview/fmodgms.mp4',
     'fullAnim': 'vid/fmodgms.mp4',
-    'description': 'A <em>GameMaker: Studio</em> and <em>GameMaker Studio 2</em> extension that provides GML bindings to the FMOD Studio low-level API. Can be used in Windows, macOS, and Linux games.<br/><br/>My longest running project, it was started about a decade ago as a means to extend the audio capabilities of <em>Game Maker 8.0</em> and has been maintained and updated as newer editions of <em>GameMaker</em> have been released.',
+    'description': 'A <em>GameMaker: Studio 1.4</em> and <em>GameMaker Studio 2</em> extension that provides GML bindings to the FMOD Studio low-level API. Can be used in Windows, macOS, and Linux games.<br/><br/>My longest running project, it was started about a decade ago as a means to extend the audio capabilities of <em>Game Maker 8.0</em> and has been maintained and updated as newer editions of <em>GameMaker</em> have been released.',
     'stack': ['FMOD Low Level API', 'GameMaker Studio 2', 'GameMaker: Studio 1.4'],
     'sourceUrls': [
       { url: 'https://github.com/mstop4/fmodgms', text: 'Source' },
