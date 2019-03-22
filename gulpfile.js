@@ -58,7 +58,7 @@ const copyFonts = () => {
 };
 
 const copyDownloads = () => {
-  return gulp.src('src/downloads/**/*',  {since: gulp.lastRun(copyDownloads)})
+  return gulp.src('src/downloads/finalized/**/*',  {since: gulp.lastRun(copyDownloads)})
     .pipe(gulp.dest('dist/downloads/'));
 };
 

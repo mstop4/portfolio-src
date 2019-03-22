@@ -32,8 +32,8 @@ export default [
     'image': 'img/tech/mocha.png'
   },
   {
-    'name': 'Gulp',
-    'image': 'img/tech/gulp.png'
+    'name': 'Heroku',
+    'image': 'img/tech/heroku.png'
   },
   {
     'name': 'git',
