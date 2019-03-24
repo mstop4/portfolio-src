@@ -48,7 +48,7 @@ const addContactCards = () => {
   resumeIcon.classList.add('icon-file-text');
 
   const resumeText = document.createElement('a');
-  resumeText.href = 'downloads/Jonathan-Lam-resume.pdf';
+  resumeText.href = 'downloads/Jonathan_Lam_resume.pdf';
   resumeText.textContent = 'Resumé';
   resumeText.target = '_blank';
 
