@@ -25,12 +25,6 @@ a {
   text-decoration: none;
 }
 
-footer {
-  margin-top: 3vmax;
-  min-height: 10vmax;
-  background: linear-gradient(#51b5cf, #1b729c);
-}
-
 #warnings {
   position: fixed;
   top: 0;
@@ -72,11 +66,6 @@ footer {
     text-align: center;
   }
 
-  footer {
-    margin-top: vmax(3);
-    min-height: vmax(10);
-  }
-
   .warning-banner {
     font-size: vmax(2.5);
   }
@@ -92,10 +81,5 @@ footer {
   p {
     font-size: 25px;
     margin: 30px auto;
-  }
-
-  footer {
-    margin-top: 30px;
-    min-height: 100px;
   }
 }
