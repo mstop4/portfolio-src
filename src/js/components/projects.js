@@ -20,7 +20,7 @@ const addProjectCards = () => {
   orderedProjects.forEach((project, i) => {
     // Project Card
 
-    let projectCard = document.createElement('article');
+    let projectCard = document.createElement('div');
     projectCard.classList.add('project', 'project--hidden');
     projectCard.setAttribute('data-index', i);
     projectCard.setAttribute('tabindex', '0');
@@ -103,7 +103,7 @@ const addPortfolioLinks = () => {
   const pos = getScrollPosition();
 
   portfolios.forEach(portfolio => {
-    const portfolioCard = document.createElement('article');
+    const portfolioCard = document.createElement('div');
     portfolioCard.classList.add('external', 'external--hidden');
     coinFlip() === 0 ? portfolioCard.classList.add('external-left') : portfolioCard.classList.add('external-right');
 

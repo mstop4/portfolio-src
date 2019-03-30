@@ -11,7 +11,7 @@ const addContactCards = () => {
   const pos = getScrollPosition();
 
   contacts.forEach(contact => {
-    const contactCard = document.createElement('article');
+    const contactCard = document.createElement('div');
     contactCard.classList.add('external', 'external--hidden');
     coinFlip() === 0 ? contactCard.classList.add('external-left') : contactCard.classList.add('external-right');
 
@@ -35,7 +35,7 @@ const addContactCards = () => {
     contactList.appendChild(contactCard);
   });
 
-  const resumeCard = document.createElement('article');
+  const resumeCard = document.createElement('div');
   resumeCard.classList.add('external', 'external--hidden');
   coinFlip() === 0 ? resumeCard.classList.add('external-left') : resumeCard.classList.add('external-right');
 
