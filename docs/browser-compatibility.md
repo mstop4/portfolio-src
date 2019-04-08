@@ -46,12 +46,12 @@
 
 *Version Tested / Latest:* **9.3** / 12.1
 
-⚠️ Needs to be tested on newer version
+⚠️ Needs to be tested on newer version    
 ❌ Issues with modal due to CSS grid incompatibility
 
 ### Android Browser
 
 *Version Tested / Latest:* **4.4** / 67
 
-⚠️ Needs to be tested on newer version
+⚠️ Needs to be tested on newer version    
 ❌ Nothing works
