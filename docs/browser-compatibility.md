@@ -8,7 +8,7 @@
 
 ### Edge
 
-*Version Tested / Latest:* **18**
+*Version Tested / Latest:* **74**
 
 ✔️ No problems
 
@@ -20,7 +20,7 @@
 
 ### Chrome
 
-*Version Tested / Latest:* **72**
+*Version Tested / Latest:* **73**
 
 ✔️ No problems
 
