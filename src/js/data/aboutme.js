@@ -8,11 +8,11 @@ export default [
     'text': 'Fascinated by the Internet of things and the web as a programmable platform'
   },
   {
-    'bullet': '📀',
-    'text': 'Enjoys creating multimedia experiences'
+    'bullet': '🛠️',
+    'text': 'Likes to tinker with and optimize code until it\'s just right'
   },
   {
-    'bullet': '🛠️',
+    'bullet': '📚',
     'text': 'Excited to learn new technologies and coding techniques and teaching others'
   },
   {
