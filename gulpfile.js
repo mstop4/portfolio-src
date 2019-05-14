@@ -72,7 +72,7 @@ const copyConfig = (done) => {
   done();
 };
 
-gulp.task('static', gulp.parallel(copyImg, copyVid, copyFonts, copyConfig));
+gulp.task('static', gulp.parallel(copyImg, copyVid, copyFonts, copyDownloads, copyConfig));
 
 gulp.task('watch', () => {
   gulp.watch('src/index.html', buildHtml);
