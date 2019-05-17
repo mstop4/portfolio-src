@@ -8,7 +8,7 @@
 .contact__field {
   display: block;
   box-sizing: border-box;
-  margin: 1vmax auto;
+  margin: 1.5vmax auto;
   border: 0;
   border-radius: 3.5vmax;
   padding: 1vmax 2vmax;
@@ -40,11 +40,11 @@
   align-items: center;
   width: 25vmax;
   height: 6vmax;
-  background-color: #cef0f5;
+  background-color: #1b729c;
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 
   font-weight: bold;
-  color: black;
+  color: white;
   font-size: 4vmax;
 }
 
@@ -55,7 +55,7 @@
   }
   
   .contact__field {
-    margin: vmax(1) auto;
+    margin: vmax(1.5) auto;
     border-radius: vmax(3.5);
     padding: vmax(1) vmax(2);
     font-size: vmax(2.5);
@@ -86,7 +86,7 @@
   }
   
   .contact__field {
-    margin: 10px auto;
+    margin: 15px auto;
     border-radius: 35px;
     padding: 10px 20px;
     font-size: 25px;
