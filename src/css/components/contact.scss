@@ -1,0 +1,88 @@
+@import '../partials/helpers';
+
+#contact-form {
+  margin: 0 auto 1.5vmax;
+  max-width: 1280px;
+}
+
+.contact__field {
+  display: block;
+  box-sizing: border-box;
+  margin: 1vmax auto;
+  border: 0;
+  border-radius: 3.5vmax;
+  padding: 1vmax 2vmax;
+  font-size: 2.5vmax;
+  width: 95%;
+  outline: none;
+}
+
+#contact-message {
+  margin: 3vmax auto;
+}
+
+#contact-send {
+  font-size: 2.5vmax;
+  margin: 1.5vmax 1vmax 1.5vmax;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  width: 25vmax;
+  height: 6vmax;
+  background-color: #D4E6F1;
+  padding: 1vmax;
+  margin: 1vmax;
+  border-radius: 3vmax;
+  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
+
+  a {
+    margin: 10px;
+    font-weight: bold;
+  }
+}
+
+/* IE 10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #contact-form {
+    margin: 0 auto vmax(1.5);
+  }
+  
+  .contact__field {
+    margin: vmax(1) auto;
+    border-radius: vmax(3.5);
+    padding: vmax(1) vmax(2);
+    font-size: vmax(2.5);
+  }
+  
+  #contact-message {
+    margin: vmax(3) auto;
+  }
+  
+  #contact-send {
+    font-size: vmax(2.5);
+    margin: vmax(1.5) vmax(1) vmax(1.5);
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  #contact-form {
+    margin: 0 auto 15px;
+  }
+  
+  .contact__field {
+    margin: 10px auto;
+    border-radius: 35px;
+    padding: 10px 20px;
+    font-size: 25px;
+  }
+  
+  #contact-message {
+    margin: 30px auto;
+  }
+  
+  #contact-send {
+    font-size: 25px;
+    margin: 15px 10px 15px;
+  }
+}

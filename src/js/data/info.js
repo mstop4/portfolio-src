@@ -172,9 +172,9 @@ const portfolios = [
 
 const contacts = [
   {
-    'displayText': 'Email',
-    'url': 'mailto:jonathan.hs.lam@gmail.com',
-    'iconClass': ['icon-envelope-o']
+    'displayText': 'Resumé',
+    'url': 'downloads/Jonathan_Lam_resume.pdf',
+    'iconClass': ['icon-file-text']
   },
 
   {
@@ -182,12 +182,6 @@ const contacts = [
     'url': 'https://www.linkedin.com/in/jonathanlam4/',
     'iconClass': ['icon-linkedin2']
   }
-
-  // {
-  //   'displayText': 'Twitter',
-  //   'url': 'https://twitter.com/QuadolorGames',
-  //   'iconClass': ['icon-twitter']
-  // }
 ];
 
 export { projects, portfolios, contacts };
