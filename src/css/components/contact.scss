@@ -15,30 +15,37 @@
   font-size: 2.5vmax;
   width: 95%;
   outline: none;
+  box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 }
 
 #contact-message {
   margin: 3vmax auto;
+  resize: vertical;
+}
+
+.contact-send-wrapper {
+  text-align: center;
 }
 
 #contact-send {
   font-size: 2.5vmax;
-  margin: 1.5vmax 1vmax 1.5vmax;
+  margin: 1.5vmax auto;
+  padding: 1vmax;
+  border: none;
+  border-radius: 3vmax;
+  box-sizing: content-box;
+  outline: none;
   justify-content: center;
   display: inline-flex;
   align-items: center;
   width: 25vmax;
   height: 6vmax;
-  background-color: #D4E6F1;
-  padding: 1vmax;
-  margin: 1vmax;
-  border-radius: 3vmax;
+  background-color: #cef0f5;
   box-shadow: 1vmax 1vmax rgba(0, 0, 0, 0.1);
 
-  a {
-    margin: 10px;
-    font-weight: bold;
-  }
+  font-weight: bold;
+  color: black;
+  font-size: 4vmax;
 }
 
 /* IE 10+ */
@@ -52,6 +59,7 @@
     border-radius: vmax(3.5);
     padding: vmax(1) vmax(2);
     font-size: vmax(2.5);
+    box-shadow: vmax(1) vmax(1) rgba(0, 0, 0, 0.1);
   }
   
   #contact-message {
@@ -60,7 +68,14 @@
   
   #contact-send {
     font-size: vmax(2.5);
-    margin: vmax(1.5) vmax(1) vmax(1.5);
+    margin: vmax(1.5) auto;
+    padding: vmax(1);
+    border-radius: vmax(3);
+    width: vmax(25);
+    height: vmax(6);
+    box-shadow: vmax(1) vmax(1) rgba(0, 0, 0, 0.1);
+  
+      font-size: vmax(4);
   }
 }
 
@@ -75,6 +90,7 @@
     border-radius: 35px;
     padding: 10px 20px;
     font-size: 25px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
   }
   
   #contact-message {
@@ -83,6 +99,13 @@
   
   #contact-send {
     font-size: 25px;
-    margin: 15px 10px 15px;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 30px;
+    width: 250px;
+    height: 60px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  
+    font-size: 40px;
   }
 }
