@@ -172,12 +172,6 @@ const portfolios = [
 
 const contacts = [
   {
-    'displayText': 'Resumé',
-    'url': 'downloads/Jonathan_Lam_resume.pdf',
-    'iconClass': ['icon-file-text']
-  },
-
-  {
     'displayText': 'LinkedIn',
     'url': 'https://www.linkedin.com/in/jonathanlam4/',
     'iconClass': ['icon-linkedin2']
