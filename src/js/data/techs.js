@@ -42,9 +42,5 @@ export default [
   {
     'name': 'GameMaker Studio 2',
     'image': 'img/tech/gms2.png'
-  },
-  {
-    'name': 'C++',
-    'image': 'img/tech/cpp.png'
-  },
+  }
 ];
