@@ -8,6 +8,7 @@ import * as projects from './components/projects';
 import * as contacts from './components/contacts';
 
 import { throttle } from './helpers';
+import { updateCopyrightYear } from './components/copyrightYear';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -47,4 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // - Modal
   modal.initialize();
+  updateCopyrightYear();
 });
