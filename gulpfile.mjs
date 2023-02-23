@@ -1,17 +1,18 @@
-const path = require('path');
-const gulp = require('gulp');
-const del = require('del');
-const source = require('vinyl-source-stream');
+import path from 'path';
+import gulp from 'gulp';
+import { deleteSync } from 'del';
+import source from 'vinyl-source-stream';
 
-const sass = require('gulp-sass');
-sass.compiler = require('node-sass');
-const autoprefixer = require('autoprefixer');
-const postcss = require('gulp-postcss');
-const uglifycss = require('gulp-uglifycss');
-const browserify = require('browserify');
-const babelify = require('babelify');
-const tinyify = require('tinyify');
-const imagemin = require('gulp-imagemin');
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);
+import autoprefixer from 'autoprefixer';
+import postcss from 'gulp-postcss';
+import uglifycss from 'gulp-uglifycss';
+import browserify from 'browserify';
+import babelify from 'babelify';
+import tinyify from 'tinyify';
+import imagemin from 'gulp-imagemin';
 
 const buildHtml = () => {
   return gulp.src('src/index.html')
@@ -21,7 +22,7 @@ const buildHtml = () => {
 const buildCss = () => {
   return gulp.src('src/css/index.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([ autoprefixer({
+    .pipe(postcss([autoprefixer({
       grid: false,
       remove: true
     })]))
@@ -86,26 +87,26 @@ gulp.task('watch', () => {
   imgWatcher.on('unlink', function (filePath) {
     const srcPath = path.relative(path.resolve('src/img/finalized'), filePath);
     const destPath = path.resolve('dist/img', srcPath);
-    del.sync(destPath);
+    deleteSync(destPath);
   });
 
   vidWatcher.on('unlink', function (filePath) {
     const srcPath = path.relative(path.resolve('src/vid/finalized'), filePath);
     const destPath = path.resolve('dist/vid', srcPath);
-    del.sync(destPath);
+    deleteSync(destPath);
   });
 
   fontWatcher.on('unlink', function (filePath) {
     const srcPath = path.relative(path.resolve('src/fonts'), filePath);
     const destPath = path.resolve('dist/fonts', srcPath);
-    del.sync(destPath);
+    deleteSync(destPath);
   });
 
   dlWatcher.on('unlink', function (filePath) {
     const srcPath = path.relative(path.resolve('src/downloads'), filePath);
     const destPath = path.resolve('dist/downloads', srcPath);
-    del.sync(destPath);
+    deleteSync(destPath);
   });
 });
 
-exports.default = gulp.parallel(buildHtml, buildCss, buildJs, copyImg, copyVid, copyFonts, copyDownloads, copyConfig);
+export default gulp.parallel(buildHtml, buildCss, buildJs, copyImg, copyVid, copyFonts, copyDownloads, copyConfig);

@@ -11,7 +11,7 @@ $heading-slide-start-y-ie: calc(#{$heading-slide-start-x-ie} * #{$heading-slide-
 @keyframes heading-slideInFromLeft {
   from {
     transform:
-      translateX(-$heading-slide-start-x)
+      translateX(-#{$heading-slide-start-x})
       translateY($heading-slide-start-y)
       rotate(-$heading-slide-angle);
     opacity: 0;
@@ -98,7 +98,7 @@ $heading-slide-start-y-ie: calc(#{$heading-slide-start-x-ie} * #{$heading-slide-
   @keyframes heading-slideInFromLeft {
     from {
       transform:
-        translateX(-$heading-slide-start-x-ie)
+        translateX(-#{$heading-slide-start-x})
         translateY($heading-slide-start-y-ie)
         rotate(-$heading-slide-angle);
       opacity: 0;
