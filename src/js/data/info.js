@@ -1,6 +1,34 @@
 const projects = [
   {
-    'id': 5,
+    'id': 0,
+    'title': 'Match 3 Garden',
+    'previewStatic': 'img/match-3-garden.jpg',
+    'previewAnim': 'vid/preview/match-3-garden.mp4',
+    'fullAnim': 'vid/match-3-garden.mp4',
+    'description': 'A free-to-play narrative match-3 puzzle game on Facebook by Softgames.  Features a story about a young woman who is trying to save and restore her dilapidated childhood home. Players complete levels in order to restore and decorate a large garden and mansion. Other features include daily challenge and missions, and a weekly event where player compete on a leaderboard to earn rewards.',
+    'stack': [ 'Phaser CE', 'Facebook Instant Games', 'DeltaDNA', 'Node.js', 'Gulp' ],
+    'sourceUrls': [],
+    'demoUrls': [
+      { url: 'https://fb.gg/play/sg_mtgarden', text: 'Play' }
+    ]
+  },
+
+  {
+    'id': 1,
+    'title': 'Cookie Land',
+    'previewStatic': 'img/gml-script-wizard.jpg',
+    'previewAnim': 'vid/preview/gml-script-wizard.mp4',
+    'fullAnim': 'vid/gml-script-wizard.mp4',
+    'description': 'A free-to-play match-3 puzzle game on Facebook by Softgames.  Players complete levels and compete with friends to see who can reach the highest level, with new levels updated every week. Other features include daily challenge, a weekly Treasure Hunt events, and seasonal events where player can earn rewards.',
+    'stack': [ 'Phaser CE', 'Facebook Instant Games', 'DeltaDNA', 'Node.js', 'Gulp' ],
+    'sourceUrls': [],
+    'demoUrls': [
+      { url: 'https://fb.gg/play/cookie_crush_two', text: 'Play' }
+    ]
+  },
+
+  {
+    'id': 7,
     'title': 'GML Script Wizard',
     'previewStatic': 'img/gml-script-wizard.jpg',
     'previewAnim': 'vid/preview/gml-script-wizard.mp4',
@@ -16,7 +44,7 @@ const projects = [
   },
 
   {
-    'id': 1,
+    'id': 3,
     'title': 'GIFcentration',
     'previewStatic': 'img/gifcentration.jpg',
     'previewAnim': 'vid/preview/gifcentration.mp4',
@@ -33,7 +61,7 @@ const projects = [
   },
 
   {
-    'id': 2,
+    'id': 4,
     'title': 'Fractured Flicks',
     'previewStatic': 'img/fractured-flicks.jpg',
     'previewAnim': 'vid/preview/fractured-flicks.mp4',
@@ -49,7 +77,7 @@ const projects = [
   },
 
   {
-    'id': 0,
+    'id': 2,
     'title': 'Sync Timer',
     'previewStatic': 'img/sync-timer.jpg',
     'previewAnim': 'vid/preview/sync-timer.mp4',
@@ -65,7 +93,7 @@ const projects = [
   },
 
   {
-    'id': 3,
+    'id': 5,
     'title': 'FMODGMS',
     'previewStatic': 'img/fmodgms.jpg',
     'previewAnim': 'vid/preview/fmodgms.mp4',
@@ -81,7 +109,7 @@ const projects = [
   },
 
   {
-    'id': 6,
+    'id': 8,
     'title': 'Arborescence',
     'previewStatic': 'img/arborescence.png',
     'previewAnim': 'vid/preview/arborescence.mp4',
@@ -109,7 +137,7 @@ const projects = [
   },*/
 
   {
-    'id': 4,
+    'id': 6,
     'title': 'Worker #11812',
     'previewStatic': 'img/worker-11812.jpg',
     'previewAnim': 'vid/preview/worker-11812.mp4',
@@ -125,7 +153,7 @@ const projects = [
     ]
   },
 
-  {
+  /*{
     'id': 7,
     'title': 'dot.Market 2',
     'previewStatic': 'img/dotMarket2.png',
@@ -153,7 +181,7 @@ const projects = [
     'demoUrls': [
       { url: 'https://quadolorgames.itch.io/toutatis', text: 'Play' }
     ]
-  },
+  },*/
 ];
 
 const portfolios = [
