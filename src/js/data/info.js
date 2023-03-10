@@ -5,7 +5,7 @@ const projects = [
     'previewStatic': 'img/match-3-garden.jpg',
     'previewAnim': 'vid/preview/match-3-garden.mp4',
     'fullAnim': 'vid/match-3-garden.mp4',
-    'description': 'A free-to-play narrative match-3 puzzle game on Facebook by Softgames.  Features a story about a young woman who is trying to save and restore her dilapidated childhood home. Players complete levels in order to restore and decorate a large garden and mansion. Other features include daily challenge and missions, and a weekly event where player compete on a leaderboard to earn rewards.',
+    'description': 'A free-to-play narrative match-3 puzzle game on Facebook by Softgames. Features a story about a young woman who is trying to save and restore her dilapidated childhood home. Players complete levels in order to restore and decorate a large garden and mansion. Other features include daily challenge and missions, and a weekly event where player compete on a leaderboard to earn rewards.',
     'stack': [ 'Phaser CE', 'Facebook Instant Games', 'DeltaDNA', 'Node.js', 'Gulp' ],
     'sourceUrls': [],
     'demoUrls': [
@@ -17,9 +17,9 @@ const projects = [
     'id': 1,
     'title': 'Cookie Land',
     'previewStatic': 'img/cookie-land.jpg',
-    'previewAnim': 'vid/preview/gml-script-wizard.mp4',
-    'fullAnim': 'vid/gml-script-wizard.mp4',
-    'description': 'A free-to-play match-3 puzzle game on Facebook by Softgames.  Players complete levels and compete with friends to see who can reach the highest level, with new levels updated every week. Other features include daily challenge, a weekly Treasure Hunt events, and seasonal events where player can earn rewards.',
+    'previewAnim': 'vid/preview/cookie-land.mp4',
+    'fullAnim': 'vid/cookie-land.mp4',
+    'description': 'A free-to-play match-3 puzzle game on Facebook by Softgames. Players complete levels and compete with friends to see who can reach the highest level, with new levels updated every week. Other features include daily challenge, a weekly Treasure Hunt events, and seasonal events where player can earn rewards.',
     'stack': [ 'Phaser CE', 'Facebook Instant Games', 'DeltaDNA', 'Node.js', 'Gulp' ],
     'sourceUrls': [],
     'demoUrls': [
