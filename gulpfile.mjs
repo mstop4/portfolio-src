@@ -38,7 +38,7 @@ const buildJs = () => {
   });
 
   return b.bundle()
-    .pipe(source('bundle.js'))
+    .pipe(source('bundle2.js'))
     .pipe(gulp.dest('dist/'));
 };
 
