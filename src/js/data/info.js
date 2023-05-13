@@ -5,8 +5,8 @@ const projects = [
     'previewStatic': 'img/match-3-garden.jpg',
     'previewAnim': 'vid/preview/match-3-garden.mp4',
     'fullAnim': 'vid/match-3-garden.mp4',
-    'description': 'A free-to-play narrative match-3 puzzle game on Facebook by Softgames. Features a story about a young woman who is trying to save and restore her dilapidated childhood home. Players complete levels in order to restore and decorate a large garden and mansion. Other features include daily challenge and missions, and a weekly event where player compete on a leaderboard to earn rewards.',
-    'stack': [ 'Phaser CE', 'Facebook Instant Games', 'DeltaDNA', 'Node.js', 'Gulp' ],
+    'description': 'A free-to-play narrative match-3 puzzle game on Facebook I worked on while at Softgames.<br/><br/>Features a story about a young woman who is trying to save and restore her dilapidated childhood home. Players complete levels in order to restore and decorate a large garden and mansion. Other features include daily challenge and missions, and a weekly event where player compete on a leaderboard to earn rewards.',
+    'stack': [ 'Phaser CE', 'Facebook Instant Games SDK', 'DeltaDNA', 'Sentry', 'Node.js', 'Gulp' ],
     'sourceUrls': [],
     'demoUrls': [
       { url: 'https://fb.gg/play/sg_mtgarden', text: 'Play' }
@@ -19,8 +19,8 @@ const projects = [
     'previewStatic': 'img/cookie-land.jpg',
     'previewAnim': 'vid/preview/cookie-land.mp4',
     'fullAnim': 'vid/cookie-land.mp4',
-    'description': 'A free-to-play match-3 puzzle game on Facebook by Softgames. Players complete levels and compete with friends to see who can reach the highest level, with new levels updated every week. Other features include daily challenge, a weekly Treasure Hunt events, and seasonal events where player can earn rewards.',
-    'stack': [ 'Phaser CE', 'Facebook Instant Games', 'DeltaDNA', 'Node.js', 'Gulp' ],
+    'description': 'A free-to-play match-3 puzzle game on Facebook I worked on while at Softgames.<br/.<br/>Players complete levels and compete with friends to see who can reach the highest level, with new levels updated every week. Other features include daily challenge, a weekly Treasure Hunt events, and seasonal events where player can earn rewards.',
+    'stack': [ 'Phaser CE', 'Facebook Instant Games SDK', 'DeltaDNA', 'Sentry', 'Node.js', 'Gulp' ],
     'sourceUrls': [],
     'demoUrls': [
       { url: 'https://fb.gg/play/cookie_crush_two', text: 'Play' }
@@ -43,41 +43,57 @@ const projects = [
     ]
   },
 
-  {
-    'id': 3,
-    'title': 'GIFcentration',
-    'previewStatic': 'img/gifcentration.jpg',
-    'previewAnim': 'vid/preview/gifcentration.mp4',
-    'fullAnim': 'vid/gifcentration.mp4',
-    'description': 'Concentration (pairs-matching) game powered by Giphy and the MERN stack.<br/><br/>The Client app allows users to search for GIFs that populate the cards in a game on Concentration. The Server app relays results and queries between the Client and the Giphy API and keeps track of the most popular searches.',
-    'stack': [ 'MongoDB', 'Mongoose', 'Express', 'React', 'Node.js', 'Giphy JS SDK', 'Redis', 'Chance.js' ],
-    'sourceUrls': [
-      { url: 'https://github.com/mstop4/gifcentration-client', text: 'Client' },
-      { url: 'https://github.com/mstop4/gifcentration-server', text: 'Server' },
-    ],
-    'demoUrls': [
-      { url: 'https://mstop4.github.io/gifcentration-client', text: 'Play' }
-    ]
-  },
-
-  {
-    'id': 4,
-    'title': 'Fractured Flicks',
-    'previewStatic': 'img/fractured-flicks.jpg',
-    'previewAnim': 'vid/preview/fractured-flicks.mp4',
-    'fullAnim': 'vid/fractured-flicks.mp4',
-    'description': 'A jigsaw puzzle-like web game where you put pieces of a video back together. Contains multiple puzzles of vary difficulty levels and saves the best solve times locally in the user\'s browser.<br/><br/>It was very well received in <a href="https://itch.io/jam/finally-finish-something-2018/rate/181663" target=_blank>Finally Finish Something Jam 2018</a>, ranked 3rd place overall out of 109 entries.',
-    'stack': ['Pixi.js', 'pixi-sound', 'Node.js', 'Babel', 'Webpack', 'Amazon S3'],
-    'sourceUrls': [
-      { url: 'https://github.com/mstop4/fractured-flicks', text: 'Source' },
-    ],
-    'demoUrls': [
-      { url: 'https://mstop4.github.io/fractured-flicks', text: 'Play' }
-    ]
-  },
+  // {
+  //   'id': 3,
+  //   'title': 'GIFcentration',
+  //   'previewStatic': 'img/gifcentration.jpg',
+  //   'previewAnim': 'vid/preview/gifcentration.mp4',
+  //   'fullAnim': 'vid/gifcentration.mp4',
+  //   'description': 'Concentration (pairs-matching) game powered by Giphy and the MERN stack.<br/><br/>The Client app allows users to search for GIFs that populate the cards in a game on Concentration. The Server app relays results and queries between the Client and the Giphy API and keeps track of the most popular searches.',
+  //   'stack': [ 'MongoDB', 'Mongoose', 'Express', 'React', 'Node.js', 'Giphy JS SDK', 'Redis', 'Chance.js' ],
+  //   'sourceUrls': [
+  //     { url: 'https://github.com/mstop4/gifcentration-client', text: 'Client' },
+  //     { url: 'https://github.com/mstop4/gifcentration-server', text: 'Server' },
+  //   ],
+  //   'demoUrls': [
+  //     { url: 'https://mstop4.github.io/gifcentration-client', text: 'Play' }
+  //   ]
+  // },
 
   {
     'id': 2,
+    'title': 'GIFcentration 2',
+    'previewStatic': 'img/gifcentration2.jpg',
+    'previewAnim': 'vid/preview/gifcentration2.mp4',
+    'fullAnim': 'vid/gifcentration2.mp4',
+    'description': 'A card pairs-matching game powered by Next.js, Giphy, and Vercel.<br/><br/>Enter a topic and GIFcentration will search for relevant GIFs and set up a game of Concentration for you to play. Can\'t think of a topic? Try one of the Popular Searches!<br/><br/>Serves as the successor and replacement to the original GIFcentration Client and Server apps.',
+    'stack': [ 'Next.js', 'Typescript', 'MongoDB', 'Mongoose', 'Giphy JS SDK', 'Redis', 'Zustand', 'Vercel' ],
+    'sourceUrls': [
+      { url: 'https://github.com/mstop4/gifcentration-2', text: 'Source' },
+    ],
+    'demoUrls': [
+      { url: 'https://gifcentration-2.vercel.app/', text: 'Play' }
+    ]
+  },
+
+  // {
+  //   'id': 4,
+  //   'title': 'Fractured Flicks',
+  //   'previewStatic': 'img/fractured-flicks.jpg',
+  //   'previewAnim': 'vid/preview/fractured-flicks.mp4',
+  //   'fullAnim': 'vid/fractured-flicks.mp4',
+  //   'description': 'A jigsaw puzzle-like web game where you put pieces of a video back together. Contains multiple puzzles of vary difficulty levels and saves the best solve times locally in the user\'s browser.<br/><br/>It was very well received in <a href="https://itch.io/jam/finally-finish-something-2018/rate/181663" target=_blank>Finally Finish Something Jam 2018</a>, ranked 3rd place overall out of 109 entries.',
+  //   'stack': ['Pixi.js', 'pixi-sound', 'Node.js', 'Babel', 'Webpack', 'Amazon S3'],
+  //   'sourceUrls': [
+  //     { url: 'https://github.com/mstop4/fractured-flicks', text: 'Source' },
+  //   ],
+  //   'demoUrls': [
+  //     { url: 'https://mstop4.github.io/fractured-flicks', text: 'Play' }
+  //   ]
+  // },
+
+  {
+    'id': 3,
     'title': 'Sync Timer',
     'previewStatic': 'img/sync-timer.jpg',
     'previewAnim': 'vid/preview/sync-timer.mp4',
@@ -92,35 +108,35 @@ const projects = [
     ]
   },
 
-  {
-    'id': 5,
-    'title': 'FMODGMS',
-    'previewStatic': 'img/fmodgms.jpg',
-    'previewAnim': 'vid/preview/fmodgms.mp4',
-    'fullAnim': 'vid/fmodgms.mp4',
-    'description': 'A <em>GameMaker: Studio 1.4</em> and <em>GameMaker Studio 2</em> extension that provides GML bindings to the FMOD Studio low-level API. Can be used in Windows, macOS, and Linux games.<br/><br/>My longest running project, it was started about a decade ago as a means to extend the audio capabilities of <em>Game Maker 8.0</em> and has been maintained and updated as newer editions of <em>GameMaker</em> have been released.',
-    'stack': ['FMOD Low Level API', 'GameMaker Studio 2', 'GameMaker: Studio 1.4'],
-    'sourceUrls': [
-      { url: 'https://github.com/mstop4/fmodgms', text: 'Source' },
-    ],
-    'demoUrls': [
-      { url: 'https://quadolorgames.itch.io/fmodgms', text: 'Download' }
-    ]
-  },
+  // {
+  //   'id': 5,
+  //   'title': 'FMODGMS',
+  //   'previewStatic': 'img/fmodgms.jpg',
+  //   'previewAnim': 'vid/preview/fmodgms.mp4',
+  //   'fullAnim': 'vid/fmodgms.mp4',
+  //   'description': 'A <em>GameMaker: Studio 1.4</em> and <em>GameMaker Studio 2</em> extension that provides GML bindings to the FMOD Studio low-level API. Can be used in Windows, macOS, and Linux games.<br/><br/>My longest running project, it was started about a decade ago as a means to extend the audio capabilities of <em>Game Maker 8.0</em> and has been maintained and updated as newer editions of <em>GameMaker</em> have been released.',
+  //   'stack': ['FMOD Low Level API', 'GameMaker Studio 2', 'GameMaker: Studio 1.4'],
+  //   'sourceUrls': [
+  //     { url: 'https://github.com/mstop4/fmodgms', text: 'Source' },
+  //   ],
+  //   'demoUrls': [
+  //     { url: 'https://quadolorgames.itch.io/fmodgms', text: 'Download' }
+  //   ]
+  // },
 
-  {
-    'id': 8,
-    'title': 'Arborescence',
-    'previewStatic': 'img/arborescence.png',
-    'previewAnim': 'vid/preview/arborescence.mp4',
-    'fullAnim': 'vid/arborescence.mp4',
-    'description': 'A relaxing point-and-click puzzle game where the player must strategically use the keys at their disposal in order to undo all the locks and get all the trees ready for the season.<br/><br/>Every tree sprite and level is procedurally-generated, modelled after binary search trees. As such, every level has at least one solution.',
-    'stack': ['GameMaker Studio 2'],
-    'sourceUrls': [],
-    'demoUrls': [
-      { url: 'https://quadolorgames.itch.io/arborescence', text: 'Download' }
-    ]
-  },
+  // {
+  //   'id': 8,
+  //   'title': 'Arborescence',
+  //   'previewStatic': 'img/arborescence.png',
+  //   'previewAnim': 'vid/preview/arborescence.mp4',
+  //   'fullAnim': 'vid/arborescence.mp4',
+  //   'description': 'A relaxing point-and-click puzzle game where the player must strategically use the keys at their disposal in order to undo all the locks and get all the trees ready for the season.<br/><br/>Every tree sprite and level is procedurally-generated, modelled after binary search trees. As such, every level has at least one solution.',
+  //   'stack': ['GameMaker Studio 2'],
+  //   'sourceUrls': [],
+  //   'demoUrls': [
+  //     { url: 'https://quadolorgames.itch.io/arborescence', text: 'Download' }
+  //   ]
+  // },
 
   /*{
     'id': 7,
