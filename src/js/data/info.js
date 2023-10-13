@@ -28,20 +28,52 @@ const projects = [
   },
 
   {
-    'id': 7,
-    'title': 'GML Script Wizard',
-    'previewStatic': 'img/gml-script-wizard.jpg',
-    'previewAnim': 'vid/preview/gml-script-wizard.mp4',
-    'fullAnim': 'vid/gml-script-wizard.mp4',
-    'description': 'A tool that will help users generate and modify GML script headers just be filling in a few fields.<br/><br/>Add, remove, and rearrange arguments and additional local variables with ease, then copy the script template with a simple click of a button. Conforms to both GM:S 1.4 and GMS 2 (JSDoc) documentation styles for documenting scripts.',
-    'stack': [ 'React', 'Redux', 'Node.js', 'Material-UI', 'Babel', 'Webpack', 'Electron' ],
+    'id': 3,
+    'title': 'Minecraft 3D Path Map',
+    'previewStatic': 'img/mc-3d-path-map.jpg',
+    'previewAnim': 'vid/preview/mc-3d-path-map.mp4',
+    'fullAnim': 'vid/mc-3d-path-map.mp4',
+    'description': 'A 3D map app visualizing the network of paths in the Nether of my survival single-player Minecraft world.<br/><br/>Features different path colour schemes for different categorizations and colourblindness. Under the hood, optimizations have been implemented to make sure the map renders hundreds of data points smoothly on different devices.',
+    'stack': [ 'Typescript', 'Three.js', 'Vite' ],
     'sourceUrls': [
-      { url: 'https://github.com/mstop4/gml-script-wizard', text: 'Source' }
+      { url: 'https://github.com/mstop4/mc-3d-path-map', text: 'Source' }
     ],
     'demoUrls': [
-      { url: 'https://mstop4.github.io/gml-script-wizard', text: 'Demo' }
+      { url: 'https://mstop4.github.io/mc-3d-path-map/', text: 'Demo' }
     ]
   },
+
+  {
+    'id': 4,
+    'title': 'VGM Obscura Dashboard',
+    'previewStatic': 'img/vgm-obscura-dashboard.jpg',
+    'previewAnim': 'vid/preview/vgm-obscura-dashboard.mp4',
+    'fullAnim': 'vid/vgm-obscura-dashboard.mp4',
+    'description': 'A simple fullstack app that automatically summarizes and calculates custom metrics for my YouTube channel, VGM Obscura.<br/><br/>Previously, I crunched the data by manually copying the values off of YouTube Studio and putting them into a spreadsheet. This eventually got tedious, so I figured I could make something that automatically pulls the data from YouTube\'s APIs directly, crunch the numbers, and display it nicely.',
+    'stack': [ 'Next.js 13', 'TypeScript', 'MUI', 'Chart.js', 'Vercel', 'Express.js', 'Redis', 'YouTube Data & Analytics APIs', 'Heroku' ],
+    'sourceUrls': [
+      { url: 'https://github.com/mstop4/vgm-obscura-tracker', text: 'Source' }
+    ],
+    'demoUrls': [
+      { url: 'https://vgm-obscura-tracker.vercel.app/', text: 'Demo' }
+    ]
+  },
+
+  // {
+  //   'id': 7,
+  //   'title': 'GML Script Wizard',
+  //   'previewStatic': 'img/gml-script-wizard.jpg',
+  //   'previewAnim': 'vid/preview/gml-script-wizard.mp4',
+  //   'fullAnim': 'vid/gml-script-wizard.mp4',
+  //   'description': 'A tool that will help users generate and modify GML script headers just be filling in a few fields.<br/><br/>Add, remove, and rearrange arguments and additional local variables with ease, then copy the script template with a simple click of a button. Conforms to both GM:S 1.4 and GMS 2 (JSDoc) documentation styles for documenting scripts.',
+  //   'stack': [ 'React', 'Redux', 'Node.js', 'Material-UI', 'Babel', 'Webpack', 'Electron' ],
+  //   'sourceUrls': [
+  //     { url: 'https://github.com/mstop4/gml-script-wizard', text: 'Source' }
+  //   ],
+  //   'demoUrls': [
+  //     { url: 'https://mstop4.github.io/gml-script-wizard', text: 'Demo' }
+  //   ]
+  // },
 
   // {
   //   'id': 3,
@@ -93,7 +125,7 @@ const projects = [
   // },
 
   {
-    'id': 3,
+    'id': 4,
     'title': 'Sync Timer',
     'previewStatic': 'img/sync-timer.jpg',
     'previewAnim': 'vid/preview/sync-timer.mp4',
